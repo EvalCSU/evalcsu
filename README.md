@@ -108,7 +108,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ## 4 项目说明
 
-> 本项目遵循 Apache license 2.0
+> 本项目遵循 [Apache license 2.0](https://github.com/Jacob953/evalcsu/blob/main/LICENSE)
 
 EvalCSU 评教部分所涉及的内容仅作为贡献者个人描述，平台及平台维护者不承担任何责任。
 

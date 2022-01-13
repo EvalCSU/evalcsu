@@ -1,7 +1,5 @@
 # EvalCSU
 
-EvalCSU 是一个关于 CSU 的非官方经验分享平台
-
 > EvalCSU 是一个关于 CSU 的非官方经验分享平台
 
 ## 1 项目简介

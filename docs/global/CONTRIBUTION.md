@@ -8,7 +8,7 @@ All kinds of contributions are welcome, including but not limited to the followi
 - Add any class or test notes and mind maps, or translate existing content into other languages
 - Add your curriculum  experiment project, it is best to include the report
 - Add your evaluation of curriculum  experiment, courses, and teachers
-
+   
 ### Workflow
 **Evaluation**
 1. Apply to become an evaluation participant
@@ -37,6 +37,9 @@ All kinds of contributions are welcome, including but not limited to the followi
 6. Click "Create pull request"
 
 Please describe your issue or PR as clear as possible. And use ``NULL`` to fill blocks you don't know what to say instead of deleting them.
+
+### WANT TO KNOW WHAT IS "PULL REQUEST" AND "ISSUE"
+please refer to [noob guide](NOOBGUIDE.md)
 
 ### EvalCSU commit message
 

@@ -1,14 +1,16 @@
+## 为EvalCSU贡献
 ## Contribute to EvalCSU
-
+### [简体中文](CONTRIBUTION_zh_simplify.md) [繁體中文](CONTRIBUTION_zh_tradition.md)
 All kinds of contributions are welcome, including but not limited to the following:
 
-- fix typo or bugs
-- add documentation or translate the documentation into other languages
-- add new features and components
+- fix typo or bugs of evaluations or projects
+- add documentation like your note or mind map of a course or test, or translate the documentation into other languages
+- add a project you made. It will be better if you provide it with the report of the project
+- add your comments of a course, a teacher, or project
 
 ### Workflow
 
-If you plan to add some new features that involve large changes, it is encouraged to open an issue for discussion first.
+If you plan to add something that involves changes on a large scale, which might be to add new faculty, major, or note, you have to open an issue for discussion first.
 
 **Issues**
 
@@ -17,8 +19,8 @@ If you plan to add some new features that involve large changes, it is encourage
 
 **Pull Request**
 
-1. fork and pull the latest GLOM repository
-2. checkout a new branch (do not use the master branch for PRs)
+1. fork and pull the latest evalCSU repository
+2. check out a new branch (do not use the master branch for PRs)
 3. commit your changes
 4. create a PR
 
@@ -29,7 +31,7 @@ Please describe your issue or PR as clear as possible. And use `NULL.` to fill b
 Please follow the commit formate:
 
 ```
-<type>[optional scopa]: <descroption>
+<type>[optional scope]: <descroption>
 ```
 
 **type of commit**

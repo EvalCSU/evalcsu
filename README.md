@@ -77,9 +77,9 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ### 3.1 贡献准则
 
-- 开辟新学院、新专业、新笔记，需要先提出 issue，待同意后方可进行 PR
+- 开辟新学院、新专业、新笔记，需要先提出 issue，待同意后方可进行 PR, 如果你不清楚这些名词，可以参考[新手教学](./docs/global/NOOBGUIDE.md)
 - 所有 docs 和 code 目录下文件至少需要注释说明：撰写者和撰写时间
-- docs 统一要求 Markdown 文档，方便迭代更新
+- docs 统一要求 Markdown 文档，方便迭代更新，Markdown是一种轻量级标记语言，能描述文档的基本格式，如果你没有接触过Markdown,可以参考[markdown guide](https://www.markdownguide.org/)了解更多，或者直接参考[cheet sheet](https://www.markdownguide.org/cheat-sheet/)来速成语法
 - img 目录下文档需要正确命名图片文件名，如：01-recursion.png
 - 为保证评教公平公开公正，各专业将会选举一名评教管理员
 - 评教参与者需要 Email 上级管理员进行身份验证，如 20 级参与评教，需向 19 级管理者提出申请

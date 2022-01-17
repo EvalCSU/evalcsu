@@ -1,12 +1,12 @@
 # EvalCSU
 
-> EvalCSU 是一个关于 CSU 的非官方经验分享平台
+> EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台
 
 ## 1 项目简介
 
 ### 1.1 平台背景
 
-本科教育的主体无非两大类：授课老师和学生。EvalCSU 受启发于 CSU 的教学环境中，不同环境下所面临的选择往往是不同的，EvalCSU 提供有效帮助的同时，希望你能够自行取舍，我们的现状描述仅作参考。
+本科教育的主体无非两大类：授课老师和学生。EvalCSU 受启发于 CSU 的教学环境中，由于不同环境下所面临的选择往往是不同的，在 EvalCSU 提供有效帮助的同时，希望你能够自行取舍，我们的现状描述仅作参考。
 
 在进行现状描述之前，我们希望能和你达成以下共识：
 
@@ -44,7 +44,7 @@ EvalCSU 目前以计算机学院和自动化学院为主，欢迎大家积极贡
 
 ### 1.2 平台目的
 
-无论你属于哪一类风格的学生，EvalCSU 都会从以下方面协助你度过整个本科生活：
+无论你属于哪一类风格的学生，EvalCSU 都会从以下方面协助你学习专业课程：
 
 - 选课排坑：课程评教，老师评教，实验评教
 
@@ -83,17 +83,12 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ### 3.1 贡献准则
 
-- 开辟新学院、新专业、新笔记，需要先提出 issue，待同意后方可进行 PR, 如果你不清楚这些名词，可以参考[新手教学](./docs/global/NOOBGUIDE.md)
-- 所有 docs 和 code 目录下文件至少需要注释说明：撰写者和撰写时间
-- docs 统一要求 Markdown 文档，方便迭代更新，Markdown是一种轻量级标记语言，能描述文档的基本格式，如果你没有接触过Markdown,可以参考[markdown guide](https://www.markdownguide.org/)了解更多，或者直接参考[cheet sheet](https://www.markdownguide.org/cheat-sheet/)来速成语法
-- img 目录下文档需要正确命名图片文件名，如：01-recursion.png
-- 为保证评教公平公开公正，各专业将会选举一名评教管理员
-- 评教参与者需要 Email 上级管理员进行身份验证，如 20 级参与评教，需向 19 级管理者提出申请
-- 评教参与者需要在 [EVALUATOR.md](docs/global/EVALUATOR.md) 中提供其他非身份认证信息，如 GPA，以做认证
-- 评教参与者需要注意措辞，不可出现负向言语、黑话
-- 评教应结合课程压力、课设难度、老师教学习惯、给分情况等方面作为综合评价
-- 评价应给出适当学习风格推荐
-- 贡献工作流程请以 [CONTRIBUTION.md](docs/global/CONTRIBUTION.md) 作为你的贡献导航
+- 公开、公平、公正，这是 EvalCSU 的根本价值理念
+- 承担开源责任，对内容负责，对他人的贡献负责
+- 共创、共建、共享 EvalCSU 专业课程经验分享平台
+- 积极响应回馈，在分享中不断学习、不断修正错误
+- 严禁窃取他人成果，坚决维护所有平台贡献者的利益
+- 贡献工作流程请以 [CONTRIBUTION.md](docs/global/CONTRIBUTION.md) 作为贡献导航
 
 ### 3.2 贡献者
 
@@ -101,10 +96,9 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 <table>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?v=4" width="100px;" alt=""/><br /><sub><b>Jacob953</b></sub></a></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></a></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/67886875?v=4" width="100px;" alt=""/><br /><sub><b>fallme</b></sub></a></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72350550?v=4" width="100px;" alt=""/><br /><sub><b>jzndd</b></sub></a></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?v=4" width="100px;" alt=""/><br /><sub><b>Jacob953</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/72350550?v=4" width="100px;" alt=""/><br /><sub><b>jzndd</b></sub></td>
     </tr>
 </table>
 

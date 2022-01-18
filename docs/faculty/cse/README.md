@@ -4,7 +4,7 @@
 
 - 计算机与科学
 - 大数据
-- [信息安全](../../faculty/cse/security/README.md)
+- [信息安全](./security/README.md)
 - 物联网
 - 通信工程
 - 软件工程
@@ -33,3 +33,4 @@
 | Manager | Email             |
 | ------- | ----------------- |
 | fallme  | 1285094405@qq.com |
+

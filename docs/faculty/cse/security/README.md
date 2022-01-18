@@ -23,7 +23,7 @@
 - [IPsec](network-security/ipsec.md)
 - [SYN-Cookies](network-security/syn-cookies.md)
 - [TLS/SSL](network-security/tls-ssl.md)
-- [一次性口令](network-security/one-time%20password.md)
+- [一次性口令](network-security/onetime-password.md)
 - [盐值](network-security/salt-value.md)
 - [路由协议](network-security/routing-protocol.md)
 - [远程安全认证](network-security/remote-security-authentication.md)

@@ -6,7 +6,7 @@
 > 1. <your id>@<sharing time>
 >     - <your sharing>
 >     - ...
-> ``
+> ```
 ### 转专业
 
 ### 选课

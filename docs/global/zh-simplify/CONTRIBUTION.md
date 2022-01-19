@@ -76,7 +76,7 @@
 ```
 
 **提交类型**
-
+<div>
   <table margin="center">
     <thead>
         <tr>
@@ -112,4 +112,3 @@
     </tbody>
   </table>
 </div>
-

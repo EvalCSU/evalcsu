@@ -86,4 +86,3 @@ Please follow the commit formate:
     </tbody>
   </table>
 </div>
-

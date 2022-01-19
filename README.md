@@ -114,6 +114,14 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 **所有贡献者**
 
+<table>
+    <tr>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/63287428?v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/94861831?v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/72063459?v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
+    </tr>
+</table>
+
 ## 4 项目说明
 
 > 本项目遵循 [Apache license 2.0](https://github.com/Jacob953/evalcsu/blob/main/LICENSE)

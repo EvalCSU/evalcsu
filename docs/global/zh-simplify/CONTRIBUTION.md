@@ -46,9 +46,9 @@
 2. 选择 Bug report、Evaluate request、Feature request 或新建一个空白模版来初始化你的 Issue
    - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-模版)
    - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 [Evaluate request 模版](#evaluate-request-模版)
-   - Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请， 详细请参考 [Feature request 模版](#feature-request-模版)
-3. 在禁止删除 **题目（加粗字体）** 的前提下，简述你的 Issue，面对无法填写的部分，请以 NULL. 代替内容
-4. 修改标题中的 \<description> 部分，建议参考已有 Issue
+   - Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请，详细请参考 [Feature request 模版](#feature-request-模版)
+3. 在禁止删除 **题目（加粗字体）** 的前提下，简述你的 Issue 内容，面对无法填写的部分，请以 `NULL.` 代替内容
+4. 修改标题中的 `<description>` 部分，建议参考已有 Issue
 5. 点击 Submit new issue 提交你的 Issue
 
 #### Bug report 模版
@@ -56,14 +56,14 @@
 - Bug report 模版中，你可以申请参与：
   1. 修正拼写、词语错误
   2. 修正课堂笔记错误
-  3. 修正考点思维导图错误，考点更换不纳入修正范围
-  4. 修正验课设错误
+  3. 修正考点思维导图错误（考点更新不纳入修正范围）
+  4. 修正实验课设错误
   5. 提出你的建议、疑惑
 
 #### Evaluate request 模版
 
 1. 在提交 Issue 前，请到你所在的学院查询 **管理员** 表格
-   - 若不存在对应学院，请重新申请 [Feature request 模版](#feature-request-模块)
+   - 若不存在对应学院，请重新申请 [Feature request](#feature-request-模版)
    - 若存在对应学院，请 Email 当前年级相近的管理员
 2. 在 **Describe the evaluation you want to join** 中简述你希望参与的内容，务必包含年级、学院和模块（评教或经验分享）
 3. 在 **Assign the manager you email** 中：
@@ -76,13 +76,13 @@
   1. 新增多个课程评教
   2. 新增多级经验分享
 - 为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息
-- 填写邮件内容时，请前往 CSU 教务系统 -> 培养管理 -> 我的培养方案，邮件内容附加全屏截图即可，建议包含系统时间
+- 填写邮件内容时，请前往 `CSU 教务系统` -> `培养管理` -> `我的培养方案`，邮件内容附加全屏截图即可，建议包含系统时间
 - 待管理员在该 Issue 下批准，便可移步 PR 进行下一步操作。
 
 #### Feature request 模版
 
 1. 在提交 Issue 前，请到你所在的学院查询 **管理员** 表格
-   - 若不存在对应学院，请优先 Email 一级 Reviewer(Rick Lin)，同时在该 Issue 中申请添加对应学院
+   - 若不存在对应学院，请优先 Email 一级 Reviewer(Rick Lin、jzndd)，同时在该 Issue 中申请添加对应学院
    - 若存在对应学院，请 Email 当前年级相近的管理员
 2. 在 **Is your feature request related to a problem? Please describe.** 中简述你希望参与的内容，务必包含年级、学院和模块（课堂笔记、考点思维导图或实验课设）
 3. 在 **Describe the solution you'd like** 中简述你的最优想法
@@ -116,19 +116,19 @@
       <your github id>/<optional scope>/<faculty>
       // e.g. jacob953/docs/security
       ```
-   - \<optional scope> 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
+   - `<optional scope>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**
 4. 在本地提交 commit 时，请严格遵循 [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
 
 **项目搭建原则**
 
-- 禁止修改 .github 中的任何内容
+- 禁止修改 .github 文件夹中的任何内容
 - 根据提交的内容，可以更改项目目录结构，但不能修改三个主目录：
   - code：放置所有课设代码
   - docs：放置所有文档，包括：
     - evaluation：评教部分
     - faculty：学院、专业的笔记、考点导图、课设报告和经验分享部分
-    - global：项目组织文档
+    - global：项目组织文档等
   - img：放置所有文档和代码中的图片
 - 文件类型要求：
   - code 中不能放置压缩包类型文件，应展示代码结构
@@ -140,17 +140,17 @@
   - en
   - zh-simplify
   - zh-tradition
-  > 应采用同一文件名，不需要添加解释性后缀
+> 应采用同一文件名，不需要添加解释性后缀
 
 #### Pull Request 合并分支
 
-1. 打开 GitHub，从个人仓库中选择 New pull request 按钮
+1. 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
 2. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
    1. 标题可以按照 `<type>[optional scope]: <description>` 的方式命名
    2. 添加 **Follow** 题目，链接到你的 Issue，可请参考 [范例](https://github.com/Jacob953/evalcsu/pull/3)
    3. 添加 **Done** 题目，在题目下方简述你的修改，可请参考 [范例](https://github.com/Jacob953/evalcsu/pull/3)
    4. 在末尾 @ 对应的管理员
-3. 点击 Create pull request 创建你的合并请求
+3. 点击 `Create pull request` 按钮创建你的合并请求
 
 **特别注意**
 
@@ -170,12 +170,12 @@
 
 #### Review 流程
 
-1. 进入需要 Rebiew 的 PR 页面，点击 Files changed 分页，查看其更改
-2. 查看修改后，点击 Review changes，输入你的评论，并依照你的想法选择下列选项:
+1. 进入需要 Rebiew 的 PR 页面，点击 `Files changed` 分页，查看其更改
+2. 查看修改后，点击 `Review changes` 按钮，输入你的评论，并依照你的想法选择下列选项:
    1. Comment：不确定是否通过，只想提供建议
    2. Approve：通过修改
    3. Request changes：否定修改，需要再进行修改
-3. 点击 Submit review 提交个人的看法
+3. 点击 `Submit review` 按钮提交个人的看法
 
 **特别注意**
 

@@ -44,9 +44,9 @@
 
 1. 进入 Issue 页面点击 New issue 按钮
 2. 选择 Bug report、Evaluate request、Feature request 或新建一个空白模版来初始化你的 Issue
-   - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-)
-   - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 [Evaluate request 模版](#evaluate-request-)
-   - Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请， 详细请参考 [Feature request 模版](#feature-request-)
+   - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-模版)
+   - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 [Evaluate request 模版](#evaluate-request-模版)
+   - Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请， 详细请参考 [Feature request 模版](#feature-request-模版)
 3. 在禁止删除 **题目（加粗字体）** 的前提下，简述你的 Issue，面对无法填写的部分，请以 NULL. 代替内容
 4. 修改标题中的 \<description> 部分，建议参考已有 Issue
 5. 点击 Submit new issue 提交你的 Issue
@@ -63,7 +63,7 @@
 #### Evaluate request 模版
 
 1. 在提交 Issue 前，请到你所在的学院查询 **管理员** 表格
-   - 若不存在对应学院，请重新申请 [Feature request 模版](#feature-request-)
+   - 若不存在对应学院，请重新申请 [Feature request 模版](#feature-request-模块)
    - 若存在对应学院，请 Email 当前年级相近的管理员
 2. 在 **Describe the evaluation you want to join** 中简述你希望参与的内容，务必包含年级、学院和模块（评教或经验分享）
 3. 在 **Assign the manager you email** 中：
@@ -101,7 +101,7 @@
   4. 将已有内容翻译为其他语言
 - 为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息
 - 填写邮件内容时，请前往 CSU 教务系统 -> 培养管理 -> 我的培养方案，邮件内容附加全屏截图即可，建议包含系统时间
-- 待管理员在该 Issue 下批准，便可移步 [Pull Request](#pull-request-) 进行下一步操作。
+- 待管理员在该 Issue 下批准，便可移步 [Pull Request](#pull-request-模块) 进行下一步操作。
 
 ### Pull Request 模块
 
@@ -116,9 +116,9 @@
       <your github id>/<optional scope>/<faculty>
       // e.g. jacob953/docs/security
       ```
-   - \<optional scope> 建议参考 [提交类型](#evalcsu--commit-)
+   - \<optional scope> 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**
-4. 在本地提交 commit 时，请严格遵循 [EvalCSU 的 commit 注意事项](#evalcsu--commit-)
+4. 在本地提交 commit 时，请严格遵循 [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
 
 - PR 合并分支时：
    - 禁止对主仓库的 gh-pages 分支操作
@@ -163,7 +163,7 @@
 
 #### 注意事项
 
-1. 熟悉 [Issue 模块](#issue-) 和 [Pull Request 模块](#pull-request-) 中的所有流程
+1. 熟悉 [Issue 模块](#issue-模块) 和 [Pull Request 模块](#pull-request-模块) 中的所有流程
 2. 禁止直接对主分支做任何操作
 3. 积极维护平台环境环境，严格遵守 [贡献准则](../../../README.md#31-) 和 [行为准则](../../../README.md#41-)
 4. 积极承担授权和审核的责任，完成授权和审核的工作

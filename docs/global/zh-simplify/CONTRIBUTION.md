@@ -1,6 +1,6 @@
 
 [English](CONTRIBUTION.md) [繁體中文](CONTRIBUTION_zh_tradition.md)
-## 为EvalCSU贡献
+## 为 EvalCSU 贡献
 
 > **请确保你已经仔细阅读了本指南，在工作流程清晰后再进行操作!**
 > 
@@ -17,7 +17,7 @@
 > 
 > 若本指南有任何模糊不清的地方，请通过 Issue 和我们反映。
 
-- [为EvalCSU贡献](#为evalcsu贡献)
+- [为 EvalCSU 贡献](#为-evalcsu-贡献)
   - [Issue 模块](#issue-模块)
     - [新增 Issue](#新增-issue)
     - [Bug report 模版](#bug-report-模版)

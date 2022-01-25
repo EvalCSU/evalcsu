@@ -13,7 +13,7 @@
 > 5. 申请参与校级、院级或专业级经验分享
 > 6. 将已有的内容翻译成其他语言
 > 
-> 若你是我们的协作者，请务必遵循 [Collaborator](#collaborator-协作者) 要求。
+> 若你是我们的协作者，请务必遵循 [Collaborator](#collaborator-协作者) 的要求。
 > 
 > 若本指南有任何模糊不清的地方，请通过 Issue 和我们反映。
 
@@ -38,27 +38,34 @@
 
 提出新的 Issue 之前，请你检查 Open 和 Closed 中是否存在相似 Issue：
 - 若 Open 中存在，且无法解决你的疑惑，请在该 Issue 下提出你的问题
-- 若 Closed 中存在，依然无法解决你的疑惑，可以重新新增一个 Issue
+- 若 Closed 中存在，但依然无法解决你的疑惑，可以重新新增一个 Issue
+- 若都不存在，则在新增你的 Issue 
 
 #### 新增 Issue
 
-1. 进入 Issue 页面点击 New issue 按钮
-2. 选择 Bug report、Evaluate request、Feature request 或新建一个空白模版来初始化你的 Issue
+1. 进入 Issue 页面点击 `New issue` 按钮
+2. 选择 `Bug report`, `Evaluate request`, `Feature request` 或新建一个空白模版来初始化你的 Issue
    - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-模版)
    - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 [Evaluate request 模版](#evaluate-request-模版)
    - Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请，详细请参考 [Feature request 模版](#feature-request-模版)
-3. 在禁止删除 **题目（加粗字体）** 的前提下，简述你的 Issue 内容，面对无法填写的部分，请以 `NULL.` 代替内容
+3. 在禁止删除 **题目（加粗字体）** 的前提下，简述你的 Issue 内容，面对无法填写的部分，请以 `NULL.` 代替内容，而非删除题目
 4. 修改标题中的 `<description>` 部分，建议参考已有 Issue
-5. 点击 Submit new issue 提交你的 Issue
+5. 点击 `Submit new issue` 按钮提交你的 Issue
 
 #### Bug report 模版
 
+- 仔细阅读 **题目（加粗字体）** ，尽可能保证 Bug 描述的简洁性和准确性
+
+**特别注意**
+
+- 通常情况下，Bug report 模版不需要 Email 管理员
 - Bug report 模版中，你可以申请参与：
   1. 修正拼写、词语错误
   2. 修正课堂笔记错误
   3. 修正考点思维导图错误（考点更新不纳入修正范围）
   4. 修正实验课设错误
   5. 提出你的建议、疑惑
+- 待管理员在该 Issue 下批准，便可移步 [Pull Request 模块](#pull-request-模块) 进行下一步操作。
 
 #### Evaluate request 模版
 
@@ -77,7 +84,7 @@
   2. 新增多级经验分享
 - 为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息
 - 填写邮件内容时，请前往 `CSU 教务系统` -> `培养管理` -> `我的培养方案`，邮件内容附加全屏截图即可，建议包含系统时间
-- 待管理员在该 Issue 下批准，便可移步 PR 进行下一步操作。
+- 待管理员在该 Issue 下批准，便可移步 [Pull Request 模块](#pull-request-模块) 进行下一步操作。
 
 #### Feature request 模版
 
@@ -98,7 +105,8 @@
   1. 优化或新增多个课堂笔记
   2. 优化或新增多个考点思维导图
   3. 优化或新增多个实验课设
-  4. 将已有内容翻译为其他语言
+  4. 新增新的学院、专业
+  5. 将已有内容翻译为其他语言
 - 为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息
 - 填写邮件内容时，请前往 `CSU 教务系统` -> `培养管理` -> `我的培养方案`，邮件内容附加全屏截图即可，建议包含系统时间
 - 待管理员在该 Issue 下批准，便可移步 [Pull Request 模块](#pull-request-模块) 进行下一步操作。
@@ -109,7 +117,7 @@
 
 #### Pull Request 准备工作
 
-1. Fork 主仓库到你的 GitHub 仓库中，并 clone 个人仓库到本地
+1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
 2. 在本地新建一个分支
    - 分支命名规则：
       ```
@@ -136,11 +144,17 @@
 - 文件、文件夹命名要求：
   - 禁止包含中文、特殊字符或空格
   - 需要简述文档、文件夹含义，而不是乱码
-- 处理的文档有多个语言版本时，请将文件放入 global 中的对应文件夹下，目前仅支持:
-  - en
-  - zh-simplify
-  - zh-tradition
-> 应采用同一文件名，不需要添加解释性后缀
+- 文件优化、新增要求：
+  - 处理的文档有多个自然语言版本时，请将文件放入 global 中的对应文件夹下，目前仅支持: en, zh-simplify, zh-tradition
+    - 应采用同一文件名，不需要添加解释性后缀
+  - 处理的文档有多个编程语言版本时，请重新构建 code 目录，并按照语言分类
+- 笔记、课设的优化、新增要求：
+  - 禁止出现多版本笔记：
+    - 若笔记已存在，则应在已有版本上进行迭代
+    - 若笔记不存在，则应申请添加新笔记
+  - 发生课改时，应在合适的 README.md 中做解释
+- 评教、经验分享要求：
+  - 措辞中肯，评价公正，遵守 [行为准则](../../../README.md#41-行为准则)
 
 #### Pull Request 合并分支
 
@@ -179,7 +193,7 @@
 
 **特别注意**
 
-- 此过程为交叉互审，除 Jacob953 外，至少需要两名以上的协作者 Approved 后才能合并
+- 此过程为交叉互审，除 Jacob953(owner) 外，至少需要两名以上的协作者 Approved 后才能合并
 ### EvalCSU 的 commit 注意事项
 
 1. 请尽量于本地进行 commit，有较大的操作空间与弹性。

@@ -27,4 +27,3 @@
 ### typedrandomly
 
 - 竞赛：ICPC金牌
-- 绩点：前25%

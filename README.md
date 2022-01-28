@@ -95,13 +95,16 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ### 3.2 贡献者
 
+感谢以下每个人对 EvalCSU 的贡献！
+
 **核心贡献者**
 
 <table>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?v=4" width="100px;" alt=""/><br /><sub><b>Jacob953</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72350550?v=4" width="100px;" alt=""/><br /><sub><b>jzndd</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Jacob953</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/72350550?s=60&v=4" width="100px;" alt=""/><br /><sub><b>jzndd</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/65447998?s=60&v=4" width="100px;" alt=""/><br /><sub><b>LegendZi</b></sub></td>
     </tr>
 </table>
 
@@ -109,9 +112,9 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 <table>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/63287428?v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/94861831?v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72063459?v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/63287428?s=60&v=4" width="100px;" alt=""/><br /><sub><b>DvIkero</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/94861831?s=60&v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/72063459?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
     </tr>
 </table>
 

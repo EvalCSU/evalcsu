@@ -13,7 +13,7 @@
 
 ### 2.1 评教目录
 
-- 计算机与科学
+- [计算机与科学](../../evaluation/cse/science/README.md)
 - 大数据
 - [信息安全](../../evaluation/cse/security/README.md) - Manager: fallme, ...
 - 物联网

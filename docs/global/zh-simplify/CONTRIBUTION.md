@@ -121,10 +121,10 @@
 2. 在本地新建一个分支
    - 分支命名规则：
       ```
-      <your github id>/<optional scope>/<faculty>
-      // e.g. jacob953/docs/security
+      <type>/[faculty]/<your github id>/
+      // e.g. docs/security/jacob953
       ```
-   - `<optional scope>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
+   - `<type>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**
 4. 在本地提交 commit 时，请严格遵循 [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
 

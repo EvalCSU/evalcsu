@@ -27,3 +27,7 @@
 ### typedrandomly
 
 - 竞赛：ICPC金牌
+
+### the-fall-moon
+- 排名：专业前10
+- 绩点：一等奖学金

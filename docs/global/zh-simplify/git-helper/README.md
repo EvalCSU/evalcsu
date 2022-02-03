@@ -3,7 +3,7 @@
 > Git Helper 仅涉及常用的使用场景，更多高级的 Git 用法请参考 [Git doc](https://git-scm.com/doc)
 
 - [EvalCSU - Git Helper](#evalcsu---git-helper)
-	- [Git  introduction](#git--introduction)
+	- [Git introduction](#git-introduction)
 		- [Repository](#repository)
 	- [Time Travel](#time-travel)
 		- [back version](#back-version)
@@ -27,7 +27,7 @@
 		- [Tag Delete](#tag-delete)
 	- [Custom Git](#custom-git)
 
-## Git  introduction
+## Git introduction
 
 > 详细参考 [Git Self-Introduction](Git_Self-Inctroduction.md)
 

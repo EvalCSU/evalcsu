@@ -1,6 +1,6 @@
 # EvalCSU - Git Helper
 
-> Git Helper 仅涉及常用的使用场景，更多高级的 Git 用法请参考 [git doc](https://git-scm.com/doc)
+> Git Helper 仅涉及常用的使用场景，更多高级的 Git 用法请参考 [Git doc](https://git-scm.com/doc)
 
 - [EvalCSU - Git Helper](#evalcsu---git-helper)
 	- [Git  introduction](#git--introduction)

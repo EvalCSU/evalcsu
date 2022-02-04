@@ -1,8 +1,8 @@
 # Git  introduction
 
-**本质**：C语言开发的分布式版本控制系统。
+**本质**：**C语言** 开发的 **分布式** **版本控制系统**
 
-> 版本控制系统：能管理所有文件，但只能追踪文本文件的内容改动，而不能追踪二进制文件的内容变化。
+> 版本控制系统：能管理所有文件，但只能追踪文本文件的内容改动，而不能追踪二进制文件的内容变化
 
 **分布式 vs 集中式**：
 
@@ -17,7 +17,7 @@
 
 1. 命令行安装：
    - `git`：检查系统是否安装Git；
-   - `sudo apt-get install git(git-core)`：直接安装Git，Debian或者较老的Ubuntu需要用`git-core`，因为还有一个软件叫GIT。
+   - `sudo apt-get install git(git-core)`：直接安装 Git，Debian 或者较老的 Ubuntu 需要用 `git-core`，因为还有一个软件叫 GIT 。
 2. 手动安装：
    - 从官网下载源码，并进入对应文件夹，打开命令行；
    - `./config`：配置文件；
@@ -64,7 +64,7 @@ git config --global user.email "email@example.com"
 
 **定义**：仓库又叫版本库，可以看作一个目录，里面的所有文件都被Git管理起来。
 
-> 编码选择：UTF-8编码，不会引起冲突，又被所有平台支持。
+> 编码选择：UTF-8 编码，不会引起冲突，又被所有平台支持。
 >
 > 软件选择：Notepad++，而不是记事本，因为记事本会在文件开头添加0xefbbbf，会导致语法错误等
 
@@ -110,5 +110,5 @@ git commmit -m "<message>"	  \\Commit all files to branch
 
 **Attention**:
 
-- `fatal: not a git repository (or any of the parent directories)`：没有在repository中执行git指令，cd到repository中即可。
-- `fatal: pathspec '<filename>' did not match any files`：添加\<filename>与创建\<filename>不一样，存在才能添加，因此touch \<filename>即可。
+- `fatal: not a git repository (or any of the parent directories)`：没有在 repository 中执行 Git 指令，cd 到 repository 中即可
+- `fatal: pathspec '<filename>' did not match any files`：添加 \<filename> 与创建 \<filename> 不一样，存在才能添加，因此 touch \<filename> 即可

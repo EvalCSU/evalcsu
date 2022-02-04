@@ -2,11 +2,11 @@
 
 **理解**：
 
-- 一条时间线，不相互干扰，可创建、删除、切换和合并。
+- 一条时间线，不相互干扰，可创建、删除、切换和合并
 
 **CVS vs SVN**：
 
-- 集中式控制系统的分支管理开销极大。
+- 集中式控制系统的分支管理开销极大
 
 ### Create and Merge Branch
 
@@ -66,8 +66,8 @@ git branch -d <branch_name>	//Delete <branch_name> branch
 
 **理解**：
 
-- Git默认会用`Fast forward`模式合并分支，在这种模式下，删除分支后，会丢掉分支信息；
-- `master`分支应该是稳定了，仅用来发布新版本，不能在上面干活；
+- Git默认会用 `fast forward` 模式合并分支，在这种模式下，删除分支后，会丢掉分支信息；
+- `master` 分支应该是稳定了，仅用来发布新版本，不能在上面干活；
 - 其他分支是不稳定的。
 
 **参数**：
@@ -116,7 +116,7 @@ git cherry-pick <commit_id>	\\Merge dev with bug of master
 
 **Attention**：
 
-- 必须保证当前分支的工作区干净，才能转换到其他分支。
+- 必须保证当前分支的工作区干净，才能转换到其他分支
 
 ### Feature Branch
 
@@ -137,13 +137,13 @@ git cherry-pick <commit_id>	\\Merge dev with bug of master
 **理解**：
 
 - 推送分支：
-  - `master`分支是主分支，因此需要时刻与远程库同步；
-  - `dev`分支是开发分支，团队所有成员都需要在上面工作，因此也需要同步；
-  - bug分支只用于本低修复bug，不需要同步；
-  - feature分支是否推送取决于团队；
+  - `master` 分支是主分支，因此需要时刻与远程库同步；
+  - `dev` 分支是开发分支，团队所有成员都需要在上面工作，因此也需要同步；
+  - `bug` 分支只用于本地修复 `bug`，不需要同步；
+  - `feature` 分支是否推送取决于团队；
   - 本地新建的分支如果不推送到远程，对其他人就是不可见的。
 - 抓取分支：
-  - 从远程库clone时，默认情况下，只能看到`master`分支；
+  - 从远程库 `clone` 时，默认情况下，只能看到 `master` 分支；
   - 要建立链接才能抓取分支；
   - 本地和远程分支的名称最好一致。
 
@@ -168,19 +168,19 @@ git branch --set-upstream-to=<repository>/<branch_name> <branch_name>
 **Attention**：
 
 - 推送分支：
-  1. 如果推送失败，则因为远程分支比你的本地更新，需要先用`git pull`试图合并；
+  1. 如果推送失败，则因为远程分支比你的本地更新，需要先用 `git pull` 试图合并；
   2. 如果合并有冲突，则解决冲突，并在本地提交。
 - 抓取分支：
-  - `no tracking information`：则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to <branch-name> origin/<branch-name>`；
-  - 如果推送失败，先用`git pull`抓取远程的新提交；
+  - `no tracking information`：则说明本地分支和远程分支的链接关系没有创建，用命令 `git branch --set-upstream-to <branch-name> origin/<branch-name>`；
+  - 如果推送失败，先用 `git pull` 抓取远程的新提交；
   - 如果有冲突，要先处理冲突。
 
 ### Rebase
 
 **理解**：
 
-- rebase操作可以把本地未push的分叉提交历史整理成直线；
-- rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
+- rebase 操作可以把本地未 push 的分叉提交历史整理成直线；
+- rebase 的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 
 **命令**：
 

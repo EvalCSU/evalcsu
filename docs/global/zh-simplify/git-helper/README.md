@@ -26,8 +26,8 @@
 		- [Tag Creation](#tag-creation)
 		- [Tag Delete](#tag-delete)
 	- [Custom Git](#custom-git)
-	- [Igonre Files](#igonre-files)
-	- [Alias](#alias)
+		- [Igonre Files](#igonre-files)
+		- [Alias](#alias)
 
 ## Git introduction
 
@@ -366,7 +366,7 @@ git push <repository_name> :refs/tags/<tag_name>	\\Delete remote <tag_name>
 
 **理解**：自定义 Git 配置，方便使用和更加细致地管理版本库，是 Git 的高级用法
 
-## Igonre Files
+### Igonre Files
 
 **理解**：在 `.gitignore` 中编写需要忽略的文件
 
@@ -374,6 +374,6 @@ git push <repository_name> :refs/tags/<tag_name>	\\Delete remote <tag_name>
 - 忽略编译生成的中间文件、可执行文件等
 - 忽略自己的带有敏感信息的配置文件
 
-## Alias
+### Alias
 
 **理解**：简化和自定义 git 的相关操作

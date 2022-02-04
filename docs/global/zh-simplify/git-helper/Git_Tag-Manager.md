@@ -28,7 +28,7 @@ git show <tag_name>		//Show message of <tag_name>
 
 **Attention**：
 
-- 如果一个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个conmit的标签。
+- 如果一个 commit 既出现在 master 分支，又出现在 dev 分支，那么在这两个分支上都可以看到这个 conmit 的标签。
 
 ### Tag Delete
 

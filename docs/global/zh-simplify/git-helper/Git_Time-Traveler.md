@@ -61,7 +61,7 @@ git fsck --lost-found
 **理解**：
 
 - `LearningGit` 文件夹就是一个工作区，但其中的 `.git` 并不算在工作区内，因为它是 Git 的版本库
-- `.git` 中包含了暂存区，自动创建的第一个分支——主分支 `master`，指针 `HEAD`
+- `.git` 中包含了暂存区 `stage`，自动创建的第一个分支——主分支 `master`，指针 `HEAD`
 - 主分支 `master` 自动生成且唯一，并且名称可以自定义
 
 ## Management of change

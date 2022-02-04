@@ -85,5 +85,5 @@ git clone <repository>	//Clone a repository
 
 **理解**：
 
-- Git支持其他协议，但一般使用`git://`。
-- `https`：速度慢，每次推送都必须输入口令。
+- Git支持其他协议，但一般使用`git://`
+- `https`：速度慢，每次推送都必须输入口令

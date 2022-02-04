@@ -31,7 +31,7 @@ cat <file_name>	//View imformation of <file_name>
 //查看所有命令
 git reflog	 //View history of commit
 
-//找回所有git-add的文件
+//找回所有 git-add 的文件
 git fsck --lost-found
 ```
 
@@ -44,12 +44,15 @@ git fsck --lost-found
 
 **理解**：
 
-- 版本退回指的是退回到特定地址，或者`HEAD`指针所在位置；
-- Git是分布式的版本控制系统，因此，<commit_id>不能采用1，2，3…的形式，而是16进制字符。
+- 版本退回指的是退回到特定地址，或者 `HEAD` 指针所在位置；
+- Git是分布式的版本控制系统，因此，\<commit_id> 不能采用1，2，3…的形式，而是16进制字符。
 
 **Attention**：
 
-`HEAD`：HEAD表示当前版本，HEAD\^表示上1个版本，HEAD^^表示上2个版本，HEAD~n表示上n个版本。
+`HEAD`：HEAD表示当前版本
+  - HEAD\^ 表示上1个版本
+  - HEAD^^ 表示上2个版本
+  - HEAD~n 表示上n个版本
 
 `version`：版本号只需要写开头就行，Git会自动检索。
 
@@ -57,20 +60,20 @@ git fsck --lost-found
 
 **理解**：
 
-- `BianTeam`文件夹就是一个工作区，但其中的`.git`并不算在工作区内，因为它是Git的版本库；
-- `.git`中包含了暂存区，自动创建的第一个分支`mastter`，指针`HEAD`；
-- `master`自动生成且唯一。
+- `LearningGit` 文件夹就是一个工作区，但其中的 `.git` 并不算在工作区内，因为它是 Git 的版本库
+- `.git` 中包含了暂存区，自动创建的第一个分支——主分支 `master`，指针 `HEAD`
+- 主分支 `master` 自动生成且唯一，并且名称可以自定义
 
 ## Management of change
 
 **理解**：
 
-- Git仅管理的是修改：
-  - `git add`把工作区的修改放到暂存区中，准备提交；
-  - `git commit`是把暂存区的修改提交到分支中。
-- 在`git add`后修改的内容无法提交到分支，需要再次`git add`。
+- Git 仅管理的是修改：
+  - `git add` 把工作区的修改放到暂存区中，准备提交；
+  - `git commit` 是把暂存区的修改提交到分支中。
+- 在 `git add` 后,再次修改的内容就无法提交到分支，需要再次 `git add`
 
-## Undo modify
+## Undo Modify
 
 **命令**：
 
@@ -88,7 +91,7 @@ git reset HEAD <file_name>	//Push <file_name> file back to Working Directory fro
 
 - `git checkout -- <file_name>`：
   - 如果文件未放入暂存区，则恢复到版本库时的版本；
-  - 如果文件已经添加到暂存库，则恢复到添加到暂存库后的版本。
+  - 如果文件已经添加到暂存区，则恢复到添加到暂存区后的版本。
 
 **Attention**：
 
@@ -108,5 +111,5 @@ git rm <filename>	\\Delete file from repository
 
 **理解**：
 
-- `git checkout -- <filename>`：可恢复误删文件；
-- 未提交到版本库的文件无法恢复。
+- `git checkout -- <filename>`：可恢复误删文件，前提是文件已被添加到暂存区
+- 未提交到版本库的文件无法恢复

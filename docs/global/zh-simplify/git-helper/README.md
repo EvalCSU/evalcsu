@@ -1,6 +1,6 @@
 # EvalCSU - Git Helper
 
-> Git Helper 仅涉及常用的使用场景，更多高级的 Git 用法请参考 [Git doc](https://git-scm.com/doc)
+> Git Helper 主要参考了 [廖雪峰 Git](https://www.liaoxuefeng.com/wiki/896043488029600)，仅涉及常用的使用场景，更多高级的 Git 用法请参考 [Git doc](https://git-scm.com/doc)
 
 - [EvalCSU - Git Helper](#evalcsu---git-helper)
 	- [Git introduction](#git-introduction)
@@ -26,6 +26,8 @@
 		- [Tag Creation](#tag-creation)
 		- [Tag Delete](#tag-delete)
 	- [Custom Git](#custom-git)
+	- [Igonre Files](#igonre-files)
+	- [Alias](#alias)
 
 ## Git introduction
 
@@ -33,7 +35,7 @@
 
 **本质**：**C语言** 开发的 **分布式** **版本控制系统**
 
-> 版本控制系统：能管理所有文件，但只能追踪文本文件的内容改动，而不能追踪二进制文件的内容变化。
+> 版本控制系统：能管理所有文件，但只能追踪文本文件的内容改动，而不能追踪二进制文件的内容变化
 
 **分布式vs集中式**：
 
@@ -96,12 +98,19 @@ git reflog	 \\Show command history
 **理解**：
 
 - `LearningGit` 文件夹就是一个工作区，但其中的 `.git` 并不算在工作区内，因为它是 Git 的版本库
-- `.git` 中包含了暂存区，自动创建的第一个分支——主分支 `mastter`，指针 `HEAD`
-- 主分支 `master` 自动生成且唯一
+- `.git` 中包含了暂存区 `stage` ，自动创建的第一个分支——主分支 `master`，指针 `HEAD`
+- 主分支 `master` 自动生成且唯一，并且名称可以自定义
+
+
 
 ### Management of Change
 
-**理解**：Git仅管理的是修改，`git add`把工作区的修改放到暂存区中，准备提交，`git commit`是把暂存区的修改提交到分支中，因此，在`git add`后修改的内容无法提交。
+**理解**：
+
+- Git 仅管理的是修改：
+  - `git add` 把工作区的修改放到暂存区中，准备提交；
+  - `git commit` 是把暂存区的修改提交到分支中。
+- 在 `git add` 后,再次修改的内容就无法提交到分支，需要再次 `git add`
 
 ### Undo Modify
 
@@ -237,7 +246,7 @@ git switch <branchname>		\\Switch to <branchname> branchname
 
 ### Branch management strategy
 
-> 通常，合并分支时，如果可能，Git会用`Fast forward`模式，但这种模式下，删除分支后，会丢掉分支信息。
+> 通常，合并分支时，如果可能，Git会用 `Fast forward` 模式，但这种模式下，删除分支后，会丢掉分支信息。
 
 **理解**：
 
@@ -269,7 +278,7 @@ git stash list	\\List elements of stash
 git stash drop	\\Drop out top element
 git stash apply stash@{...}		\\Reappear No.<...> element
 	eg:git stash apply stash@{0}	\\Reappear No.0 element
-git cherry-pick <commitid>	\\Merge dev with bug of master
+git cherry-pick <commit id>	\\Merge dev with bug of master
 	eg:git cherry-pick f32c45
 ```
 
@@ -277,8 +286,8 @@ git cherry-pick <commitid>	\\Merge dev with bug of master
 
 **理解**：
 
-- 与bug分支相似。
-- 开发一个新的feature，最好建立一个新的分支。
+- 与 bug 分支相似
+- 开发一个新的 feature ，最好建立一个新的分支
 
 ### Collobration
 
@@ -317,8 +326,8 @@ git pull	\\Pull index to repository
 
 **理解**：
 
-- rebase操作可以把本地未push的分叉提交历史整理成直线；
-- rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
+- rebase 操作可以把本地未 push 的分叉提交历史整理成直线；
+- rebase 的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 
 ## Tag management
 
@@ -326,8 +335,8 @@ git pull	\\Pull index to repository
 
 **理解**：
 
-- 标签相当于指针，指向`commit_id`。
-- 标签不可移动。
+- 标签相当于指针，指向 `commit_id`
+- 标签不可移动
 
 ### Tag Creation
 
@@ -352,3 +361,19 @@ git push <repository_name> :refs/tags/<tag_name>	\\Delete remote <tag_name>
 ```
 
 ## Custom Git
+
+> 详细参考 [Git Custom](Git_Custom.md)
+
+**理解**：自定义 Git 配置，方便使用和更加细致地管理版本库，是 Git 的高级用法
+
+## Igonre Files
+
+**理解**：在 `.gitignore` 中编写需要忽略的文件
+
+- 忽略操作系统自动生成的文件
+- 忽略编译生成的中间文件、可执行文件等
+- 忽略自己的带有敏感信息的配置文件
+
+## Alias
+
+**理解**：简化和自定义 git 的相关操作

@@ -13,9 +13,9 @@
 > 5. 申请参与校级、院级或专业级经验分享
 > 6. 将已有的内容翻译成其他语言
 > 
-> 若你是我们的协作者，请务必遵循 [Collaborator](#collaborator-协作者) 的要求。
+> 若你是我们的协作者，请务必遵循 [Collaborator](#collaborator-协作者) 的要求
 > 
-> 若本指南有任何模糊不清的地方，请通过 Issue 和我们反映。
+> 若本指南有任何模糊不清的地方，请通过 Issue 和我们反映
 
 - [为 EvalCSU 贡献](#为-evalcsu-贡献)
   - [Issue 模块](#issue-模块)
@@ -31,7 +31,14 @@
     - [Review 流程](#review-流程)
   - [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
 
-> 为了便于指导小白操作，我们将根据 GitHub 的操作模块进行详细指导，尽管如此，我们还是建议你多参考已有的 Issue 或者 PR
+> 为了便于指导小白操作，我们将根据 GitHub 的操作模块进行详细指导
+> 
+> 尽管如此，我们还是建议你多参考已有的 Issue 或者 PR
+> 
+> 若你不是小白，可以参考一下几点：
+> 1. 提交错误或建议等，请参考 [Bug report 模版](#bug-report-模版)
+> 2. 提交评教或分享经验等，请参考 [Evaluate request 模版](#evaluate-request-模版)
+> 3. 提交课设、笔记或作业等，请参考 [Feature request 模版](#feature-request-模版)
 
 ### Issue 模块
 > Issue 是一种非常好的可沉淀的交流方式，能帮助 EvalCSU 实现答疑交流、反馈缺陷和提出新需求，欢迎你通过 Issue 与我们交流
@@ -113,9 +120,15 @@
 
 ### Pull Request 模块
 
-> PR 即将你的贡献合并、发布到主仓库中，任何 PR 都需要链接到已存在的 Issue，因此，建议你优先阅读 [Issue 模块](#issue-模块)
+> PR 即将你的贡献合并、发布到主仓库中
+> 
+> **任何 PR 都需要链接到已存在，并且已授权的 Issue**
+> 
+> 因此，在提交 PR 前，建议你优先阅读 [Issue 模块](#issue-模块)
 
 #### Pull Request 准备工作
+
+> 更多 Git 相关操作，请参考 [Git Helper](git-helper/README.md)
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
 2. 在本地新建一个分支

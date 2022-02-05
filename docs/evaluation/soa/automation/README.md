@@ -1,3 +1,5 @@
+[> Back](../../../faculty/soa/README.md)
+
 # 自动化评教
 
 > 老师排名不分先后!

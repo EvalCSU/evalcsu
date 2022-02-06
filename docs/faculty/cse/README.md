@@ -5,7 +5,7 @@
 ## 1 笔记
 
 - 计算机与科学
-- 大数据
+- [大数据](./bigdata/README.md)
 - [信息安全](./security/README.md)
 - 物联网
 - [通信工程](./communication/README.md)

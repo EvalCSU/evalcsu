@@ -1,4 +1,4 @@
-[> Back](../../../README.md)
+[> Back](../../../README.md#3.1-贡献准则)
 
 [English](CONTRIBUTION.md) [繁體中文](CONTRIBUTION_zh_tradition.md)
 ## 为 EvalCSU 贡献
@@ -175,9 +175,12 @@
 1. 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
 2. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
    1. 标题可以按照 `<type>[optional scope]: <description>` 的方式命名
-   2. 添加 **Follow** 题目，链接到你的 Issue，可请参考 [范例](https://github.com/Jacob953/evalcsu/pull/3)
-   3. 添加 **Done** 题目，在题目下方简述你的修改，可请参考 [范例](https://github.com/Jacob953/evalcsu/pull/3)
-   4. 在末尾 @ 对应的管理员
+   2. 在 **Related Issue** 中链接到相关 Issue，不可缺失
+   3. 在 **Propose changes** 中简述你的改动，不可缺失
+   4. 在 **Additional information** 中添加额外信息，可选
+   5. 在 **Checklist** 中检查你的任务，不可缺失，但不要求一定完成
+   6. 在 **Screenshoot** 中贴上对应截图
+   7. 非协作者需要在末尾 @ 对应的管理员，协作者可以忽略
 3. 点击 `Create pull request` 按钮创建你的合并请求
 
 **特别注意**

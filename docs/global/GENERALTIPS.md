@@ -1,4 +1,4 @@
-[> Back](../../README.md)
+[> Back](../../README.md#2-项目目录)
 
 ## 通用技巧
 

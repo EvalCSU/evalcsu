@@ -1,4 +1,4 @@
-[> Back](../../../faculty/cse/README.md)
+[> Back](../../../faculty/cse/README.md#2.1-评教目录)
 
 # 信息安全评教
 

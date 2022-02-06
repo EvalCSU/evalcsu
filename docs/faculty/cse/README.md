@@ -5,7 +5,7 @@
 ## 1 笔记
 
 - 计算机与科学
-- 大数据
+- [大数据](./bigdata/README.md)
 - [信息安全](./security/README.md)
 - 物联网
 - [通信工程](./communication/README.md)
@@ -16,7 +16,7 @@
 ### 2.1 评教目录
 
 - [计算机与科学](../../evaluation/cse/science/README.md)
-- 大数据
+- [大数据](../../evaluation/cse/bigdata/README.md)-Manager:Aiden,
 - [信息安全](../../evaluation/cse/security/README.md) - Manager: fallme, ...
 - 物联网
 - [通信工程](../../evaluation/cse/communication/README.md) - Manager: GZHuan, .
@@ -36,6 +36,7 @@
 | ------- | ----------------- |
 | fallme  | 1285094405@qq.com |
 | GZHuan  | 1709884032@qq.com |
+| Aiden   | 1149440709@qq.com |
 
 ## 3 专业规划经验分享
 

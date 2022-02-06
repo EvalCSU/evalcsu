@@ -101,10 +101,10 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 <table>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Jacob953</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72350550?s=60&v=4" width="100px;" alt=""/><br /><sub><b>jzndd</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/65447998?s=60&v=4" width="100px;" alt=""/><br /><sub><b>LegendZi</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Jacob953</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/72350550?s=120&v=4" width="100px;" alt=""/><br /><sub><b>jzndd</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/65447998?s=120&v=4" width="100px;" alt=""/><br /><sub><b>LegendZi</b></sub></td>
     </tr>
 </table>
 
@@ -112,10 +112,11 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 <table>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/63287428?s=60&v=4" width="100px;" alt=""/><br /><sub><b>DvIkero</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/94861831?s=60&v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72063459?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/62288395?s=60&v=4" width="100px;" alt=""/><br /><sub><b>typedrandomly</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/63287428?s=120&v=4" width="100px;" alt=""/><br /><sub><b>DvIkero</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/94861831?s=120&v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/72063459?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/62288395?s=120&v=4" width="100px;" alt=""/><br /><sub><b>typedrandomly</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/72177652?s=120&v=4" width="100px;" alt=""/><br /><sub><b>puzi12138</b></sub></td>
     </tr>
 </table>
 

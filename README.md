@@ -107,6 +107,9 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
         <td align="center"><img src="https://avatars.githubusercontent.com/u/65447998?s=120&v=4" width="100px" alt=""/><br /><sub><b>LegendZi</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/58100940?s=120&v=4" width="100px" alt=""/><br /><sub><b>Aiden927</b></sub></td>
     </tr>
+    <tr>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/73345205?s=120&v=4" width="100px" alt=""/><br /><sub><b>NIUYI0511</b></sub></td>
+    </tr>
 </table>
 
 **所有贡献者**

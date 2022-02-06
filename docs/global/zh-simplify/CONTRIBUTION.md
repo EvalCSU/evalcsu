@@ -183,7 +183,7 @@
 **特别注意**
 
 - 禁止对本仓库的 gh-pages 进行任何操作
-- 如果参与了评教（或经验分享）部分，请在 [EVALUATOR.md](../EVALUATOR.md) (或 [SHARER.md](../SHARER.md) ) 中添加你的信息
+- 如果参与了评教（或经验分享）部分，请在 [EVALUATOR.md](../EVALUATOR.md) 中添加你的信息
   - 严禁出现个人信息，具有权威性即可
 
 ### Collaborator 协作者

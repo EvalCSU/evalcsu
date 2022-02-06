@@ -18,7 +18,7 @@
 - [计算机与科学](../../evaluation/cse/science/README.md)
 - 大数据
 - [信息安全](../../evaluation/cse/security/README.md) - Manager: fallme, ...
-- 物联网
+- [物联网](../../evaluation/cse/iot/README.md)
 - [通信工程](../../evaluation/cse/communication/README.md) - Manager: GZHuan, .
 - 软件工程
 

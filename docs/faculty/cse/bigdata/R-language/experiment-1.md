@@ -28,7 +28,7 @@
 
 ## 二、实验环境
 
-Windows系统，RGui（32-bit）
+Windows系统，RGui（32-bit）。。
 
 
 

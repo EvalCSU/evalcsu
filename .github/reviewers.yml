@@ -33,7 +33,7 @@ files:
     - security # group
   '**':
     - repository-owners # group
-    - bigdata
+    - security
 
 options:
   ignore_draft: true

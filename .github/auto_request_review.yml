@@ -31,7 +31,7 @@ files:
   'security':
     - security # group
   '**':
-    - automation # group
+    - repository-owners # group
 
 options:
   ignore_draft: true

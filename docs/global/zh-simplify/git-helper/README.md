@@ -2,6 +2,9 @@
 
 > Git Helper 主要参考了 [廖雪峰 Git](https://www.liaoxuefeng.com/wiki/896043488029600)，仅涉及常用的使用场景，更多高级的 Git 用法请参考 [Git doc](https://git-scm.com/doc)
 
+>纯 Git 新手可先查看 [Git 新手指南](../NOOBGUIDTOGIT.md)进行概念了解和学习
+
+
 - [EvalCSU - Git Helper](#evalcsu---git-helper)
 	- [Git introduction](#git-introduction)
 		- [Repository](#repository)

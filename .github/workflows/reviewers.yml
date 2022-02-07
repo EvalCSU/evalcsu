@@ -1,11 +1,13 @@
 reviewers:
   # The default reviewers
   defaults:
-    - jzndd
-    - team:EvalCSU # GitHub team
+    - repository-owners # GitHub team
 
   # Reviewer groups each of which has a list of GitHub usernames
   groups:
+    repository-owners:
+      - Jacob953
+      - DevRickLin
     science:
       - DevRickLin # username
       - HanX-gthb # username
@@ -29,7 +31,7 @@ files:
     - bigdata # group
   'security':
     - security # group
-  'automation':
+  '**':
     - automation # group
 
 options:

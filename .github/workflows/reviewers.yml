@@ -1,0 +1,38 @@
+reviewers:
+  # The default reviewers
+  defaults:
+    - team:EvalCSU # GitHub team
+
+  # Reviewer groups each of which has a list of GitHub usernames
+  groups:
+    science:
+      - DevRickLin # username
+      - HanX-gthb # username
+    bigdata:
+      - tangent-heng # username
+      - Yemonade # username
+      - zhangchenqi123 # username
+    security:
+      - Gstalker # username
+      - the-fall-moon # username
+      - wbfwonderful # username
+    automation:
+      - jzndd
+
+files:
+  # Keys are glob expressions.
+  # You can assign groups defined above as well as GitHub usernames.
+  'science':
+    - science # group
+  'bigdata':
+    - bigdata # group
+  'security':
+    - security # group
+  'automation':
+    - automation # group
+
+options:
+  ignore_draft: true
+  ignored_keywords:
+    - DO NOT REVIEW
+  enable_group_assignment: false

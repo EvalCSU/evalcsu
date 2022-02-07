@@ -16,7 +16,7 @@
 ### 2.1 评教目录
 
 - [计算机与科学](../../evaluation/cse/science/README.md)
-- 大数据
+- [大数据](../../evaluation/cse/bigdata/README.md)-Manager:Aiden927,
 - [信息安全](../../evaluation/cse/security/README.md) - Manager: fallme, ...
 - [物联网](../../evaluation/cse/iot/README.md)
 - [通信工程](../../evaluation/cse/communication/README.md) - Manager: GZHuan, .
@@ -32,10 +32,11 @@
 
 **2019**
 
-| Manager | Email             |
-| ------- | ----------------- |
-| fallme  | 1285094405@qq.com |
-| GZHuan  | 1709884032@qq.com |
+| Manager  | Email             |
+| -------- | ----------------- |
+| fallme   | 1285094405@qq.com |
+| GZHuan   | 1709884032@qq.com |
+| Aiden927 | 1149440709@qq.com |
 
 ## 3 专业规划经验分享
 

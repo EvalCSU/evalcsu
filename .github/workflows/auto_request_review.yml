@@ -1,7 +1,7 @@
 name: Auto Request Review
 
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, ready_for_review, reopened]
 
 jobs:
@@ -13,4 +13,4 @@ jobs:
         uses: necojackarc/auto-request-review@v0.7.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          config: .github/workflows/reviewers.yml # Config file location override
+          config: .github/reviewers.yml # Config file location override

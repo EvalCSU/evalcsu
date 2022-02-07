@@ -18,8 +18,8 @@
 
 #### R语言
 
-- [实验一](R-language\experiment-1.md)
-- [实验二](R-language\experiment-2.md)
+- [实验一](R-language/experiment-1.md)
+- [实验二](R-language/experiment-2.md)
 
 #### 深度学习
 
@@ -27,7 +27,7 @@
 
 #### web技术
 
-- [实验报告](Web-technology\web-lab-report.md)
+- [实验报告](Web-technology/web-lab-report.md)
 
 
 

@@ -1,6 +1,5 @@
 [> Back](../../../README.md#3.1-贡献准则)
 
-[English](CONTRIBUTION.md) [繁體中文](CONTRIBUTION_zh_tradition.md)
 ## 为 EvalCSU 贡献
 
 > **请确保你已经仔细阅读了本指南，在工作流程清晰后再进行操作!**

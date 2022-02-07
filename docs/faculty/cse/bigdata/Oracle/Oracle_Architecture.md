@@ -10,11 +10,11 @@ Instance consists of **Memory Structures** and **Background Process**
 
 Database consists consists of **Files**(Control Files, Redo Log files, Data Files...)
 
-![](./images/architecture.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080029332.jpg)
 
 ## Instance
 
-![](./images/Instance1.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080029399.jpg)
 
 Memory
 
@@ -41,7 +41,7 @@ All Server processes and Background share the SGA.
 
 Components
 
-![](./images/SGA1.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080030157.jpg)
 
 （实线代表必须，虚线代表可有可无）
 
@@ -74,7 +74,7 @@ Components
 
 Components
 
-![](./images/PGA1.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080030760.jpg)
 
 - SQL Work Area
 - Session Memory
@@ -86,11 +86,11 @@ Components
 - Each background process performs a unique task, but works with the other processes
 - Oracle Database creates background processes automatically when you start a database instance
 
-![](./images/BackgroundProcess1.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080030102.jpg)
 
 （实线代表必须，虚线代表可有可无）
 
-![](./images/BackgroundProcess2.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080030578.jpg)
 
 Server Process is started with the connection and stopped with the connection whereas the Background Process is ... instance
 
@@ -103,13 +103,13 @@ To store and manage data, Oracle Database uses
 - PSS (Physical Storage Structures): include Data files, Control files, Redo Log files; viewable at the OS level;
 - LSS (Logical Storage Structures): Data Blocks, Extents, Segments and Tablespaces
 
-![](./images/Database2.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080030804.jpg)
 
 one tablespace is like
 
 ![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202112221536173.jpg)
 
-![](./images/Database3.jpg)
+![](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080030949.jpg)
 
 ## 关闭
 

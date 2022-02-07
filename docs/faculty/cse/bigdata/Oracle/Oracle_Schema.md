@@ -627,29 +627,29 @@ The definition of *order* for a tree would be the maximum branching factor, i.e.
 
 假设order=4
 
-插入1,4,7,10并变形![avatar](./images/B+1.jpg)
+插入1,4,7,10并变形![avatar](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031552.jpg)
 
 插入17,21并变形
 
-![avatar](./images/B+2.jpg)
+![avatar](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031690.jpg)
 
 变形结果
 
-![avatar](./images/B+3.jpg)
+![avatar](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031366.jpg)
 
 
 
 插入31,25,19,20并变形
 
-![avatar](./images/B+4.jpg)
+![avatar](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031253.jpg)
 
 变形结果
 
-![avatar](./images/B+5.jpg)![avatar](./images/B+6.jpg)
+![avatar](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080032996.jpeg)![avatar](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080032777.jpg)
 
 最终结果
 
-![avatar](./images/B+7.jpg)
+![avatar](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080032504.jpg)
 
 位图索引：见笔记
 

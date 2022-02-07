@@ -33,7 +33,6 @@ files:
     - security # group
   '**':
     - repository-owners # group
-    - security
 
 options:
   ignore_draft: true

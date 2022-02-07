@@ -25,17 +25,17 @@ reviewers:
 files:
   # Keys are glob expressions.
   # You can assign groups defined above as well as GitHub usernames.
-  'science':
+  '**/science/**':
     - science # group
-  'bigdata':
+  '**/bigdata/**':
     - bigdata # group
-  'security':
+  '**/security/**':
     - security # group
   '**':
     - repository-owners # group
 
 options:
-  ignore_draft: true
+  ignore_draft: false
   ignored_keywords:
     - DO NOT REVIEW
   enable_group_assignment: false

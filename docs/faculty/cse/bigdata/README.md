@@ -19,13 +19,14 @@
 
 #### R语言
 
-- [实验一](R-language/experiment-1.md)
-- [实验二](R-language/experiment-2.md)
+- [笔记](R-language/Note)
+- [实验](R-language/Experiment)
 
 #### 深度学习
 
 #### 大型数据库技术
-- [课程笔记](Oracle)
+- [笔记](Oracle/Note)
+- [实验](Oracle/Experiment)
 
 #### web技术
 

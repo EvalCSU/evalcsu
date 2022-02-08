@@ -8,6 +8,8 @@ reviewers:
     repository-owners:
       - Jacob953
       - DevRickLin
+    core-manager:
+      - jzndd
     science:
       - DevRickLin # username
       - HanX-gthb # username
@@ -33,6 +35,7 @@ files:
     - security # group
   '**':
     - repository-owners # group
+    - core-manager # group
 
 options:
   ignore_draft: false

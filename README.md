@@ -99,7 +99,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 **核心贡献者**
 
-<table>
+<table width="700" style="table-layout:fixed">
     <tr>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?s=120&v=4" width="100px" alt=""/><br /><sub><b>Jacob953</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?s=120&v=4" width="100px" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
@@ -108,22 +108,25 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
         <td align="center"><img src="https://avatars.githubusercontent.com/u/58100940?s=120&v=4" width="100px" alt=""/><br /><sub><b>Aiden927</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/73345205?s=120&v=4" width="100px" alt=""/><br /><sub><b>NIUYI0511</b></sub></td>
     </tr>
+    <tr>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/67886875?s=120&v=4" width="100px;" alt=""/><br /><sub><b>fallme</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/63188873?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Yemonade</b></sub></td>
+    </tr>
 </table>
 
 **所有贡献者**
 
-<table>
+<table width="700" style="table-layout:fixed">
     <tr>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/63287428?s=120&v=4" width="100px;" alt=""/><br /><sub><b>DvIkero</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/94861831?s=120&v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/72063459?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/62288395?s=120&v=4" width="100px;" alt=""/><br /><sub><b>typedrandomly</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/72177652?s=120&v=4" width="100px;" alt=""/><br /><sub><b>puzi12138</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/67886875?s=120&v=4" width="100px;" alt=""/><br /><sub><b>fallme</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/53910152?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Gstalker</b></sub></td>
     </tr>
     <tr>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/72395679?s=120&v=4" width="100px;" alt=""/><br /><sub><b>tangent-heng</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/53910152?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Gstalker</b></sub></td>
     </tr>
 </table>
 

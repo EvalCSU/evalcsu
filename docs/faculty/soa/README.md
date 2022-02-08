@@ -16,7 +16,7 @@
 ### 2.1 评教目录
 
 - [自动化](../../evaluation/soa/automation/README.md)
-- 智能科学与技术
+- [智能科学与技术](../../evaluation/soa/intelligence/README.md)
 - 测控
 - 电子信息
 - 电气工程及其自动化

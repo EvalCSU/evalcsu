@@ -180,7 +180,6 @@
    4. 在 **Additional information** 中添加额外信息，可选
    5. 在 **Checklist** 中检查你的任务，不可缺失，但不要求一定完成
    6. 在 **Screenshoot** 中贴上对应截图
-   7. 非协作者需要在末尾 @ 对应的管理员，协作者可以忽略
 3. 点击 `Create pull request` 按钮创建你的合并请求
 
 **特别注意**

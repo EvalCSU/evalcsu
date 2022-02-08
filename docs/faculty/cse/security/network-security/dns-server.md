@@ -1,3 +1,5 @@
+[> Back](../README.md#网络安全)
+
 # DNS 服务
 
 Created: November 18, 2021
@@ -16,11 +18,11 @@ DNS 作为将域名和 IP 地址相互映射的一个分布式数据库，能够
 
 DNS 未缓存响应：
 
-![https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-uncached-response.svg](https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-uncached-response.svg)
+<embed alt="dns-uncached-response.svg" src="https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-uncached-response.svg"/>
 
 DNS 已缓存响应：
 
-![https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cached-response.svg](https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cached-response.svg)
+<embed alt="dns-cached-response.svg" src="https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cached-response.svg"/>
 
 # **DNS 缓存中毒**
 
@@ -31,11 +33,11 @@ DNS 已缓存响应：
 
 DNS 缓存中毒过程：
 
-![https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cache-poisoning-attack.svg](https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cache-poisoning-attack.svg)
+<embed alt="dns-cache-poisoning-attack.svg" src="https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cache-poisoning-attack.svg"/>
 
 中毒的 DNS 缓存：
 
-![https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cache-poisoned.svg](https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cache-poisoned.svg)
+<embed alt="dns-cache-poisoned.svg" src="https://www.cloudflare.com/img/learning/dns/dns-cache-poisoning/dns-cache-poisoned.svg"/>
 
 ## DNS 攻击预防策略
 

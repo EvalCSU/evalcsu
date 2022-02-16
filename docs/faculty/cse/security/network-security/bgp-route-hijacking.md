@@ -1,23 +1,22 @@
+[> Back](../README.md#网络安全)
+
 # BGP 路由劫持
 
 Created: November 8, 2021
 Sort: Security
 
-> BGP（Border Gateway Protocol）：边界网关协议，是 Internet 的去中心化自治路由协议（摘自 Wiki 百科）
+> BGP（Border Gateway Protocol）：边界网关协议，是 Internet 的去中心化自治路由协议。 —— Wiki 百科
 > 
 
 ## 1. BGP
 
 BGP 是一个路由协议：
-
 - 每个 BGP 路由器都拥有一个路由表，路由表中记录着 AS （自治系统）之间的最佳路由。
 
 BGP 是一个矢量路由协议：
-
 - 矢量提供了方向，以便流量尽可能高效地在 IP 地址间传输。BGP 总是倾向于 AS 之间的最短路径，通过尽可能少的路由来到达 IP 地址。
 
 BGP 是一个去中心自治路由协议：
-
 - 由于 AS 会不断广播其所拥有的 IP 地址前缀，因此 BGP 路由器几乎需要不断地更新这些内容。
 
 *IP 地址前缀的意义在于表示其 IP 地址的范围*

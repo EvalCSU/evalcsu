@@ -12,6 +12,3 @@
 - [ ] checkout 2
 
 ## Screenshoot
-
-
-@\<evalcsu/your_manager>

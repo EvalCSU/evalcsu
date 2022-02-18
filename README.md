@@ -128,6 +128,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
     </tr>
     <tr>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/60459217?s=120&v=4" width="100px;" alt=""/><br /><sub><b>M-Chase</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/73117818?s=120&v=4" width="100px;" alt=""/><br /><sub><b>M-Chase</b></sub></td>
     </tr>
 </table>
 

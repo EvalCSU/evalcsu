@@ -112,6 +112,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
         <td align="center"><img src="https://avatars.githubusercontent.com/u/67886875?s=120&v=4" width="100px;" alt=""/><br /><sub><b>fallme</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/63188873?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Yemonade</b></sub></td>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/72395679?s=120&v=4" width="100px;" alt=""/><br /><sub><b>tangent-heng</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/57822495?s=120&v=4" width="100px;" alt=""/><br /><sub><b>EZ4Chen</b></sub></td>
     </tr>
 </table>
 
@@ -128,7 +129,8 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
     </tr>
     <tr>
         <td align="center"><img src="https://avatars.githubusercontent.com/u/60459217?s=120&v=4" width="100px;" alt=""/><br /><sub><b>M-Chase</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/73117818?s=120&v=4" width="100px;" alt=""/><br /><sub><b>M-Chase</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/73117818?s=120&v=4" width="100px;" alt=""/><br /><sub><b>heyzbw</b></sub></td>
+        <td align="center"><img src="https://avatars.githubusercontent.com/u/99242280?s=120&v=4" width="100px;" alt=""/><br /><sub><b>yyyangxy</b></sub></td>
     </tr>
 </table>
 

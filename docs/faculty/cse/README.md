@@ -9,7 +9,7 @@
 - [信息安全](./security/README.md)
 - 物联网
 - [通信工程](./communication/README.md)
-- 软件工程
+- [软件工程](./software/README.md)
 
 ## 2 评教
 
@@ -20,7 +20,7 @@
 - [信息安全](../../evaluation/cse/security/README.md) - Manager: fallme, ...
 - [物联网](../../evaluation/cse/iot/README.md)
 - [通信工程](../../evaluation/cse/communication/README.md) - Manager: GZHuan, .
-- 软件工程
+- [软件工程](../../evaluation/cse/software/README.md)  -Manger: EZ4Chen,
 
 ### 2.2 管理员
 
@@ -38,6 +38,7 @@
 | fallme   | 1285094405@qq.com |
 | GZHuan   | 1709884032@qq.com |
 | Aiden927 | 1149440709@qq.com |
+| EZ4Chen  | 1609926534@qq.com |
 
 ## 3 专业规划经验分享
 

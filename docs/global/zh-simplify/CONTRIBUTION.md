@@ -63,6 +63,15 @@
 #### Bug report 模版
 
 - 仔细阅读 **题目（加粗字体）** ，尽可能保证 Bug 描述的简洁性和准确性
+1. 在 **Describe the bug** 中简述 bug 的位置、影响以及可能带来的后果
+   - 如果需要特殊步骤，在 **To Reproduce** 中描述复现 bug 的步骤
+   - 如果不需要，则用 `NULL.` 代替
+2. 在 **Expected behavior** 中简述你的解决方案或者你期待的效果
+   - 为了使得描述更加具体，建议在 **Screenshots** 中贴上你的截图
+   - 如果没有，则用 `NULL.` 代替
+   - 如果有其他内容，则在 **Additional context** 中简述
+   - 如果无其他内容， 填 `NULL.`
+3. 在 **Assign the manager you email** 中 @ 负责 bug 所在区域的管理员
 
 **特别注意**
 

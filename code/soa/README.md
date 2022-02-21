@@ -7,5 +7,5 @@
 - [自动化](automation/README.md)
 - 电气工程及其自动化
 - 电子信息
-- 智能
+- [智能](intelligence/README.md)
 - 测控

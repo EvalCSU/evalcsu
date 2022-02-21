@@ -122,7 +122,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 **所有贡献者**
 
-<table width="700" style="word-wrap:break-word">
+<table width="700" style="table-layout:fixed">
     <tr>
         <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/63287428?s=120&v=4" width="100px;" alt=""/><br /><sub><b>DvIkero</b></sub></td>
         <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/94861831?s=120&v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>

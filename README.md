@@ -122,20 +122,20 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 **所有贡献者**
 
-<table width="700" style="table-layout:fixed">
+<table width="700" style="word-wrap:break-word">
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/63287428?s=120&v=4" width="100px;" alt=""/><br /><sub><b>DvIkero</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/94861831?s=120&v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72063459?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/62288395?s=120&v=4" width="100px;" alt=""/><br /><sub><b>typedrandomly</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72177652?s=120&v=4" width="100px;" alt=""/><br /><sub><b>puzi12138</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/53910152?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Gstalker</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/63287428?s=120&v=4" width="100px;" alt=""/><br /><sub><b>DvIkero</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/94861831?s=120&v=4" width="100px;" alt=""/><br /><sub><b>HanX-gthb</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/72063459?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Wangbf</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/62288395?s=120&v=4" width="100px;" alt=""/><br /><sub><b>typedrandomly</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/72177652?s=120&v=4" width="100px;" alt=""/><br /><sub><b>puzi12138</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/53910152?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Gstalker</b></sub></td>
     </tr>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/60459217?s=120&v=4" width="100px;" alt=""/><br /><sub><b>M-Chase</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/73117818?s=120&v=4" width="100px;" alt=""/><br /><sub><b>heyzbw</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/99242280?s=120&v=4" width="100px;" alt=""/><br /><sub><b>yyyangxy</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/97728260?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Shanewbx</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/60459217?s=120&v=4" width="100px;" alt=""/><br /><sub><b>M-Chase</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/73117818?s=120&v=4" width="100px;" alt=""/><br /><sub><b>heyzbw</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/99242280?s=120&v=4" width="100px;" alt=""/><br /><sub><b>yyyangxy</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/97728260?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Shanewbx</b></sub></td>
     </tr>
 </table>
 

@@ -1,9 +1,9 @@
 [>Back](../README.md)
 
-# 智能
+# 智能科学与技术
 
-- 智能科学与技术
-  - 专业课设及实验
+- [智能科学与技术](#智能科学与技术)
+  - [专业课设及实验](#专业课设及实验)
     - [第三学期](#第三学期)
       - [数据结构课设](#数据结构课设)
     - [第四学期](#第四学期)
@@ -19,9 +19,7 @@
 
 #### 数据结构课设
 
-1.M-Chase 20220221
-
-此代码为数据结构的迷宫题目，使用python编写，界面为pyqt框架，仅供参考，请勿照搬源码
+此代码为 M-Chase 数据结构的迷宫题目，使用python编写，界面为pyqt框架，仅供参考，请勿照搬源码
 
 https://github.com/M-Chase/Maze
 
@@ -29,9 +27,7 @@ https://github.com/M-Chase/Maze
 
 #### 数据库课设
 
-1.M-Chase 20220221
-
-包含了数据库课设，使用pyqt做的简易界面，echarts做的简易图表等，仅供参考，请勿照搬源码
+此代码为 M-Chase 数据库课设，使用pyqt做的简易界面，echarts做的简易图表等，仅供参考，请勿照搬源码
 
 https://github.com/M-Chase/Sql_work
 
@@ -39,7 +35,7 @@ https://github.com/M-Chase/Sql_work
 
 1.M-Chase 20220221
 
-此仓库包含9个实验题目和5个课设题目的全部代码，仅供参考，请勿照搬源代码
+此代码为 M-Chase 汇编语言实验课设，包含9个实验题目和5个课设题目的全部代码，仅供参考，请勿照搬源代码
 
 https://github.com/M-Chase/assembly
 
@@ -47,9 +43,7 @@ https://github.com/M-Chase/assembly
 
 #### 机器学习课设
 
-1.M-Chase 20220221
-
-机器学习课设代码，课设代码主要在machine/bigwork里面，主要有KNN SVM-SMO 决策树C4.5几种算法以及一些辅助代码，仅供参考，请勿照搬源码
+代码为 M-Chase 机器学习课设，课设代码主要在machine/bigwork里面，主要有KNN SVM-SMO 决策树C4.5几种算法以及一些辅助代码，仅供参考，请勿照搬源码
 
 https://github.com/M-Chase/Machine_learning
 

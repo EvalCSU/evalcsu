@@ -105,18 +105,18 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 <table width="700" style="table-layout:fixed">
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/64075563?s=120&v=4" width="100px" alt=""/><br /><sub><b>Jacob953</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/74520253?s=120&v=4" width="100px" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72350550?s=120&v=4" width="100px" alt=""/><br /><sub><b>jzndd</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/65447998?s=120&v=4" width="100px" alt=""/><br /><sub><b>LegendZi</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/58100940?s=120&v=4" width="100px" alt=""/><br /><sub><b>Aiden927</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/73345205?s=120&v=4" width="100px" alt=""/><br /><sub><b>NIUYI0511</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/64075563?s=120&v=4" width="100px" alt=""/><br /><sub><b>Jacob953</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/74520253?s=120&v=4" width="100px" alt=""/><br /><sub><b>Rick Lin</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/72350550?s=120&v=4" width="100px" alt=""/><br /><sub><b>jzndd</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/65447998?s=120&v=4" width="100px" alt=""/><br /><sub><b>LegendZi</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/58100940?s=120&v=4" width="100px" alt=""/><br /><sub><b>Aiden927</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/73345205?s=120&v=4" width="100px" alt=""/><br /><sub><b>NIUYI0511</b></sub></td>
     </tr>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/67886875?s=120&v=4" width="100px;" alt=""/><br /><sub><b>fallme</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/63188873?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Yemonade</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/72395679?s=120&v=4" width="100px;" alt=""/><br /><sub><b>tangent-heng</b></sub></td>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/57822495?s=120&v=4" width="100px;" alt=""/><br /><sub><b>EZ4Chen</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/67886875?s=120&v=4" width="100px;" alt=""/><br /><sub><b>fallme</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/63188873?s=120&v=4" width="100px;" alt=""/><br /><sub><b>Yemonade</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/72395679?s=120&v=4" width="100px;" alt=""/><br /><sub><b>tangent-heng</b></sub></td>
+        <td align="center" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/57822495?s=120&v=4" width="100px;" alt=""/><br /><sub><b>EZ4Chen</b></sub></td>
     </tr>
 </table>
 

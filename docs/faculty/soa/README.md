@@ -5,10 +5,10 @@
 ## 1 笔记
 
 - [自动化](automation/README.md)
-- 智能科学与技术
-- 测控
+- [智能科学与技术](intelligence/README.md)
+- [测控](observe_and_control/README.md)
 - [电子信息工程](electronic_information/README.md)
-- 电气工程及其自动化
+- [电气工程及其自动化](electronic/README.md)
 
 
 ## 2 评教

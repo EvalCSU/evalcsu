@@ -148,6 +148,7 @@ eg: git push origin feat/docs/tfm
 ### 远端合并分支
 
 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
+
 ![github_button](./../../../img/git-helper/noodGuideToGit/github_button.png)
 
 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
@@ -182,8 +183,6 @@ TIP：每天工作开始之前，必须要先拉取
 TIP：普通程序员，不应当执行 merge 操作
 
 ### 初始化
-
-- 初始化本地仓库：git init
 
 - 克隆远端仓库到本地：
 ```
@@ -254,13 +253,5 @@ eg: git pull origin main
 - 将暂存区文件回滚至工作区：git checkout <files_name>
 - 将仓库最后一次提交回滚至暂存区：git reset HEAD^1
 - 将按索引值回滚至仓库的某次版本：git reset <index_value>
-
-
-### 特殊的查找资源小技巧-常用前缀后缀
-
-- 找百科大全 awesome xxx
-- 找例子 xxx sample
-- 找空项目架子 xxx starter / xxx boilerplate
-- 找教程 xxx tutorial
 
 

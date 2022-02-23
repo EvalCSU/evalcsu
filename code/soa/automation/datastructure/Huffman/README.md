@@ -1,4 +1,4 @@
-[> Back](../../README.md)
+[> Back](../../../../../docs/faculty/soa/automation/datastructure/Huffman.md)
 
 + 文件说明：
     + [interaction.h](interaction.h)与[interaction.cpp](interaction.cpp)写了关于人机交互的逻辑，包括菜单栏的设定以及鲁棒性的设置等等

@@ -1,4 +1,4 @@
-[>Back](../README.md)
+[> Back](../README.md)
 
 # 智能科学与技术
 

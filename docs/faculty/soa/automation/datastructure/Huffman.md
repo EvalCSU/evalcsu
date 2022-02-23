@@ -50,7 +50,7 @@
  
  ## 2.实验过程（编码过程）
  
- > 直接贴代码，加一些分析，代码将会在下次更新中给出
+ > [代码](../../../../../code/soa/automation/datastructure/Huffman/README.md)
 
 ## 3.完整示例
 

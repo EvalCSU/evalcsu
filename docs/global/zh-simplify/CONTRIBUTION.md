@@ -139,14 +139,14 @@
 
 #### Pull Request 准备工作
 
-> 更多 Git 相关操作，请参考 [Git Helper](git-helper/README.md)
+> 请参考 [Git 新手指南](NOOBGUIDTOGIT.md)
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
 2. 在本地新建一个分支
    - 分支命名规则：
       ```
       <type>/[faculty]/<your github id>/
-      // e.g. docs/security/jacob953
+      // e.g. feat/docs/jacob953
       ```
    - `<type>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**

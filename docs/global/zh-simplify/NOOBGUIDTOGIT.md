@@ -1,7 +1,9 @@
 
-[> Back](./git-helper/README.md)
+[> Back](./CONTRIBUTION.md)
 # Git新手指导教程
-本教程本着以简易明了的语言向git/github新手解释基本概念与流程，如有错误和疏漏，请以谅解和更改
+本教程本着以简易明了的语言向 Git & Github 新手解释基本概念与流程，如有错误和疏漏，请以谅解和更改
+
+更多 Git 相关操作，请参考[Git Helper](./git-helper/README.md)
 <!-- TOC -->
 
 - [Git新手指导教程](#git新手指导教程)
@@ -11,7 +13,15 @@
 		- [仓库](#仓库)
 		- [版本](#版本)
 		- [分支](#分支)
-	- [一、编写上传项目](#一编写上传项目)
+	- [一、 Pull Request 的基本流程](#一-pull-request-的基本流程)
+		- [克隆目标仓库代码](#克隆目标仓库代码)
+		- [克隆代码到本地](#克隆代码到本地)
+		- [创建自己的分支](#创建自己的分支)
+		- [提交修改到本地仓库](#提交修改到本地仓库)
+		- [拉取最新版本](#拉取最新版本)
+		- [提交修改到远程仓库](#提交修改到远程仓库)
+		- [远端合并分支](#远端合并分支)
+	- [二、 git 命令总结](#二-git-命令总结)
 		- [基本模式（ ForkFlow 工作流）](#基本模式-forkflow-工作流)
 		- [初始化](#初始化)
 		- [删除文件](#删除文件)
@@ -67,7 +77,103 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 
 在完成在对应分支上的工作后，可以通过 merge 操作将该分支合并至主分支 main 。
 
-## 一、编写上传项目
+
+## 一、 Pull Request 的基本流程
+
+**注意**：请先看完[理解基础概念](#零理解基础概念)再跟随本部分进行操作。
+
+### 克隆目标仓库代码
+
+在目标仓库点击 fork 按钮，可以生成一个属于自己的同名仓库，并与原始仓库关联。
+
+![fork](../../../img/git-helper/noodGuideToGit/fork.png)
+
+操作后，可以在自己的主页看到克隆的仓库
+
+![fork_result](../../../img/git-helper/noodGuideToGit/fork_result.png)
+
+### 克隆代码到本地
+
+进入自己的仓库后，点击绿色的 Code 按钮，获取本仓库的 SSH 链接。
+
+使用 SSH 链接需要先在本地主机上和自己的Github账户上，部署 SSH key 免密登入，可自行搜索完成。
+
+![clone_local](../../../img/git-helper/noodGuideToGit/clone_local.png)
+
+在你打算存放该代码仓库的目录下，打开 git bash 程序，输入命令 git clone \<repository> ,即可在本地获取到对应代码仓库，并自动与远程仓库关联。
+
+![clone_code](../../../img/git-helper/noodGuideToGit/clone_code.png)
+
+### 创建自己的分支
+
+以当前分支为基础新建分支并切换：
+```
+git checkout -b <branch_name>
+e.g. git checkout -b docs/security/tfm
+```
+分支名命名规则：
+```
+<type>/[faculty]/<your github id>/
+e.g. docs/security/tfm
+```
+`<type>` 建议参考[提交类型](./CONTRIBUTION.md/#evalcsu-的-commit-注意事项)
+
+### 提交修改到本地仓库
+
+在修改完毕仓库中的代码后，可以通过两种方式将修改后的文件
+- 添加单个文件到暂存区：git add \<file_name>
+- 添加所有修改后的文件到暂存区：git add -A
+
+把所有提交到暂存区的文件提交到仓库：git commit -m "example commit"
+
+-m 后的字符串为伴随本次提交的提示信息
+
+**注意**：尽量单次 commit 完成单个任务，不要一个 commit 完成了多个任务或多个 commit 完成单个任务。
+
+### 拉取最新版本
+
+添加远端仓库 upstream 并关联到**你的分支**，以便利拉取原始仓库的最新版本:
+```
+git remote add upstream git@github.com:example.git
+e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
+
+git branch --set-upstream-to=upstream/<branch_name> <your_branch>
+e.g. git branch --set-upstream-to=upstream/main docs/security/tfm
+```
+
+![branch_set](./../../../img/git-helper/noodGuideToGit/branch_set.png)
+
+后续便可以使用 git pull 命令简化输入。
+
+### 提交修改到远程仓库
+
+推送当前分支最新的提交到远程，第一次 push 的时候可以用下面的代码将 origin 设置为你的默认上游：
+```
+git push -u <remote_repository> <branch_name>	
+eg: git push -u origin docs/security/tfm  
+```
+
+后续可以用 git push 命令简化输入。
+
+### 远端合并分支
+
+打开 GitHub，从个人仓库中选择 `New pull request` 按钮
+![github_button](./../../../img/git-helper/noodGuideToGit/github_button.png)
+
+选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
+   1. 标题可以按照 `<type>[optional scope]: <description>` 的方式命名
+   2. 在 **Related Issue** 中链接到相关 Issue，不可缺失
+   3. 在 **Propose changes** 中简述你的改动，不可缺失
+   4. 在 **Additional information** 中添加额外信息，可选
+   5. 在 **Checklist** 中检查你的任务，不可缺失，但不要求一定完成
+   6. 在 **Screenshoot** 中贴上对应截图
+   7. 在 **Reviewers** 处添加数个检查者
+
+![github_pull](../../../img/git-helper/noodGuideToGit/github_pull.png)
+
+点击 `Create pull request` 按钮创建你的合并请求
+
+## 二、 git 命令总结
 
 **注意**：以下 git 命令均在 git bash 上运行，请在主机上下载 Git 程序。另外，有需要的可下载 VScode 配合使用。相关教程在各大搜索引擎均可搜取
 
@@ -78,7 +184,9 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 - 本地仓库 git push
 - 云端（ orgin Github ）pull request
 - 云端（ upstream Github ）git pull
-***
+
+*******
+
 TIP：每天工作开始之前，必须要先拉取
 
 TIP：普通程序员，不应当执行 merge 操作

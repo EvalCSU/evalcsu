@@ -154,6 +154,7 @@
 
 **项目搭建原则**
 
+- 文案排版请尽量参考 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-Hans.md)
 - 禁止修改 .github 文件夹中的任何内容
 - 根据提交的内容，可以更改项目目录结构，但不能修改三个主目录：
   - code：放置所有课设代码

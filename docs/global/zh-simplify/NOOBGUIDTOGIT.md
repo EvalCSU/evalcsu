@@ -98,7 +98,7 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 
 2. 在你打算存放该代码仓库的目录下，打开 git bash 程序，输入命令,即可在本地获取到对应代码仓库，并自动与远程仓库关联。
 ```
-git clone git@github.com:github_account/repository_name.git
+git clone git@github.com:<github_account>/<repository_name.git>
 e.g. git clone git@github.com:the-fall-moon/evalcsu.git
 ```
 
@@ -114,7 +114,7 @@ e.g. git checkout -b docs/security/tfm
 
 2. 分支名命名规则：
 ```
-<type>/[faculty]/<your github id>/
+<type>/[faculty]/<your github id>
 e.g. docs/security/tfm
 ```
 `<type>` 建议参考[提交类型](./CONTRIBUTION.md/#evalcsu-的-commit-注意事项)
@@ -139,7 +139,7 @@ e.g. git commit -m "docs:20220225 update evaluation/security"
 
 1. 在本地添加对应着原始仓库的上游 upstream 。
 ```
-git remote add upstream_name git@github.com:github_account/repository_name.git
+git remote add upstream_name git@github.com:github_account/<repository_name.git>
 e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
 ```
 

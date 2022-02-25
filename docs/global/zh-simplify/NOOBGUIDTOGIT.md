@@ -1,19 +1,19 @@
 
 [> Back](./CONTRIBUTION.md)
-# Git新手指导教程
-本教程本着以简易明了的语言向 Git & Github 新手解释基本概念与流程，如有错误和疏漏，请以谅解和更改
+# Git 新手指南
+本指南本着以简易明了的语言向 Git & Github 新手解释基本概念与流程，如有错误和疏漏，请以谅解和更改。
 
-更多 Git 相关操作，请参考[Git Helper](./git-helper/README.md)
+更多 Git 相关操作，请参考 [Git Helper](./git-helper/README.md)
 <!-- TOC -->
 
-- [Git新手指导教程](#git新手指导教程)
+- [Git 新手指南](#git-新手指南)
 	- [零、理解基础概念](#零理解基础概念)
 		- [工作区](#工作区)
 		- [暂存区](#暂存区)
 		- [仓库](#仓库)
 		- [版本](#版本)
 		- [分支](#分支)
-	- [一、 Pull Request 的基本流程](#一-pull-request-的基本流程)
+	- [一、Pull Request 的基本流程](#一pull-request-的基本流程)
 		- [克隆目标仓库代码](#克隆目标仓库代码)
 		- [克隆代码到本地](#克隆代码到本地)
 		- [创建自己的分支](#创建自己的分支)
@@ -21,22 +21,22 @@
 		- [拉取最新版本](#拉取最新版本)
 		- [提交修改到远程仓库](#提交修改到远程仓库)
 		- [远端合并分支](#远端合并分支)
-	- [二、 补充部分常用的 git 命令](#二-补充部分常用的-git-命令)
+	- [二、部分常用的 git 命令补充](#二部分常用的-git-命令补充)
 		- [初始化](#初始化)
 		- [删除文件](#删除文件)
-		- [分支](#分支-1)
+		- [分支操作](#分支操作)
 		- [查看提交的修改](#查看提交的修改)
 		- [撤回提交的修改](#撤回提交的修改)
 
 <!-- /TOC -->
 --------------------
 ## 零、理解基础概念
-Git中需要理解基础概念：
-- 工作区
-- 暂存区
-- 仓库
-- 版本
-- 分支
+Git 中需要理解基础概念：
+- [工作区](#工作区)
+- [暂存区](#暂存区)
+- [仓库](#仓库)
+- [版本](#版本)
+- [分支](#分支)
 
 ### 工作区
 
@@ -44,7 +44,7 @@ Git中需要理解基础概念：
 
 ### 暂存区
 
-暂存区是暂时存储工作区修改操作的区域。使用者所有的文件改动均需要先添加入暂存区（ 对应操作为 add ），再由暂存区提交到当前仓库（ 对应操作为 commit ）。
+暂存区是暂时存储工作区修改操作的区域。使用者所有的文件改动均需要先添加入暂存区（对应操作为 add ），再由暂存区提交到当前仓库（对应操作为 commit ）。
 	
 需要注意的是，暂存区可以包含多个文件的多次改动，可以在工作区修改文件后，进行多次 add 操作，然后再进行一次 commit 操作，将多次同目的的文件修改包含在一次 commit 之中。
 
@@ -74,13 +74,13 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 在完成在对应分支上的工作后，可以通过 merge 操作将该分支合并至主分支 main 。
 
 
-## 一、 Pull Request 的基本流程
+## 一、Pull Request 的基本流程
 
 **注意**：请尽量看完[理解基础概念](#零理解基础概念)再跟随本部分进行操作。
 
 ### 克隆目标仓库代码
 
-1. 在目标仓库点击 fork 按钮，可以生成一个属于自己的同名仓库，并与原始仓库关联。
+1. 在目标仓库点击 `Fork` 按钮，可以生成一个属于自己的同名仓库，并与原始仓库关联。
 
 ![fork](../../../img/git-helper/noodGuideToGit/fork.png)
 
@@ -90,13 +90,13 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 
 ### 克隆代码到本地
 
-1. 进入自己的仓库后，点击绿色的 Code 按钮，获取本仓库的 SSH 链接。
+1. 进入自己的仓库后，点击绿色的 `Code` 按钮，获取本仓库的 SSH 链接。
 
 **注意**：使用 SSH 链接需要先在本地主机上和自己的Github账户上，部署 SSH key 免密登入。该步骤可参考网络教程或官方教程 [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 完成。
 
 ![clone_local](../../../img/git-helper/noodGuideToGit/clone_local.png)
 
-2. 在你打算存放该代码仓库的目录下，打开 git bash 程序，输入命令,即可在本地获取到对应代码仓库，并自动与远程仓库关联。
+2. 在你打算存放该代码仓库的目录下，打开 `Git Bash` 终端，输入命令,即可在本地获取到对应代码仓库，并自动与远程仓库关联。
 ```
 git clone git@github.com:<github_account>/<repository_name.git>
 e.g. git clone git@github.com:the-fall-moon/evalcsu.git
@@ -121,7 +121,7 @@ e.g. docs/security/tfm
 
 ### 提交修改到本地仓库
 
-1. 在修改完毕仓库中的代码后，可以通过两种方式将修改后的文件
+1. 在修改完毕仓库中的代码后，可以通过两种方式将修改后的文件添加到暂存区：
    - 添加单个文件到暂存区：git add \<file_name>
    - 添加所有修改后的文件到暂存区：git add -A
 
@@ -137,13 +137,15 @@ e.g. git commit -m "docs:20220225 update evaluation/security"
 
 添加上游 upstream 并关联到**你的分支**，以便利拉取原始仓库的最新版本.
 
-1. 在本地添加对应着原始仓库的上游 upstream 。
+1. 在本地添加对应着原始仓库的上游 upstream ，可用 git remote -v 命令查看是否添加成功。
 ```
 git remote add upstream_name git@github.com:github_account/<repository_name.git>
 e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
 ```
 
-2. 将 upstream 设置为你当前的分支的上游。
+![remote_add](./../../../img/git-helper/noodGuideToGit/remote_add.png)
+
+2. 将 upstream 设置为你当前的分支的默认 pull 上游。
 ```
 git branch --set-upstream-to=upstream/<branch_name> <your_branch>
 e.g. git branch --set-upstream-to=upstream/main docs/security/tfm
@@ -155,7 +157,7 @@ e.g. git branch --set-upstream-to=upstream/main docs/security/tfm
 
 ### 提交修改到远程仓库
 
-1. 推送当前分支最新的提交到远程，第一次 push 的时候可以用下面的代码将 origin 设置为你的默认上游。
+1. 推送当前分支最新的提交到远程，第一次 push 的时候可以用下面的代码将 origin 设置为你的默认 push 上游。
 ```
 git push -u <remote_repository> <branch_name>	
 eg: git push -u origin docs/security/tfm  
@@ -170,7 +172,7 @@ eg: git push -u origin docs/security/tfm
 ![github_button](./../../../img/git-helper/noodGuideToGit/github_button.png)
 
 2. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
-   1. 标题可以按照 `<type>[optional scope]: <description>` 的方式命名
+   1. 在**标题栏**中按照 `<type>[optional scope]: <description>` 的方式命名标题，要求简洁明了，不可缺失
    2. 在 **Related Issue** 中链接到相关 Issue，不可缺失
    3. 在 **Propose changes** 中简述你的改动，不可缺失
    4. 在 **Additional information** 中添加额外信息，可选
@@ -182,8 +184,7 @@ eg: git push -u origin docs/security/tfm
 
 3. 点击 `Create pull request` 按钮创建你的合并请求
 
-## 二、 补充部分常用的 git 命令
-
+## 二、部分常用的 git 命令补充
 ### 初始化
 
 - **从零**初始化本地仓库：git init
@@ -193,13 +194,13 @@ eg: git push -u origin docs/security/tfm
 - 从**文件夹**中删除文件：rm \<files_name>
 - 从**工作区**中移除文件：git rm \<files_name>
 
-### 分支
+### 分支操作
 
 - 列举所有的分支：git branch
 - 重命名分支：git branch -m <old_branch_name> <new_branch_name>
 - 以当前分支为基础新建分支并切换：git checkout -b <branch_name>
 - 单纯地切换到某个分支：git checkout <branch_name>
-- 强制删掉特定的分支：git branch -D <branch_name>
+- **强制**删掉特定的分支：git branch -D <branch_name>
 - 合并分支：git merge <branch_name>
 
 

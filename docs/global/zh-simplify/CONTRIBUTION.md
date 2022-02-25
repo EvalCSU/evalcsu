@@ -139,7 +139,7 @@
 
 #### Pull Request 准备工作
 
-> 可以参考 Git [新手指南](./NOOBGUIDTOGIT.md)
+> 可以参考 [Git 新手指南](./NOOBGUIDTOGIT.md)
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
 2. 在本地新建一个分支

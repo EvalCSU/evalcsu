@@ -148,7 +148,8 @@
       <type>/[faculty]/<your github id>/
       // e.g. docs/security/jacob953
       ```
-   - `<type>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
+      ![新建分支的命令样例](../../../img/global/CONTRIBUTION/create_new_branch.png)
+    - `<type>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**
 4. 在本地提交 commit 时，请严格遵循 [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
 
@@ -191,6 +192,7 @@
    4. 在 **Additional information** 中添加额外信息，可选
    5. 在 **Checklist** 中检查你的任务，不可缺失，但不要求一定完成
    6. 在 **Screenshoot** 中贴上对应截图
+   ![优秀的PR样例](../../../img/global/CONTRIBUTION/PR_example.png)
 3. 点击 `Create pull request` 按钮创建你的合并请求
 
 **特别注意**

@@ -161,11 +161,7 @@ git push -u <remote_repository> <branch_name>
 eg: git push -u origin docs/security/tfm  
 ```
 
-<<<<<<< HEAD
-1. 在**设置过的分支**使用 git push 命令简化操作。
-=======
 2. 在**设置过的分支**使用 git push 命令简化操作。
->>>>>>> 6553a12 (docs:--20220225 optimize noobguidetogit.md)
 
 ### 远端合并分支
 

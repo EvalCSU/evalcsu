@@ -80,7 +80,7 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 
 ### 克隆目标仓库代码
 
-1. 在目标仓库点击 `Fork` 按钮，可以生成一个属于自己的同名仓库，并与原始仓库关联。
+1. 在目标仓库点击 `Fork` 按钮，可以生成一个属于自己的同名仓库，并与上游仓库关联。
 
 ![fork](../../../img/git-helper/noodGuideToGit/fork.png)
 
@@ -114,7 +114,7 @@ e.g. git checkout -b docs/security/tfm
 
 2. 分支名命名规则：
 ```
-<type>/[faculty]/<your github id>
+<type>/[faculty]/<your_github_id>
 e.g. docs/security/tfm
 ```
 `<type>` 建议参考[提交类型](./CONTRIBUTION.md/#evalcsu-的-commit-注意事项)
@@ -135,9 +135,9 @@ e.g. git commit -m "docs:20220225 update evaluation/security"
 
 ### 拉取最新版本
 
-添加上游 upstream 并关联到**你的分支**，以便利拉取原始仓库的最新版本.
+添加上游仓库 upstream 并关联到**你的分支**，以便利拉取上游仓库的最新版本.
 
-1. 在本地添加对应着原始仓库的上游 upstream ，可用 git remote -v 命令查看是否添加成功。
+1. 在本地添加上游仓库 upstream ，可用 git remote -v 命令查看是否添加成功。
 ```
 git remote add upstream_name git@github.com:github_account/<repository_name.git>
 e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
@@ -145,7 +145,7 @@ e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
 
 ![remote_add](./../../../img/git-helper/noodGuideToGit/remote_add.png)
 
-2. 将 upstream 设置为你当前的分支的默认 pull 上游。
+2. 将 upstream 设置为你当前的分支所要同步的远程仓库。
 ```
 git branch --set-upstream-to=upstream/<branch_name> <your_branch>
 e.g. git branch --set-upstream-to=upstream/main docs/security/tfm
@@ -153,17 +153,17 @@ e.g. git branch --set-upstream-to=upstream/main docs/security/tfm
 
 ![branch_set](./../../../img/git-helper/noodGuideToGit/branch_set.png)
 
-3. 在**设置过的分支**使用 git pull 命令简化操作。
+3. 在**设置过的分支**使用 git pull 命令简化拉取最新版本的操作。
 
 ### 提交修改到远程仓库
 
-1. 推送当前分支最新的提交到远程，第一次 push 的时候可以用下面的代码将 origin 设置为你的默认 push 上游。
+1. 推送当前分支最新的提交到**自己的远程仓库**。
 ```
-git push -u <remote_repository> <branch_name>	
-eg: git push -u origin docs/security/tfm  
+git push <remote_repository> <branch_name>	
+eg: git push origin docs/security/tfm  
 ```
 
-2. 在**设置过的分支**使用 git push 命令简化操作。
+**注意**：若在此使用 git push -u origin docs/security/tfm 命令，则会导致 origin 被设置为当前分支要同步的远程仓库，而不是[拉取最新版本](#拉取最新版本)中设置的 upstream 。
 
 ### 远端合并分支
 

@@ -145,7 +145,7 @@ e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
 
 ![remote_add](./../../../img/git-helper/noodGuideToGit/remote_add.png)
 
-2. 将 upstream 设置为你当前的分支的默认远程仓库。
+2. 将 upstream 设置为你当前的分支所要同步的远程仓库。
 ```
 git branch --set-upstream-to=upstream/<branch_name> <your_branch>
 e.g. git branch --set-upstream-to=upstream/main docs/security/tfm
@@ -163,7 +163,7 @@ git push <remote_repository> <branch_name>
 eg: git push origin docs/security/tfm  
 ```
 
-**注意**：若在此使用 git push -u origin docs/security/tfm 命令，则会导致 origin 被设置为当前分支的默认远程仓库，而不是[拉取最新版本](#拉取最新版本)中设置的 upstream 。
+**注意**：若在此使用 git push -u origin docs/security/tfm 命令，则会导致 origin 被设置为当前分支要同步的远程仓库，而不是[拉取最新版本](#拉取最新版本)中设置的 upstream 。
 
 ### 远端合并分支
 

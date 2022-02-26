@@ -33,12 +33,13 @@
 
 **2019**
 
-| Manager  | Email             |
-| -------- | ----------------- |
-| fallme   | 1285094405@qq.com |
-| GZHuan   | 1709884032@qq.com |
-| Aiden927 | 1149440709@qq.com |
-| EZ4Chen  | 1609926534@qq.com |
+| Manager   | Email             |
+| --------- | ----------------- |
+| fallme    | 1285094405@qq.com |
+| GZHuan    | 1709884032@qq.com |
+| Aiden927  | 1149440709@qq.com |
+| EZ4Chen   | 1609926534@qq.com |
+| Anwen-zww | 1551389932@qq.com |
 
 ## 3 专业规划经验分享
 

@@ -28,7 +28,7 @@
 | Manager |      Email         |
 | ------- | ----------------   |
 |  jzndd  | 1274669808@qq.com  |
-|  heyzbw  | heyzbw@qq.com     |
+|  heyzbw | heyzbw@qq.com      |
 
 **2019**
 

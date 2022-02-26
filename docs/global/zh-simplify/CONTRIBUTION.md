@@ -52,6 +52,7 @@
 #### 新增 Issue
 
 1. 进入 Issue 页面点击 `New issue` 按钮
+   ![New issue按钮所在的地方](../../../img/global/CONTRIBUTION/issue_button.png)
 2. 选择 `Bug report`, `Evaluate request`, `Feature request` 或新建一个空白模版来初始化你的 Issue
    - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-模版)
    - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 [Evaluate request 模版](#evaluate-request-模版)
@@ -73,6 +74,7 @@
    - 如果有其他内容，则在 **Additional context** 中简述
    - 如果无其他内容， 填 `NULL.`
 3. 在 **Assign the manager you email** 中 @ 负责 bug 所在区域的管理员
+![优秀的 bug issue 案例](../../../img/global/CONTRIBUTION/bug_issue_example.png)
 
 **特别注意**
 
@@ -116,6 +118,7 @@
    - 如果有其他内容，则在 **Additional context** 中简述
    - 如果无其他内容， 填 `NULL.`
 4. 无论是否有相应资格，都需要在 **Assign the manager you email** 中 @ 所发邮件的管理员
+![优秀的 feature request 案例](../../../img/global/CONTRIBUTION/feature_request_example.png)
 
 **特别注意**
 
@@ -142,6 +145,7 @@
 > 更多 Git 相关操作，请参考 [Git Helper](git-helper/README.md)
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
+   ![fork 按钮位置](../../../img/global/CONTRIBUTION/fork_button.png)
 2. 在本地新建一个分支
    - 分支命名规则：
       ```
@@ -185,6 +189,7 @@
 #### Pull Request 合并分支
 
 1. 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
+   ![PR button](../../../img/global/CONTRIBUTION/PR_button.png)
 2. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
    1. 标题可以按照 `<type>[optional scope]: <description>` 的方式命名
    2. 在 **Related Issue** 中链接到相关 Issue，不可缺失

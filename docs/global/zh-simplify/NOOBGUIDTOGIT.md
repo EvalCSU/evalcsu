@@ -145,22 +145,30 @@ e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
 
 ![remote_add](./../../../img/git-helper/noodGuideToGit/remote_add.png)
 
-2. 将 upstream 设置为你当前的分支所要同步的远程仓库。
+2. 去上游仓库拉取一次你所需保持跟踪的分支 upstream/main 。
 ```
-git branch --set-upstream-to=upstream/<branch_name> <your_branch>
-e.g. git branch --set-upstream-to=upstream/main docs/security/tfm
+git fetch <upstream_name> <branch_name>
+e.g. git fetch upstream main
+```
+
+![fetch_upstream](./../../../img/git-helper/noodGuideToGit/fetch_upstream.png)
+
+3. 将 upstream/main 设置为你**当前分支**所要跟踪的远程仓库分支。
+```
+git branch -u <upstream_name>/<branch_name>
+e.g. git branch -u upstream/main
 ```
 
 ![branch_set](./../../../img/git-helper/noodGuideToGit/branch_set.png)
 
-3. 在**设置过的分支**使用 git pull 命令简化拉取最新版本的操作。
+4. 在**设置过的分支**使用 git pull 命令简化拉取最新版本的操作。
 
 ### 提交修改到远程仓库
 
-1. 推送当前分支最新的提交到**自己的远程仓库**。
+1. 推送**当前分支**最新的提交到**自己的远程仓库**。
 ```
-git push <remote_repository> <branch_name>	
-eg: git push origin docs/security/tfm  
+git push <remote_repository>
+eg: git push origin 
 ```
 
 **注意**：若在此使用 git push -u origin docs/security/tfm 命令，则会导致 origin 被设置为当前分支要同步的远程仓库，而不是[拉取最新版本](#拉取最新版本)中设置的 upstream 。

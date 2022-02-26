@@ -62,7 +62,17 @@
 
 #### Bug report 模版
 
-- 仔细阅读 **题目（加粗字体）** ，尽可能保证 Bug 描述的简洁性和准确性
+> 仔细阅读 **题目（加粗字体）** ，尽可能保证 Bug 描述的简洁性和准确性
+
+1. 在 **Describe the bug** 中简述 bug 的位置、影响以及可能带来的后果
+   - 如果需要特殊步骤，在 **To Reproduce** 中描述复现 bug 的步骤
+   - 如果不需要，则用 `NULL.` 代替
+2. 在 **Expected behavior** 中简述你的解决方案或者你期待的效果
+   - 为了使得描述更加具体，建议在 **Screenshots** 中贴上你的截图
+   - 如果没有，则用 `NULL.` 代替
+   - 如果有其他内容，则在 **Additional context** 中简述
+   - 如果无其他内容， 填 `NULL.`
+3. 在 **Assign the manager you email** 中 @ 负责 bug 所在区域的管理员
 
 **特别注意**
 
@@ -129,7 +139,7 @@
 
 #### Pull Request 准备工作
 
-> 更多 Git 相关操作，请参考 [Git Helper](git-helper/README.md)
+> 可以参考 [Git 新手指南](./NOOBGUIDTOGIT.md)
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
 2. 在本地新建一个分支
@@ -144,6 +154,7 @@
 
 **项目搭建原则**
 
+- 文案排版请尽量参考 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-Hans.md)
 - 禁止修改 .github 文件夹中的任何内容
 - 根据提交的内容，可以更改项目目录结构，但不能修改三个主目录：
   - code：放置所有课设代码

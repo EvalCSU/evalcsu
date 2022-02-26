@@ -1,5 +1,5 @@
 ---
-name: evaluate request
+name: Evaluate request
 about: Take a part in evaluation part
 title: 'Evaluate: <description>'
 labels: ''

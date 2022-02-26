@@ -22,7 +22,7 @@
 
 1. 打开cmd，输入`sqlplus`，然后按提示输入用户名及口令
 
-   ![image-20210923224312648](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210923224312648.png)
+   ![image-20210923224312648](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058273.png)
 
 2. 在`SQL>`状态下输入建立用户的命令
 
@@ -36,7 +36,7 @@
    SELECT * FROM all_users WHERE USERNAME='C##U_LZC_D312';
    ```
 
-   ![image-20210923232953403](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210923232953403.png)
+   ![image-20210923232953403](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058275.png)
 
 3. 给用户授权
 
@@ -46,7 +46,7 @@
    -- 查看当前用户权限：select * from session_privs
    ```
 
-   ![image-20210925011123605](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925011123605.png)
+   ![image-20210925011123605](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058276.png)
 
 4. 连接用户
 
@@ -55,7 +55,7 @@
    CONNECT C##U_LZC_D312/sys;
    ```
 
-   ![image-20210925001918529](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925001918529.png)
+   ![image-20210925001918529](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058277.png)
 
 ### 2. 建立表格
 
@@ -74,7 +74,7 @@ CREATE TABLE t_major_D312(
 );
 ```
 
-![image-20210924170350935](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210924170350935.png)
+![image-20210924170350935](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058278.png)
 
 #### 2.2 t_stud_D312表
 
@@ -99,7 +99,7 @@ CREATE TABLE t_stud_D312(
 );
 ```
 
-![image-20210924170239934](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210924170239934.png)
+![image-20210924170239934](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058279.png)
 
 ### 3. 插入数据
 
@@ -114,7 +114,7 @@ insert into t_major_D312 values('24','信安','新校区','黄家玮');
 select * from t_major_D312;
 ```
 
-![image-20210925002543164](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925002543164.png)
+![image-20210925002543164](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058280.png)
 
 ```sql
 set serveroutpu on;
@@ -177,7 +177,7 @@ end;
 ```
 
 
-​	![image-20210925005403791](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925005403791.png)
+​	![image-20210925005403791](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058281.png)
 
 ​	查看插入的数据
 
@@ -186,7 +186,7 @@ set linesize 500;
 SELECT * FROM t_stud_D312;
 ```
 
-![image-20210925005436670](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925005436670.png)
+![image-20210925005436670](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058282.png)
 
 #### 3. 2 约束测试
 
@@ -203,7 +203,7 @@ delete from t_major_D312;
 insert into t_major_D312(loc) values('北校区');
 ```
 
-![image-20210924101701132](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210924101701132.png)
+![image-20210924101701132](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058283.png)
 
 此时使用`system`管理员对`C##U_LZC_D312`账号进行授权：
 
@@ -213,7 +213,7 @@ alter user C##U_LZC_D312 quota unlimited on users;
 
 再进行`insert`操作
 
-![image-20210924102026497](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210924102026497.png)
+![image-20210924102026497](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058284.png)
 
 ```sql
 --t_stud_D312约束
@@ -242,7 +242,7 @@ INSERT INTO t_stud_D312(sno,mno) VALUES('123456789','1234567891');
 INSERT INTO t_stud_D312(sno,majorno) VALUES('123456789','87');
 ```
 
-![image-20210925003140381](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925003140381.png)![image-20210925003514484](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925003514484.png)
+![image-20210925003140381](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058285.png)![image-20210925003514484](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058286.png)
 
 ### 4. 建立用户及其权限
 
@@ -254,7 +254,7 @@ GRANT CREATE USER TO C##U_LZC_D312;
 CONNECT C##U_LZC_D312/sys;
 ```
 
-![image-20210925011156232](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925011156232.png)
+![image-20210925011156232](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058287.png)
 
 但仍然发现有权限不足的问题，无法创建用户
 
@@ -267,7 +267,7 @@ STARTUP;
 CONNECT C##U_LZC_D312/sys;
 ```
 
-![image-20210925092051557](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925092051557.png)
+![image-20210925092051557](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058288.png)
 
 #### 4. 1 创建用户，建立视图并授权
 
@@ -312,7 +312,7 @@ end;
 /
 ```
 
-![image-20210925124908944](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925124908944.png)
+![image-20210925124908944](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058289.png)
 
 查看所有用户验证是否创建成功
 
@@ -321,7 +321,7 @@ SELECT * FROM all_users;
 SELECT * FROM TAB;
 ```
 
-![image-20210925124935915](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925124935915.png)
+![image-20210925124935915](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058290.png)
 
 ##### 4. 1. 2 每位班长
 
@@ -357,7 +357,7 @@ end;
 /
 ```
 
-![image-20210925140353363](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925140353363.png)
+![image-20210925140353363](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058291.png)
 
 ##### 4. 1. 3 专业负责人
 
@@ -405,7 +405,7 @@ GRANT SELECT ON V_16 TO C##U_16;
 GRANT SELECT ON V_24 TO C##U_24;
 ```
 
-![image-20210925142411485](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925142411485.png)
+![image-20210925142411485](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058292.png)
 
 #### 4. 2查询测试
 
@@ -417,14 +417,14 @@ SELECT * FROM C##U_LZC_D312.V_8208191312;
 -- 注意此处一定要加上这个C##U_LZC_D312.,否则仍然查询不到
 ```
 
-![image-20210925134231971](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925134231971.png)
+![image-20210925134231971](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058293.png)
 
 ```SQL
 -- 尝试查询别的同学
 SELECT * FROM C##U_LZC_D312.V_8208190340;
 ```
 
-![image-20210925134842454](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925134842454.png)
+![image-20210925134842454](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058294.png)
 
 ##### 4. 2. 2 班长只能查询本班的信息
 
@@ -433,14 +433,14 @@ CONNECT C##U_8216190321/8216190321;
 SELECT * FROM C##U_LZC_D312.V_8216190321; 
 ```
 
-![image-20210925140518454](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925140518454.png)
+![image-20210925140518454](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058295.png)
 
 ```SQL
 -- 尝试查询别班
 SELECT * FROM C##U_LZC_D312.V_8200190301;
 ```
 
-![image-20210925140621549](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925140621549.png)
+![image-20210925140621549](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058296.png)
 
 ##### 4. 2. 3 专业负责人只能查询本专业的同学
 
@@ -449,14 +449,14 @@ CONNECT C##U_00/00;
 SELECT * FROM C##U_LZC_D312.V_00; 
 ```
 
-![image-20210925142432877](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925142432877.png)
+![image-20210925142432877](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058297.png)
 
 ```sql
 -- 尝试查询别的专业
 SELECT * FROM C##U_LZC_D312.V_08; 
 ```
 
-![image-20210925142501093](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210925142501093.png)
+![image-20210925142501093](https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202212058298.png)
 
 ## 5. 收获
 

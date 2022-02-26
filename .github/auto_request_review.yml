@@ -6,23 +6,23 @@ reviewers:
   # Reviewer groups each of which has a list of GitHub usernames
   groups:
     repository-owners:
-      - Jacob953
-      - DevRickLin
+      - Jacob953 # username
+      - DevRickLin # username
     core-manager:
-      - jzndd
+      - jzndd # username
     science:
       - DevRickLin # username
-      - HanX-gthb # username
+      - typedrandomly # username
+      - South-Twilight # username
     bigdata:
       - tangent-heng # username
       - Yemonade # username
-      - zhangchenqi123 # username
     security:
       - Gstalker # username
       - the-fall-moon # username
-      - wbfwonderful # username
-    automation:
-      - jzndd
+    intelligence:
+      - M-Chase # username
+      - heyzbw # username
 
 files:
   # Keys are glob expressions.
@@ -33,6 +33,8 @@ files:
     - bigdata # group
   '**/security/**':
     - security # group
+  '**/intelligence/**':
+    - intelligence # group
   '**':
     - repository-owners # group
     - core-manager # group

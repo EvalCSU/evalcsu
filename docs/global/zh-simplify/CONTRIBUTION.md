@@ -52,8 +52,8 @@
 #### 新增 Issue
 
 1. 进入 Issue 页面点击 `New issue` 按钮
-   ![New issue按钮所在的地方](../../../img/global/CONTRIBUTION/issue_button.png)
-   <center><div style="font-size:14px">New issue 的按钮位置</div></center>
+   ![New issue 按钮所在的地方](../../../img/global/CONTRIBUTION/issue_button.png)
+   <p align="center">Figure 1. New issue 的按钮位置</p>
 2. 选择 `Bug report`, `Evaluate request`, `Feature request` 或新建一个空白模版来初始化你的 Issue
    - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-模版)
    - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 [Evaluate request 模版](#evaluate-request-模版)
@@ -76,7 +76,7 @@
    - 如果无其他内容， 填 `NULL.`
 3. 在 **Assign the manager you email** 中 @ 负责 bug 所在区域的管理员
 ![优秀的 bug issue 案例](../../../img/global/CONTRIBUTION/bug_issue_example.png)
-<center><div style="font-size:14px">Bug issue 的按钮位置</div></center>
+<p align="center">Figure 2. Bug issue 的按钮位置</p>
 
 **特别注意**
 
@@ -121,7 +121,7 @@
    - 如果无其他内容， 填 `NULL.`
 4. 无论是否有相应资格，都需要在 **Assign the manager you email** 中 @ 所发邮件的管理员
 ![优秀的 feature request 案例](../../../img/global/CONTRIBUTION/feature_request_example.png)
-<center><div style="font-size:14px">优秀的 feature request 案例</div></center>
+<p align="center">Figure 3. 优秀的 feature request 案例</p>
 
 **特别注意**
 
@@ -149,7 +149,7 @@
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
    ![fork 按钮位置](../../../img/global/CONTRIBUTION/fork_button.png)
-   <center><div style="font-size:14px">fork 按钮位置</div></center>
+   <p align="center">Figure 4. fork 按钮位置</p>
 2. 在本地新建一个分支
    - 分支命名规则：
       ```
@@ -158,6 +158,7 @@
       ```
     - git 命令示例：
       ![新建分支的命令样例](../../../img/global/CONTRIBUTION/create_new_branch.png)
+      <p align="center">Figure 5. 新建分支的命令样例</p>
     - `<type>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**
 4. 在本地提交 commit 时，请严格遵循 [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
@@ -196,7 +197,7 @@
 1. 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
    <!-- + PR按钮图片： -->
   ![PR button](../../../img/global/CONTRIBUTION/PR_button.png)
-  <center><div style="font-size:14px">PR 按钮</div> </center>
+  <p align="center">Figure 6. PR 按钮</p>
 2. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
    1. 标题可以按照 `<type>[optional scope]: <description>` 的方式命名
    2. 在 **Related Issue** 中链接到相关 Issue，不可缺失
@@ -205,7 +206,7 @@
    5. 在 **Checklist** 中检查你的任务，不可缺失，但不要求一定完成
    6. 在 **Screenshoot** 中贴上对应截图
    ![优秀的 PR 样例](../../../img/global/CONTRIBUTION/PR_example.png)
-   <center><div style="font-size:14px">优秀的 PR 样例</div> </center>
+   <p align="center">Figure 7. 优秀的 PR 样例</p>
 3. 点击 `Create pull request` 按钮创建你的合并请求
 
 **特别注意**

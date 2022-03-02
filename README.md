@@ -1,6 +1,19 @@
 # EvalCSU
 
-> EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台
+> EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
+> 
+> 特此鸣谢 [EVALUTOR.md](docs/global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
+
+- [EvalCSU](#evalcsu)
+  - [1 项目简介](#1-项目简介)
+    - [1.1 平台背景](#11-平台背景)
+    - [1.2 平台目的](#12-平台目的)
+  - [2 项目目录](#2-项目目录)
+  - [3 贡献](#3-贡献)
+    - [3.1 贡献准则](#31-贡献准则)
+    - [3.2 贡献者](#32-贡献者)
+  - [4 项目说明](#4-项目说明)
+    - [4.1 行为准则](#41-行为准则)
 
 ## 1 项目简介
 
@@ -117,6 +130,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/63188873?s=120&v=4" width="100px;" alt=""/></td>
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/72395679?s=120&v=4" width="100px;" alt=""/></td>
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/57822495?s=120&v=4" width="100px;" alt=""/></td>
+        <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/28536427?s=120&v=4" width="100px;" alt=""/></td>
     </tr>
 </table>
 
@@ -136,8 +150,11 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/73117818?s=120&v=4" width="100px;" alt=""/></td>
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/99242280?s=120&v=4" width="100px;" alt=""/></td>
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/97728260?s=120&v=4" width="100px;" alt=""/></td>
+        <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/69760370?s=120&v=4" width="100px;" alt=""/></td>
+        <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/43837880?s=120&v=4" width="100px;" alt=""/></td>
     </tr>
 </table>
+
 
 ## 4 项目说明
 

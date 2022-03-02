@@ -43,7 +43,7 @@
  
 
  
- ## 2.实验过程（编码过程）
+## 2.实验过程（编码过程）
  
  > [代码](../../../../../code/soa/automation/datastructure/graph_traval/README.md)
 

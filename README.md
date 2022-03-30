@@ -2,7 +2,7 @@
 
 > EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
 > 
-> 特此鸣谢 [EVALUTOR.md](docs/global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
+> 特此鸣谢 [EVALUTOR.md](global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
 
 - [EvalCSU](#evalcsu)
   - [1 项目简介](#1-项目简介)
@@ -76,7 +76,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 > 学院、专业排名不分先后
 
-- [通用技巧经验分享](docs/global/GENERALTIPS.md)
+- [通用技巧经验分享](global/GENERALTIPS.md)
 
 - [计算机学院](docs/faculty/cse/README.md)
 
@@ -108,7 +108,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 - 共创、共建、共享 EvalCSU 专业课程经验分享平台
 - 积极响应回馈，在分享中不断学习、不断修正错误
 - 严禁窃取他人成果，坚决维护所有平台贡献者的利益
-- 贡献工作流程请以 [贡献指南](docs/global/zh-simplify/CONTRIBUTION.md) 作为导航
+- 贡献工作流程请以 [贡献指南](global/zh-simplify/CONTRIBUTION.md) 作为导航
 
 ### 3.2 贡献者
 

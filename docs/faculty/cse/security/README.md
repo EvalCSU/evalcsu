@@ -53,7 +53,7 @@
 > - 低年级排序高于高年级：2020 级 > 2019 级
 > - 同年级按时间顺序排：...@20220117 > ...@20220125
 > 
-> 通用技巧可以参考 [General Tips](../../global/GENERALTIPS.md)，专业规划可以参考 [CSE](../README.md#3-专业规划经验分享)
+> 通用技巧可以参考 [General Tips](/global/GENERALTIPS.md)，专业规划可以参考 [CSE](../README.md#3-专业规划经验分享)
 
 jacob953@20220205
 

@@ -155,6 +155,8 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
     </tr>
     <tr>
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/45818075?s=120&v=4" width="100px;" alt=""/></td>
+        <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/72145272?s=120&v=4" width="100px;" alt=""/></td>
+        <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/91550732?s=120&v=4" width="100px;" alt=""/></td>
     </tr>
 </table>
 

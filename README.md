@@ -1,3 +1,13 @@
+<p align="center"><img alt="LOGO" src="img/global/logo.jpg" width="100px" height="100px" /></p>
+
+<p align="center">
+  <img src="https://img.shields.io/crates/l/rustc-serialize" />
+  <img src="https://img.shields.io/github/repo-size/jacob953/evalcsu" />
+  <img src="https://img.shields.io/github/issues-raw/jacob953/evalcsu" />
+  <img src="https://img.shields.io/github/issues-pr-closed/jacob953/evalcsu" />
+  <img src="https://img.shields.io/github/milestones/progress-percent/jacob953/evalcsu/1" />
+</p>
+
 # EvalCSU
 
 > EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
@@ -70,7 +80,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 同时，我们希望能通过 EvalCSU 结识更多优秀的人，并参与到 EvalCSU 的建设中！
 
-> Welcome to light up the stars for EvalCSU! 
+<p align="center"> Welcome to light up the stars for EvalCSU! </p>
 
 ## 2 项目目录
 

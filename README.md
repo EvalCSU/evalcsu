@@ -1,5 +1,9 @@
 # EvalCSU
 
+> EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
+> 
+> 特此鸣谢 [EVALUTOR.md](global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
+
 <p align="center"><img alt="LOGO" src="img/global/logo.jpg" width="100px" height="100px" /></p>
 
 <p align="center">
@@ -9,10 +13,6 @@
   <img src="https://img.shields.io/github/issues-pr-closed/jacob953/evalcsu" />
   <img src="https://img.shields.io/github/milestones/progress-percent/jacob953/evalcsu/1" />
 </p>
-
-> EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
-> 
-> 特此鸣谢 [EVALUTOR.md](global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
 
 - [EvalCSU](#evalcsu)
   - [1 项目简介](#1-项目简介)

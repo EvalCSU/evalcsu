@@ -1,4 +1,4 @@
-[> Back](../../../README.md#2-项目目录)
+[> Back](/README.md#2-项目目录)
 
 # 计算机学院
 
@@ -15,12 +15,12 @@
 
 ### 2.1 评教目录
 
-- [计算机与科学](/docs/evaluation/cse/science/README.md)
-- [大数据](/docs/evaluation/cse/bigdata/README.md) - Manager: Aiden927, tangent, ...
-- [信息安全](/docs/evaluation/cse/security/README.md) - Manager: fallme, ...
-- [物联网](/docs/evaluation/cse/iot/README.md)
-- [通信工程](/docs/evaluation/cse/communication/README.md) - Manager: GZHuan, .
-- [软件工程](/docs/evaluation/cse/software/README.md)  -Manger: EZ4Chen,
+- [计算机与科学](/evaluation/cse/science/README.md)
+- [大数据](/evaluation/cse/bigdata/README.md) - Manager: Aiden927, tangent, ...
+- [信息安全](/evaluation/cse/security/README.md) - Manager: fallme, ...
+- [物联网](/evaluation/cse/iot/README.md)
+- [通信工程](/evaluation/cse/communication/README.md) - Manager: GZHuan, .
+- [软件工程](/evaluation/cse/software/README.md)  -Manger: EZ4Chen,
 
 ### 2.2 管理员
 

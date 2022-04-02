@@ -94,7 +94,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 > 学院、专业排名不分先后
 
-- [计算机学院](docs/faculty/cse/README.md)
+- [计算机学院](faculty/cse/README.md)
 
   - 计算机与科学
   - 大数据
@@ -103,7 +103,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
   - 通信工程
   - 软件工程
 
-- [自动化学院](docs/faculty/soa/README.md)
+- [自动化学院](faculty/soa/README.md)
 
   - 自动化
   - 智能科学与技术
@@ -113,7 +113,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ### 2.3 专业课程设计
 
-更多内容请参考 [EVAL](https://github.com/EvalCSU) 
+更多内容请参考 [EvalCSU-Template](https://github.com/EvalCSU) 
 
 ## 3 贡献
 

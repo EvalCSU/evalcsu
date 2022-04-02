@@ -1,3 +1,5 @@
+# EvalCSU
+
 <p align="center"><img alt="LOGO" src="img/global/logo.jpg" width="100px" height="100px" /></p>
 
 <p align="center">
@@ -8,8 +10,6 @@
   <img src="https://img.shields.io/github/milestones/progress-percent/jacob953/evalcsu/1" />
 </p>
 
-# EvalCSU
-
 > EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
 > 
 > 特此鸣谢 [EVALUTOR.md](global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
@@ -19,6 +19,9 @@
     - [1.1 平台背景](#11-平台背景)
     - [1.2 平台目的](#12-平台目的)
   - [2 项目目录](#2-项目目录)
+    - [2.1 通用经验分享](#21-通用经验分享)
+    - [2.2 专业评教及笔记](#22-专业评教及笔记)
+    - [2.3 课程设计](#23-课程设计)
   - [3 贡献](#3-贡献)
     - [3.1 贡献准则](#31-贡献准则)
     - [3.2 贡献者](#32-贡献者)
@@ -77,16 +80,19 @@ EvalCSU 目前以计算机学院和自动化学院为主，欢迎大家积极贡
 - 未来筹备：专业级覆盖，升学筹备，就业方向
 
 EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握专业课程内容，而不是投机取巧，浑浑噩噩度过大学生活。
-
 同时，我们希望能通过 EvalCSU 结识更多优秀的人，并参与到 EvalCSU 的建设中！
 
 <p align="center"> Welcome to light up the stars for EvalCSU! </p>
 
 ## 2 项目目录
 
-> 学院、专业排名不分先后
+### 2.1 通用经验分享
 
 - [通用技巧经验分享](global/GENERALTIPS.md)
+
+### 2.2 专业评教及笔记
+
+> 学院、专业排名不分先后
 
 - [计算机学院](docs/faculty/cse/README.md)
 
@@ -104,6 +110,10 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
   - 测控
   - 电子信息工程
   - 电气工程及其自动化
+
+### 2.3 课程设计
+
+更多内容请参考 [EVAL](https://github.com/EvalCSU) 
 
 ## 3 贡献
 

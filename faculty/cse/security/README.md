@@ -39,6 +39,8 @@
 
 #### 软件工程
 
+[[MiCode/Note] 浅谈泛读理解](software/MiCode-Note.md)
+
 ## 未来筹备经验分享
 
 > 经验分享样例源码：

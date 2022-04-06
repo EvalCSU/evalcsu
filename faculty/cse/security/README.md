@@ -6,7 +6,6 @@
   - [专业笔记](#专业笔记)
     - [第五学期](#第五学期)
       - [网络安全](#网络安全)
-      - [Web 技术](#web-技术)
       - [软件工程](#软件工程)
   - [未来筹备经验分享](#未来筹备经验分享)
 
@@ -30,12 +29,6 @@
 - [路由协议](network-security/routing-protocol.md)
 - [远程安全认证](network-security/remote-security-authentication.md)
 - [邮件中继](network-security/mail-relay.md)
-
-#### Web 技术
-
-**实验指导书**
-
-[《Web技术课程》实验任务书（2021秋）](web/web-experiment-guide.docx)
 
 #### 软件工程
 

@@ -13,8 +13,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
-    - name: gh-pages merge
-      uses: robotology/gh-action-nightly-merge@v1.3.1
+    - name: gh-pages Merge
+      uses: robotology/gh-action-nightly-merge@v1.3.3
       with:
         stable_branch: 'main'
         development_branch: 'gh-pages'

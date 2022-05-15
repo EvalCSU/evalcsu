@@ -119,7 +119,7 @@ nav:
     - NOOBGUIDTOGIT: global/zh-simplify/NOOBGUIDTOGIT.md
   - zh-tradition:
     - CONTRIBUTION: global/zh-tradition/CONTRIBUTION.md
-site_name: My Docs
+site_name: EvalCSU
 theme:
   features:
   - navigation.tabs

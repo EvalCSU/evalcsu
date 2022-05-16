@@ -1,6 +1,6 @@
 ## 为EvalCSU贡献
 ## Contribute to EvalCSU
-### [简体中文](CONTRIBUTION_zh_simplify.md) [繁體中文](CONTRIBUTION_zh_tradition.md)
+### [简体中文](../zh-simplify/CONTRIBUTION.md) [繁體中文](../zh-tradition/CONTRIBUTION.md)
 
 All kinds of contributions are welcome, including but not limited to the following:
 

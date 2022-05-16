@@ -1,5 +1,3 @@
-[> Back](./zh-simplify/CONTRIBUTION.md#pull-request-合并分支)
-
 ## Evaluators of EvalCSU
 
 > 贡献者样例：

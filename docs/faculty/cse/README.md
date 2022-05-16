@@ -1,15 +1,13 @@
-[> Back](/README.md#2-项目目录)
-
 # 计算机学院
 
 ## 1 笔记
 
 - 计算机与科学
-- [大数据](./bigdata/README.md)
-- [信息安全](./security/README.md)
+- [大数据](docs/faculty/cse/bigdata/README.md)
+- [信息安全](docs/faculty/cse/bigdata/security/README.md)
 - 物联网
-- [通信工程](./communication/README.md)
-- [软件工程](./software/README.md)
+- [通信工程](docs/faculty/cse/bigdata/communication/README.md)
+- [软件工程](docs/faculty/cse/bigdata/software/README.md)
 
 ## 2 评教
 

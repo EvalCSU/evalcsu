@@ -3,8 +3,4 @@
 !.gitignore
 !.github
 env
-<<<<<<< HEAD
 *.bak
-=======
-*.bak
->>>>>>> dev-mkdocs

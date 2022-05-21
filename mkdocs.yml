@@ -13,28 +13,18 @@ nav:
   - EvalCSU: /evalcsu/
 - 评教:
   - 计算机学院:
+    - 计算机科学与技术: evaluation/cse/science.md
     - 大数据: evaluation/cse/bigdata.md
-    - 通信工程:
-      - evaluation/cse/communication/
-    - 物联网:
-      - evaluation/cse/iot/
-    - 计算机科学与技术:
-      - evaluation/cse/science/
-    - 信息安全:
-      - evaluation/cse/security/
-    - 软件工程:
-      - evaluation/cse/software/
+    - 信息安全: evaluation/cse/security.md
+    - 物联网: evaluation/cse/iot.md
+    - 软件工程: evaluation/cse/software.md
+    - 通信工程: evaluation/cse/communication.md
   - 自动化学院:
-    - 自动化:
-      - evaluation/soa/automation/
-    - 电子工程及其自动化:
-      - evaluation/soa/electronic/
-    - 电子信息工程:
-      - evaluation/soa/electronic_information/
-    - 智能科学与技术:
-      - evaluation/soa/intelligence/
-    - 测控:
-      - evaluation/soa/observe_and_control/
+    - 自动化: evaluation/soa/automation.md
+    - 电子工程及其自动化: evaluation/soa/electronic.md
+    - 电子信息工程: evaluation/soa/electronic_information.md
+    - 智能科学与技术: evaluation/soa/intelligence.md
+    - 测控: evaluation/soa/observe_and_control.md
 - 笔记:
   - 计算机学院:
     - 大数据:

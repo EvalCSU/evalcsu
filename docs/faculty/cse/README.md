@@ -13,12 +13,12 @@
 
 ### 2.1 评教目录
 
-- [计算机与科学](/docs/evaluation/cse/science/README.md)
-- [大数据](/docs/evaluation/cse/bigdata/README.md) - Manager: Aiden927, tangent, ...
-- [信息安全](/evalcsu/evaluation/cse/security/README.md) - Manager: fallme, ...
-- [物联网](/evaluation/cse/iot/README.md)
-- [通信工程](../../evaluation/cse/communication/README.md) - Manager: GZHuan, .
-- [软件工程](../../evaluation/cse/software/README.md)  -Manger: EZ4Chen,
+- [计算机与科学](/evalcsu/evaluation/cse/science/)
+- [大数据](/evalcsu/evaluation/cse/bigdata/) - Manager: Aiden927, tangent, ...
+- [信息安全](/evalcsu/evaluation/cse/security/) - Manager: fallme, ...
+- [物联网](/evalcsu/evaluation/cse/iot/)
+- [通信工程](/evalcsu/evaluation/cse/communication/) - Manager: GZHuan, .
+- [软件工程](/evalcsu/evaluation/cse/software/)  -Manger: EZ4Chen,
 
 ### 2.2 管理员
 

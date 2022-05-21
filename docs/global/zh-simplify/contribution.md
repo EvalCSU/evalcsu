@@ -4,7 +4,7 @@ hide:
 ---
 # 贡献指南
 
-[繁體中文](global/zh-tradition/contirbution/) | [English](global/en/contribution/)
+[繁體中文](../zh-tradition/contirbution.md) | [English](../en/contribution.md)
 
 ## 为 EvalCSU 贡献
 
@@ -45,7 +45,7 @@ hide:
 
 1. 进入 Issue 页面点击 `New issue` 按钮
    
-   ![New issue 按钮所在的地方](../../img/global/CONTRIBUTION/issue_button.png)
+   ![New issue 按钮所在的地方](../../../img/global/CONTRIBUTION/issue_button.png)
    <p align="center">Figure 1. New issue 的按钮位置</p>
 2. 选择 `Bug report`, `Evaluate request`, `Feature request` 或新建一个空白模版来初始化你的 Issue
    - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-模版)
@@ -69,7 +69,7 @@ hide:
    - 如果无其他内容， 填 `NULL.`
 3. 在 **Assign the manager you email** 中 @ 负责 bug 所在区域的管理员
 
-![优秀的 bug issue 案例](../../img/global/CONTRIBUTION/bug_issue_example.png)
+![优秀的 bug issue 案例](../../../img/global/CONTRIBUTION/bug_issue_example.png)
 <p align="center">Figure 2. Bug issue 的按钮位置</p>
 
 **特别注意**
@@ -115,7 +115,7 @@ hide:
    - 如果无其他内容， 填 `NULL.`
 4. 无论是否有相应资格，都需要在 **Assign the manager you email** 中 @ 所发邮件的管理员
 
-![优秀的 feature request 案例](../../img/global/CONTRIBUTION/feature_request_example.png)
+![优秀的 feature request 案例](../../../img/global/CONTRIBUTION/feature_request_example.png)
 <p align="center">Figure 3. 优秀的 feature request 案例</p>
 
 **特别注意**
@@ -144,7 +144,7 @@ hide:
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
    
-   ![fork 按钮位置](../../img/global/CONTRIBUTION/fork_button.png)
+   ![fork 按钮位置](../../../img/global/CONTRIBUTION/fork_button.png)
    <p align="center">Figure 4. fork 按钮位置</p>
 2. 在本地新建一个分支
    - 分支命名规则：
@@ -154,7 +154,7 @@ hide:
       ```
     - git 命令示例：
       
-      ![新建分支的命令样例](../../img/global/CONTRIBUTION/create_new_branch.png)
+      ![新建分支的命令样例](../../../img/global/CONTRIBUTION/create_new_branch.png)
       <p align="center">Figure 5. 新建分支的命令样例</p>
     - `<type>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**
@@ -187,7 +187,7 @@ hide:
     - 若笔记不存在，则应申请添加新笔记
   - 发生课改时，应在合适的 README.md 中做解释
 - 评教、经验分享要求：
-  - 措辞中肯，评价公正，遵守 [行为准则](../../README.md#41-行为准则)
+  - 措辞中肯，评价公正，遵守 [行为准则](../../../README.md#41-行为准则)
 
 #### Pull Request 合并分支
 
@@ -203,7 +203,7 @@ hide:
    5. 在 **Checklist** 中检查你的任务，不可缺失，但不要求一定完成
    6. 在 **Screenshoot** 中贴上对应截图
    
-   ![优秀的 PR 样例](../../img/global/CONTRIBUTION/PR_example.png)
+   ![优秀的 PR 样例](../../../img/global/CONTRIBUTION/PR_example.png)
    <p align="center">Figure 7. 优秀的 PR 样例</p>
 3. 点击 `Create pull request` 按钮创建你的合并请求
 
@@ -219,7 +219,7 @@ hide:
 
 1. 熟悉 [Issue 模块](#issue-模块) 和 [Pull Request 模块](#pull-request-模块) 中的所有流程
 2. 禁止直接对主分支做任何操作
-3. 积极维护平台环境环境，严格遵守 [贡献准则](../../README.md#31-贡献准则) 和 [行为准则](../../README.md#41-行为准则)
+3. 积极维护平台环境环境，严格遵守 [贡献准则](../../../README.md#31-贡献准则) 和 [行为准则](../../../README.md#41-行为准则)
 4. 积极承担授权和审核的责任，完成授权和审核的工作
 5. 积极承担 Review 的责任，完成 Review 工作
 

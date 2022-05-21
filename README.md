@@ -4,7 +4,7 @@
 > 
 > 特此鸣谢 [EVALUTOR.md](docs/global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
 
-<p align="center"><img alt="LOGO" src="docs/img/global/logo.jpg" width="100px" height="100px" /></p>
+<p align="center"><img alt="LOGO" src="img/global/logo.jpg" width="100px" height="100px" /></p>
 
 <p align="center">
   <img src="https://img.shields.io/crates/l/rustc-serialize" />

@@ -2,9 +2,9 @@
 
 > EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
 > 
-> 特此鸣谢 [EVALUTOR.md](../global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
+> 特此鸣谢 [EVALUTOR.md](/docs/global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
 
-<p align="center"><img alt="LOGO" src="./img/global/logo.jpg" width="100px" height="100px" /></p>
+<p align="center"><img alt="LOGO" src="../img/global/logo.jpg" width="100px" height="100px" /></p>
 
 <p align="center">
   <img src="https://img.shields.io/crates/l/rustc-serialize" />
@@ -75,7 +75,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ### 2.1 通用经验分享
 
-- [通用技巧经验分享](global/GENERALTIPS.md)
+- [通用技巧经验分享](/docs/global/GENERALTIPS.md)
 
 ### 2.2 专业评教及笔记
 

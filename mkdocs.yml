@@ -1,4 +1,13 @@
 dev_addr: 0.0.0.0:8000
+
+site_name: EvalCSU
+theme:
+  features:
+  - navigation.tabs
+  - navigation.top
+  language: zh
+  name: material
+
 nav:
 - 简介:
   - Getting Start: README.md
@@ -119,10 +128,4 @@ nav:
     - NOOBGUIDTOGIT: global/zh-simplify/NOOBGUIDTOGIT.md
   - zh-tradition:
     - CONTRIBUTION: global/zh-tradition/CONTRIBUTION.md
-site_name: EvalCSU
-theme:
-  features:
-  - navigation.tabs
-  - navigation.top
-  language: zh
-  name: material
+

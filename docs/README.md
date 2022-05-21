@@ -1,8 +1,10 @@
 # EvalCSU
 
+[中文繁体](global/zh-tradition/contirbution/) | [English](global/en/contribution/)
+
 > EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成
 > 
-> 特此鸣谢 [EVALUTOR.md](/docs/global/EVALUATOR.md) 以及所有 EvalCSU 的贡献者们
+> 特此鸣谢 [EVALUTOR.md](global/evaluator/) 以及所有 EvalCSU 的贡献者们
 
 <p align="center"><img alt="LOGO" src="https://github.com/Jacob953/evalcsu/blob/dev/img/global/logo.jpg?raw=true" width="100px" height="100px" /></p>
 
@@ -75,13 +77,13 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ### 2.1 通用经验分享
 
-- [通用技巧经验分享](/docs/global/GENERALTIPS.md)
+- [通用技巧经验分享](global/general-tips/)
 
 ### 2.2 专业评教及笔记
 
 > 学院、专业排名不分先后
 
-- [计算机学院](faculty/cse/README.md)
+- [计算机学院](faculty/cse/)
 
   - 计算机与科学
   - 大数据
@@ -90,7 +92,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
   - 通信工程
   - 软件工程
 
-- [自动化学院](faculty/soa/README.md)
+- [自动化学院](faculty/soa/)
 
   - 自动化
   - 智能科学与技术
@@ -115,7 +117,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 - 共创、共建、共享 EvalCSU 专业课程经验分享平台
 - 积极响应回馈，在分享中不断学习、不断修正错误
 - 严禁窃取他人成果，坚决维护所有平台贡献者的利益
-- 贡献工作流程请以 [贡献指南](global/zh-simplify/CONTRIBUTION.md) 作为导航
+- 贡献工作流程请以 [贡献指南](global/zh-simplify/contirbution/) 作为导航
 
 ### 3.2 贡献者
 

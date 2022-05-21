@@ -10,32 +10,32 @@ theme:
 
 nav:
 - 简介:
-  - EvalCSU: README.md
+  - EvalCSU: /
 - 评教:
   - 计算机学院:
     - 大数据:
-      - evaluation/cse/bigdata/README.md
+      - evaluation/cse/bigdata/
     - 通信工程:
-      - evaluation/cse/communication/README.md
+      - evaluation/cse/communication/
     - 物联网:
-      - evaluation/cse/iot/README.md
+      - evaluation/cse/iot/
     - 计算机科学与技术:
-      - evaluation/cse/science/README.md
+      - evaluation/cse/science/
     - 信息安全:
-      - evaluation/cse/security/README.md
+      - evaluation/cse/security/
     - 软件工程:
-      - evaluation/cse/software/README.md
+      - evaluation/cse/software/
   - 自动化学院:
     - 自动化:
-      - evaluation/soa/automation/README.md
+      - evaluation/soa/automation/
     - 电子工程及其自动化:
-      - evaluation/soa/electronic/README.md
+      - evaluation/soa/electronic/
     - 电子信息工程:
-      - evaluation/soa/electronic_information/README.md
+      - evaluation/soa/electronic_information/
     - 智能科学与技术:
-      - evaluation/soa/intelligence/README.md
+      - evaluation/soa/intelligence/
     - 测控:
-      - evaluation/soa/observe_and_control/README.md
+      - evaluation/soa/observe_and_control/
 - 笔记:
   - 计算机学院:
     - 大数据:
@@ -77,7 +77,7 @@ nav:
     - 计算机科学与技术:
       - 计算机科学与技术: faculty/cse/science/README.md
     - 信息安全:
-      - network-security:
+      - 网络安全:
         - arp-spoofing: faculty/cse/security/network-security/arp-spoofing.md
         - bgp-route-hijacking: faculty/cse/security/network-security/bgp-route-hijacking.md
         - dns-server: faculty/cse/security/network-security/dns-server.md
@@ -109,23 +109,25 @@ nav:
       - 智能科学与技术: faculty/soa/intelligence/README.md
     - 测控:
       - 测控: faculty/soa/observe_and_control/README.md
-- global:
-  - en:
-    - CONTRIBUTION: global/en/CONTRIBUTION.md
-  - EVALUATOR: global/EVALUATOR.md
-  - GENERALTIPS: global/GENERALTIPS.md
-  - zh-simplify:
-    - CONTRIBUTION: global/zh-simplify/CONTRIBUTION.md
-    - git-helper:
-      - Git_Branch-Manager: global/zh-simplify/git-helper/Git_Branch-Manager.md
-      - Git_Custom: global/zh-simplify/git-helper/Git_Custom.md
-      - Git_Remote-Repository: global/zh-simplify/git-helper/Git_Remote-Repository.md
-      - Git_Self-Inctroduction: global/zh-simplify/git-helper/Git_Self-Inctroduction.md
-      - Git_Tag-Manager: global/zh-simplify/git-helper/Git_Tag-Manager.md
-      - Git_Time-Traveler: global/zh-simplify/git-helper/Git_Time-Traveler.md
-      - git-helper: global/zh-simplify/git-helper/README.md
-    - NOOBGUIDE: global/zh-simplify/NOOBGUIDE.md
-    - NOOBGUIDTOGIT: global/zh-simplify/NOOBGUIDTOGIT.md
-  - zh-tradition:
-    - CONTRIBUTION: global/zh-tradition/CONTRIBUTION.md
+- 如何贡献:
+  - global/zh-simplify/contribution/
+# - global:
+#   - en:
+#     - CONTRIBUTION: global/en/contribution/
+#   - EVALUATOR: global/evaluator/
+#   - GENERALTIPS: global/GENERALTIPS.md
+#   - zh-simplify:
+#     - CONTRIBUTION: global/zh-simplify/contribution/
+#     - git-helper:
+#       - Git_Branch-Manager: global/zh-simplify/git-helper/Git_Branch-Manager.md
+#       - Git_Custom: global/zh-simplify/git-helper/Git_Custom.md
+#       - Git_Remote-Repository: global/zh-simplify/git-helper/Git_Remote-Repository.md
+#       - Git_Self-Inctroduction: global/zh-simplify/git-helper/Git_Self-Inctroduction.md
+#       - Git_Tag-Manager: global/zh-simplify/git-helper/Git_Tag-Manager.md
+#       - Git_Time-Traveler: global/zh-simplify/git-helper/Git_Time-Traveler.md
+#       - git-helper: global/zh-simplify/git-helper/README.md
+#     - 菜鸟教程: global/zh-simplify/noobguide/
+#     - 菜鸟教程-Git: global/zh-simplify/noobguide-git/
+#   - zh-tradition:
+#     - CONTRIBUTION: global/zh-tradition/contribution/
 

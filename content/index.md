@@ -1,3 +1,7 @@
+---
+hide:
+  - navigation
+---
 # EvalCSU
 
 > EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台所有内容均由贡献者自愿完成

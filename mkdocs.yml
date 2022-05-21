@@ -13,7 +13,7 @@ nav:
   - EvalCSU: /evalcsu/
 - 评教:
   - 计算机学院:
-    - 大数据: evaluation/cse/bigdata/
+    - 大数据: evaluation/cse/bigdata.md
     - 通信工程:
       - evaluation/cse/communication/
     - 物联网:

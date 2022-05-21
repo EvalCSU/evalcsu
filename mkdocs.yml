@@ -1,5 +1,6 @@
 dev_addr: 0.0.0.0:8000
 site_name: EvalCSU
+
 theme:
   features:
   - navigation.tabs
@@ -7,6 +8,8 @@ theme:
   language: zh
   name: material
   logo: assets/logo.png
+
+docs_dir: content
 
 nav:
 - 简介:

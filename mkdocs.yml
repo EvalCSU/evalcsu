@@ -10,7 +10,7 @@ theme:
 
 nav:
 - 简介:
-  - EvalCSU: /
+  - EvalCSU: /evalcsu/
 - 评教:
   - 计算机学院:
     - 大数据:

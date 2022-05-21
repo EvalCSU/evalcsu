@@ -6,7 +6,7 @@ theme:
   - navigation.top
   language: zh
   name: material
-  favicon: images/logo.jpg
+  logo: assets/logo.png
 
 nav:
 - 简介:

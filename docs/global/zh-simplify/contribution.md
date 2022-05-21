@@ -1,5 +1,5 @@
 
-[English](../en/CONTRIBUTION.md) [繁體中文](../zh-tradition/CONTRIBUTION.md)
+[English](../en/CONTRIBUTION.md) ｜ [繁體中文](../zh-tradition/CONTRIBUTION.md)
 
 
 ## 为 EvalCSU 贡献

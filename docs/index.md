@@ -37,8 +37,8 @@ EvalCSU 受启发于 CSU 的教学环境中，由于不同环境下所面临的�
 
 1. 授课老师风格
 
-   - 激进风格：以提升学生能力为目的，高标准，高要求
-   - 稳健风格：以遵循课程大纲为目的，中规中矩
+      - 激进风格：以提升学生能力为目的，高标准，高要求
+      - 稳健风格：以遵循课程大纲为目的，中规中矩
 
 老师的授课风格会直接影响学生的学习感受，同时，学院设计的培养方案也会间接影响学生的学习感受，过于紧凑的培养方案带来的压力是极大的，这可能导致你无法很好地完成老师设计的教学任务。
 
@@ -46,9 +46,9 @@ EvalCSU 受启发于 CSU 的教学环境中，由于不同环境下所面临的�
 
 2. 学生风格
 
-   - 刷绩点：国内升学，国外留学，或者盲目跟风
-   - 做工程：专注竞赛，国外留学，工作导向，或者兴趣使然
-   - 躺毕业：专业调剂，国外镀金，其他计划，或者家里有矿
+      - 刷绩点：国内升学，国外留学，或者盲目跟风
+      - 做工程：专注竞赛，国外留学，工作导向，或者兴趣使然
+      - 躺毕业：专业调剂，国外镀金，其他计划，或者家里有矿
 
 学生的学习风格是影响学习成果最重要的因素，学习成果非单一绩点而论，科研成果，竞赛经历，以及工程能力都是衡量学习成果的重要指标。
 
@@ -142,6 +142,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/72395679?s=120&v=4" width="100px;" alt=""/></td>
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/57822495?s=120&v=4" width="100px;" alt=""/></td>
         <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/28536427?s=120&v=4" width="100px;" alt=""/></td>
+        <td align="top" style="word-wrap:break-word;"><img src="https://avatars.githubusercontent.com/u/55947248?s=120&v=4" width="100px;" alt=""/></td>
     </tr>
 </table>
 

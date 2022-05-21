@@ -9,8 +9,6 @@ theme:
   name: material
   logo: assets/logo.png
 
-docs_dir: content
-
 nav:
 - 简介:
   - EvalCSU: /evalcsu/

@@ -100,7 +100,7 @@ nav:
     - 测控:
       - 测控: faculty/soa/observe_and_control/README.md
 - 贡献指南:
-  - global/zh-simplify/contribution/
+  - docs/global/zh-simplify/contribution.md
 # - global:
 #   - en:
 #     - CONTRIBUTION: global/en/contribution/

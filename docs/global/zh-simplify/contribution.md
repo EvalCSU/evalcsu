@@ -4,7 +4,7 @@ hide:
 ---
 # 贡献指南
 
-[繁體中文](global/zh-tradition/contirbution/) | [English](global/en/contribution/)
+[繁體中文](../zh-tradition/contirbution.md) | [English](../en/contribution.md)
 
 ## 为 EvalCSU 贡献
 
@@ -19,7 +19,7 @@ hide:
 > 5. 申请参与校级、院级或专业级经验分享
 > 6. 将已有的内容翻译成其他语言
 > 
-> 若你是我们的协作者，请务必遵循 [Collaborator](#collaborator-协作者) 的要求
+> 若你是我们的协作者，请务必遵循 <a href='#collaborator'>Collaborator</a>的要求
 > 
 > 若本指南有任何模糊不清的地方，请通过 Issue 和我们反映
 
@@ -29,9 +29,11 @@ hide:
 > 尽管如此，我们还是建议你多参考已有的 Issue 或者 PR
 > 
 > 若你不是小白，可以参考一下几点：
-> 1. 提交错误或建议等，请参考 [Bug report 模版](#bug-report-模版)
-> 2. 提交评教或分享经验等，请参考 [Evaluate request 模版](#evaluate-request-模版)
-> 3. 提交课设、笔记或作业等，请参考 [Feature request 模版](#feature-request-模版)
+> 1. 提交错误或建议等，请参考 <a href="#bug-report">Bug report 模版</a>
+> 2. 提交评教或分享经验等，请参考 <a href='#evaluate-request'>Evaluate request </a>
+> 3. 提交课设、笔记或作业等，请参考 <a href='#feature-request'>Feature request 模版</a>
+
+<div id='issue'></div>
 
 ### Issue 模块
 > Issue 是一种非常好的可沉淀的交流方式，能帮助 EvalCSU 实现答疑交流、反馈缺陷和提出新需求，欢迎你通过 Issue 与我们交流
@@ -45,15 +47,17 @@ hide:
 
 1. 进入 Issue 页面点击 `New issue` 按钮
    
-   ![New issue 按钮所在的地方](../../img/global/CONTRIBUTION/issue_button.png)
+  ![New issue 按钮所在的地方](../../../img/global/CONTRIBUTION/issue_button.png)
    <p align="center">Figure 1. New issue 的按钮位置</p>
 2. 选择 `Bug report`, `Evaluate request`, `Feature request` 或新建一个空白模版来初始化你的 Issue
-   - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 [Bug report 模版](#bug-report-模版)
-   - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 [Evaluate request 模版](#evaluate-request-模版)
-   - Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请，详细请参考 [Feature request 模版](#feature-request-模版)
+   - Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 <a href='#bug-report'>Bug report 模版</a>
+   - Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考       <a href='#evaluate-request'>Evaluate request 模版</a>
+   - Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请，详细请参考 <a href='#feature-request'>Feature request 模版</a>
 3. 在禁止删除 **题目（加粗字体）** 的前提下，简述你的 Issue 内容，面对无法填写的部分，请以 `NULL.` 代替内容，而非删除题目
 4. 修改标题中的 `<description>` 部分，建议参考已有 Issue
 5. 点击 `Submit new issue` 按钮提交你的 Issue
+
+<div id="bug-report"></div> 
 
 #### Bug report 模版
 
@@ -69,7 +73,7 @@ hide:
    - 如果无其他内容， 填 `NULL.`
 3. 在 **Assign the manager you email** 中 @ 负责 bug 所在区域的管理员
 
-![优秀的 bug issue 案例](../../img/global/CONTRIBUTION/bug_issue_example.png)
+ ![优秀的 bug issue 案例](../../../img/global/CONTRIBUTION/bug_issue_example.png)
 <p align="center">Figure 2. Bug issue 的按钮位置</p>
 
 **特别注意**
@@ -81,12 +85,14 @@ hide:
   3. 修正考点思维导图错误（考点更新不纳入修正范围）
   4. 修正实验课设错误
   5. 提出你的建议、疑惑
-- 待管理员在该 Issue 下批准，便可移步 [Pull Request 模块](#pull-request-模块) 进行下一步操作。
+- 待管理员在该 Issue 下批准，便可移步 <a href='#pull-request'>Pull Request 模块</a>进行下一步操作。
+
+<div id='evaluate-request'></div>
 
 #### Evaluate request 模版
 
 1. 在提交 Issue 前，请到你所在的学院查询 **管理员** 表格
-   - 若不存在对应学院，请重新申请 [Feature request](#feature-request-模版)
+   - 若不存在对应学院，请重新申请 <a href='#feature-request'>Feature request</a>
    - 若存在对应学院，请 Email 当前年级相近的管理员
 2. 在 **Describe the evaluation you want to join** 中简述你希望参与的内容，务必包含年级、学院和模块（评教或经验分享）
 3. 在 **Assign the manager you email** 中：
@@ -100,7 +106,9 @@ hide:
   2. 新增多级经验分享
 - 为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息
 - 填写邮件内容时，请前往 `CSU 教务系统` -> `培养管理` -> `我的培养方案`，邮件内容附加全屏截图即可，建议包含系统时间
-- 待管理员在该 Issue 下批准，便可移步 [Pull Request 模块](#pull-request-模块) 进行下一步操作。
+- 待管理员在该 Issue 下批准，便可移步 <a href='#pull-request'>Pull Request 模块</a> 进行下一步操作。
+
+<div id='feature-request'></div>
 
 #### Feature request 模版
 
@@ -115,7 +123,7 @@ hide:
    - 如果无其他内容， 填 `NULL.`
 4. 无论是否有相应资格，都需要在 **Assign the manager you email** 中 @ 所发邮件的管理员
 
-![优秀的 feature request 案例](../../img/global/CONTRIBUTION/feature_request_example.png)
+![优秀的 feature request 案例](../../../img/global/CONTRIBUTION/feature_request_example.png)
 <p align="center">Figure 3. 优秀的 feature request 案例</p>
 
 **特别注意**
@@ -128,7 +136,9 @@ hide:
   5. 将已有内容翻译为其他语言
 - 为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息
 - 填写邮件内容时，请前往 `CSU 教务系统` -> `培养管理` -> `我的培养方案`，邮件内容附加全屏截图即可，建议包含系统时间
-- 待管理员在该 Issue 下批准，便可移步 [Pull Request 模块](#pull-request-模块) 进行下一步操作。
+- 待管理员在该 Issue 下批准，便可移步 <a href='#pull-request'>Pull Request 模块</a>进行下一步操作。
+
+<div id='pull-request'></div>
 
 ### Pull Request 模块
 
@@ -136,15 +146,15 @@ hide:
 > 
 > **任何 PR 都需要链接到已存在，并且已授权的 Issue**
 > 
-> 因此，在提交 PR 前，建议你优先阅读 [Issue 模块](#issue-模块)
-
+> 因此，在提交 PR 前，建议你优先阅读 <a href='#issue'>Issue 模块</a>
+>
 #### Pull Request 准备工作
 
-> 可以参考 [Git 新手指南](NOOBGUIDTOGIT.md)
+> 可以参考 [Git 新手指南](noobguide-git.md)
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
    
-   ![fork 按钮位置](../../img/global/CONTRIBUTION/fork_button.png)
+   ![fork 按钮位置](../../../img/global/CONTRIBUTION/fork_button.png)
    <p align="center">Figure 4. fork 按钮位置</p>
 2. 在本地新建一个分支
    - 分支命名规则：
@@ -154,11 +164,11 @@ hide:
       ```
     - git 命令示例：
       
-      ![新建分支的命令样例](../../img/global/CONTRIBUTION/create_new_branch.png)
+      ![新建分支的命令样例](../../../img/global/CONTRIBUTION/create_new_branch.png)
       <p align="center">Figure 5. 新建分支的命令样例</p>
-    - `<type>` 建议参考 [提交类型](#evalcsu-的-commit-注意事项)
+    - `<type>` 建议参考 <a href='evalcsu-commit'>提交类型</a>
 3. 在本地新建的分支上完成你的修改，修改要求详细请参考 **项目搭建原则**
-4. 在本地提交 commit 时，请严格遵循 [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
+4. 在本地提交 commit 时，请严格遵循 <a href='#evalcsu-commit'>EvalCSU 的 commit 注意事项</a>
 
 **项目搭建原则**
 
@@ -189,6 +199,7 @@ hide:
 - 评教、经验分享要求：
   - 措辞中肯，评价公正，遵守 [行为准则](../../README.md#41-行为准则)
 
+
 #### Pull Request 合并分支
 
 1. 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
@@ -203,7 +214,7 @@ hide:
    5. 在 **Checklist** 中检查你的任务，不可缺失，但不要求一定完成
    6. 在 **Screenshoot** 中贴上对应截图
    
-   ![优秀的 PR 样例](../../img/global/CONTRIBUTION/PR_example.png)
+   ![优秀的 PR 样例](../../../img/global/CONTRIBUTION/PR_example.png)
    <p align="center">Figure 7. 优秀的 PR 样例</p>
 3. 点击 `Create pull request` 按钮创建你的合并请求
 
@@ -213,13 +224,15 @@ hide:
 - 如果参与了评教（或经验分享）部分，请在 [EVALUATOR.md](../EVALUATOR.md) 中添加你的信息
   - 严禁出现个人信息，具有权威性即可
 
+<div id='collaborator'></div>
+
 ### Collaborator 协作者
 
 #### 注意事项
 
-1. 熟悉 [Issue 模块](#issue-模块) 和 [Pull Request 模块](#pull-request-模块) 中的所有流程
+1. 熟悉 <a href='#issue'>Issue 模块</a> 和 <a href='#pull-request'>Pull Request 模块</a>中的所有流程
 2. 禁止直接对主分支做任何操作
-3. 积极维护平台环境环境，严格遵守 [贡献准则](../../README.md#31-贡献准则) 和 [行为准则](../../README.md#41-行为准则)
+3. 积极维护平台环境环境，严格遵守 [贡献准则](../../../README.md#31-贡献准则) 和 [行为准则](../../../README.md#41-行为准则)
 4. 积极承担授权和审核的责任，完成授权和审核的工作
 5. 积极承担 Review 的责任，完成 Review 工作
 
@@ -235,6 +248,9 @@ hide:
 **特别注意**
 
 - 此过程为交叉互审，除 Jacob953(owner) 外，至少需要两名以上的协作者 Approved 后才能合并
+
+<div id='evalcsu-commit'></div>
+
 ### EvalCSU 的 commit 注意事项
 
 1. 请尽量于本地进行 commit，有较大的操作空间与弹性。

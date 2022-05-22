@@ -36,8 +36,8 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 ## 导航
 
 - EvalCSU 主页：[EvalCSU](https://jacob953.github.io/evalcsu/)
-- EvalCSU 维基：[EvalCSU-wiki](https://github.com/Jacob953/evalcsu/wiki)
-- EvalCSU 专业课程设计：[EvalCSU-Template](https://github.com/EvalCSU)
+- EvalCSU 维基：[EvalCSU-Wiki](https://github.com/Jacob953/evalcsu/wiki)
+- EvalCSU 专业课程设计：[EvalCSU-Org](https://github.com/EvalCSU)
 
 ### 鸣谢
 

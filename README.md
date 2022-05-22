@@ -39,7 +39,7 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 - EvalCSU 维基：[EvalCSU-Wiki](https://github.com/Jacob953/evalcsu/wiki)
 - EvalCSU 专业课程设计：[EvalCSU-Org](https://github.com/EvalCSU)
 
-### 鸣谢
+## 鸣谢
 
 **核心贡献者**
 

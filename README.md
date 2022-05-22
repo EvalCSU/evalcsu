@@ -35,32 +35,11 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 
 ## 导航
 
-### EvalCSU 主页
+- EvalCSU 主页：[EvalCSU](https://jacob953.github.io/evalcsu/)
+- EvalCSU 维基：[EvalCSU-wiki](https://github.com/Jacob953/evalcsu/wiki)
+- EvalCSU 专业课程设计：[EvalCSU-Template](https://github.com/EvalCSU)
 
-请查看移步 [EvalCSU](https://jacob953.github.io/evalcsu/)
-
-### 专业课程设计
-
-更多内容请参考 [EvalCSU-Template](https://github.com/EvalCSU) 
-
-## 贡献
-
-作为本项目的贡献者和维护者，需要时刻牢记和遵守 [贡献准则](#31-贡献准则) 和 [行为准则](#41-行为准则)。
-
-不仅如此，EvalCSU 为了感谢部分贡献者的突出工作，会将这部分贡献者提升为核心贡献者，并分享更加优质、完善的课程设计报告，欢迎你的积极参与！
-
-### 贡献准则
-
-- 公开、公平、公正，这是 EvalCSU 的根本价值理念
-- 承担开源责任，对内容负责，对他人的贡献负责
-- 共创、共建、共享 EvalCSU 专业课程经验分享平台
-- 积极响应回馈，在分享中不断学习、不断修正错误
-- 严禁窃取他人成果，坚决维护所有平台贡献者的利益
-- 贡献工作流程请以 [贡献指南](/docs/global/zh-simplify/CONTRIBUTION.md) 作为导航
-
-### 贡献者
-
-感谢以下每个人对 EvalCSU 的贡献！
+### 鸣谢
 
 **核心贡献者**
 
@@ -116,6 +95,19 @@ EvalCSU 建立的目的是为了帮助你节省时间，更好、更快地掌握
 > 项目内容遵循 [Apache 2 Lisence](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-AP)
 
 EvalCSU 评教部分所涉及的内容仅作为贡献者个人描述，平台及平台维护者不承担任何责任。
+
+### 贡献准则
+
+作为本项目的贡献者和维护者，需要时刻牢记和遵守 [贡献准则](#贡献准则) 和 [行为准则](#行为准则)。
+
+不仅如此，EvalCSU 为了感谢部分贡献者的突出工作，会将这部分贡献者提升为核心贡献者，并分享更加优质、完善的课程设计报告，欢迎你的积极参与！
+
+- 公开、公平、公正，这是 EvalCSU 的根本价值理念
+- 承担开源责任，对内容负责，对他人的贡献负责
+- 共创、共建、共享 EvalCSU 专业课程经验分享平台
+- 积极响应回馈，在分享中不断学习、不断修正错误
+- 严禁窃取他人成果，坚决维护所有平台贡献者的利益
+- 贡献工作流程请以 [贡献指南](/docs/global/zh-simplify/CONTRIBUTION.md) 作为导航
 
 ### 行为准则
 

@@ -1,6 +1,11 @@
-[> Back](../../../README.md#3.1-贡献准则)
+---
+hide:
+  - navigation
+---
+# 贡献指南
 
-[English](CONTRIBUTION.md) [繁體中文](CONTRIBUTION_zh_tradition.md)
+[繁體中文](../zh-tradition/contirbution.md) | [English](../en/contribution.md)
+
 ## 为 EvalCSU 贡献
 
 > **请确保你已经仔细阅读了本指南，在工作流程清晰后再进行操作!**
@@ -18,19 +23,6 @@
 > 
 > 若本指南有任何模糊不清的地方，请通过 Issue 和我们反映
 
-- [为 EvalCSU 贡献](#为-evalcsu-贡献)
-  - [Issue 模块](#issue-模块)
-    - [新增 Issue](#新增-issue)
-    - [Bug report 模版](#bug-report-模版)
-    - [Evaluate request 模版](#evaluate-request-模版)
-    - [Feature request 模版](#feature-request-模版)
-  - [Pull Request 模块](#pull-request-模块)
-    - [Pull Request 准备工作](#pull-request-准备工作)
-    - [Pull Request 合并分支](#pull-request-合并分支)
-  - [Collaborator 协作者](#collaborator-协作者)
-    - [注意事项](#注意事项)
-    - [Review 流程](#review-流程)
-  - [EvalCSU 的 commit 注意事项](#evalcsu-的-commit-注意事项)
 
 > 为了便于指导小白操作，我们将根据 GitHub 的操作模块进行详细指导
 > 
@@ -148,7 +140,7 @@
 
 #### Pull Request 准备工作
 
-> 可以参考 [Git 新手指南](./NOOBGUIDTOGIT.md)
+> 可以参考 [Git 新手指南](NOOBGUIDTOGIT.md)
 
 1. `fork` 主仓库到你的 GitHub 仓库中，并 `git clone` 个人仓库到本地
    
@@ -201,7 +193,7 @@
 
 1. 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
   
-  ![PR button](../../../img/global/CONTRIBUTION/PR_button.png)
+  ![PR button](/img/global/CONTRIBUTION/PR_button.png)
   <p align="center">Figure 6. PR 按钮</p>
 2. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
    1. 标题可以按照 `<type>[optional scope]: <description>` 的方式命名
@@ -227,7 +219,7 @@
 
 1. 熟悉 [Issue 模块](#issue-模块) 和 [Pull Request 模块](#pull-request-模块) 中的所有流程
 2. 禁止直接对主分支做任何操作
-3. 积极维护平台环境环境，严格遵守 [贡献准则](../../../README.md#31-) 和 [行为准则](../../../README.md#41-)
+3. 积极维护平台环境环境，严格遵守 [贡献准则](../../../README.md#31-贡献准则) 和 [行为准则](../../../README.md#41-行为准则)
 4. 积极承担授权和审核的责任，完成授权和审核的工作
 5. 积极承担 Review 的责任，完成 Review 工作
 

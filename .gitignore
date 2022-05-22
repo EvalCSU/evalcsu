@@ -1,4 +1,6 @@
-.*
+.vscode
 
 !.gitignore
 !.github
+env
+*.bak

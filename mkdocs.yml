@@ -1,0 +1,123 @@
+dev_addr: 0.0.0.0:8000
+site_name: EvalCSU
+
+theme:
+  features:
+  - navigation.tabs
+  - navigation.top
+  language: zh
+  name: material
+  logo: assets/logo.png
+
+nav:
+- 简介:
+  - EvalCSU: /evalcsu/
+- 评教:
+  - 计算机学院:
+    - 计算机科学与技术: evaluation/cse/science.md
+    - 大数据: evaluation/cse/bigdata.md
+    - 信息安全: evaluation/cse/security.md
+    - 物联网: evaluation/cse/iot.md
+    - 软件工程: evaluation/cse/software.md
+    - 通信工程: evaluation/cse/communication.md
+  - 自动化学院:
+    - 自动化: evaluation/soa/automation.md
+    - 电子工程及其自动化: evaluation/soa/electronic.md
+    - 电子信息工程: evaluation/soa/electronic_information.md
+    - 智能科学与技术: evaluation/soa/intelligence.md
+    - 测控: evaluation/soa/observe_and_control.md
+- 笔记:
+  - 计算机学院:
+    - 大数据:
+      - Database:
+        - experiment1: faculty/cse/bigdata/Database/experiment1.md
+        - experiment2: faculty/cse/bigdata/Database/experiment2.md
+      - Oracle:
+        - Experiment:
+          - experiment-1: faculty/cse/bigdata/Oracle/Experiment/experiment-1.md
+          - experiment-2: faculty/cse/bigdata/Oracle/Experiment/experiment-2.md
+          - experiment-3: faculty/cse/bigdata/Oracle/Experiment/experiment-3.md
+          - experiment-4: faculty/cse/bigdata/Oracle/Experiment/experiment-4.md
+          - experiment-5: faculty/cse/bigdata/Oracle/Experiment/experiment-5.md
+        - Note:
+          - Advanced: faculty/cse/bigdata/Oracle/Note/Advanced.md
+          - Execution_Plan: faculty/cse/bigdata/Oracle/Note/Execution_Plan.md
+          - Oracle_Architecture: faculty/cse/bigdata/Oracle/Note/Oracle_Architecture.md
+          - Oracle_Schema: faculty/cse/bigdata/Oracle/Note/Oracle_Schema.md
+          - PL_SQL1: faculty/cse/bigdata/Oracle/Note/PL_SQL1.md
+          - PL_SQL2: faculty/cse/bigdata/Oracle/Note/PL_SQL2.md
+        - Oracle: faculty/cse/bigdata/Oracle/README.md
+      - R-language:
+        - Experiment:
+          - experiment-1: faculty/cse/bigdata/R-language/Experiment/experiment-1.md
+          - experiment-2: faculty/cse/bigdata/R-language/Experiment/experiment-2.md
+        - Note:
+          - BasicStructure: faculty/cse/bigdata/R-language/Note/BasicStructure.md
+          - DataAnalysis: faculty/cse/bigdata/R-language/Note/DataAnalysis.md
+          - dataOp: faculty/cse/bigdata/R-language/Note/dataOp.md
+          - Grammar: faculty/cse/bigdata/R-language/Note/Grammar.md
+          - ML: faculty/cse/bigdata/R-language/Note/ML.md
+          - Plot: faculty/cse/bigdata/R-language/Note/Plot.md
+        - R-language: faculty/cse/bigdata/R-language/README.md
+      - 大数据: faculty/cse/bigdata/README.md
+      - Web-technology:
+        - web-lab-report: faculty/cse/bigdata/Web-technology/web-lab-report.md
+    - 通信工程:
+      - 通信工程: faculty/cse/communication/README.md
+    - 计算机科学与技术:
+      - 计算机科学与技术: faculty/cse/science/README.md
+    - 信息安全:
+      - 网络安全:
+        - arp-spoofing: faculty/cse/security/network-security/arp-spoofing.md
+        - bgp-route-hijacking: faculty/cse/security/network-security/bgp-route-hijacking.md
+        - dns-server: faculty/cse/security/network-security/dns-server.md
+        - dos: faculty/cse/security/network-security/dos.md
+        - ipsec: faculty/cse/security/network-security/ipsec.md
+        - mail-relay: faculty/cse/security/network-security/mail-relay.md
+        - onetime-password: faculty/cse/security/network-security/onetime-password.md
+        - remote-security-authentication: faculty/cse/security/network-security/remote-security-authentication.md
+        - routing-protocol: faculty/cse/security/network-security/routing-protocol.md
+        - salt-value: faculty/cse/security/network-security/salt-value.md
+        - syn-cookies: faculty/cse/security/network-security/syn-cookies.md
+        - tls-ssl: faculty/cse/security/network-security/tls-ssl.md
+      - 信息安全: faculty/cse/security/README.md
+      - 软件工程:
+        - MiCode-Note: faculty/cse/security/software/MiCode-Note.md
+    - 软件工程:
+      - 软件工程: faculty/cse/software/README.md
+  - 自动化学院:
+    - 自动化:
+      - datastructure:
+        - graph_traval: faculty/soa/automation/datastructure/graph_traval.md
+        - Huffman: faculty/soa/automation/datastructure/Huffman.md
+      - 自动化: faculty/soa/automation/README.md
+    - 电子工程及其自动化:
+      - 电子工程及其自动化: faculty/soa/electronic/README.md
+    - 电子信息工程:
+      - 电子信息工程: faculty/soa/electronic_information/README.md
+    - 智能科学与技术:
+      - 智能科学与技术: faculty/soa/intelligence/README.md
+    - 测控:
+      - 测控: faculty/soa/observe_and_control/README.md
+- 贡献指南:
+  - global/zh-simplify/contribution/
+# - global:
+#   - en:
+#     - CONTRIBUTION: global/en/contribution/
+#   - EVALUATOR: global/evaluator/
+#   - GENERALTIPS: global/GENERALTIPS.md
+#   - zh-simplify:
+#     - CONTRIBUTION: global/zh-simplify/contribution/
+#     - git-helper:
+#       - Git_Branch-Manager: global/zh-simplify/git-helper/Git_Branch-Manager.md
+#       - Git_Custom: global/zh-simplify/git-helper/Git_Custom.md
+#       - Git_Remote-Repository: global/zh-simplify/git-helper/Git_Remote-Repository.md
+#       - Git_Self-Inctroduction: global/zh-simplify/git-helper/Git_Self-Inctroduction.md
+#       - Git_Tag-Manager: global/zh-simplify/git-helper/Git_Tag-Manager.md
+#       - Git_Time-Traveler: global/zh-simplify/git-helper/Git_Time-Traveler.md
+#       - git-helper: global/zh-simplify/git-helper/README.md
+#     - 菜鸟教程: global/zh-simplify/noobguide/
+#     - 菜鸟教程-Git: global/zh-simplify/noobguide-git/
+#   - zh-tradition:
+#     - CONTRIBUTION: global/zh-tradition/contribution/
+

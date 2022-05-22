@@ -1,14 +1,6 @@
-[> Back](../README.md)
 
 # 信息安全
 
-- [信息安全](#信息安全)
-  - [专业笔记](#专业笔记)
-    - [第五学期](#第五学期)
-      - [网络安全](#网络安全)
-      - [Web 技术](#web-技术)
-      - [软件工程](#软件工程)
-  - [未来筹备经验分享](#未来筹备经验分享)
 
 
 ## 专业笔记
@@ -31,13 +23,9 @@
 - [远程安全认证](network-security/remote-security-authentication.md)
 - [邮件中继](network-security/mail-relay.md)
 
-#### Web 技术
-
-**实验指导书**
-
-[《Web技术课程》实验任务书（2021秋）](web/web-experiment-guide.docx)
-
 #### 软件工程
+
+[[MiCode/Note] 浅谈泛读理解](software/MiCode-Note.md)
 
 ## 未来筹备经验分享
 
@@ -53,7 +41,7 @@
 > - 低年级排序高于高年级：2020 级 > 2019 级
 > - 同年级按时间顺序排：...@20220117 > ...@20220125
 > 
-> 通用技巧可以参考 [General Tips](../../global/GENERALTIPS.md)，专业规划可以参考 [CSE](../README.md#3-专业规划经验分享)
+> 通用技巧可以参考 [General Tips](/global/GENERALTIPS.md)，专业规划可以参考 [CSE](../README.md#3-专业规划经验分享)
 
 jacob953@20220205
 

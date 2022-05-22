@@ -1,35 +1,9 @@
-
-[> Back](./CONTRIBUTION.md)
 # Git 新手指南
 本指南本着以简易明了的语言向 Git & Github 新手解释基本概念与流程，如有错误和疏漏，请以谅解和更改。
 
 更多 Git 相关操作，请参考 [Git Helper](./git-helper/README.md)
-<!-- TOC -->
 
-- [Git 新手指南](#git-新手指南)
-	- [零、理解基础概念](#零理解基础概念)
-		- [工作区](#工作区)
-		- [暂存区](#暂存区)
-		- [仓库](#仓库)
-		- [版本](#版本)
-		- [分支](#分支)
-	- [一、Pull Request 的基本流程](#一pull-request-的基本流程)
-		- [克隆目标仓库代码](#克隆目标仓库代码)
-		- [克隆代码到本地](#克隆代码到本地)
-		- [创建自己的分支](#创建自己的分支)
-		- [提交修改到本地仓库](#提交修改到本地仓库)
-		- [拉取最新版本](#拉取最新版本)
-		- [提交修改到远程仓库](#提交修改到远程仓库)
-		- [远端合并分支](#远端合并分支)
-	- [二、部分常用的 git 命令补充](#二部分常用的-git-命令补充)
-		- [初始化](#初始化)
-		- [删除文件](#删除文件)
-		- [分支操作](#分支操作)
-		- [查看提交的修改](#查看提交的修改)
-		- [撤回提交的修改](#撤回提交的修改)
 
-<!-- /TOC -->
---------------------
 ## 零、理解基础概念
 Git 中需要理解基础概念：
 - [工作区](#工作区)
@@ -82,11 +56,11 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 
 1. 在目标仓库点击 `Fork` 按钮，可以生成一个属于自己的同名仓库，并与上游仓库关联。
 
-![fork](../../../img/git-helper/noodGuideToGit/fork.png)
+![fork](../../img/git-helper/noodGuideToGit/fork.png)
 
-2. 操作后，可以在自己的主页看到克隆的仓库
+1. 操作后，可以在自己的主页看到克隆的仓库
 
-![fork_result](../../../img/git-helper/noodGuideToGit/fork_result.png)
+![fork_result](../../img/git-helper/noodGuideToGit/fork_result.png)
 
 ### 克隆代码到本地
 
@@ -94,15 +68,15 @@ Git 仓库分为两类仓库：本地仓库和远程仓库。
 
 **注意**：使用 SSH 链接需要先在本地主机上和自己的Github账户上，部署 SSH key 免密登入。该步骤可参考网络教程或官方教程 [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 完成。
 
-![clone_local](../../../img/git-helper/noodGuideToGit/clone_local.png)
+![clone_local](../../img/git-helper/noodGuideToGit/clone_local.png)
 
-2. 在你打算存放该代码仓库的目录下，打开 `Git Bash` 终端，输入命令,即可在本地获取到对应代码仓库，并自动与远程仓库关联。
+1. 在你打算存放该代码仓库的目录下，打开 `Git Bash` 终端，输入命令,即可在本地获取到对应代码仓库，并自动与远程仓库关联。
 ```
 git clone git@github.com:<github_account>/<repository_name.git>
 e.g. git clone git@github.com:the-fall-moon/evalcsu.git
 ```
 
-![clone_code](../../../img/git-helper/noodGuideToGit/clone_code.png)
+![clone_code](../../img/git-helper/noodGuideToGit/clone_code.png)
 
 ### 创建自己的分支
 
@@ -117,7 +91,7 @@ e.g. git checkout -b docs/security/tfm
 <type>/[faculty]/<your_github_id>
 e.g. docs/security/tfm
 ```
-`<type>` 建议参考[提交类型](./CONTRIBUTION.md/#evalcsu-的-commit-注意事项)
+`<type>` 建议参考[提交类型](./CONTRIBUTION.md)
 
 ### 提交修改到本地仓库
 
@@ -143,25 +117,25 @@ git remote add upstream_name git@github.com:github_account/<repository_name.git>
 e.g. git remote add upstream git@github.com:jacob953/evalcsu.git
 ```
 
-![remote_add](./../../../img/git-helper/noodGuideToGit/remote_add.png)
+![remote_add](../../img/git-helper/noodGuideToGit/remote_add.png)
 
-2. 去上游仓库拉取一次你所需保持跟踪的分支 upstream/main 。
+1. 去上游仓库拉取一次你所需保持跟踪的分支 upstream/main 。
 ```
 git fetch <upstream_name> <branch_name>
 e.g. git fetch upstream main
 ```
 
-![fetch_upstream](./../../../img/git-helper/noodGuideToGit/fetch_upstream.png)
+![fetch_upstream](../../img/git-helper/noodGuideToGit/fetch_upstream.png)
 
-3. 将 upstream/main 设置为你**当前分支**所要跟踪的远程仓库分支。
+1. 将 upstream/main 设置为你**当前分支**所要跟踪的远程仓库分支。
 ```
 git branch -u <upstream_name>/<branch_name>
 e.g. git branch -u upstream/main
 ```
 
-![branch_set](./../../../img/git-helper/noodGuideToGit/branch_set.png)
+![branch_set](../../img/git-helper/noodGuideToGit/branch_set.png)
 
-4. 在**设置过的分支**使用 git pull 命令简化拉取最新版本的操作。
+1. 在**设置过的分支**使用 git pull 命令简化拉取最新版本的操作。
 
 ### 提交修改到远程仓库
 
@@ -177,9 +151,9 @@ eg: git push origin
 
 1. 打开 GitHub，从个人仓库中选择 `New pull request` 按钮
 
-![github_button](./../../../img/git-helper/noodGuideToGit/github_button.png)
+![github_button](../../img/git-helper/noodGuideToGit/github_button.png)
 
-2. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
+1. 选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：
    1. 在**标题栏**中按照 `<type>[optional scope]: <description>` 的方式命名标题，要求简洁明了，不可缺失
    2. 在 **Related Issue** 中链接到相关 Issue，不可缺失
    3. 在 **Propose changes** 中简述你的改动，不可缺失
@@ -188,9 +162,9 @@ eg: git push origin
    6. 在 **Screenshoot** 中贴上对应截图
    7. 在 **Reviewers** 处添加数个检查者
 
-![github_pull](../../../img/git-helper/noodGuideToGit/github_pull.png)
+![github_pull](../../img/git-helper/noodGuideToGit/github_pull.png)
 
-3. 点击 `Create pull request` 按钮创建你的合并请求
+1. 点击 `Create pull request` 按钮创建你的合并请求
 
 ## 二、部分常用的 git 命令补充
 ### 初始化

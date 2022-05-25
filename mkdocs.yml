@@ -6,9 +6,11 @@ theme:
   language: zh
   # custom_dir: "mkdocs-material/material"
   custom_dir: "overrides/"
+
   features:
   - navigation.tabs
   - navigation.top
+  
   logo: assets/logo.png
 
 nav:

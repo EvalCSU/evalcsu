@@ -2,11 +2,15 @@ dev_addr: 0.0.0.0:8000
 site_name: EvalCSU
 
 theme:
+  name: material
+  language: zh
+  # custom_dir: "mkdocs-material/material"
+  custom_dir: "overrides/"
+
   features:
   - navigation.tabs
   - navigation.top
-  language: zh
-  name: material
+  
   logo: assets/logo.png
 
 nav:

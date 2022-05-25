@@ -108,8 +108,8 @@ EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台�
 
 ## 项目说明
 
-> 本仓库遵循 [CC BY-SA 4.0](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-CC)
+> 本仓库遵循 [Apache 2 Lisence](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-AP)
 
-> 本仓库项目内容遵循 [Apache 2 Lisence](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-AP)
+> 本仓库项目内容遵循 [CC BY-SA 4.0](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-CC)
 
 EvalCSU 评教部分所涉及的内容仅作为贡献者个人描述，平台及平台维护者不承担任何责任。

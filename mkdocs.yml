@@ -1,10 +1,12 @@
 dev_addr: 0.0.0.0:8000
 site_name: EvalCSU
 
+repo_url: https://github.com/Jacob953/evalcsu
+repo_name: Jacob953/evalcsu
+
 theme:
   name: material
   language: zh
-  # custom_dir: "mkdocs-material/material"
   custom_dir: "overrides/"
 
   features:
@@ -12,6 +14,9 @@ theme:
   - navigation.top
   
   logo: assets/logo.png
+
+  icon:
+    repo: fontawesome/brands/github-square
 
 nav:
 - 简介:

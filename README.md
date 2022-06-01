@@ -84,7 +84,7 @@ EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台�
 - 共创、共建、共享 EvalCSU 专业课程经验分享平台
 - 积极响应回馈，在分享中不断学习、不断修正错误
 - 严禁窃取他人成果，坚决维护所有平台贡献者的利益
-- 贡献工作流程请以 [贡献指南](/docs/global/zh-simplify/CONTRIBUTION.md) 作为导航
+- 贡献工作流程请以 [贡献指南](/docs/global/zh-simplify/contribution.md) 作为导航
 
 不仅如此，EvalCSU 为了感谢部分贡献者的突出工作，会将这部分贡献者提升为核心贡献者，并分享更加优质、完善的课程设计报告，欢迎你的积极参与！
 
@@ -108,8 +108,6 @@ EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台�
 
 ## 项目说明
 
-> 本仓库遵循 [Apache 2 Lisence](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-AP)
-
-> 本仓库项目内容遵循 [CC BY-SA 4.0](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-CC)
+> 本仓库遵循 [Apache 2 Lisence](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-AP)，本仓库项目内容遵循 [CC BY-SA 4.0](https://github.com/Jacob953/evalcsu/blob/main/LICENSE-CC)
 
 EvalCSU 评教部分所涉及的内容仅作为贡献者个人描述，平台及平台维护者不承担任何责任。

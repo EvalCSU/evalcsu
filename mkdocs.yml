@@ -22,13 +22,15 @@ nav:
 - 简介:
   - EvalCSU: /evalcsu/
 - 评教:
-  - 计算机学院:
+  - 计算机学院: 
+    - evaluation/cse/
     - 计算机科学与技术: evaluation/cse/science.md
     - 大数据: evaluation/cse/bigdata.md
     - 信息安全: evaluation/cse/security.md
     - 物联网: evaluation/cse/iot.md
     - 软件工程: evaluation/cse/software.md
   - 自动化学院:
+    - evaluation/soa/
     - 自动化: evaluation/soa/automation.md
     - 电子工程及其自动化: evaluation/soa/electronic_information.md
     - 智能科学与技术: evaluation/soa/intelligence.md

@@ -33,8 +33,7 @@ nav:
     - 电子工程及其自动化: evaluation/soa/electronic_information.md
     - 智能科学与技术: evaluation/soa/intelligence.md
 - 笔记:
-  - 计算机学院:
-    - faculty/cse/
+  - 计算机学院: faculty/cse/
     # - 大数据:
     #   - Database:
     #     - experiment1: faculty/cse/bigdata/Database/experiment1.md
@@ -86,15 +85,14 @@ nav:
     #   - 信息安全: faculty/cse/security/README.md
     #   - 软件工程:
     #     - MiCode-Note: faculty/cse/security/software/MiCode-Note.md
-  - 自动化学院:
-    - faculty/soa/
-    - 自动化:
-      - datastructure:
-        - graph_traval: faculty/soa/automation/datastructure/graph_traval.md
-        - Huffman: faculty/soa/automation/datastructure/Huffman.md
-      - 自动化: faculty/soa/automation/README.md
-    - 智能科学与技术:
-      - 智能科学与技术: faculty/soa/intelligence/README.md
+  - 自动化学院: faculty/soa/
+    # - 自动化:
+    #   - datastructure:
+    #     - graph_traval: faculty/soa/automation/datastructure/graph_traval.md
+    #     - Huffman: faculty/soa/automation/datastructure/Huffman.md
+    #   - 自动化: faculty/soa/automation/README.md
+    # - 智能科学与技术:
+    #   - 智能科学与技术: faculty/soa/intelligence/README.md
 - 贡献指南:
   - global/zh-simplify/contribution/
 - 加入我们:

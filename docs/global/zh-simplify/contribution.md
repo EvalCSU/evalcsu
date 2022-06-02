@@ -2,11 +2,10 @@
 hide:
   - navigation
 ---
-# 贡献指南
 
 [繁體中文](../zh-tradition/contirbution.md) | [English](../en/contribution.md)
 
-## 为 EvalCSU 贡献
+# 贡献指南
 
 > **请确保你已经仔细阅读了本指南，在工作流程清晰后再进行操作!**
 > 
@@ -23,6 +22,7 @@ hide:
 > 
 > 若本指南有任何模糊不清的地方，请通过 Issue 和我们反映
 
+## 为 EvalCSU 贡献
 
 > 为了便于指导小白操作，我们将根据 GitHub 的操作模块进行详细指导
 > 

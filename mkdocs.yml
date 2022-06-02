@@ -28,13 +28,10 @@ nav:
     - 信息安全: evaluation/cse/security.md
     - 物联网: evaluation/cse/iot.md
     - 软件工程: evaluation/cse/software.md
-    - 通信工程: evaluation/cse/communication.md
   - 自动化学院:
     - 自动化: evaluation/soa/automation.md
-    - 电子工程及其自动化: evaluation/soa/electronic.md
-    - 电子信息工程: evaluation/soa/electronic_information.md
+    - 电子工程及其自动化: evaluation/soa/electronic_information.md
     - 智能科学与技术: evaluation/soa/intelligence.md
-    - 测控: evaluation/soa/observe_and_control.md
 - 笔记:
   - 计算机学院:
     - 大数据:
@@ -71,10 +68,6 @@ nav:
       - 大数据: faculty/cse/bigdata/README.md
       - Web-technology:
         - web-lab-report: faculty/cse/bigdata/Web-technology/web-lab-report.md
-    - 通信工程:
-      - 通信工程: faculty/cse/communication/README.md
-    - 计算机科学与技术:
-      - 计算机科学与技术: faculty/cse/science/README.md
     - 信息安全:
       - 网络安全:
         - arp-spoofing: faculty/cse/security/network-security/arp-spoofing.md
@@ -92,24 +85,18 @@ nav:
       - 信息安全: faculty/cse/security/README.md
       - 软件工程:
         - MiCode-Note: faculty/cse/security/software/MiCode-Note.md
-    - 软件工程:
-      - 软件工程: faculty/cse/software/README.md
   - 自动化学院:
     - 自动化:
       - datastructure:
         - graph_traval: faculty/soa/automation/datastructure/graph_traval.md
         - Huffman: faculty/soa/automation/datastructure/Huffman.md
       - 自动化: faculty/soa/automation/README.md
-    - 电子工程及其自动化:
-      - 电子工程及其自动化: faculty/soa/electronic/README.md
-    - 电子信息工程:
-      - 电子信息工程: faculty/soa/electronic_information/README.md
     - 智能科学与技术:
       - 智能科学与技术: faculty/soa/intelligence/README.md
-    - 测控:
-      - 测控: faculty/soa/observe_and_control/README.md
 - 贡献指南:
   - global/zh-simplify/contribution/
+- 加入我们:
+  - global/joinus/
 # - global:
 #   - en:
 #     - CONTRIBUTION: global/en/contribution/

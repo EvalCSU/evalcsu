@@ -34,8 +34,8 @@ nav:
     - 智能科学与技术: evaluation/soa/intelligence.md
 - 笔记:
   - 计算机学院: 
-    - 概括: 
-      - faculty/cse/
+    # - 概括: 
+    #   - faculty/cse/
     - 大数据:
       - Database:
         - experiment1: faculty/cse/bigdata/Database/experiment1.md

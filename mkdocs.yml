@@ -34,6 +34,8 @@ nav:
     - 智能科学与技术: evaluation/soa/intelligence.md
 - 笔记:
   - 计算机学院: 
+    - 概括: 
+      - faculty/cse/
     - 大数据:
       - Database:
         - experiment1: faculty/cse/bigdata/Database/experiment1.md
@@ -65,7 +67,6 @@ nav:
           - ML: faculty/cse/bigdata/R-language/Note/ML.md
           - Plot: faculty/cse/bigdata/R-language/Note/Plot.md
         - R-language: faculty/cse/bigdata/R-language/README.md
-      - 大数据: faculty/cse/bigdata/README.md
       - Web-technology:
         - web-lab-report: faculty/cse/bigdata/Web-technology/web-lab-report.md
     - 信息安全:
@@ -82,11 +83,11 @@ nav:
         - salt-value: faculty/cse/security/network-security/salt-value.md
         - syn-cookies: faculty/cse/security/network-security/syn-cookies.md
         - tls-ssl: faculty/cse/security/network-security/tls-ssl.md
-      - 信息安全: faculty/cse/security/README.md
       - 软件工程:
         - MiCode-Note: faculty/cse/security/software/MiCode-Note.md
   - 自动化学院:
-    - 概括: faculty/soa/
+    - 概括: 
+      - faculty/soa/
     - 自动化:
       - datastructure:
         - graph_traval: faculty/soa/automation/datastructure/graph_traval.md

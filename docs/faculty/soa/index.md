@@ -13,10 +13,10 @@
 
 ### 2.1 评教目录
 
-- [自动化](/evaluation/soa/automation/) - Manager: jzndd, ...
-- [智能科学与技术](/evaluation/soa/intelligence/)
+- [自动化](/evalcsu/evaluation/soa/automation/) - Manager: jzndd, ...
+- [智能科学与技术](/evalcsu/evaluation/soa/intelligence/)
 - 测控
-- [电子信息工程](/evaluation/soa/electronic_information/) - Manager: Shanewbx, ...
+- [电子信息工程](/evalcsu/evaluation/soa/electronic_information/) - Manager: Shanewbx, ...
 - 电气工程及其自动化
 
 ### 2.2 评教管理者

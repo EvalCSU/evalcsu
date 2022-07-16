@@ -8,4 +8,4 @@
     + [graph_info.txt](graph_info.txt)中说明了交通连通图的信息
     <br/>
 + 代码说明（实验报告）
-> [图的遍历的报告](../../../../../docs/faculty/soa/automation/datastructure/Huffman.md)
+> [图的遍历的报告](../../../../../faculty/soa/automation/datastructure/graph-travel.md)

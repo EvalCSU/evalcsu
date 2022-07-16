@@ -50,7 +50,7 @@
  
 ## 2.实验过程（编码过程）
  
- > [代码](../../../../../code/soa/automation/datastructure/Huffman/README.md)
+ > [代码](../../../../code/soa/automation/datastructure/Huffman/README.md)
 
 ## 3.完整示例
 

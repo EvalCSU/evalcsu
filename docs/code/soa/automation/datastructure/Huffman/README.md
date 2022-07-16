@@ -11,5 +11,4 @@
     <br/>
 
 + 对应报告（实验报告）
-> [哈夫曼数的编码与译码的报告](../../../../../docs/faculty/soa/automation/datastructure/Huffman.md)
-
+> [哈夫曼数的编码与译码的报告](../../../../../faculty/soa/automation/datastructure/Huffman.md)

@@ -9,7 +9,7 @@
 **数据结构实验**
 
 - [哈夫曼树](datastructure/Huffman.md)
-- [图的遍历的演示](datastructure/graph_traval.md)
+- [图的遍历的演示](datastructure/graph-travel.md)
 
 ## 第四学期
 

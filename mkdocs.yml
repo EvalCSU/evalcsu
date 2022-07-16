@@ -35,8 +35,9 @@ nav:
 - 笔记:
   - 计算机学院: 
     - 专业规划: 
-      - 概括: faculty/cse/index.md
+      - 概述: faculty/cse/index.md
     - 大数据:
+      - 概述: faculty/cse/bigdata/
       - 数据库:
         - experiment1: faculty/cse/bigdata/Database/experiment1.md
         - experiment2: faculty/cse/bigdata/Database/experiment2.md
@@ -70,6 +71,7 @@ nav:
       - Web 技术:
         - web-lab-report: faculty/cse/bigdata/Web-technology/web-lab-report.md
     - 信息安全:
+      - 概述: faculty/cse/security/
       - 网络安全:
         - ARP 嗅探: faculty/cse/security/network-security/arp-spoofing.md
         - BGP 路由劫持: faculty/cse/security/network-security/bgp-route-hijacking.md
@@ -87,14 +89,14 @@ nav:
         - 小米笔记: faculty/cse/security/software/MiCode-Note.md
   - 自动化学院:
     - 专业规划: 
-      - 概括: faculty/soa/index.md
+      - 概述: faculty/soa/index.md
     - 自动化:
+      - 概括: faculty/soa/automation/README.md
       - 数据结构:
         - 图遍历: faculty/soa/automation/datastructure/graph-traval.md
         - 哈夫曼编码: faculty/soa/automation/datastructure/Huffman.md
-      - 自动化: faculty/soa/automation/README.md
     - 智能科学与技术:
-      - 智能科学与技术: faculty/soa/intelligence/README.md
+      - 概述: faculty/soa/intelligence/README.md
 - 贡献指南: global/zh-simplify/contribution/
 - 加入我们: global/join/
 # - global:

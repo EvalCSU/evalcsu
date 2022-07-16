@@ -90,15 +90,13 @@ nav:
       - 概括: faculty/soa/index.md
     - 自动化:
       - 数据结构:
-        - 图遍历: faculty/soa/automation/datastructure/graph_traval.md
+        - 图遍历: faculty/soa/automation/datastructure/graph-traval.md
         - 哈夫曼编码: faculty/soa/automation/datastructure/Huffman.md
       - 自动化: faculty/soa/automation/README.md
     - 智能科学与技术:
       - 智能科学与技术: faculty/soa/intelligence/README.md
-- 贡献指南:
-  - global/zh-simplify/contribution/
-- 加入我们:
-  - global/joinus/
+- 贡献指南: global/zh-simplify/contribution/
+- 加入我们: global/join/
 # - global:
 #   - en:
 #     - CONTRIBUTION: global/en/contribution/

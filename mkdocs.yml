@@ -37,7 +37,7 @@ nav:
     - 专业规划: 
       - 概括: faculty/cse/index.md
     - 大数据:
-      - Database:
+      - 数据库:
         - experiment1: faculty/cse/bigdata/Database/experiment1.md
         - experiment2: faculty/cse/bigdata/Database/experiment2.md
       - Oracle:
@@ -55,7 +55,7 @@ nav:
           - PL_SQL1: faculty/cse/bigdata/Oracle/Note/PL_SQL1.md
           - PL_SQL2: faculty/cse/bigdata/Oracle/Note/PL_SQL2.md
         - Oracle: faculty/cse/bigdata/Oracle/README.md
-      - R-language:
+      - R语言:
         - Experiment:
           - experiment-1: faculty/cse/bigdata/R-language/Experiment/experiment-1.md
           - experiment-2: faculty/cse/bigdata/R-language/Experiment/experiment-2.md
@@ -67,31 +67,31 @@ nav:
           - ML: faculty/cse/bigdata/R-language/Note/ML.md
           - Plot: faculty/cse/bigdata/R-language/Note/Plot.md
         - R-language: faculty/cse/bigdata/R-language/README.md
-      - Web-technology:
+      - Web 技术:
         - web-lab-report: faculty/cse/bigdata/Web-technology/web-lab-report.md
     - 信息安全:
       - 网络安全:
-        - arp-spoofing: faculty/cse/security/network-security/arp-spoofing.md
-        - bgp-route-hijacking: faculty/cse/security/network-security/bgp-route-hijacking.md
-        - dns-server: faculty/cse/security/network-security/dns-server.md
-        - dos: faculty/cse/security/network-security/dos.md
-        - ipsec: faculty/cse/security/network-security/ipsec.md
-        - mail-relay: faculty/cse/security/network-security/mail-relay.md
-        - onetime-password: faculty/cse/security/network-security/onetime-password.md
-        - remote-security-authentication: faculty/cse/security/network-security/remote-security-authentication.md
-        - routing-protocol: faculty/cse/security/network-security/routing-protocol.md
-        - salt-value: faculty/cse/security/network-security/salt-value.md
-        - syn-cookies: faculty/cse/security/network-security/syn-cookies.md
-        - tls-ssl: faculty/cse/security/network-security/tls-ssl.md
+        - ARP 嗅探: faculty/cse/security/network-security/arp-spoofing.md
+        - BGP 路由劫持: faculty/cse/security/network-security/bgp-route-hijacking.md
+        - DNS 服务: faculty/cse/security/network-security/dns-server.md
+        - Dos 拒绝服务攻击: faculty/cse/security/network-security/dos.md
+        - IPsec: faculty/cse/security/network-security/ipsec.md
+        - 邮件中继: faculty/cse/security/network-security/mail-relay.md
+        - 一次性口令: faculty/cse/security/network-security/onetime-password.md
+        - 远程安全认证: faculty/cse/security/network-security/remote-security-authentication.md
+        - 路由协议: faculty/cse/security/network-security/routing-protocol.md
+        - 盐值: faculty/cse/security/network-security/salt-value.md
+        - SYN-Cookies: faculty/cse/security/network-security/syn-cookies.md
+        - TSL / SSL: faculty/cse/security/network-security/tls-ssl.md
       - 软件工程:
-        - MiCode-Note: faculty/cse/security/software/MiCode-Note.md
+        - 小米笔记: faculty/cse/security/software/MiCode-Note.md
   - 自动化学院:
     - 专业规划: 
       - 概括: faculty/soa/index.md
     - 自动化:
-      - datastructure:
-        - graph_traval: faculty/soa/automation/datastructure/graph_traval.md
-        - Huffman: faculty/soa/automation/datastructure/Huffman.md
+      - 数据结构:
+        - 图遍历: faculty/soa/automation/datastructure/graph_traval.md
+        - 哈夫曼编码: faculty/soa/automation/datastructure/Huffman.md
       - 自动化: faculty/soa/automation/README.md
     - 智能科学与技术:
       - 智能科学与技术: faculty/soa/intelligence/README.md

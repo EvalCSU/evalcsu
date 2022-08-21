@@ -1,0 +1,3758 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>experiment-3 - EvalCSU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="EvalCSU" class="md-header__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EvalCSU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              experiment-3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/evalcsu/" class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-tabs__link">
+        评教
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        笔记
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/zh-simplify/contribution/" class="md-tabs__link">
+      贡献指南
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/join/" class="md-tabs__link">
+      加入我们
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="EvalCSU" class="md-nav__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    EvalCSU
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/evalcsu/" class="md-nav__link">
+        EvalCSU
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          评教
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="评教" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          评教
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-nav__link">
+        计算机科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/bigdata/" class="md-nav__link">
+        大数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/security/" class="md-nav__link">
+        信息安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/iot/" class="md-nav__link">
+        物联网
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/software/" class="md-nav__link">
+        软件工程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/automation/" class="md-nav__link">
+        自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/electronic_information/" class="md-nav__link">
+        电子工程及其自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/intelligence/" class="md-nav__link">
+        智能科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_2" type="checkbox" id="__nav_3_1_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_2">
+          数据库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据库
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment1/" class="md-nav__link">
+        experiment1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment2/" class="md-nav__link">
+        experiment2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3" type="checkbox" id="__nav_3_1_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Oracle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_1" type="checkbox" id="__nav_3_1_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          experiment-3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        experiment-3
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 目的与要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 操作环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 实验内容
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 实验内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    3. 1 生成数据集
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 1 生成数据集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1-1" class="md-nav__link">
+    3. 1. 1 导入姓名相关数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-2" class="md-nav__link">
+    3. 1. 2 生成姓名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-3" class="md-nav__link">
+    3. 1. 3 生成学号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-4" class="md-nav__link">
+    3. 1. 4 生成剩余随机字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-5" class="md-nav__link">
+    3. 1. 5 生成数据集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2" class="md-nav__link">
+    3. 2 追踪主键的影响
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 2 追踪主键的影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-2-1" class="md-nav__link">
+    3. 2. 1 无主键
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-2" class="md-nav__link">
+    3. 2. 2 有主键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3-34" class="md-nav__link">
+    3. 3 - 3.4 索引对性能的影响
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 3 - 3.4 索引对性能的影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    索引建立前
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    索引建立后
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-5" class="md-nav__link">
+    3. 5 分区对性能的影响
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 5 分区对性能的影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分区建立前
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    分区建立后
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 收获总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 源码
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-4/" class="md-nav__link">
+        experiment-4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-5/" class="md-nav__link">
+        experiment-5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_2" type="checkbox" id="__nav_3_1_2_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Execution_Plan/" class="md-nav__link">
+        Execution_Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Oracle_Architecture/" class="md-nav__link">
+        Oracle_Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Oracle_Schema/" class="md-nav__link">
+        Oracle_Schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/PL_SQL1/" class="md-nav__link">
+        PL_SQL1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/PL_SQL2/" class="md-nav__link">
+        PL_SQL2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4" type="checkbox" id="__nav_3_1_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4">
+          R语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R语言" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          R语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_1" type="checkbox" id="__nav_3_1_2_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_2" type="checkbox" id="__nav_3_1_2_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/BasicStructure/" class="md-nav__link">
+        BasicStructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/DataAnalysis/" class="md-nav__link">
+        DataAnalysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/dataOp/" class="md-nav__link">
+        dataOp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/Grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/ML/" class="md-nav__link">
+        ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/Plot/" class="md-nav__link">
+        Plot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/" class="md-nav__link">
+        R-language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_5" type="checkbox" id="__nav_3_1_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_5">
+          Web 技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web 技术" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web 技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web-technology/web-lab-report/" class="md-nav__link">
+        web-lab-report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          信息安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信息安全" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          信息安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_2" type="checkbox" id="__nav_3_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_2">
+          网络安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="网络安全" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          网络安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/arp-spoofing/" class="md-nav__link">
+        ARP 嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/bgp-route-hijacking/" class="md-nav__link">
+        BGP 路由劫持
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dns-server/" class="md-nav__link">
+        DNS 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dos/" class="md-nav__link">
+        Dos 拒绝服务攻击
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/ipsec/" class="md-nav__link">
+        IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/mail-relay/" class="md-nav__link">
+        邮件中继
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/onetime-password/" class="md-nav__link">
+        一次性口令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/remote-security-authentication/" class="md-nav__link">
+        远程安全认证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/routing-protocol/" class="md-nav__link">
+        路由协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/salt-value/" class="md-nav__link">
+        盐值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/syn-cookies/" class="md-nav__link">
+        SYN-Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/tls-ssl/" class="md-nav__link">
+        TSL / SSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_3" type="checkbox" id="__nav_3_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_3">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/software/MiCode-Note/" class="md-nav__link">
+        小米笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          自动化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/" class="md-nav__link">
+        概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_2" type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据结构" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/graph-traval.md" class="md-nav__link">
+        图遍历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/Huffman/" class="md-nav__link">
+        哈夫曼编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="智能科学与技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          智能科学与技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/intelligence/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/zh-simplify/contribution/" class="md-nav__link">
+        贡献指南
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/join/" class="md-nav__link">
+        加入我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 目的与要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 操作环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 实验内容
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 实验内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    3. 1 生成数据集
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 1 生成数据集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1-1" class="md-nav__link">
+    3. 1. 1 导入姓名相关数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-2" class="md-nav__link">
+    3. 1. 2 生成姓名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-3" class="md-nav__link">
+    3. 1. 3 生成学号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-4" class="md-nav__link">
+    3. 1. 4 生成剩余随机字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-5" class="md-nav__link">
+    3. 1. 5 生成数据集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2" class="md-nav__link">
+    3. 2 追踪主键的影响
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 2 追踪主键的影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-2-1" class="md-nav__link">
+    3. 2. 1 无主键
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-2" class="md-nav__link">
+    3. 2. 2 有主键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3-34" class="md-nav__link">
+    3. 3 - 3.4 索引对性能的影响
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 3 - 3.4 索引对性能的影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    索引建立前
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    索引建立后
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-5" class="md-nav__link">
+    3. 5 分区对性能的影响
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 5 分区对性能的影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分区建立前
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    分区建立后
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 收获总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 源码
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Jacob953/evalcsu/edit/master/docs/faculty/cse/bigdata/Oracle/Experiment/experiment-3.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="_1">实验三、基于大数据集的数据库操作</h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">实验三、基于大数据集的数据库操作</a><ul>
+<li><a href="#1">1. 目的与要求</a></li>
+<li><a href="#2">2. 操作环境</a></li>
+<li><a href="#3">3. 实验内容</a><ul>
+<li><a href="#3-1">3. 1 生成数据集</a><ul>
+<li><a href="#3-1-1">3. 1. 1 导入姓名相关数据</a></li>
+<li><a href="#3-1-2">3. 1. 2 生成姓名</a></li>
+<li><a href="#3-1-3">3. 1. 3 生成学号</a></li>
+<li><a href="#3-1-4">3. 1. 4 生成剩余随机字段</a></li>
+<li><a href="#3-1-5">3. 1. 5 生成数据集</a></li>
+</ul>
+</li>
+<li><a href="#3-2">3. 2 追踪主键的影响</a><ul>
+<li><a href="#3-2-1">3. 2. 1 无主键</a></li>
+<li><a href="#3-2-2">3. 2. 2 有主键</a></li>
+</ul>
+</li>
+<li><a href="#3-3-34">3. 3 - 3.4 索引对性能的影响</a><ul>
+<li><a href="#_2">索引建立前</a></li>
+<li><a href="#_3">索引建立后</a></li>
+</ul>
+</li>
+<li><a href="#3-5">3. 5 分区对性能的影响</a><ul>
+<li><a href="#_4">分区建立前</a></li>
+<li><a href="#_5">分区建立后</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4">4. 收获总结</a></li>
+<li><a href="#5">5. 源码</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1">1. 目的与要求</h2>
+<p>本实验主要是熟悉ORACLE的基于大数据集（记录达到千万级）的相关数据库操作包括生成海量测试数据的更新操作、基于海量数据的索引维护、表空间、分区、视图、序列及相关的统计分析。</p>
+<h2 id="2">2. 操作环境</h2>
+<ul>
+<li>硬件：主频2GHz以上服务器（内存2GB以上、硬件空闲2.2GB以上），主频1GHz以上微机，内存1GB以上。</li>
+<li>软件：WINDOWS XP/2000/2003/或Win7/Win8/Win10等。如操作系统是 SERVER版， 可安装ORACLE/9i/10g/11g/12C FOR NT/WINDOWS(注意有32位与64位的区别，可选企业版)； 如果Windows非server如XP/win7等，安装时请选择个人版(PERSONAL)，注意安装时要有兼容性设置与用管理员运行。安装过程中需要关注系统预定义的账号SYS与SYSTEM的密码设置。</li>
+</ul>
+<h2 id="3">3. 实验内容</h2>
+<p>分析整个实验内容，在实验开始前写一个记录时间的过程有利于实验的顺利进行</p>
+<p>建立一个<code>t_time_consume_D312</code>表，字段如下</p>
+<table>
+<thead>
+<tr>
+<th align="center">event</th>
+<th align="center">start_time</th>
+<th align="center">end_time</th>
+<th align="center">time_consume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-plsql">set serveroutpu on;
+set linesize 500;
+
+-- 0.创建记录时间过程
+drop table t_time_consume_D312;
+create table t_time_consume_D312 (
+    event varchar2(128) primary key,
+    start_time timestamp,
+    end_time timestamp,
+    time_consume interval day to second
+);
+
+col event format a30;
+col start_time format a33;
+col end_time format a33;
+col time_consume format a20;
+
+drop synonym t_time;
+create synonym t_time for t_time_consume_D312;
+
+create or replace procedure p_record_time_D312 
+(
+    p_event in varchar2,
+    p_flag in varchar2
+)
+as
+    v_start_time timestamp;
+    v_end_time timestamp;
+    v_time interval day to second;
+begin
+    if p_flag = 'start' then
+        -- 插入开始时间
+        select systimestamp into v_start_time from dual;
+        insert into t_time(event, start_time) values(p_event, v_start_time);
+    else
+        -- 更新终止时间与时间开销，打印输出
+        select systimestamp into v_end_time from dual;
+        select start_time into v_start_time from t_time where event = p_event;
+        select (v_end_time - v_start_time) day(2) to second into v_time from dual;
+        update t_time set end_time = v_end_time, time_consume = v_time where event = p_event;
+        dbms_output.put_line(p_event || '耗时: ' || v_time);
+    end if;
+
+
+end;
+/
+
+show error;
+
+exec p_record_time_D312 ('demo','start');
+-- 过若干秒
+exec p_record_time_D312 ('demo','end');
+select * from t_time;
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111121206773.png" alt="image-20211112120651696" style="zoom:67%;" /></p>
+<h3 id="3-1">3. 1 生成数据集</h3>
+<p>以常用“名字大全”与“百家姓”数据集为基础，生成不小于1千万条stud记录</p>
+<p>要求</p>
+<ul>
+<li>姓名的重复率不超过10%</li>
+<li>学号以ABCD19EFGH为格式模板，即其中19是固定的，AB为从01到80，CD为从01到90，EF为01到50，GH为01到32</li>
+<li>性别中，男、女占比为99%到99.5%</li>
+<li>TEL与E-mail不作要求，但不能全空</li>
+<li>Birthday要求从‘19940101’到‘19990731’分布</li>
+<li>要求记录ORACLE数据文件的大小变化</li>
+</ul>
+<p>主要思路</p>
+<ol>
+<li>生成姓名表<code>t_name</code></li>
+<li>生成学号表<code>t_sno</code></li>
+<li>随机生成其他字段表<code>t_random</code></li>
+<li>将三个表合并即得最终学生信息表<code>t_stud_info</code>；注意此处不含任何约束；在插入所有数据后统一添加</li>
+</ol>
+<h4 id="3-1-1">3. 1. 1 导入姓名相关数据</h4>
+<pre><code class="language-plsql">-- 1. 导入姓名与相关数据
+drop table t_name1;
+create table t_name1(last_name varchar2(32));
+
+drop table t_name2;
+create table t_name2(first_name varchar2(32));
+
+drop table t_common_name;
+create table t_common_name(name varchar2(32));
+
+------- load_last_name.ctl -------
+LOAD DATA
+INFILE 'D:\Messy\Experiment\last_name.CSV'
+APPEND
+INTO TABLE t_name1
+FIELDS TERMINATED BY ','
+(last_name)
+------- cmd -------
+sqlldr userid=C##U_LZC_D312/sys control='D:\Messy\Experiment\大型数据库\OraExp3_D312\load_last_name.ctl'
+
+
+------- load_first_name.ctl -------
+LOAD DATA
+INFILE 'D:\Messy\Experiment\first_name.CSV'
+APPEND
+INTO TABLE t_name2
+FIELDS TERMINATED BY ','
+(first_name)
+------- cmd -------
+sqlldr userid=C##U_LZC_D312/sys control='D:\Messy\Experiment\大型数据库\OraExp3_D312\load_first_name.ctl'
+
+------- load_common.ctl -------
+OPTIONS(SKIP=1) --跳过第一行
+LOAD DATA
+INFILE 'D:\Messy\Experiment\common.CSV'
+APPEND
+INTO TABLE t_common_name
+FIELDS TERMINATED BY ','
+(virtual_column FILLER, name)
+------- cmd -------
+sqlldr userid=C##U_LZC_D312/sys control='D:\Messy\Experiment\大型数据库\OraExp3_D312\load_common.ctl'
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111122314229.png" alt="image-20211112231258620" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111122314251.png" alt="image-20211112231346205" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111130009457.png" alt="image-20211113000926258" style="zoom:67%;" /></p>
+<pre><code class="language-plsql">-- 删去复姓
+select count(*) from t_name1 where length(last_name) = 2;
+delete from t_name1 where length(last_name) = 2;
+select count(*) from t_name1;
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111122327505.png" alt="image-20211112232510424" style="zoom:67%;" /></p>
+<h4 id="3-1-2">3. 1. 2 生成姓名</h4>
+<p>从姓氏表选随机取 400 条记录，从常用名表分别随机选取 150 和 200 条记录，通过全排列生成 400﹡150﹡250=1500,0000 个名字。再插入常用姓名表即可，故最终有 1502, 4054 条名字记录</p>
+<p>步骤</p>
+<ol>
+<li>创建三个视图，分别对应上述的 400, 150, 250，简化语句以及不必要的开销</li>
+<li>创建表<code>t_name</code></li>
+<li>插入三个视图的笛卡尔积</li>
+<li>插入常用姓名表</li>
+</ol>
+<pre><code class="language-plsql">-- 2. 创建姓名表
+drop view v_name1;
+drop view v_name2;
+drop view v_name3;
+
+-- 随机选择
+delete from t_time where event='生成名字';
+exec p_record_time_D312 ('生成名字','start');
+create view v_name1 as select last_name n1 from (select distinct last_name from t_name1 order by dbms_random.value) where rownum &lt;= 400;
+create view v_name2 as select first_name n2 from (select distinct first_name from t_name2 order by dbms_random.value) where rownum &lt;= 150;
+create view v_name3 as select first_name n3 from (select distinct first_name from t_name2 order by dbms_random.value) where rownum &lt;= 250;
+
+set timing on;
+set serveroutpu on;
+
+-- 笛卡尔积
+drop table t_name;
+create table t_name as select n1 || n2 || n3 name from v_name1, v_name2, v_name3;
+-- 插入常用姓名
+insert into t_name select first_name from t_common_name;
+exec p_record_time_D312 ('生成名字','end');
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111140034894.png" alt="image-20211114003438819" style="zoom:67%;" /></p>
+<h4 id="3-1-3">3. 1. 3 生成学号</h4>
+<p>提高<code>insert</code>的几个Tip</p>
+<ul>
+<li><code>insert-select</code>  ：保证所有在RAM里面</li>
+</ul>
+<blockquote>
+<p>Each query will have its own PGA [Program global area] which is basically RAM available to each query. If this this area is not sufficient to return query results then SQL engine starts using Global temp tablespace which is like hard disk and query starts becoming slow. If data needed by query is so huge that even temp area is not sufficient then you will tablespace error.</p>
+<p>So always design query so that it stays in PGA else its a Red flag.</p>
+</blockquote>
+<ul>
+<li>
+<p><code>/*+ APPEND */</code></p>
+</li>
+<li>
+<p><code>NOLOGGING</code></p>
+</li>
+</ul>
+<p>步骤</p>
+<ul>
+<li>创建四个表，分别对应AB CD EF GH 学号部分；前缀形式</li>
+<li>按GH EF CD AB顺序生成学号表</li>
+</ul>
+<p>PS：下述提供两种写法</p>
+<pre><code class="language-plsql">-- 3. 生成学号
+exec p_record_time_D312 ('生成学号','start');
+-- 存最终sno
+drop table t_sno_ab; 
+drop table t_sno_cd;
+drop table t_sno_ef;
+drop table t_sno_gh;
+
+-- 由于有前导0，故存成string，同时降低存储开销
+create table t_sno_ab(sno varchar2(32)); 
+create table t_sno_cd(sno number(8));
+create table t_sno_ef(sno number(8));
+create table t_sno_gh(sno number(2));
+
+
+declare 
+i int;
+begin
+    insert into t_sno_gh select level from dual connect by level &lt;= 32;
+    for i in 1..50 loop
+            insert /*+ append */ into t_sno_ef select 190000+i*100+t_sno_gh.sno from t_sno_gh;
+        commit;
+    end loop;
+    for i in 1..90 loop
+            insert /*+ append */ into t_sno_cd select i*1000000+t_sno_ef.sno from t_sno_ef;
+        commit;
+    end loop;
+    for i in 1..100 loop
+            insert /*+ append */ into t_sno_ab select substr(10000000000+i*100000000+t_sno_cd.sno,2,10) from t_sno_cd;
+        commit;
+    end loop;
+end;
+/
+exec p_record_time_D312 ('生成学号','end');
+
+----------------- 一种更简便的写法 ------------------
+exec p_record_time_D312 ('生成学号2','start');
+-- 存最终sno
+drop table t_sno_ab; 
+drop table t_sno_cd;
+drop table t_sno_ef;
+drop table t_sno_gh;
+
+create table t_sno_ab(sno varchar2(32)); 
+create table t_sno_cd(sno number(8));
+create table t_sno_ef(sno number(8));
+create table t_sno_gh(sno number(2));
+
+insert /*+ append */ into t_sno_gh select level from dual connect by level &lt;= 32;
+commit;
+
+insert /*+ append */ into t_sno_ef select 190000+i*100+t_sno_gh.sno from t_sno_gh, (select level i from dual connect by level &lt;= 50);
+commit;
+
+insert /*+ append */ into t_sno_cd select i*1000000+t_sno_ef.sno from t_sno_ef, (select level i from dual connect by level &lt;= 90);
+commit;
+
+insert /*+ append */ into t_sno_ab select substr(10000000000+i*100000000+t_sno_cd.sno,2,10) from t_sno_cd,  (select level i from dual connect by level &lt;= 100);
+commit;
+exec p_record_time_D312 ('生成学号2','end');
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111131119619.png" alt="image-20211113111929579" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111131118779.png" alt="image-20211113111832718" style="zoom:67%;" /></p>
+<h4 id="3-1-4">3. 1. 4 生成剩余随机字段</h4>
+<ul>
+<li>性别：随机选择1~1000的数x，当 $x&lt;498$ ​​时，为男性，反之当 $x&lt;995$ ​​时为女性，其余情况记作缺失</li>
+<li>电话：事先存储常见电话3位前缀，然后剩下的8位数字随机生成</li>
+<li>邮箱：事先存储常见的邮箱名，数字部分随机生成</li>
+<li>生日：随机生成<code>1994-01-01</code>到<code>1999-07-31</code>的生日</li>
+</ul>
+<pre><code class="language-plsql">-- 4. 生成剩余随机字段
+-- 性别
+create or replace function f_get_sex return varchar2
+as
+v_num number;
+v_sex varchar2(8);
+begin
+    select dbms_random.value(1,1000) into v_num from dual;
+    if v_num &lt; 498 then
+        v_sex := '男';
+    elsif v_num &lt; 995 then
+        v_sex := '女';
+    else 
+        v_sex := '缺失';
+    end if;
+    return v_sex;
+end;
+/
+
+-- 电话
+-- 辅助表：存储电话前三位
+drop table t_tel_head;
+create table t_tel_head(htel varchar2(4));
+declare 
+    type htel_array is varray(14) of t_tel_head.htel%type;
+    htels htel_array := htel_array('132', '135', '138', '139', '150', '151', '153', '156', '177', '178', '180', '183', '186', '188');
+
+begin
+    for i in 1..14 loop
+        insert into t_tel_head values(htels(i));
+    end loop;
+end;
+/
+select * from t_tel_head;
+
+create or replace function f_get_tel return varchar2
+is 
+    v_tel varchar2(32);
+    v_htel varchar2(4);
+    v_ttel varchar2(16);
+begin
+    -- 随机选一行模板
+    select htel into v_htel from (select htel from t_tel_head order by dbms_random.value ) where rownum = 1;
+    -- 上面不能写成：select htel from t_tel_head where rownum = 1 order by dbms_random.value; 因为这是先取一个数然后打乱
+    -- 随机生成剩余手机号
+    select substr(cast(dbms_random.value as varchar2(32)),5,8) into v_ttel from dual;
+    v_tel := v_htel || v_ttel;
+    return v_tel;
+end;
+/
+show error;
+
+-- 邮箱
+-- 辅助表：常见邮箱
+drop table t_email;
+create table t_email_suffix(email_suffix varchar2(32));
+declare 
+    type email_suffix_array is varray(7) of t_email_suffix.email_suffix%type;
+    es email_suffix_array := email_suffix_array ('qq', 'gmail', 'ymail', '126', '169', 'outlook', 'csu');
+
+begin
+    for i in 1..7 loop
+        insert into t_email_suffix values(es(i));
+    end loop;
+end;
+/
+
+select * from t_email_suffix;
+
+create or replace function f_get_email return varchar2
+is
+    v_email_suffix varchar2(32);
+    v_email_head varchar2(32);
+    v_email varchar2(32);
+begin
+    select email_suffix into v_email_suffix from (select email_suffix from t_email_suffix order by dbms_random.value ) where rownum = 1;
+    select substr(cast(dbms_random.value as varchar2(32)),4,11) into v_email_head from dual;
+    v_email := v_email_head || '@' || v_email_suffix || '.com';
+    return v_email;
+end;
+/
+
+-- 生日
+create or replace function f_get_birth return date
+is 
+    birth date;
+begin
+    select to_date(
+        trunc(
+            dbms_random.value(to_char(date '1994-01-01', 'J'), 
+                to_char(date '1999-07-31','J')
+            )
+        )
+    , 'J') into birth from dual;
+    return birth;
+end;
+/
+</code></pre>
+<p>Test</p>
+<pre><code class="language-plsql">-- 测试
+select f_get_sex() from dual;
+select f_get_tel() from dual;
+select f_get_email() from dual;
+select f_get_birth() from dual;
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111130914238.png" alt="image-20211113091447178" style="zoom:67%;" /></p>
+<p>生成随机生成的字段</p>
+<pre><code class="language-plsql">-- 生成随机生成的字段
+set timing on;
+delete from t_time where event = '生成随机字段';
+exec p_record_time_D312 ('生成随机字段','start');
+drop table t_random;
+create table t_random(
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+);
+
+insert /*+ append */ into t_random NOLOGGING select f_get_sex(), f_get_tel(), f_get_email(), f_get_birth() from xmltable('1 to 14400000');
+commit;
+exec p_record_time_D312 ('生成随机字段','end');
+</code></pre>
+<p><img alt="image-20211126140940177" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111261409476.png" /></p>
+<h4 id="3-1-5">3. 1. 5 生成数据集</h4>
+<p>生成学生信息表</p>
+<pre><code class="language-plsql">-- 生成最终数据集
+set timing on;
+delete from t_time where event = '生成最终数据集';
+exec p_record_time_D312 ('生成最终数据集','start');
+-- 生成不含主键的学生信息表
+drop table t_stud_info_D312;
+create table t_stud_info_D312(
+    sno varchar2(32),
+    sname varchar2(32),
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+);
+drop synonym t_stud;
+create synonym t_stud for t_stud_info_D312;
+
+insert into t_stud 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random.*, rownum rn3 from t_random)  C
+    where rn1 = rn2 and rn2 = rn3;
+exec p_record_time_D312 ('生成最终数据集','end');
+</code></pre>
+<p><img alt="image-20211126141447398" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111261414666.png" /></p>
+<ul>
+<li>用时明细</li>
+</ul>
+<pre><code class="language-plsql">-- 用时明细
+select * from t_time;
+</code></pre>
+<p><img alt="image-20211114011327492" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111140113558.png" /></p>
+<ul>
+<li>追踪数据文件大小变化</li>
+</ul>
+<pre><code class="language-plsql">-- 查看数据文件路径
+select tablespace_name,file_id,file_name from dba_data_files order by 1,2;
+</code></pre>
+<p><img alt="image-20211114004735080" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111140047123.png" /></p>
+<p><img alt="image-20211114011122128" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111140111165.png" /></p>
+<h3 id="3-2">3. 2 追踪主键的影响</h3>
+<p>对比 stud 有主键与没有主键情形下生成记录的时间与数据文件大小追踪</p>
+<h4 id="3-2-1">3. 2. 1 无主键</h4>
+<p>见3. 1. 5</p>
+<h4 id="3-2-2">3. 2. 2 有主键</h4>
+<pre><code class="language-plsql">-- 生成有主键的数据集
+set timing on;
+delete from t_time where event = '生成有主键最终数据集';
+exec p_record_time_D312 ('生成有主键最终数据集','start');
+-- 生成含主键的学生信息表
+drop table t_pk_stud_info_D312;
+create table t_pk_stud_info_D312(
+    sno varchar2(32) primary key,
+    sname varchar2(32),
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+);
+drop synonym t_pk_stud;
+create synonym t_pk_stud for t_pk_stud_info_D312;
+
+insert into t_pk_stud 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random.*, rownum rn3 from t_random)  C
+    where rn1 = rn2 and rn2 = rn3;
+exec p_record_time_D312 ('生成有主键最终数据集','end');
+</code></pre>
+<p><img alt="image-20211126141543338" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111261415483.png" /></p>
+<ul>
+<li>追踪数据文件大小变化</li>
+</ul>
+<p><img alt="image-20211114011122128" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111140111165.png" /></p>
+<p><img alt="image-20211114011935310" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111140119351.png" /></p>
+<p>对比发现，存储空间比无主键的多了约10倍</p>
+<ul>
+<li>时间明细</li>
+</ul>
+<p><img alt="image-20211114012102108" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111140121178.png" /></p>
+<p>为完整性，在此处补上潜在的约束</p>
+<pre><code class="language-plsql">-- 添加约束
+exec p_record_time_D312 ('添加约束','start');
+alter table t_stud_info_D312 add constraint pk_sno primary key(sno);
+alter table t_stud_info_D312 add constraint ck_sex check(sex in ('男', '女', '缺失'));
+alter table t_stud_info_D312 add constraint ck_email check(email like '%@%.%');
+alter table t_stud_info_D312 add constraint ck_birth check(birthday between date '1994-01-01' and date '1999-07-31');
+exec p_record_time_D312 ('添加约束','end');
+</code></pre>
+<h3 id="3-3-34">3. 3 - 3.4 索引对性能的影响</h3>
+<h4 id="_2">索引建立前</h4>
+<ol>
+<li>查询某一姓名、某一姓、某一名的时间</li>
+<li>分姓、分名的记录数统计时间</li>
+</ol>
+<pre><code class="language-plsql">-- 查询
+set serveroutpu on;
+set timing on;
+set autotrace on;
+
+delete from t_time where event='无索引查找姓名';
+exec p_record_time_D312 ('无索引查找姓名','start');
+select sname from t_stud where sname='叶令官';
+exec p_record_time_D312 ('无索引查找姓名','end');
+
+delete from t_time where event='无索引查找姓';
+exec p_record_time_D312 ('无索引查找姓','start');
+select sname from t_stud where sname like '叶__';
+exec p_record_time_D312 ('无索引查找姓','end');
+
+delete from t_time where event='无索引查找名';
+exec p_record_time_D312 ('无索引查找名','start');
+select sname from t_stud where sname like '_令官';
+exec p_record_time_D312 ('无索引查找名','end');
+
+
+delete from t_time where event='无索引统计姓';
+exec p_record_time_D312 ('无索引统计姓','start');
+select count(*) from  t_stud where sname like '叶__';
+exec p_record_time_D312 ('无索引统计姓','end');
+
+delete from t_time where event='无索引统计名1';
+exec p_record_time_D312 ('无索引统计名1','start');
+select count(*) from  t_stud where sname like '_令_';
+exec p_record_time_D312 ('无索引统计名1','end');
+
+delete from t_time where event='无索引统计名2';
+exec p_record_time_D312 ('无索引统计名2','start');
+select count(*) from  t_stud where sname like '__官';
+exec p_record_time_D312 ('无索引统计名2','end');
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141303795.png" alt="image-20211114130328673" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141304398.png" alt="image-20211114130414273" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141304577.png" alt="image-20211114130435462" style="zoom:67%;" /></p>
+<p>统计信息的执行计划</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141304960.png" alt="image-20211114130457883" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141305368.png" alt="image-20211114130536276" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141305988.png" alt="image-20211114130546898" style="zoom:67%;" /></p>
+<h4 id="_3">索引建立后</h4>
+<ol>
+<li>查询某一姓名、某一姓、某一名的时间</li>
+<li>分姓、分名的记录数统计时间</li>
+</ol>
+<pre><code class="language-plsql">-- 建立索引
+drop index index_name_D312;
+delete from t_time where event='建立索引';
+exec p_record_time_D312 ('建立索引','start');
+create index index_name_D312 on t_stud_info_D312(sname);
+exec p_record_time_D312 ('建立索引','end');
+-- 查询
+set serveroutpu on;
+set timing on;
+set autotrace on;
+
+delete from t_time where event='有索引查找姓名';
+exec p_record_time_D312 ('有索引查找姓名','start');
+select sname from t_stud where sname='叶令官';
+exec p_record_time_D312 ('有索引查找姓名','end');
+
+delete from t_time where event='有索引查找姓';
+exec p_record_time_D312 ('有索引查找姓','start');
+select sname from t_stud where sname like '叶__';
+exec p_record_time_D312 ('有索引查找姓','end');
+
+delete from t_time where event='有索引查找名';
+exec p_record_time_D312 ('有索引查找名','start');
+select sname from t_stud where sname like '_令官';
+exec p_record_time_D312 ('有索引查找名','end');
+
+delete from t_time where event='有索引统计姓';
+exec p_record_time_D312 ('有索引统计姓','start');
+select count(*) from  t_stud where sname like '叶__';
+exec p_record_time_D312 ('有索引统计姓','end');
+
+delete from t_time where event='有索引统计名1';
+exec p_record_time_D312 ('有索引统计名1','start');
+select count(*) from  t_stud where sname like '_令_';
+exec p_record_time_D312 ('有索引统计名1','end');
+
+delete from t_time where event='有索引统计名2';
+exec p_record_time_D312 ('有索引统计名2','start');
+select count(*) from  t_stud where sname like '__官';
+exec p_record_time_D312 ('有索引统计名2','end');
+
+set autotrace off;
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141305988.png" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141311242.png" alt="image-20211114131105170" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141311892.png" alt="image-20211114131126817" style="zoom:67%;" /></p>
+<p>统计信息</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141311087.png" alt="image-20211114131154013" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141312050.png" alt="image-20211114131227974" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141312601.png" alt="image-20211114131245522" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141314816.png" alt="image-20211114131409730" style="zoom:67%;" /></p>
+<table>
+<thead>
+<tr>
+<th>操作ID</th>
+<th>执行计划哈希值</th>
+<th>访问方式</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无索引1</td>
+<td>1542020857</td>
+<td>TABLE ACCESS FULL</td>
+<td>全盘扫描</td>
+</tr>
+<tr>
+<td>无索引2</td>
+<td>1542020857</td>
+<td>TABLE ACCESS FULL</td>
+<td>全盘扫描</td>
+</tr>
+<tr>
+<td>无索引3</td>
+<td>1542020857</td>
+<td>TABLE ACCESS FULL</td>
+<td>全盘扫描</td>
+</tr>
+<tr>
+<td>无索引统计1</td>
+<td>2811796169</td>
+<td>SORT AGGREGATE <br />TABLE ACCESS FULL</td>
+<td>全盘扫描后聚合</td>
+</tr>
+<tr>
+<td>无索引统计2</td>
+<td>2811796169</td>
+<td>SORT AGGREGATE <br />TABLE ACCESS FULL</td>
+<td>全盘扫描后聚合</td>
+</tr>
+<tr>
+<td>有索引统计3</td>
+<td>2811796169</td>
+<td>SORT AGGREGATE <br />TABLE ACCESS FULL</td>
+<td>全盘扫描后聚合</td>
+</tr>
+<tr>
+<td>有索引1</td>
+<td>3803812383</td>
+<td>INDEX RANGE SCAN</td>
+<td>索引范围扫描</td>
+</tr>
+<tr>
+<td>有索引2</td>
+<td>3803812383</td>
+<td>INDEX RANGE SCAN</td>
+<td>索引范围扫描</td>
+</tr>
+<tr>
+<td>有索引3</td>
+<td>40889341</td>
+<td>INDEX FAST FULL SCAN</td>
+<td>索引快速扫描</td>
+</tr>
+<tr>
+<td>有索引统计1</td>
+<td>664314567</td>
+<td>SORT AGGREGATE<br/>INDEX FAST FULL SCAN</td>
+<td>快速扫描后聚合</td>
+</tr>
+<tr>
+<td>有索引统计2</td>
+<td>583658112</td>
+<td>SORT AGGREGATE<br/>INDEX FAST FULL SCAN</td>
+<td>快速扫描后聚合</td>
+</tr>
+<tr>
+<td>有索引统计3</td>
+<td>583658112</td>
+<td>SORT AGGREGATE<br/>INDEX FAST FULL SCAN</td>
+<td>快速扫描后聚合</td>
+</tr>
+</tbody>
+</table>
+<p>结论：</p>
+<ul>
+<li>无索引情况下前三个执行计划一致，后三个执行计划一致</li>
+<li>使用索引范围扫描是因为使用一个索引存取多行数据</li>
+<li>使用索引速度加快几十倍甚至上百倍</li>
+</ul>
+<h3 id="3-5">3. 5 分区对性能的影响</h3>
+<p>分学号首位ID统计人数与分专业（EF位）统计人数</p>
+<h4 id="_4">分区建立前</h4>
+<pre><code class="language-plsql">set serveroutpu on;
+set timing on;
+set autotrace on;
+
+drop index index_name_D312;
+delete from t_time where event='无分区统计ID';
+exec p_record_time_D312 ('无分区统计ID','start');
+select count(*) from t_stud where sno like '5%';
+exec p_record_time_D312 ('无分区统计ID','end');
+
+delete from t_time where event='无分区统计专业';
+exec p_record_time_D312 ('无分区统计专业','start');
+select count(*) from t_stud where sno like '______08__';
+exec p_record_time_D312 ('无分区统计专业','end');
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141422448.png" alt="image-20211114142236371" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141422493.png" alt="image-20211114142251418" style="zoom:67%;" /></p>
+<h4 id="_5">分区建立后</h4>
+<p>按学号首位建立10个分区分别为part_0到part_9</p>
+<pre><code class="language-plsql">-- 建立分区
+delete from t_time where event='建立分区表';
+drop table t_pt_stud_info_D312;
+exec p_record_time_D312 ('建立分区表','start');
+create table t_pt_stud_info_D312(
+    sno varchar2(32) primary key,
+    sname varchar2(32),
+    sex varchar2(32) check(sex in('男', '女', '缺失')),
+    tel varchar2(32),
+    email varchar2(32) check(email like '%@%.%'),
+    birthday date check(birthday between date '1994-01-01' and date '1999-07-31')
+)partition by range(sno) (
+    partition part_0 values less than ('1000190000'),
+    partition part_1 values less than ('2000190000'),
+    partition part_2 values less than ('3000190000'),
+    partition part_3 values less than ('4000190000'),
+    partition part_4 values less than ('5000190000'),
+    partition part_5 values less than ('6000190000'),
+    partition part_6 values less than ('7000190000'),
+    partition part_7 values less than ('8000190000'),
+    partition part_8 values less than ('9000190000'),
+    partition part_9 values less than (maxvalue)
+);
+
+drop synonym  t_pt_stud;
+create synonym t_pt_stud for t_pt_stud_info_D312;
+
+insert into t_pt_stud 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random.*, rownum rn3 from t_random)  C
+    where rn1 = rn2 and rn2 = rn3;
+
+exec p_record_time_D312 ('建立分区表','end');
+</code></pre>
+<pre><code class="language-plsql">delete from t_time where event='有分区统计ID';
+exec p_record_time_D312 ('有分区统计ID','start');
+select count(*) from t_pt_stud where sno like '5%';
+exec p_record_time_D312 ('有分区统计ID','end');
+
+delete from t_time where event='有分区统计专业';
+exec p_record_time_D312 ('有分区统计专业','start');
+select count(*) from t_pt_stud where sno like '______08__';
+exec p_record_time_D312 ('有分区统计专业','end');
+
+select * from t_time order by start_time;
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141433925.png" alt="image-20211114143318824" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111141433260.png" alt="image-20211114143335141" style="zoom:67%;" /></p>
+<p><img alt="image-20211114145202155" src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20211114145202155.png" /></p>
+<p>结论：在一定程度上分区表的速度比原始表更快</p>
+<h2 id="4">4. 收获总结</h2>
+<ul>
+<li>
+<p><code>timestamp</code>数据类型的使用：由于本次实验大部分操作需要统计时间，故手动实现一个统计时间的函数方便后续对比</p>
+</li>
+<li>
+<p>学会使用<code>sqlloader</code>导入外源数据：由于本次实验需要插入千万级数据，手动插入显然是不合适的。故采用专业工具<code>sqlloader</code>，写一个 .ctl 文件后实现批量导入</p>
+</li>
+<li>
+<p>懂得了一些提高插入效率的方法</p>
+</li>
+<li>
+<p>采用<code>/*+ append */</code></p>
+</li>
+<li>
+<p>尽可能使用<code>insert+select</code>的组合提升速率。这是因为优化器自动会处理成批处理的形式实现插入。</p>
+</li>
+<li>
+<p>避免大量 LOOP 循环。在这里我使用了<code>select ... from xmltable('1 to 14400000');</code>与<code>select level from dual connect by level &lt;= 32;</code>避免手动实现 LOOP 循环</p>
+</li>
+<li>
+<p>掌握了关于不同数据类型的一些基本操作</p>
+</li>
+<li>
+<p>系统学习了如何读懂执行计划，并根据执行计划进行优化SQL语句</p>
+</li>
+</ul>
+<p>此外，在以下一些方面有一些收获</p>
+<p><strong>1. <code>insert /*+append*/</code>提速原因</strong></p>
+<ul>
+<li>Data is appended to the end of the table, rather than attempting to use existing free space within the table.</li>
+<li>Data is written directly to the data files, by-passing the buffer cache.</li>
+<li>Referential integrity constraints are not considered. </li>
+<li>No trigger processing is performed. </li>
+</ul>
+<p><strong>2. 使用<code>insert /*+append*/</code>时，遇到了如下错误</strong></p>
+<pre><code>ORA-12838: 无法在并行模式下修改之后读/修改对象
+</code></pre>
+<p>查询后学习到Oracle内部的两种模式</p>
+<p><strong><em>parallel</em></strong>: Data Manipulation Language (DML) operations such as INSERT, UPDATE, and DELETE can be parallelized by Oracle. Parallel execution can speed up large DML operations and is particularly advantageous in data warehousing environments where it's necessary to maintain large summary or historical tables.</p>
+<p><strong><em>Direct-load INSERT</em></strong> enhances performance during insert operations by formatting and writing data directly into Oracle datafiles, without using the buffer cache.</p>
+<p>A major benefit of direct-load INSERT is that you can load data without logging redo or undo entries, which improves the insert performance significantly.</p>
+<p>示例详见<a href="https://docs.oracle.com/cd/A87860_01/doc/server.817/a76965/c21dlins.htm">官方文档</a></p>
+<p>关于报错的解释</p>
+<p>Cause: Within the same transaction, an attempt was made to add read or modification statements on a table after it had been modified in <strong>parallel</strong> or with <strong>direct load</strong>. This is not permitted.</p>
+<p>使用<code>insert /*+append*/</code>， 数据会直接写入数据文件</p>
+<p>所以为保持事务一致性，要添加一个<code>commit</code>来修复这个bug</p>
+<p><strong>3. PK的存在不一定使 insert 操作变慢</strong></p>
+<p><strong>Inserts are faster in a clustered table</strong> (but only in the "right" clustered table) than compared to a heap. The primary problem here is that lookups in the IAM/PFS to determine the insert location in a heap are slower than in a clustered table (where insert location is known, defined by the clustered key). Inserts are faster when inserted into a table where order is defined (CL) and where that order is ever-increasing.</p>
+<p>So actually, having a good clustered index (e.g. on a INT IDENTITY column, if ever possible) does speed things up - even insert, updates and deletes!</p>
+<p>==The speed will be faster only if the PK gets a clustered index==</p>
+<p>详情见<a href="https://dba.stackexchange.com/questions/129504/how-to-create-clustered-and-non-clustered-index-in-oracle">此处</a></p>
+<h2 id="5">5. 源码</h2>
+<pre><code class="language-plsql">set serveroutpu on;
+set linesize 500;
+
+-- 0.创建记录时间过程
+drop table t_time_consume_D312;
+create table t_time_consume_D312 (
+    event varchar2(128) primary key,
+    start_time timestamp,
+    end_time timestamp,
+    time_consume interval day to second
+);
+
+col event format a30;
+col start_time format a33;
+col end_time format a33;
+col time_consume format a20;
+
+drop synonym t_time;
+create synonym t_time for t_time_consume_D312;
+
+create or replace procedure p_record_time_D312 
+(
+    p_event in varchar2,
+    p_flag in varchar2
+)
+as
+    v_start_time timestamp;
+    v_end_time timestamp;
+    v_time         interval day to second;
+begin
+    if p_flag = 'start' then
+        -- 插入开始时间
+        select systimestamp into v_start_time from dual;
+        insert into t_time(event, start_time) values(p_event, v_start_time);
+    else
+        -- 更新终止时间与时间开销，打印输出
+        select systimestamp into v_end_time from dual;
+        select start_time into v_start_time from t_time where event = p_event;
+        select (v_end_time - v_start_time) day(2) to second into v_time from test;
+        update t_time set end_time = v_end_time, time_consume = v_time where event = p_event;
+        dbms_output.put_line(p_event || '耗时: ' || v_time);
+    end if;
+
+
+end;
+/
+
+show error;
+
+exec p_record_time_D312 ('demo','start');
+-- 过若干秒
+exec p_record_time_D312 ('demo','end');
+select * from t_time;
+
+-- 1. 导入姓名与相关数据
+drop table t_name1;
+create table t_name1(last_name varchar2(32));
+
+drop table t_name2;
+create table t_name2(first_name varchar2(32));
+
+drop table t_common_name;
+create table t_common_name(name varchar2(32));
+
+------- load_last_name.ctl -------
+LOAD DATA
+INFILE 'D:\Messy\Experiment\last_name.CSV'
+APPEND
+INTO TABLE t_name1
+FIELDS TERMINATED BY ','
+(last_name)
+------- cmd -------
+sqlldr userid=C##U_LZC_D312/sys control='D:\Messy\Experiment\大型数据库\OraExp3_D312\load_last_name.ctl'
+
+
+------- load_first_name.ctl -------
+LOAD DATA
+INFILE 'D:\Messy\Experiment\first_name.CSV'
+APPEND
+INTO TABLE t_name2
+FIELDS TERMINATED BY ','
+(first_name)
+------- cmd -------
+sqlldr userid=C##U_LZC_D312/sys control='D:\Messy\Experiment\大型数据库\OraExp3_D312\load_first_name.ctl'
+
+------- load_common.ctl -------
+OPTIONS(SKIP=1) --跳过第一行
+LOAD DATA
+INFILE 'D:\Messy\Experiment\common.CSV'
+APPEND
+INTO TABLE t_common_name
+FIELDS TERMINATED BY ','
+(virtual_column FILLER, name)
+------- cmd -------
+sqlldr userid=C##U_LZC_D312/sys control='D:\Messy\Experiment\大型数据库\OraExp3_D312\load_common.ctl'
+
+-- 删去复姓
+select count(*) from t_name1 where length(last_name) = 2;
+delete from t_name1 where length(last_name) = 2;
+select count(*) from t_name1;
+
+-- 2. 创建姓名表
+drop view v_name1;
+drop view v_name2;
+drop view v_name3;
+
+-- 随机选择
+delete from t_time where event='生成名字';
+exec p_record_time_D312 ('生成名字','start');
+create view v_name1 as select last_name n1 from (select distinct last_name from t_name1 order by dbms_random.value) where rownum &lt;= 400;
+create view v_name2 as select first_name n2 from (select distinct first_name from t_name2 order by dbms_random.value) where rownum &lt;= 150;
+create view v_name3 as select first_name n3 from (select distinct first_name from t_name2 order by dbms_random.value) where rownum &lt;= 250;
+
+set timing on;
+set serveroutpu on;
+
+-- 笛卡尔积
+drop table t_name;
+create table t_name as select n1 || n2 || n3 name from v_name1, v_name2, v_name3;
+-- 插入常用姓名
+insert into t_name select first_name from t_common_name;
+exec p_record_time_D312 ('生成名字','end');
+
+
+-- 3. 生成学号
+exec p_record_time_D312 ('生成学号','start');
+-- 存最终sno
+drop table t_sno_ab; 
+drop table t_sno_cd;
+drop table t_sno_ef;
+drop table t_sno_gh;
+
+-- 由于有前导0，故存成string，同时降低存储开销
+create table t_sno_ab(sno varchar2(32)); 
+create table t_sno_cd(sno number(8));
+create table t_sno_ef(sno number(8));
+create table t_sno_gh(sno number(2));
+
+
+declare 
+i int;
+begin
+    insert into t_sno_gh select level from dual connect by level &lt;= 32;
+    for i in 1..50 loop
+            insert /*+ append */ into t_sno_ef select 190000+i*100+t_sno_gh.sno from t_sno_gh;
+        commit;
+    end loop;
+    for i in 1..90 loop
+            insert /*+ append */ into t_sno_cd select i*1000000+t_sno_ef.sno from t_sno_ef;
+        commit;
+    end loop;
+    for i in 1..80 loop
+            insert /*+ append */ into t_sno_ab select substr(10000000000+i*100000000+t_sno_cd.sno,2,10) from t_sno_cd;
+        commit;
+    end loop;
+end;
+/
+exec p_record_time_D312 ('生成学号','end');
+
+----------------- 一种更简便的写法 ------------------
+exec p_record_time_D312 ('生成学号2','start');
+-- 存最终sno
+drop table t_sno_ab; 
+drop table t_sno_cd;
+drop table t_sno_ef;
+drop table t_sno_gh;
+
+create table t_sno_ab(sno varchar2(32)); 
+create table t_sno_cd(sno number(8));
+create table t_sno_ef(sno number(8));
+create table t_sno_gh(sno number(2));
+
+insert /*+ append */ into t_sno_gh select level from dual connect by level &lt;= 32;
+commit;
+
+insert /*+ append */ into t_sno_ef select 190000+i*100+t_sno_gh.sno from t_sno_gh, (select level i from dual connect by level &lt;= 50);
+commit;
+
+insert /*+ append */ into t_sno_cd select i*1000000+t_sno_ef.sno from t_sno_ef, (select level i from dual connect by level &lt;= 90);
+commit;
+
+insert /*+ append */ into t_sno_ab select substr(10000000000+i*100000000+t_sno_cd.sno,2,10) from t_sno_cd,  (select level i from dual connect by level &lt;= 80);
+commit;
+exec p_record_time_D312 ('生成学号2','end');
+
+
+
+-- 4. 生成剩余随机字段
+-- 性别
+create or replace function f_get_sex return varchar2
+as
+v_num number;
+v_sex varchar2(8);
+begin
+    select dbms_random.value(1,1000) into v_num from dual;
+    if v_num &lt; 498 then
+        v_sex := '男';
+    elsif v_num &lt; 995 then
+        v_sex := '女';
+    else 
+        v_sex := '缺失';
+    end if;
+    return v_sex;
+end;
+/
+
+-- 电话
+-- 辅助表：存储电话前三位
+drop table t_tel_head;
+create table t_tel_head(htel varchar2(4));
+declare 
+    type htel_array is varray(14) of t_tel_head.htel%type;
+    htels htel_array := htel_array('132', '135', '138', '139', '150', '151', '153', '156', '177', '178', '180', '183', '186', '188');
+
+begin
+    for i in 1..14 loop
+        insert into t_tel_head values(htels(i));
+    end loop;
+end;
+/
+select * from t_tel_head;
+
+create or replace function f_get_tel return varchar2
+is 
+    v_tel varchar2(32);
+    v_htel varchar2(4);
+    v_ttel varchar2(16);
+begin
+    -- 随机选一行模板
+    select htel into v_htel from (select htel from t_tel_head order by dbms_random.value ) where rownum = 1;
+    -- 随机生成剩余手机号
+    select substr(cast(dbms_random.value as varchar2(32)),5,8) into v_ttel from dual;
+    v_tel := v_htel || v_ttel;
+    return v_tel;
+end;
+/
+show error;
+
+-- 邮箱
+-- 辅助表：常见邮箱
+drop table t_email;
+create table t_email_suffix(email_suffix varchar2(32));
+declare 
+    type email_suffix_array is varray(7) of t_email_suffix.email_suffix%type;
+    es email_suffix_array := email_suffix_array ('qq', 'gmail', 'ymail', '126', '169', 'outlook', 'csu');
+
+begin
+    for i in 1..7 loop
+        insert into t_email_suffix values(es(i));
+    end loop;
+end;
+/
+
+select * from t_email_suffix;
+
+create or replace function f_get_email return varchar2
+is
+    v_email_suffix varchar2(32);
+    v_email_head varchar2(32);
+    v_email varchar2(32);
+begin
+    select email_suffix into v_email_suffix from (select email_suffix from t_email_suffix order by dbms_random.value ) where rownum = 1;
+    select substr(cast(dbms_random.value as varchar2(32)),4,11) into v_email_head from dual;
+    v_email := v_email_head || '@' || v_email_suffix || '.com';
+    return v_email;
+end;
+/
+
+-- 生日
+create or replace function f_get_birth return date
+is 
+    birth date;
+begin
+    select to_date(
+        trunc(
+            dbms_random.value(to_char(date '1994-01-01', 'J'), 
+                to_char(date '1999-07-31','J')
+            )
+        )
+    , 'J') into birth from dual;
+    return birth;
+end;
+/
+
+-- 生成随机生成的字段
+set timing on;
+delete from t_time where event = '生成随机字段';
+exec p_record_time_D312 ('生成随机字段','start');
+drop table t_random;
+create table t_random(
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+);
+
+insert /*+ append */ into t_random NOLOGGING select f_get_sex(), f_get_tel(), f_get_email(), f_get_birth() from xmltable('1 to 14400000');
+commit;
+exec p_record_time_D312 ('生成随机字段','end');
+
+
+-- 生成最终数据集
+set timing on;
+delete from t_time where event = '生成最终数据集';
+exec p_record_time_D312 ('生成最终数据集','start');
+-- 生成不含主键的学生信息表
+drop table t_stud_info_D312;
+create table t_stud_info_D312(
+    sno varchar2(32),
+    sname varchar2(32),
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+);
+drop synonym t_stud;
+create synonym t_stud for t_stud_info_D312;
+
+insert into t_stud 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random.*, rownum rn3 from t_random)  C
+    where rn1 = rn2 and rn2 = rn3;
+exec p_record_time_D312 ('生成最终数据集','end');
+
+-- 生成有主键的数据集
+set timing on;
+delete from t_time where event = '生成有主键最终数据集';
+exec p_record_time_D312 ('生成有主键最终数据集','start');
+-- 生成含主键的学生信息表
+drop table t_pk_stud_info_D312;
+create table t_pk_stud_info_D312(
+    sno varchar2(32) primary key,
+    sname varchar2(32),
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+);
+drop synonym t_pk_stud;
+create synonym t_pk_stud for t_pk_stud_info_D312;
+
+insert into t_pk_stud 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random.*, rownum rn3 from t_random)  C
+    where rn1 = rn2 and rn2 = rn3;
+exec p_record_time_D312 ('生成有主键最终数据集','end');
+
+-- 添加约束
+exec p_record_time_D312 ('添加约束','start');
+alter table t_stud_info_D312 add constraint pk_sno primary key(sno);
+alter table t_stud_info_D312 add constraint ck_sex check(sex in ('男', '女', '缺失'));
+alter table t_stud_info_D312 add constraint ck_email check(email like '%@%.%');
+alter table t_stud_info_D312 add constraint ck_birth check(birthday between date '1994-01-01' and date '1999-07-31');
+exec p_record_time_D312 ('添加约束','end');
+
+
+-- 查询
+set serveroutpu on;
+set timing on;
+set autotrace on;
+
+delete from t_time where event='无索引查找姓名';
+exec p_record_time_D312 ('无索引查找姓名','start');
+select sname from t_stud where sname='叶令官';
+exec p_record_time_D312 ('无索引查找姓名','end');
+
+delete from t_time where event='无索引查找姓';
+exec p_record_time_D312 ('无索引查找姓','start');
+select sname from t_stud where sname like '叶__';
+exec p_record_time_D312 ('无索引查找姓','end');
+
+delete from t_time where event='无索引查找名';
+exec p_record_time_D312 ('无索引查找名','start');
+select sname from t_stud where sname like '_令官';
+exec p_record_time_D312 ('无索引查找名','end');
+
+
+delete from t_time where event='无索引统计姓';
+exec p_record_time_D312 ('无索引统计姓','start');
+select count(*) from  t_stud where sname like '叶__';
+exec p_record_time_D312 ('无索引统计姓','end');
+
+delete from t_time where event='无索引统计名1';
+exec p_record_time_D312 ('无索引统计名1','start');
+select count(*) from  t_stud where sname like '_令_';
+exec p_record_time_D312 ('无索引统计名1','end');
+
+delete from t_time where event='无索引统计名2';
+exec p_record_time_D312 ('无索引统计名2','start');
+select count(*) from  t_stud where sname like '__官';
+exec p_record_time_D312 ('无索引统计名2','end');
+
+
+-- 建立索引
+drop index index_name_D312;
+delete from t_time where event='建立索引';
+exec p_record_time_D312 ('建立索引','start');
+create index index_name_D312 on t_stud_info_D312(sname);
+exec p_record_time_D312 ('建立索引','end');
+-- 查询
+set serveroutpu on;
+set timing on;
+set autotrace on;
+
+delete from t_time where event='有索引查找姓名';
+exec p_record_time_D312 ('有索引查找姓名','start');
+select sname from t_stud where sname='叶令官';
+exec p_record_time_D312 ('有索引查找姓名','end');
+
+delete from t_time where event='有索引查找姓';
+exec p_record_time_D312 ('有索引查找姓','start');
+select sname from t_stud where sname like '叶__';
+exec p_record_time_D312 ('有索引查找姓','end');
+
+delete from t_time where event='有索引查找名';
+exec p_record_time_D312 ('有索引查找名','start');
+select sname from t_stud where sname like '_令官';
+exec p_record_time_D312 ('有索引查找名','end');
+
+delete from t_time where event='有索引统计姓';
+exec p_record_time_D312 ('有索引统计姓','start');
+select count(*) from  t_stud where sname like '叶__';
+exec p_record_time_D312 ('有索引统计姓','end');
+
+delete from t_time where event='有索引统计名1';
+exec p_record_time_D312 ('有索引统计名1','start');
+select count(*) from  t_stud where sname like '_令_';
+exec p_record_time_D312 ('有索引统计名1','end');
+
+delete from t_time where event='有索引统计名2';
+exec p_record_time_D312 ('有索引统计名2','start');
+select count(*) from  t_stud where sname like '__官';
+exec p_record_time_D312 ('有索引统计名2','end');
+
+set autotrace off;
+
+
+set serveroutpu on;
+set timing on;
+set autotrace on;
+
+drop index index_name_D312;
+exec p_record_time_D312 ('无分区统计ID','start');
+select count(*) from t_stud where sno like '5%';
+exec p_record_time_D312 ('无分区统计ID','end');
+
+exec p_record_time_D312 ('无分区统计专业','start');
+select count(*) from t_stud where sno like '______08__';
+exec p_record_time_D312 ('无分区统计专业','end');
+
+
+-- 建立分区
+delete from t_time where event='建立分区表';
+drop table t_pt_stud_info_D312;
+exec p_record_time_D312 ('建立分区表','start');
+create table t_pt_stud_info_D312(
+    sno varchar2(32) primary key,
+    sname varchar2(32),
+    sex varchar2(32) check(sex in('男', '女', '缺失')),
+    tel varchar2(32),
+    email varchar2(32) check(email like '%@%.%'),
+    birthday date check(birthday between date '1994-01-01' and date '1999-07-31')
+)partition by range(sno) (
+    partition part_0 values less than ('1000190000'),
+    partition part_1 values less than ('2000190000'),
+    partition part_2 values less than ('3000190000'),
+    partition part_3 values less than ('4000190000'),
+    partition part_4 values less than ('5000190000'),
+    partition part_5 values less than ('6000190000'),
+    partition part_6 values less than ('7000190000'),
+    partition part_7 values less than ('8000190000'),
+    partition part_8 values less than ('9000190000'),
+    partition part_9 values less than (maxvalue)
+);
+
+drop synonym  t_pt_stud;
+create synonym t_pt_stud for t_pt_stud_info_D312;
+
+insert into t_pt_stud 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random.*, rownum rn3 from t_random)  C
+    where rn1 = rn2 and rn2 = rn3;
+
+exec p_record_time_D312 ('建立分区表','end');
+
+
+exec p_record_time_D312 ('有分区统计ID','start');
+select count(*) from t_pt_stud where sno like '5%';
+exec p_record_time_D312 ('有分区统计ID','end');
+
+exec p_record_time_D312 ('有分区统计专业','start');
+select count(*) from t_pt_stud where sno like '______08__';
+exec p_record_time_D312 ('有分区统计专业','end');
+
+</code></pre>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../experiment-2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: experiment-2" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              experiment-2
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../experiment-4/" class="md-footer__link md-footer__link--next" aria-label="下一页: experiment-4" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              experiment-4
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

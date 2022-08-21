@@ -1,0 +1,2374 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Contribution - EvalCSU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="EvalCSU" class="md-header__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EvalCSU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contribution
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/evalcsu/" class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../evaluation/cse/science/" class="md-tabs__link">
+        评教
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faculty/cse/" class="md-tabs__link">
+        笔记
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link">
+      贡献指南
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../join/" class="md-tabs__link">
+      加入我们
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EvalCSU" class="md-nav__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    EvalCSU
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/evalcsu/" class="md-nav__link">
+        EvalCSU
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          评教
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="评教" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          评教
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/cse/science/" class="md-nav__link">
+        计算机科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/cse/bigdata/" class="md-nav__link">
+        大数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/cse/security/" class="md-nav__link">
+        信息安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/cse/iot/" class="md-nav__link">
+        物联网
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/cse/software/" class="md-nav__link">
+        软件工程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/soa/automation/" class="md-nav__link">
+        自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/soa/electronic_information/" class="md-nav__link">
+        电子工程及其自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluation/soa/intelligence/" class="md-nav__link">
+        智能科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_2" type="checkbox" id="__nav_3_1_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_2">
+          数据库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据库
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Database/experiment1/" class="md-nav__link">
+        experiment1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Database/experiment2/" class="md-nav__link">
+        experiment2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3" type="checkbox" id="__nav_3_1_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Oracle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_1" type="checkbox" id="__nav_3_1_2_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-3/" class="md-nav__link">
+        experiment-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-4/" class="md-nav__link">
+        experiment-4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-5/" class="md-nav__link">
+        experiment-5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_2" type="checkbox" id="__nav_3_1_2_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Execution_Plan/" class="md-nav__link">
+        Execution_Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Oracle_Architecture/" class="md-nav__link">
+        Oracle_Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Oracle_Schema/" class="md-nav__link">
+        Oracle_Schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/PL_SQL1/" class="md-nav__link">
+        PL_SQL1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/PL_SQL2/" class="md-nav__link">
+        PL_SQL2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4" type="checkbox" id="__nav_3_1_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4">
+          R语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R语言" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          R语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_1" type="checkbox" id="__nav_3_1_2_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_2" type="checkbox" id="__nav_3_1_2_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/BasicStructure/" class="md-nav__link">
+        BasicStructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/DataAnalysis/" class="md-nav__link">
+        DataAnalysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/dataOp/" class="md-nav__link">
+        dataOp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/Grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/ML/" class="md-nav__link">
+        ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/Plot/" class="md-nav__link">
+        Plot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/" class="md-nav__link">
+        R-language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_5" type="checkbox" id="__nav_3_1_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_5">
+          Web 技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web 技术" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web 技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Web-technology/web-lab-report/" class="md-nav__link">
+        web-lab-report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          信息安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信息安全" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          信息安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_2" type="checkbox" id="__nav_3_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_2">
+          网络安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="网络安全" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          网络安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/arp-spoofing/" class="md-nav__link">
+        ARP 嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/bgp-route-hijacking/" class="md-nav__link">
+        BGP 路由劫持
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/dns-server/" class="md-nav__link">
+        DNS 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/dos/" class="md-nav__link">
+        Dos 拒绝服务攻击
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/ipsec/" class="md-nav__link">
+        IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/mail-relay/" class="md-nav__link">
+        邮件中继
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/onetime-password/" class="md-nav__link">
+        一次性口令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/remote-security-authentication/" class="md-nav__link">
+        远程安全认证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/routing-protocol/" class="md-nav__link">
+        路由协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/salt-value/" class="md-nav__link">
+        盐值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/syn-cookies/" class="md-nav__link">
+        SYN-Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/tls-ssl/" class="md-nav__link">
+        TSL / SSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_3" type="checkbox" id="__nav_3_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_3">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/software/MiCode-Note/" class="md-nav__link">
+        小米笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          自动化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/automation/" class="md-nav__link">
+        概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_2" type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据结构" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/automation/datastructure/graph-traval.md" class="md-nav__link">
+        图遍历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/automation/datastructure/Huffman/" class="md-nav__link">
+        哈夫曼编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="智能科学与技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          智能科学与技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/intelligence/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        贡献指南
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../join/" class="md-nav__link">
+        加入我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evalcsu" class="md-nav__link">
+    为 EvalCSU 贡献
+  </a>
+  
+    <nav class="md-nav" aria-label="为 EvalCSU 贡献">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue" class="md-nav__link">
+    Issue 模块
+  </a>
+  
+    <nav class="md-nav" aria-label="Issue 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue_1" class="md-nav__link">
+    新增 Issue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-report" class="md-nav__link">
+    Bug report 模版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-request" class="md-nav__link">
+    Evaluate request 模版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-request" class="md-nav__link">
+    Feature request 模版
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-request" class="md-nav__link">
+    Pull Request 模块
+  </a>
+  
+    <nav class="md-nav" aria-label="Pull Request 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-request_1" class="md-nav__link">
+    Pull Request 准备工作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-request_2" class="md-nav__link">
+    Pull Request 合并分支
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaborator" class="md-nav__link">
+    Collaborator 协作者
+  </a>
+  
+    <nav class="md-nav" aria-label="Collaborator 协作者">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    Review 流程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalcsu-commit" class="md-nav__link">
+    EvalCSU 的 commit 注意事项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Jacob953/evalcsu/edit/master/docs/global/zh-simplify/contribution.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<p><a href="../../zh-tradition/contirbution/">繁體中文</a> | <a href="../../en/contribution/">English</a></p>
+<h1 id="_1">贡献指南</h1>
+<blockquote>
+<p><strong>请确保你已经仔细阅读了本指南，在工作流程清晰后再进行操作!</strong></p>
+<p>我们欢迎任何形式的贡献，包括但不限于下列:</p>
+<ol>
+<li>提出或申请并修正任何 EvalCSU 的内容错误 </li>
+<li>提出任何关于 EvalCSU 的疑惑和建议</li>
+<li>申请优化或新增课堂笔记、考点思维导图或实验课设</li>
+<li>申请参与课程、实验或老师的评教</li>
+<li>申请参与校级、院级或专业级经验分享</li>
+<li>将已有的内容翻译成其他语言</li>
+</ol>
+<p>若你是我们的协作者，请务必遵循 <a href="#collaborator-协作者">Collaborator</a> 的要求</p>
+<p>若本指南有任何模糊不清的地方，请通过 Issue 和我们反映</p>
+</blockquote>
+<h2 id="evalcsu">为 EvalCSU 贡献</h2>
+<blockquote>
+<p>为了便于指导小白操作，我们将根据 GitHub 的操作模块进行详细指导</p>
+<p>尽管如此，我们还是建议你多参考已有的 Issue 或者 PR</p>
+<p>若你不是小白，可以参考一下几点：
+1. 提交错误或建议等，请参考 <a href="#bug-report-模版">Bug report 模版</a>
+2. 提交评教或分享经验等，请参考 <a href="#evaluate-request-模版">Evaluate request 模版</a>
+3. 提交课设、笔记或作业等，请参考 <a href="#feature-request-模版">Feature request 模版</a></p>
+</blockquote>
+<h3 id="issue">Issue 模块</h3>
+<blockquote>
+<p>Issue 是一种非常好的可沉淀的交流方式，能帮助 EvalCSU 实现答疑交流、反馈缺陷和提出新需求，欢迎你通过 Issue 与我们交流</p>
+</blockquote>
+<p>提出新的 Issue 之前，请你检查 Open 和 Closed 中是否存在相似 Issue：
+- 若 Open 中存在，且无法解决你的疑惑，请在该 Issue 下提出你的问题
+- 若 Closed 中存在，但依然无法解决你的疑惑，可以重新新增一个 Issue
+- 若都不存在，则在新增你的 Issue </p>
+<h4 id="issue_1">新增 Issue</h4>
+<ol>
+<li>进入 Issue 页面点击 <code>New issue</code> 按钮</li>
+</ol>
+<p><img alt="New issue 按钮所在的地方" src="../../../img/global/CONTRIBUTION/issue_button.png" />
+ <br />
+<p align="center">Figure 1. New issue 的按钮位置</p></p>
+<ol>
+<li>选择 <code>Bug report</code>, <code>Evaluate request</code>, <code>Feature request</code> 或新建一个空白模版来初始化你的 Issue</li>
+<li>Bug report：指出 EvalCSU 中存在的内容错误，并提出修正建议，详细请参考 <a href="#bug-report-模版">Bug report 模版</a></li>
+<li>Evaluate request：向 Manager 提交评教、经验分享的申请，详细请参考 <a href="#evaluate-request-模版">Evaluate request 模版</a></li>
+<li>Feature request：向 Manager 提交课堂笔记、考点思维导图或实验课设的优化或新增的申请，详细请参考 <a href="#feature-request-模版">Feature request 模版</a></li>
+<li>在禁止删除 <strong>题目（加粗字体）</strong> 的前提下，简述你的 Issue 内容，面对无法填写的部分，请以 <code>NULL.</code> 代替内容，而非删除题目</li>
+<li>修改标题中的 <code>&lt;description&gt;</code> 部分，建议参考已有 Issue</li>
+<li>点击 <code>Submit new issue</code> 按钮提交你的 Issue</li>
+</ol>
+<h4 id="bug-report">Bug report 模版</h4>
+<blockquote>
+<p>仔细阅读 <strong>题目（加粗字体）</strong> ，尽可能保证 Bug 描述的简洁性和准确性</p>
+</blockquote>
+<ol>
+<li>在 <strong>Describe the bug</strong> 中简述 bug 的位置、影响以及可能带来的后果</li>
+<li>如果需要特殊步骤，在 <strong>To Reproduce</strong> 中描述复现 bug 的步骤</li>
+<li>如果不需要，则用 <code>NULL.</code> 代替</li>
+<li>在 <strong>Expected behavior</strong> 中简述你的解决方案或者你期待的效果</li>
+<li>为了使得描述更加具体，建议在 <strong>Screenshots</strong> 中贴上你的截图</li>
+<li>如果没有，则用 <code>NULL.</code> 代替</li>
+<li>如果有其他内容，则在 <strong>Additional context</strong> 中简述</li>
+<li>如果无其他内容， 填 <code>NULL.</code></li>
+<li>在 <strong>Assign the manager you email</strong> 中 @ 负责 bug 所在区域的管理员</li>
+</ol>
+<p><img alt="优秀的 bug issue 案例" src="../../../img/global/CONTRIBUTION/bug_issue_example.png" /></p>
+<p align="center">Figure 2. Bug issue 的按钮位置</p>
+
+<p><strong>特别注意</strong></p>
+<ul>
+<li>通常情况下，Bug report 模版不需要 Email 管理员</li>
+<li>Bug report 模版中，你可以申请参与：</li>
+<li>修正拼写、词语错误</li>
+<li>修正课堂笔记错误</li>
+<li>修正考点思维导图错误（考点更新不纳入修正范围）</li>
+<li>修正实验课设错误</li>
+<li>提出你的建议、疑惑</li>
+<li>待管理员在该 Issue 下批准，便可移步 <a href="#pull-request-模块">Pull Request 模块</a> 进行下一步操作。</li>
+</ul>
+<h4 id="evaluate-request">Evaluate request 模版</h4>
+<ol>
+<li>在提交 Issue 前，请到你所在的学院查询 <strong>管理员</strong> 表格</li>
+<li>若不存在对应学院，请重新申请 <a href="#feature-request-模版">Feature request</a></li>
+<li>若存在对应学院，请 Email 当前年级相近的管理员</li>
+<li>在 <strong>Describe the evaluation you want to join</strong> 中简述你希望参与的内容，务必包含年级、学院和模块（评教或经验分享）</li>
+<li>在 <strong>Assign the manager you email</strong> 中：</li>
+<li>如果未获得评教、经验分享资格，@ 所发邮件的管理员</li>
+<li>如果已获得评教、经验分享资格，填 <code>NULL.</code></li>
+</ol>
+<p><strong>特别注意</strong></p>
+<ul>
+<li>Evaluate request 模版中，你可以申请参与：</li>
+<li>新增多个课程评教</li>
+<li>新增多级经验分享</li>
+<li>为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息</li>
+<li>填写邮件内容时，请前往 <code>CSU 教务系统</code> -&gt; <code>培养管理</code> -&gt; <code>我的培养方案</code>，邮件内容附加全屏截图即可，建议包含系统时间</li>
+<li>待管理员在该 Issue 下批准，便可移步 <a href="#pull-request-模块">Pull Request 模块</a> 进行下一步操作。</li>
+</ul>
+<h4 id="feature-request">Feature request 模版</h4>
+<ol>
+<li>在提交 Issue 前，请到你所在的学院查询 <strong>管理员</strong> 表格</li>
+<li>若不存在对应学院，请优先 Email 一级 Reviewer(Rick Lin、jzndd)，同时在该 Issue 中申请添加对应学院</li>
+<li>若存在对应学院，请 Email 当前年级相近的管理员</li>
+<li>在 <strong>Is your feature request related to a problem? Please describe.</strong> 中简述你希望参与的内容，务必包含年级、学院和模块（课堂笔记、考点思维导图或实验课设）</li>
+<li>在 <strong>Describe the solution you'd like</strong> 中简述你的最优想法</li>
+<li>如果有代替方案，则在 <strong>Describe alternatives you've considered</strong> 中简述</li>
+<li>如果无代替方案， 填 <code>NULL.</code></li>
+<li>如果有其他内容，则在 <strong>Additional context</strong> 中简述</li>
+<li>如果无其他内容， 填 <code>NULL.</code></li>
+<li>无论是否有相应资格，都需要在 <strong>Assign the manager you email</strong> 中 @ 所发邮件的管理员</li>
+</ol>
+<p><img alt="优秀的 feature request 案例" src="../../../img/global/CONTRIBUTION/feature_request_example.png" /></p>
+<p align="center">Figure 3. 优秀的 feature request 案例</p>
+
+<p><strong>特别注意</strong></p>
+<ul>
+<li>Feature request 模版中，你可以申请参与且不止于：</li>
+<li>优化或新增多个课堂笔记</li>
+<li>优化或新增多个考点思维导图</li>
+<li>优化或新增多个实验课设</li>
+<li>新增新的学院、专业</li>
+<li>将已有内容翻译为其他语言</li>
+<li>为了保护贡献者的隐私，Issue 和邮件中严禁出现个人信息</li>
+<li>填写邮件内容时，请前往 <code>CSU 教务系统</code> -&gt; <code>培养管理</code> -&gt; <code>我的培养方案</code>，邮件内容附加全屏截图即可，建议包含系统时间</li>
+<li>待管理员在该 Issue 下批准，便可移步 <a href="#pull-request-模块">Pull Request 模块</a> 进行下一步操作。</li>
+</ul>
+<h3 id="pull-request">Pull Request 模块</h3>
+<blockquote>
+<p>PR 即将你的贡献合并、发布到主仓库中</p>
+<p><strong>任何 PR 都需要链接到已存在，并且已授权的 Issue</strong></p>
+<p>因此，在提交 PR 前，建议你优先阅读 <a href="#issue-模块">Issue 模块</a></p>
+</blockquote>
+<h4 id="pull-request_1">Pull Request 准备工作</h4>
+<blockquote>
+<p>可以参考 <a href="NOOBGUIDTOGIT.md">Git 新手指南</a></p>
+</blockquote>
+<ol>
+<li><code>fork</code> 主仓库到你的 GitHub 仓库中，并 <code>git clone</code> 个人仓库到本地</li>
+</ol>
+<p><img alt="fork 按钮位置" src="../../../img/global/CONTRIBUTION/fork_button.png" />
+ <br />
+<p align="center">Figure 4. fork 按钮位置</p></p>
+<ol>
+<li>在本地新建一个分支</li>
+<li>
+<p>分支命名规则：
+      <code>&lt;type&gt;/[faculty]/&lt;your github id&gt;/
+      // e.g. docs/security/jacob953</code></p>
+<ul>
+<li>git 命令示例：</li>
+</ul>
+<p><img alt="新建分支的命令样例" src="../../../img/global/CONTRIBUTION/create_new_branch.png" />
+  <p align="center">Figure 5. 新建分支的命令样例</p>
+- <code>&lt;type&gt;</code> 建议参考 <a href="#evalcsu-的-commit-注意事项">提交类型</a>
+3. 在本地新建的分支上完成你的修改，修改要求详细请参考 <strong>项目搭建原则</strong>
+4. 在本地提交 commit 时，请严格遵循 <a href="#evalcsu-的-commit-注意事项">EvalCSU 的 commit 注意事项</a></p>
+</li>
+</ol>
+<p><strong>项目搭建原则</strong></p>
+<ul>
+<li>文案排版请尽量参考 <a href="https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-Hans.md">中文文案排版指北</a></li>
+<li>禁止修改 .github 文件夹中的任何内容</li>
+<li>根据提交的内容，可以更改项目目录结构，但不能修改三个主目录：</li>
+<li>code：放置所有课设代码</li>
+<li>docs：放置所有文档，包括：<ul>
+<li>evaluation：评教部分</li>
+<li>faculty：学院、专业的笔记、考点导图、课设报告和经验分享部分</li>
+<li>global：项目组织文档等</li>
+</ul>
+</li>
+<li>img：放置所有文档和代码中的图片</li>
+<li>文件类型要求：</li>
+<li>code 中不能放置压缩包类型文件，应展示代码结构</li>
+<li>docs 中除实验指导书等内容固定的文件，不能放置 .docx, .pdf, .excl 等类型文件，应使用 .md 类型文件，便于更新和维护</li>
+<li>文件、文件夹命名要求：</li>
+<li>禁止包含中文、特殊字符或空格</li>
+<li>需要简述文档、文件夹含义，而不是乱码</li>
+<li>文件优化、新增要求：</li>
+<li>处理的文档有多个自然语言版本时，请将文件放入 global 中的对应文件夹下，目前仅支持: en, zh-simplify, zh-tradition<ul>
+<li>应采用同一文件名，不需要添加解释性后缀</li>
+</ul>
+</li>
+<li>处理的文档有多个编程语言版本时，请重新构建 code 目录，并按照语言分类</li>
+<li>笔记、课设的优化、新增要求：</li>
+<li>禁止出现多版本笔记：<ul>
+<li>若笔记已存在，则应在已有版本上进行迭代</li>
+<li>若笔记不存在，则应申请添加新笔记</li>
+</ul>
+</li>
+<li>发生课改时，应在合适的 README.md 中做解释</li>
+<li>评教、经验分享要求：</li>
+<li>措辞中肯，评价公正，遵守 <a href="../../../README.md#41-行为准则">行为准则</a></li>
+</ul>
+<h4 id="pull-request_2">Pull Request 合并分支</h4>
+<ol>
+<li>打开 GitHub，从个人仓库中选择 <code>New pull request</code> 按钮</li>
+</ol>
+<p><img alt="PR button" src="/img/global/CONTRIBUTION/PR_button.png" />
+<br />
+<p align="center">Figure 6. PR 按钮</p></p>
+<ol>
+<li>选取本仓库的主分支与你修改过的分支作为比较对象，依照以下方式描述你的修改：</li>
+<li>标题可以按照 <code>&lt;type&gt;[optional scope]: &lt;description&gt;</code> 的方式命名</li>
+<li>在 <strong>Related Issue</strong> 中链接到相关 Issue，不可缺失</li>
+<li>在 <strong>Propose changes</strong> 中简述你的改动，不可缺失</li>
+<li>在 <strong>Additional information</strong> 中添加额外信息，可选</li>
+<li>在 <strong>Checklist</strong> 中检查你的任务，不可缺失，但不要求一定完成</li>
+<li>在 <strong>Screenshoot</strong> 中贴上对应截图</li>
+</ol>
+<p><img alt="优秀的 PR 样例" src="../../../img/global/CONTRIBUTION/PR_example.png" />
+ <br />
+<p align="center">Figure 7. 优秀的 PR 样例</p></p>
+<ol>
+<li>点击 <code>Create pull request</code> 按钮创建你的合并请求</li>
+</ol>
+<p><strong>特别注意</strong></p>
+<ul>
+<li>禁止对本仓库的 gh-pages 进行任何操作</li>
+<li>如果参与了评教（或经验分享）部分，请在 <a href="../EVALUATOR.md">EVALUATOR.md</a> 中添加你的信息</li>
+<li>严禁出现个人信息，具有权威性即可</li>
+</ul>
+<h3 id="collaborator">Collaborator 协作者</h3>
+<h4 id="_2">注意事项</h4>
+<ol>
+<li>熟悉 <a href="#issue-模块">Issue 模块</a> 和 <a href="#pull-request-模块">Pull Request 模块</a> 中的所有流程</li>
+<li>禁止直接对主分支做任何操作</li>
+<li>积极维护平台环境环境，严格遵守 <a href="../../../README.md#31-贡献准则">贡献准则</a> 和 <a href="../../../README.md#41-行为准则">行为准则</a></li>
+<li>积极承担授权和审核的责任，完成授权和审核的工作</li>
+<li>积极承担 Review 的责任，完成 Review 工作</li>
+</ol>
+<h4 id="review">Review 流程</h4>
+<ol>
+<li>进入需要 Rebiew 的 PR 页面，点击 <code>Files changed</code> 分页，查看其更改</li>
+<li>查看修改后，点击 <code>Review changes</code> 按钮，输入你的评论，并依照你的想法选择下列选项:</li>
+<li>Comment：不确定是否通过，只想提供建议</li>
+<li>Approve：通过修改</li>
+<li>Request changes：否定修改，需要再进行修改</li>
+<li>点击 <code>Submit review</code> 按钮提交个人的看法</li>
+</ol>
+<p><strong>特别注意</strong></p>
+<ul>
+<li>此过程为交叉互审，除 Jacob953(owner) 外，至少需要两名以上的协作者 Approved 后才能合并</li>
+</ul>
+<h3 id="evalcsu-commit">EvalCSU 的 commit 注意事项</h3>
+<ol>
+<li>请尽量于本地进行 commit，有较大的操作空间与弹性。</li>
+<li>对于有关联的更改，请通过 <code>git commit</code> 记录，然后再一次性提交 PR。</li>
+<li>遵循以下的提交 commit 格式</li>
+</ol>
+<pre><code>&lt;type&gt;[optional scope]: &lt;description&gt;
+</code></pre>
+<p><strong>提交类型</strong></p>
+<div>
+  <table margin="center">
+    <thead>
+        <tr>
+            <th>type</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>feat</td>
+            <td>新增新的功能</td>
+        </tr>
+        <tr>
+            <td>fix</td>
+            <td>修正bug</td>
+            </tr>
+            <tr>
+            <td>docs</td>
+            <td>更新文档</td>
+        </tr>
+        <tr>
+            <td>test</td>
+            <td>新增或更新测试</td>
+        </tr>
+        <tr>
+            <td>style</td>
+            <td>格式化文档或代码</td>
+        </tr>
+        <tr>
+            <td>chore</td>
+            <td>其他提交类型</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

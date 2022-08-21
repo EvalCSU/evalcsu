@@ -1,0 +1,3109 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>智能科学与技术 - EvalCSU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="EvalCSU" class="md-header__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EvalCSU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              智能科学与技术
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/evalcsu/" class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cse/science/" class="md-tabs__link md-tabs__link--active">
+        评教
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faculty/cse/" class="md-tabs__link">
+        笔记
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../global/zh-simplify/contribution/" class="md-tabs__link">
+      贡献指南
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../global/join/" class="md-tabs__link">
+      加入我们
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EvalCSU" class="md-nav__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    EvalCSU
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/evalcsu/" class="md-nav__link">
+        EvalCSU
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          评教
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="评教" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          评教
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cse/science/" class="md-nav__link">
+        计算机科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cse/bigdata/" class="md-nav__link">
+        大数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cse/security/" class="md-nav__link">
+        信息安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cse/iot/" class="md-nav__link">
+        物联网
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cse/software/" class="md-nav__link">
+        软件工程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/" class="md-nav__link">
+        自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../electronic_information/" class="md-nav__link">
+        电子工程及其自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        智能科学与技术
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    第三学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第三学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    离散数学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    模拟电子技术B
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    脑与认知科学基础
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第四学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第四学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运筹学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    计算机组成原理与汇编语言
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    计算机网络
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    操作系统原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    数据库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    数字电路原理B
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    人工智能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    数字通信原理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    第五学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第五学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    模式识别与机器学习
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    自动控制原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    图像处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    知识工程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    物联网技术基础
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    虚拟仪器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    数字信号处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    语音信号处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    计算机仿真技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    嵌入式系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    第六学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第六学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    分布式系统与云计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    机器人学导论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    计算机控制技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    生物特征识别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    自然语言处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    传感器原理与应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    计算机图形学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rfid" class="md-nav__link">
+    RFID及智能卡技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    大数据理论与应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    智能控制技术
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_2" type="checkbox" id="__nav_3_1_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_2">
+          数据库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据库
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Database/experiment1/" class="md-nav__link">
+        experiment1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Database/experiment2/" class="md-nav__link">
+        experiment2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3" type="checkbox" id="__nav_3_1_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Oracle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_1" type="checkbox" id="__nav_3_1_2_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-3/" class="md-nav__link">
+        experiment-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-4/" class="md-nav__link">
+        experiment-4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Experiment/experiment-5/" class="md-nav__link">
+        experiment-5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_2" type="checkbox" id="__nav_3_1_2_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Execution_Plan/" class="md-nav__link">
+        Execution_Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Oracle_Architecture/" class="md-nav__link">
+        Oracle_Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/Oracle_Schema/" class="md-nav__link">
+        Oracle_Schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/PL_SQL1/" class="md-nav__link">
+        PL_SQL1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/Note/PL_SQL2/" class="md-nav__link">
+        PL_SQL2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Oracle/" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4" type="checkbox" id="__nav_3_1_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4">
+          R语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R语言" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          R语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_1" type="checkbox" id="__nav_3_1_2_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_2" type="checkbox" id="__nav_3_1_2_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/BasicStructure/" class="md-nav__link">
+        BasicStructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/DataAnalysis/" class="md-nav__link">
+        DataAnalysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/dataOp/" class="md-nav__link">
+        dataOp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/Grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/ML/" class="md-nav__link">
+        ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/Note/Plot/" class="md-nav__link">
+        Plot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/R-language/" class="md-nav__link">
+        R-language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_5" type="checkbox" id="__nav_3_1_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_5">
+          Web 技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web 技术" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web 技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/bigdata/Web-technology/web-lab-report/" class="md-nav__link">
+        web-lab-report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          信息安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信息安全" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          信息安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_2" type="checkbox" id="__nav_3_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_2">
+          网络安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="网络安全" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          网络安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/arp-spoofing/" class="md-nav__link">
+        ARP 嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/bgp-route-hijacking/" class="md-nav__link">
+        BGP 路由劫持
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/dns-server/" class="md-nav__link">
+        DNS 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/dos/" class="md-nav__link">
+        Dos 拒绝服务攻击
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/ipsec/" class="md-nav__link">
+        IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/mail-relay/" class="md-nav__link">
+        邮件中继
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/onetime-password/" class="md-nav__link">
+        一次性口令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/remote-security-authentication/" class="md-nav__link">
+        远程安全认证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/routing-protocol/" class="md-nav__link">
+        路由协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/salt-value/" class="md-nav__link">
+        盐值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/syn-cookies/" class="md-nav__link">
+        SYN-Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/network-security/tls-ssl/" class="md-nav__link">
+        TSL / SSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_3" type="checkbox" id="__nav_3_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_3">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/cse/security/software/MiCode-Note/" class="md-nav__link">
+        小米笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          自动化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/automation/" class="md-nav__link">
+        概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_2" type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据结构" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/automation/datastructure/graph-traval.md" class="md-nav__link">
+        图遍历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/automation/datastructure/Huffman/" class="md-nav__link">
+        哈夫曼编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="智能科学与技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          智能科学与技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faculty/soa/intelligence/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/zh-simplify/contribution/" class="md-nav__link">
+        贡献指南
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../global/join/" class="md-nav__link">
+        加入我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    第三学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第三学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    离散数学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    模拟电子技术B
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    脑与认知科学基础
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第四学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第四学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运筹学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    计算机组成原理与汇编语言
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    计算机网络
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    操作系统原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    数据库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    数字电路原理B
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    人工智能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    数字通信原理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    第五学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第五学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    模式识别与机器学习
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    自动控制原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    图像处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    知识工程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    物联网技术基础
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    虚拟仪器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    数字信号处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    语音信号处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    计算机仿真技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    嵌入式系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    第六学期
+  </a>
+  
+    <nav class="md-nav" aria-label="第六学期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    分布式系统与云计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    机器人学导论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    计算机控制技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    生物特征识别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    自然语言处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    传感器原理与应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    计算机图形学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rfid" class="md-nav__link">
+    RFID及智能卡技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    大数据理论与应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    智能控制技术
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Jacob953/evalcsu/edit/master/docs/evaluation/soa/intelligence.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="_1">人工智能/智能科学与技术评教</h1>
+<blockquote>
+<p>老师排名不分先后!</p>
+<p>评教样例源码：</p>
+<p><code>1. &lt;your id&gt;@&lt;comment time&gt;
+    - &lt;your comment&gt;
+    - ...</code></p>
+<p>请注意：</p>
+<ul>
+<li>学期 &gt; 课程 &gt; 老师 &gt; 年级</li>
+<li>低年级排序高于高年级：2020 级 &gt; 2019 级</li>
+<li>同年级按时间顺序排：...@20220117 &gt; ...@20220125</li>
+</ul>
+</blockquote>
+<h2 id="_2">第三学期</h2>
+<h3 id="_3">离散数学</h3>
+<p><strong>刘丽珏</strong></p>
+<p><em>2020 级</em></p>
+<ol>
+<li>heyzbw@20220218<ul>
+<li>珏珏子对离散的理解还是满深入的，认真听可以收获很多。</li>
+<li>珏珏子声音有点轻，想听建议前排。</li>
+<li>上课不是很在意人有没有来齐，没有点过名。</li>
+<li>20级开始需要完成畅课上的练习，最好看完畅课课件，珏珏子中途不会提醒，但最后平时分她说会参考这个。</li>
+</ul>
+</li>
+</ol>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>珏珏子说话不着急，可能有些人觉得语速有点慢，声音也不是特别大，可以去抢前排，基本不会有点名提问。上课强烈建议好好听讲，听懂每一个知识点。</li>
+<li>用的教材是她自己出的那本，西电出版社编的，还算比较好理解。</li>
+<li>逻辑和图论几章是重点，但考试套路不深</li>
+<li>每章结束会有几个题目要求完成，是平时成绩的组成。考试会出原题，只要认真听讲搞懂作业期末成绩可以比较高。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_4">数据结构</h3>
+<p><strong>刘丽珏</strong></p>
+<p><em>2020 级</em></p>
+<ol>
+<li>heyzbw@20220218<ul>
+<li>课堂风格和离散数学类似。</li>
+<li>20级没有课程设计，但每一章会设置几道力扣的题目，以小组为单位讨论并完成。</li>
+<li>实验周也是按小组到实验室，以个人为单位检查，检查内容：力扣完成题数，任自选一道题讲解思路。</li>
+<li>畅课上的题目也要按时完成，与离散数学同理。</li>
+</ul>
+</li>
+</ol>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>是的还是珏珏子，这学期她代两门。</li>
+<li>这学期真正硬核的课程，尽可能听懂，课下多想想。</li>
+<li>这门课有课程设计，老师出题，对于大二上学生有一定难度。小组合作，要做系统，部分题目涉及物联网RFID和人工智能图搜索的相关算法，也会有答辩。</li>
+<li>考试不容易，要好好复习，但最后给分其实还可以。</li>
+<li>课设和答辩是重点，珏珏子很在乎这一点，答辩耳目一新，课设做的有创新点是加分项。</li>
+</ul>
+</li>
+</ol>
+<h3 id="b">模拟电子技术B</h3>
+<p><strong>周晓君</strong></p>
+<p><em>2020 级</em></p>
+<ol>
+<li>heyzbw@20220218<ul>
+<li>上课前最好预先看一下，不然可能跟不上他的节奏。</li>
+<li>课堂提问回答两次，课堂平时分就满了。</li>
+<li>上课会不定时点名，叫人起来回答问题，没来的会扣平时分。</li>
+<li>实验在下学期，但是会要求使用Multisim仿真。</li>
+<li>人挺好的，考试也不是很难。</li>
+</ul>
+</li>
+</ol>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>讲课语速超快，RAP高手（bushi），AKA “简单哥”。</li>
+<li>理解快的同学能跟上思路，但他会把同一个知识点讲好几遍。</li>
+<li>会课堂提问，让同学上去做题（为了让我们拿到课堂分），本身的问题不是太难，不会超纲</li>
+<li>考试难度适中，不会太为难学生，会希望学生都及格</li>
+<li>有实验，要写实验报告（手写）</li>
+<li>个人认为老师人挺好的，会照顾到学生的情绪</li>
+</ul>
+</li>
+<li>M-Chase@20220208<ul>
+<li>请叫他Simple哥，学术水平很牛，模电讲的，一言难尽，语速极快，可能平时做科研就很快吧，听说是论文哥，现在好像已经升教授了，想做学术的也许可以联系联系他，感觉挺愿意指导的。</li>
+<li>考试还算行，比学着轻松一点，题不会很难，认真复习就好。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_5">脑与认知科学基础</h3>
+<p><strong>邹逸群</strong></p>
+<p><em>2020 级</em></p>
+<ol>
+<li>heyzbw@20220218<ul>
+<li>听说智能科学与技术改为人工智能就不上这门课了。</li>
+<li>上课讲金庸时，不要一笑而过，可能会考。</li>
+<li>开卷考试，考的时候满有信心，成绩出来就满纳闷，成绩20级普遍偏低。</li>
+<li>20级课设是实现二分类，小组合作，和课程毫不相干，但挺有用的。</li>
+</ul>
+</li>
+</ol>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>教材用北邮的那本，王志良主编</li>
+<li>金庸小说狂热爱好者，表情包收藏大师，会在PPT上插大量例子和表情包</li>
+<li>课的内容不容易听懂，涉及脑科学，心理学，机器学习，人机交互等等，因此大家容易摆烂</li>
+<li>考试开卷，会有一两个题出自课上他举的例子，（19届考试出了神雕侠侣和射雕英雄传的题目，左右互搏巴拉巴拉，当时给看傻了）</li>
+<li>WARNING：从19级开始，这个课开始有课程设计，题目对于大二上学生很难，是机器学习的内容，19级做的是使用国际第三届脑机接口比赛（BCI-Ⅲ）数据做脑电信号分类，主流是用LDA和SVM</li>
+<li>会有课设答辩，会把你问住，但也不会太为难，阿弥陀佛。。。</li>
+</ul>
+</li>
+</ol>
+<h2 id="_6">第四学期</h2>
+<h3 id="_7">运筹学</h3>
+<p><strong>王雅琳&amp;周晓君</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>两学分的课，选的人比较少，但老师很负责</li>
+<li>课程内容还是不容易的，越到后面越难，其实听的有点难受，好像听懂了与好像没有。</li>
+<li>有作业，每节课三四个题的样子，就是画单纯形表麻烦</li>
+<li>考试开卷，时间紧张，单纯形表一旦画错就麻烦了，给分还可以</li>
+<li>简单哥会在最后一节课登场给大家复习并拓展（当时讲了强化学习的一点东西）</li>
+</ul>
+</li>
+</ol>
+<h3 id="_8">计算机组成原理与汇编语言</h3>
+<p><strong>李仪</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>仪宝承诺不挂</li>
+<li>讲课大活宝，上他的课痛并快乐着</li>
+<li>难度还是有的，要努力去听，多看书好理解</li>
+<li>讲一章复习一章，复习课是讲考研题，难度挺大</li>
+<li>考试闭卷，全是408考研题，但把题目刷穿就没问题（我都经历了什么啊。。。。）</li>
+<li>实验和课设都是汇编语言，我们上课的时候，几乎没讲汇编的有关知识，虽然可以考完试在做，但真的太痛苦了，全靠自学</li>
+<li>验收都会及格，可能会请隔壁邹逸群老师帮忙，仪宝验收时先问你要优？良？还是中？，中是低保，优不容易拿到。</li>
+<li>建议早早去验收，后面验收的同学直接让现场改代码，太可怕了。。。</li>
+<li>敢选仪宝的课的，你们是真的猛士。</li>
+</ul>
+</li>
+<li>M-Chase<ul>
+<li>一句话概括：学着很难考试很简单，全是PPT原题，40分钟写完卷子，平时好好听课，可以看王道考研书，讲的很细，基本都是那里面的题目。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>李仪上课迷之自信，总觉得自己讲得完，结果一半都没讲完</li>
+<li>夏天可以买冰阔落给他喝，他会很开心</li>
+<li>女生分普遍高于男生</li>
+<li>建议直接自学</li>
+</ul>
+</li>
+</ol>
+<h3 id="_9">计算机网络</h3>
+<p><strong>胡扬</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>胡老师人很好，是良师类型的，会给你很多很好的关于升学，工作，学术上的建议。</li>
+<li>上课不光讲PPT，会举例子让大家理解，但这门课内容太多了，听的其实是比较累的。</li>
+<li>PPT很多，依稀记得网络层那一章就有400页。</li>
+<li>会有实验，包括组网实验，做网线什么的，对于实验报告要求比较严。</li>
+<li>考试开卷，题目不难，给分也很好很高</li>
+<li>另外，胡老师身体不太好，但真的是很好很好的老师，学长希望选这门课的同学好好善待胡老师，多关心他，在这里谢谢各位学弟学妹。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>胡老师人好，事少，但是讲课会保持一种具有催眠效果的语速，听起来很累</li>
+<li>考试开卷，要写很多字，字丑的慎重</li>
+<li>期末带本书就可以了，没必要打印ppt</li>
+<li>程序实验通常要求用C来写</li>
+</ul>
+</li>
+</ol>
+<h3 id="_10">操作系统原理</h3>
+<p><strong>宋虹</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>M-Chase@20220208<ul>
+<li>没选这个课，道听途说。</li>
+<li>有课设，难度还行，一般编程能力即可</li>
+<li>考试题据说很难，和计算机院一张卷子，老师也是计算机院的，但最后老师好像给分挺仁慈，并没有那么夸张？据说是改卷比较松，不懂。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>老师讲课很好，如果目的是学知识的话强烈推荐</li>
+<li>课设是实现多CPU调度算法，并且做出可视化界面，很麻烦，但是难度不高</li>
+<li>期末很难，虽然改卷很松，但是依旧分不高，卷分人慎重</li>
+</ul>
+</li>
+</ol>
+<h3 id="_11">数据库</h3>
+<p><strong>雷琪</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>M-Chase@20220208<ul>
+<li>大一的C语言和C++老师，由于和老师很熟，所以选了这门课</li>
+<li>老师讲课还是很认真的，也有备课，可以听一听</li>
+<li>课程难度整体不大，自己看书和PPT也基本能看懂，有一个课设，自选题目做一个数据库相关系统，不是很难</li>
+<li>有时候有课堂小测或者题目，主要是老师看大家不认真听课的时候会这样做</li>
+<li>老师会找人来讲数据库代码的使用，报名可以加平时分</li>
+<li>考试不难，但题量较大，考前可以多看一看相关大题，练一练手，整体来说建议选</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>老师讲课认真，但大多数时候都只是在念PPT（因为PPT过于详细），如果不想选课但是想学，建议要一份PPT自己看</li>
+<li>课设是实现数据库，要有可视化界面，老师检查很宽，很少主动询问，但是被研究生检查就请自求多福</li>
+<li>课堂小测基本白给，只要听了课都能做出来</li>
+<li>期末题量很大，很多人没做完</li>
+<li>平时分很高</li>
+</ul>
+</li>
+</ol>
+<h3 id="b_1">数字电路原理B</h3>
+<p><strong>陈明义</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>另一位活宝，上他的课你一定睡不着觉，特别能调动课堂气氛</li>
+<li>会把难的内容分解，厉害的是能把一节课的知识压缩在5min给你讲完还能给你讲明白。前提是跟着他的思路走。</li>
+<li>会有反转课堂，强烈建议大家报名，可以拿平时分，也可以选择大作业，但难度有点大，陈老师是电信那边的老师，对于动手能力要求还是比较高的。</li>
+<li>考试不是他出题的话不难，但他出题的话但他的话说会有两个题让你动“小脑”解决。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>听就完事了，比网课强</li>
+<li>作业做工整一点，不然会被喷</li>
+<li>网上的作业答案存在错误，老师会专门看你有没有照抄这些错误，抄了就寄</li>
+</ul>
+</li>
+</ol>
+<h3 id="_12">人工智能</h3>
+<p><strong>刘丽珏</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIIUYI0511@20220130<ul>
+<li>珏珏子老熟人了，对于动手能力要求比较高。</li>
+<li>本身课堂内容不难，跟着思路走就行</li>
+<li>会有分阶段的大作业，内容有一定难度，课设是比较难的，会给大家申请华为云的计算资源</li>
+<li>课设会有答辩，有新意的小组会有加分，采用打榜机制，排名越靠前分数越高</li>
+<li>考试开卷，个人觉得不难，但分数奇低，可能压分，但不会给你挂</li>
+</ul>
+</li>
+<li>M-Chase@20220208<ul>
+<li>考试分是真低！人均都很低</li>
+</ul>
+</li>
+</ol>
+<h3 id="_13">数字通信原理</h3>
+<p><strong>？？？</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>19级选的人不够，没有开课</li>
+</ul>
+</li>
+</ol>
+<h2 id="_14">第五学期</h2>
+<h3 id="_15">模式识别与机器学习</h3>
+<p><strong>高琰</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>课程难度挺大的，完全听懂不容易，对于数学要求是比较高的</li>
+<li>老师很认真负责，想让大家了解整个知识体系，看书+听讲+看网课可能理解的更充分。</li>
+<li>会有实验，可以调包，写实验报告</li>
+<li>有课设，不能调包，手动实现机器学习算法，也有答辩，但老师不会为难你，只要自己明白代码和相关概念就可以拿到比较好的等级</li>
+<li>考试开卷，题目不难，认真完成西瓜书的作业就好。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>课程难度大，但是期末很简单，没听懂也能做出很多</li>
+<li>老师讲得很详细，但是还是建议提前预习</li>
+<li>课设建议卷王写稍微困难一点的算法，如BP、随机森林、SVM等，别只写一种，否则肯定没优；KNN、PCA、线性回归都没必要，太简单了（她亲口说不会在课设上挂人，想水的建议就写个线性回归）</li>
+</ul>
+</li>
+</ol>
+<h3 id="_16">自动控制原理</h3>
+<p><strong>赵于前</strong>
+<em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>老师人很好，深知自控书太难啃，自己总结了知识体系来讲，讲的也很明白，会有几次作业，认真听就没问题</li>
+<li>注重课堂反馈，互动比较多，也会讲自己上大学的有趣的事情。</li>
+<li>注重思维，注重过程，对于结果不太注重，考试的时候只要按照思路一步一步走是可以拿到很高的分数的。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>千万别逃课，他半分钟就能算出多少人没来，并且记性超级好，俗称赵·逃课的都得死·于前</li>
+<li>上课讲得很好，期末和上课内容关联极大，建议听课而不是网课</li>
+<li>期末有40分左右的白给题，给予混子爱的关怀</li>
+</ul>
+</li>
+</ol>
+<h3 id="_17">图像处理</h3>
+<p><strong>谢斌</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>智能专业花活第一人，作业打榜制创始人，理想主义掘墓人，工匠精神挖掘机。</li>
+<li>这门课没有期末考试，分数组成是5次大作业+期末项目，19大作业都是围绕书法汉字自动评分系统展开的。每一次的大作业采用百度飞桨平台打榜，排名越靠前分数越高，（但会带来强烈的内卷，不知道的同学可以咨询一下19级智能专业强尼银手的传说）</li>
+<li>注重实践，注重动手能力，思政气息浓厚。</li>
+<li>期末项目包括开题答辩+结题答辩，要求很高，起步深度学习，比较看重具有社会视角和学术前沿的题目。</li>
+<li>评价两极分化，能看出来老师认真负责，有个人魅力，但是要求是很高的。但也逃不了，他的课都是必修。</li>
+</ul>
+</li>
+<li>M-Chase@20220208<ul>
+<li>只能说老师进行课程设置的初心是好的，但是平时作业的打榜排名过于离谱，导致同学们锱铢必较，疯狂调参争排名，而且排名影响平时成绩也是挺大的</li>
+<li>期末就是展示项目，可以提前规划准备，有新意，技术新颖，有意义，答辩质量高一般分不会低，当然报告要好好写。</li>
+<li>这一届学生吐槽挺严重的，个人来说中规中矩，没有那么烦，还是能学到点东西（虽然都是自学hhhh）</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>讲课速度极慢，建议直接上网课自学open-cv，一小时即可学完谢斌讲的所有内容</li>
+<li>学习强尼·银手冲塔能够有效减少课程内容（指谢斌害怕数据集被强尼传至网上，因而取消第五次打榜）</li>
+<li>谢斌对期末展示要求极高，对传统项目打分低，最好给他上点花活</li>
+<li>如果改成选修，千万别选</li>
+<li>基本做了打榜内容就能及格，混子福利</li>
+<li>楼上就是强尼</li>
+</ul>
+</li>
+</ol>
+<h3 id="_18">知识工程</h3>
+<p><strong>肖晓明</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>老师没什么架子，作为一门必修课有点水</li>
+<li>不用买教材其实，主要内容在ppt上，但ppt上会有大量的英文</li>
+<li>考试开卷，也不难，ppt上都能找得到，给分还可以</li>
+<li>有实验有报告，CLIPS语言搭建专家系统</li>
+</ul>
+</li>
+<li>M-Chase@20220208<ul>
+<li>假大空，极其没意思的课</li>
+<li>考试题PPT都有，平时分和期末分挂钩，基本相等，自我感觉在PPT上都找到了，但最后分不算很理想，不予评价，可能是字写的太丑了。</li>
+<li>实验很水</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>专家系统就是一堆if-else，浪费时间</li>
+</ul>
+</li>
+</ol>
+<h3 id="_19">物联网技术基础</h3>
+<p><strong>王冰川</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>上课学术气息浓厚，但其实内容比较水，不难</li>
+<li>会讲很多他自己研究的东西，其实和课堂没啥用</li>
+<li>会有实验，按照指导书做就好</li>
+<li>考试开卷，但不难，给分也算理想</li>
+</ul>
+</li>
+<li>M-Chase@20200208<ul>
+<li>超级无敌大水课，我们专业基本都选了</li>
+<li>上课没什么意思，物联网讲个空壳，PPT里全是科普小视频，想水学分必选，不过学不到东西</li>
+<li>可能是自己也不是搞物联网的，也没什么可讲的，就讲了很多自己的研究方向，电池那一方面</li>
+<li>上课不点名，但有时候会发张纸进行签到，非常水，懂得都懂</li>
+<li>整个课有点物联网内味的也就那几个实验了，还算有点意思，有实验指导书，照着做就好</li>
+<li>考试开卷，有一点计算题，个人感觉分也不是特别高，不过确实没什么压力。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>小川川第一节课就说这节课是水课，懂的都懂</li>
+</ul>
+</li>
+</ol>
+<h3 id="_20">虚拟仪器</h3>
+<p><strong>熊红云</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>动手能力要求高，但其实不难，主要是LabView的使用</li>
+<li>课堂直接讲怎么搭建LabView程序，编程能力强的同学学起来很轻松，就跟搭积木一样。</li>
+<li>每周有实验，但不难，实验课只验收，上课会有课堂小测试</li>
+<li>考试上机考试，题目改编自平时的实验。不难</li>
+<li>给分两极分化，据说有的同学分数奇低，但我的分数很高，因此建议认真的同学选，稳赚不赔。</li>
+</ul>
+</li>
+<li>M-Chase@20200208<ul>
+<li>课堂测试好好做！这个老师平时分算的很细，很多同学考试分很高但平时分很低。学小易有些题目可以搜到。</li>
+<li>整体课还不错，不难</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>期末监考及其离谱，你甚至能提前交卷，然后在考场外面再次交卷</li>
+<li>实验网上都有，但是最好理解原理，他验收时可能会问问题。</li>
+<li>随堂测试占比很大，内容大多来自于往年LABVIEW能力认证考试（大概是叫这个名字），可以自己做一个word文档，便于查询</li>
+</ul>
+</li>
+</ol>
+<h3 id="_21">数字信号处理</h3>
+<p><strong>陈志文</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>19级只有7个人选了，估计比较硬核</li>
+</ul>
+</li>
+</ol>
+<h3 id="_22">语音信号处理</h3>
+<p><strong>余伶俐</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>NIUYI0511@20220130<ul>
+<li>上课挺活泼，也没有架子，会站在学生的角度思考问题</li>
+<li>个人觉得讲课的体系稍稍难理解，学完了回过头才能理清楚</li>
+<li>会有实验，华为共建课程，传统语音信号的处理和识别</li>
+<li>有大作业，参与过反转课堂的同学可以免做，但做了可以加分。随机分题目，有的难，有的简单，我当时抽中的语音情感识别就比较难，也可以申请不做，但平时分不会高，比较公平。</li>
+<li>开卷考试，我们这一届可以带电脑，便于查ppt，但是严禁上网，考试内容不难，好好复习能拿到高分。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_23">计算机仿真技术</h3>
+<p><strong>王勇</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>M-Chase @20220208<ul>
+<li>上课较为轻松，都是一些基础的matlab语法，难度不大</li>
+<li>有课程实验，但实验很水，老师很忙，不会仔细验收实验，甚至实验的时候老师因为去外地开会都没来，博士生来的，最后甚至实验报告也没有要求</li>
+<li>平时分都很高，应该每个人都是100，开卷考试，考试也不难，记得买后湖的matlab题库(老师不让带题库，懂得都懂)，看看ppt，基本问题不大，人均90~95左右的水平</li>
+<li>水课永流传，由于扩招我们相当于第一届开这课的学生，不知道下一届会不会因为课水选的人很多而增加考核难度。</li>
+</ul>
+</li>
+<li>Gramorgans@20220305<ul>
+<li>老师人好，课水，实验约等于没有，分还高，智能瑰宝</li>
+</ul>
+</li>
+</ol>
+<h3 id="_24">嵌入式系统</h3>
+<p><strong>张帆</strong></p>
+<p><em>2019 级</em></p>
+<ol>
+<li>M-Chase @20220208<ul>
+<li>上课非常轻松，甚至老师经常放b站视频，尤其是稚晖君的视频，老师重度b站人，甚至很多PPT的页面都是从b站的视频里面截取的</li>
+<li>我们这届选的人很少，大家都以为有课设，又觉得是硬件方面，所以只有30人选了，但其实只有实验，而且实验指导书非常详细，也不用自己写代码，傻瓜式操作即可。</li>
+<li>平时分还不错，考试也很简单，平时从来没听过课，考前把书大致过了两遍，开卷考试，拿书考试我觉得就可以，PPT一般，也可以带上，后湖题库没用，那个是自动化那边的考试</li>
+<li>可能也是因为老师看我们没人听课，也不想挂我们，最后出的非常简单，同样不排除下一届会不会因为课水选的人很多而增加考核难度。</li>
+</ul>
+</li>
+</ol>
+<h2 id="_25">第六学期</h2>
+<h3 id="_26">分布式系统与云计算</h3>
+<p><strong>何世文</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+    - 老师是计算机学院的，课程很多内容都和操作系统还有计网有关系，什么死锁远程调用之类的，没学过的不好听懂。
+    - 老师上课很水，会有一两次点名，还有几次作业，都是写相关的论文。因为课程本身就听不太懂，作业也是不太会写，反正凭自己仅有的计网知识写写吧。
+    - 开卷考试，务必记得带往年的考试题，很多原题。一提起这个真是永远的痛，考前努力复习了两三天，考场上翻书还是找不到，我带了往年的题库但是一眼没看。考试结束以后同学们都说简单，都是题库里的题，我真的无语了，最后只有八十多。</p>
+<h3 id="_27">机器人学导论</h3>
+<p><strong>谢斌</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+      - 图像处理课程的同学对老师的评价很到位我就不多说了，主要说说课程内容
+      - 课程知识还是不错的，讲的也比较清晰。运动学比较重要，需要重点掌握，后面的章节主要还是考例题，考试开卷不难。
+      - 上课的时候会有畅课的随堂小测验，作业题也是交到畅课上。实验比较难，要用matlab做然后在实验室给学长讲一遍代码，先讲的分数会高。有一些实验会在真实的机械臂上操作，但也仅限于走个流程。完全从零开始自己写代码几乎是不可能的，如果你能从零写代码完成实验，那你在这方面已经有稚晖君的水平了（参考机械臂那期视频）。
+      - 有一个课程设计，需要做中期答辩和结题答辩。我觉得我们专业的同学做硬件方面的东西还是有一定的难度的，大部分同学是结合视觉做了一个机械臂，也有做四足机器人的，也有从网上买的改了改代码能跑起来，八仙过海各显神通吧。</p>
+<h3 id="_28">计算机控制技术</h3>
+<p><strong>贺建军</strong></p>
+<p><em>2019 级</em></p>
+<h3 id="_29">生物特征识别</h3>
+<p><strong>唐琎</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+      - 唐老师是咱们系主任，上课非常地轻松愉快，老师很和蔼幽默，课堂气氛很活跃。
+      - 老师到了春天花粉过敏反应比较剧烈，而且经常出差。
+      - 一半的讲课由同学们贡献，老师会讲一些基本的知识，包括指纹和步态等，剩下的技术由各组同学来讲，其实大同小异。
+      - 没有考试和作业，根据课程设计打分。一上来先分小组，每个小组选一个生物特征识别的方式来做，有前中后三次汇报，最后要现场演示，并且提交一个课程设计报告。
+      - 整体上来说比较对我的胃口，以项目为主，没有杂七杂八的事情，除了汇报有点频繁了。这个项目做得好还可以写进简历里吹一下，听同学们讲也挺有收获的。当时我们有位辅修生物的同学讲了讲DNA鉴定的方法。</p>
+<h3 id="_30">自然语言处理</h3>
+<p><strong>高琰</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+      - 是一门值得好好学习的课程，尤其是现在NLP越来越火，甚至连CV领域也要借鉴NLP的做法（各种Vision Transformer和预训练模型）。虽然课程主要讲的是传统的NLP方法，但是如果以后走学术方向的话也要好好掌握。
+      - 高老师讲课不太能跟得上，感觉听着听着就不知道在讲啥了，但是自己静下心来看书+看网课还是可以看懂的。
+      - 有随堂小测验，基本上就是看你来没来。作业有爬虫、正则表达式、分词还有词云方面的内容，需要写一些代码。课程设计主要是分小组用深度学习的方法做文本分类、相似度匹配等等，最后答辩交报告。这方面需要熟悉深度学习框架。
+      - 考试开卷，但是题目大部分是计算题，不理解的话很难做对，所以考前还是要认真复习，搞懂算法怎么算的。当然及格还是容易的。</p>
+<h3 id="_31">传感器原理与应用</h3>
+<p><strong>张涛</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+      - 很和蔼的一个老师，没什么脾气，课讲的非常好，老师对电路非常熟悉，而且能够给同学们讲明白。虽然传感器的内部机理对我们来说稍作了解就可以，但是认真听的话在电路方面肯定有收获，如果不想听的话水一下也可以。
+      - 实验挺有意思的，需要手写实验报告。考试开卷，有一两道计算不难，剩下的翻书都有，考前捋一下每章讲的知识点免得考试找不着。</p>
+<h3 id="_32">计算机图形学</h3>
+<p><strong>李仪</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+      - 仪宝讲课给人一种很神奇的感觉，就是你感觉他讲课讲的还不错，但是就是跟不上记不住他讲的内容，比较跳跃。虽然但是吧，也没有那么不堪（指仪宝圣经，知乎评价中南智能专业的一篇帖子）。
+      - 课程内容就是在讲OpenGL，当时C++都忘干净了，课设做起来还挺痛苦的。我们当时作业留了十个编程小作业，完成几个给对应的分数，保底好像是给一半的作业分。我们那一届选的人有一半30人吧，课设大部分搞得一般，很多网上找的，有三四个比较出彩的，可能大家最后都在忙自己的事情去了，也没有学太明白，保研稳了的同学也随便水水了。能看出来是自己做的，用了可编程渲染管线而不是固定管线的（尽量别用，很多网上的代码用这个，用老师的话说已经老掉牙了），拿良的分数还是比较容易，再有点工作量或者自己的想法可以拿到不错的成绩。
+      - 老师经常给我们举一个学长的例子，就用OpenGL绘制了一个数据的直方图（好像是3D的？），比较简单，但是完全自己写的，也给了高分。
+      - 听说后面几届改了考核标准，不知道效果怎么样。</p>
+<h3 id="rfid">RFID及智能卡技术</h3>
+<p><strong>马山</strong></p>
+<p><em>2019 级</em></p>
+<h3 id="_33">大数据理论与应用</h3>
+<p><strong>高琰</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+      - 课比较水，但内容挺有价值的。课程主要讲hadoop、hbase还有spark这些大数据软件，还要配置docker。这些技术在现在的企业里用的很多，不管是开发岗还是算法岗，开发经常要用docker，k8s来做微服务，算法岗要用spark在大规模数据上做机器学习。
+      - 作业大部分时间在配置环境，需要在linux服务器上配置集群，没有经验的会比较痛苦。还有要用pyspark做一点简单的数据处理，会给代码，跑完结果就行。
+      - 考试开卷很水，PPT和书本都带齐，翻就完事了。</p>
+<h3 id="_34">智能控制技术</h3>
+<p><strong>肖晓明</strong></p>
+<p><em>2018级</em>
+1. lxy764139720@20220305
+      - 水课无疑，但是对于想搞智能算法+控制的同学很有帮助，尤其是模糊系统哪怕不听也值得好好看看，是个水论文的好方向，很多老师搞这方面的研究。
+      - 实验是matlab模糊PID控制，互相借鉴难度一般。课程汇报比较难搞，因为很少同学有控制方面的经验，需要小组讲PPT，但是问题不大，感觉不太影响分数。
+      - 考试开卷，高分低分都不容易，参考知识工程。</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../electronic_information/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 电子工程及其自动化" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              电子工程及其自动化
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../faculty/cse/" class="md-footer__link md-footer__link--next" aria-label="下一页: 概述" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              概述
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

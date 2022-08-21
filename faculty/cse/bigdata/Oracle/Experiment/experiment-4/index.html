@@ -1,0 +1,2694 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>experiment-4 - EvalCSU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="EvalCSU" class="md-header__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EvalCSU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              experiment-4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/evalcsu/" class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-tabs__link">
+        评教
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        笔记
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/zh-simplify/contribution/" class="md-tabs__link">
+      贡献指南
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/join/" class="md-tabs__link">
+      加入我们
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="EvalCSU" class="md-nav__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    EvalCSU
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/evalcsu/" class="md-nav__link">
+        EvalCSU
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          评教
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="评教" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          评教
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-nav__link">
+        计算机科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/bigdata/" class="md-nav__link">
+        大数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/security/" class="md-nav__link">
+        信息安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/iot/" class="md-nav__link">
+        物联网
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/software/" class="md-nav__link">
+        软件工程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/automation/" class="md-nav__link">
+        自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/electronic_information/" class="md-nav__link">
+        电子工程及其自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/intelligence/" class="md-nav__link">
+        智能科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_2" type="checkbox" id="__nav_3_1_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_2">
+          数据库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据库
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment1/" class="md-nav__link">
+        experiment1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment2/" class="md-nav__link">
+        experiment2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3" type="checkbox" id="__nav_3_1_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Oracle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_1" type="checkbox" id="__nav_3_1_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-3/" class="md-nav__link">
+        experiment-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          experiment-4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        experiment-4
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一、目的与要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    二、操作环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    三、实验内容
+  </a>
+  
+    <nav class="md-nav" aria-label="三、实验内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-3gb" class="md-nav__link">
+    1. 建立对应 3GB 大小的外部文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-major-stud" class="md-nav__link">
+    2. 重建 major 表与 stud 表于该表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 重新产生样本值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 导入导出数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 对表空间进行备份与恢复
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-sql-sql-1" class="md-nav__link">
+    6.  SQL 生成 SQL 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-sql-sql-2" class="md-nav__link">
+    7.  SQL 生成 SQL 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    四、收获
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    五、源码
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment-5/" class="md-nav__link">
+        experiment-5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_2" type="checkbox" id="__nav_3_1_2_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Execution_Plan/" class="md-nav__link">
+        Execution_Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Oracle_Architecture/" class="md-nav__link">
+        Oracle_Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Oracle_Schema/" class="md-nav__link">
+        Oracle_Schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/PL_SQL1/" class="md-nav__link">
+        PL_SQL1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/PL_SQL2/" class="md-nav__link">
+        PL_SQL2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4" type="checkbox" id="__nav_3_1_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4">
+          R语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R语言" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          R语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_1" type="checkbox" id="__nav_3_1_2_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_2" type="checkbox" id="__nav_3_1_2_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/BasicStructure/" class="md-nav__link">
+        BasicStructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/DataAnalysis/" class="md-nav__link">
+        DataAnalysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/dataOp/" class="md-nav__link">
+        dataOp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/Grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/ML/" class="md-nav__link">
+        ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/Plot/" class="md-nav__link">
+        Plot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/" class="md-nav__link">
+        R-language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_5" type="checkbox" id="__nav_3_1_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_5">
+          Web 技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web 技术" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web 技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web-technology/web-lab-report/" class="md-nav__link">
+        web-lab-report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          信息安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信息安全" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          信息安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_2" type="checkbox" id="__nav_3_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_2">
+          网络安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="网络安全" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          网络安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/arp-spoofing/" class="md-nav__link">
+        ARP 嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/bgp-route-hijacking/" class="md-nav__link">
+        BGP 路由劫持
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dns-server/" class="md-nav__link">
+        DNS 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dos/" class="md-nav__link">
+        Dos 拒绝服务攻击
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/ipsec/" class="md-nav__link">
+        IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/mail-relay/" class="md-nav__link">
+        邮件中继
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/onetime-password/" class="md-nav__link">
+        一次性口令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/remote-security-authentication/" class="md-nav__link">
+        远程安全认证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/routing-protocol/" class="md-nav__link">
+        路由协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/salt-value/" class="md-nav__link">
+        盐值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/syn-cookies/" class="md-nav__link">
+        SYN-Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/tls-ssl/" class="md-nav__link">
+        TSL / SSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_3" type="checkbox" id="__nav_3_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_3">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/software/MiCode-Note/" class="md-nav__link">
+        小米笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          自动化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/" class="md-nav__link">
+        概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_2" type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据结构" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/graph-traval.md" class="md-nav__link">
+        图遍历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/Huffman/" class="md-nav__link">
+        哈夫曼编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="智能科学与技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          智能科学与技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/intelligence/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/zh-simplify/contribution/" class="md-nav__link">
+        贡献指南
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/join/" class="md-nav__link">
+        加入我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一、目的与要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    二、操作环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    三、实验内容
+  </a>
+  
+    <nav class="md-nav" aria-label="三、实验内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-3gb" class="md-nav__link">
+    1. 建立对应 3GB 大小的外部文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-major-stud" class="md-nav__link">
+    2. 重建 major 表与 stud 表于该表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 重新产生样本值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 导入导出数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 对表空间进行备份与恢复
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-sql-sql-1" class="md-nav__link">
+    6.  SQL 生成 SQL 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-sql-sql-2" class="md-nav__link">
+    7.  SQL 生成 SQL 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    四、收获
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    五、源码
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Jacob953/evalcsu/edit/master/docs/faculty/cse/bigdata/Oracle/Experiment/experiment-4.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="_1">实验四、数据备份恢复与基于数据字典的数据库操作</h1>
+<h2 id="_2">一、目的与要求</h2>
+<p>本实验主要是熟悉 ORACLE 的备份与恢复技术。针对 ORACLE 表空间进行相关操作。</p>
+<h2 id="_3">二、操作环境</h2>
+<ul>
+<li>硬件：主频2GHz以上服务器（内存2GB以上、硬件空闲2.2GB以上），主频1GHz以上微机，内存1GB以上。</li>
+<li>软件：WINDOWS XP/2000/2003/或Win7/Win8/Win10等。如操作系统是 SERVER版， 可安装ORACLE/9i/10g/11g/12C FOR NT/WINDOWS(注意有32位与64位的区别，可选企业版)； 如果Windows非server如XP/win7等，安装时请选择个人版(PERSONAL)，注意安装时要有兼容性设置与用管理员运行。安装过程中需要关注系统预定义的账号SYS与SYSTEM的密码设置。</li>
+</ul>
+<h2 id="_4">三、实验内容</h2>
+<h3 id="1-3gb">1. 建立对应 3GB 大小的外部文件</h3>
+<pre><code class="language-plsql">drop tablespace tabspace_D312;
+create tablespace tabspace_D312 
+datafile 'E:\App\Lemonade\oradata\TABLESPACE_D312\data01.dbf' size 3G 
+extent management local autoallocate
+online;
+</code></pre>
+<p>运行后可以看见在指定目录下生成了约 3G 大小的文件</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111210901985.png" /></p>
+<h3 id="2-major-stud">2. 重建 major 表与 stud 表于该表空间</h3>
+<pre><code class="language-plsql">DROP TABLE t_stud2_D312;
+DROP TABLE t_major2_D312;
+CREATE TABLE t_major2_D312(
+    majorno VARCHAR2(32) PRIMARY KEY,
+    mname VARCHAR2(32),
+    loc VARCHAR2(32),
+    mdean VARCHAR2(32),
+    CONSTRAINT loc_ck2 check(loc in('主校区','南校区','新校区','铁道校区','湘雅校区'))
+)tablespace tabspace_D312;
+
+DROP TABLE t_stud2_D312;
+CREATE TABLE t_stud2_D312(
+    sno VARCHAR2(20) PRIMARY KEY,
+    sname VARCHAR2(32),
+    sex VARCHAR2(32),
+    tel VARCHAR2(32),
+    email VARCHAR2(32),
+    birthday DATE,
+    mno VARCHAR2(20),
+    majorno VARCHAR2(32),
+    CONSTRAINT sex_ck2 check(sex in('男', '女', '其它')),
+    CONSTRAINT email_ck2 check(email like '%@%.%'),
+    CONSTRAINT birthday_ck2 check(birthday &gt; TO_DATE('19990731', 'YYYYMMDD')),
+    CONSTRAINT majorno_ck2 check(majorno in substr(sno, 3, 2)),
+    CONSTRAINT mno_fk2 FOREIGN KEY(mno) REFERENCES t_stud2_D312(sno),
+    CONSTRAINT majorno_fk2 FOREIGN KEY(majorno) REFERENCES t_major2_D312(majorno)
+) tablespace tabspace_D312;
+</code></pre>
+<h3 id="3">3. 重新产生样本值</h3>
+<p>重新产生样本值，包括千万级数据的stud表，对比实验三中产生样本值的时间</p>
+<pre><code class="language-plsql">insert into t_major2_D312(majorno, mname, loc, mdean) select majorno, mname, loc, mdean from t_major_D312;
+
+insert into t_stud2_D312(sno, sname, sex, tel, email, birthday, mno, majorno) select sno, sname, sex, tel, email, birthday, mno, majorno from t_stud_D312;
+
+
+/*
+insert into t_major2_D312 values('00','计科','主校区','王斌');
+insert into t_major2_D312 values('08','大数据','主校区','廖胜辉');
+insert into t_major2_D312 values('16','物联网','新校区','彭军');
+insert into t_major2_D312 values('24','信安','新校区','黄家玮');
+
+set serveroutpu on;
+declare
+    type snoArray     is varray(40) of t_stud2_D312.sno%TYPE;
+    type snameArray   is varray(40) of t_stud2_D312.sname%TYPE;
+    type sexArray     is varray(40) of t_stud2_D312.sex%TYPE;
+    type telArray     is varray(40) of t_stud2_D312.tel%TYPE;
+    type emailArray   is varray(40) of t_stud2_D312.email%TYPE;
+    type birthArray   is varray(40) of t_stud2_D312.birthday%TYPE;
+    type mnoArray     is varray(40) of t_stud2_D312.mno%TYPE;
+    type majornoArray is varray(40) of t_stud2_D312.majorno%TYPE;
+    type majorArray   is varray(4) of varchar2(32);
+
+    i        NUMBER;
+    snos     snoArray     := snoArray();
+    snames   snameArray   := snameArray();
+    sexes    sexArray     := sexArray();
+    tels     telArray     := telArray();
+    emails   emailArray   := emailArray();
+    births   birthArray   := birthArray();
+    mnos     mnoArray     := mnoArray();
+    majornos majornoArray := majornoArray();
+    majors   majorArray  := majorArray('J', 'D', 'W', 'X');
+begin
+    for k in 1..4 loop
+        for j in 1..10 loop
+            i := (k - 1) * 10 + j;
+            snos.extend;
+            snames.extend;
+            sexes.extend;
+            tels.extend;
+            emails.extend;
+            births.extend;
+            mnos.extend;
+            majornos.extend;
+
+            majornos(i) := TO_CHAR((k-1) * 8, 'FM00');
+            -- 不知道为什么不用REPLACE时 常量||变量 会添加一个空格 
+            -- snos(i) := REPLACE('82' || majornos(i) || '191' || TO_CHAR(i, 'FM00'),' ', '');
+            snos(i) := '82' || majornos(i) || '1903' || TO_CHAR(i, 'FM00');
+            snames(i) := majors(k) || TO_CHAR(i, 'FM00');
+            sexes(i) := (case when mod(i, 2) = 0 then '男' else '女' end);
+            tels(i) := TO_CHAR(12345678901 + k * 10 + i);
+            emails(i) := snos(i) || '@csu.edu.cn';
+            births(i) := TO_DATE('20010101', 'YYYYMMDD')+ k*10 + i;
+            mnos(i) := snos((k-1)*10+1);
+            dbms_output.put_line(snos(i) || ' ' || snames(i) || ' ' || sexes(i) || ' ' || tels(i) || ' ' || emails(i) || ' ' || TO_CHAR(births(i), 'YY-MM-DD') || ' ' || mnos(i) || ' ' || majornos(i));
+        end loop;
+    end loop;
+
+    DELETE FROM t_stud2_D312;
+    for i in 1..40 loop
+        INSERT INTO t_stud2_D312 VALUES(snos(i), snames(i), sexes(i), tels(i), emails(i), births(i), mnos(i), majornos(i));
+    end loop;
+    -- 插入自身数据
+    INSERT INTO t_stud2_D312 VALUES('8208191312', '李智聪', '男', '17759573563', '1319871052@qq.com', TO_DATE('20010125', 'YYYYMMDD'), '8208190311', '08');
+end;
+/
+*/
+</code></pre>
+<p>生成 stud_info 表</p>
+<pre><code class="language-plsql">set timing on;
+delete from t_time where event='生成随机字段(指定表空间)';
+exec p_record_time_D312 ('生成随机字段(指定表空间)','start');
+drop table t_random22;
+create table t_random22(
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+) tablespace tabspace_D312;
+
+insert /*+ append */ into t_random22 select f_get_sex(), f_get_tel(), f_get_email(), f_get_birth() from xmltable('1 to 11520000');
+commit;
+
+exec p_record_time_D312 ('生成随机字段(指定表空间)','end');
+
+drop table t_stud2_info_D312;
+create table t_stud2_info_D312(
+    sno varchar2(32),
+    sname varchar2(32),
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+) tablespace tabspace_D312;
+
+drop synonym t_stud2;
+create synonym t_stud2 for t_stud2_info_D312;
+
+exec p_record_time_D312 ('生成最终数据集(表空间)','start');
+insert into t_stud2 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random22.*, rownum rn3 from t_random22)  C
+    where rn1 = rn2 and rn2 = rn3;
+
+exec p_record_time_D312 ('生成最终数据集(指定表空间)','end');
+
+set linesize 500;
+col event format a30;
+col start_time format a33;
+col end_time format a33;
+col time_consume format a20;
+select * from t_time order by start_time;
+</code></pre>
+<p><img alt="image-20211121232808213" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111212328295.png" /></p>
+<p>可以看到由于事先指定了表空间，所以生成数据集速度明显快了许多。</p>
+<h3 id="4">4. 导入导出数据</h3>
+<p>用 EXP 导出数据与 IMP 导入数据</p>
+<pre><code class="language-plsql">-- 在命令行中执行
+exp C##U_LZC_D312/sys file=E:\App\Lemonade\oradata\backuptest\t_stud2_info.dmp tables=(t_stud2_info_D312)
+
+drop table t_stud2_info_D312;
+
+imp C##U_LZC_D312/sys file=E:\App\Lemonade\oradata\backuptest\t_stud2_info.dmp tables=(t_stud2_info_D312)
+
+select count(*) from t_stud2_info_D312;
+</code></pre>
+<p>交互式方式导出导入</p>
+<pre><code class="language-plsql">exp
+...
+
+imp
+...
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111261421179.png" alt="image-20211126142116984" style="zoom:67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111261422853.png" alt="image-20211126142220706" style="zoom:67%;" /></p>
+<p>导出导入总用时不到一分钟</p>
+<p>这里通过事先删除该表再进行导入验证是否成功导入。</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111261423061.png" alt="image-20211126142309941" style="zoom:67%;" /></p>
+<h3 id="5">5. 对表空间进行备份与恢复</h3>
+<p>尝试对系统表空间 <code>user</code> 及自定义表空间 <code>tabspace_????</code> 进行备份与恢复</p>
+<pre><code class="language-plsql">-- 查看数据库的归档模式
+SELECT dbid, name, log_mode FROM v$database;
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211011316.png" alt="image-20211121101113133" style="zoom:67%;" /></p>
+<p>由于数据库默认是<code>noarchivelog</code>状态，故需要重启数据库修改为<code>archivelog</code>状态</p>
+<pre><code class="language-plsql">conn SYSTEM/sys as sysdba;
+-- 关闭数据库
+shutdown
+-- 重启实例
+startup mount;
+-- 设置归档模式
+alter database archivelog;
+-- open 数据库
+alter database open;
+
+-- 查看数据库的归档模式
+SELECT dbid, name, log_mode FROM v$database;
+</code></pre>
+<p>再次查询，发现已变为归档模式</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211456169.png" alt="image-20211121145608117" style="zoom:67%;" /></p>
+<p>在命令行执行以下命令</p>
+<pre><code class="language-bash"># 连接到 RMAN
+rman target SYSTEM/sys nocatalog;
+
+# 备份
+backup tablespace users, tabspace_D312 format 'E:\App\Lemonade\oradata\backuptest\%d_%p_%t_%c.dbf';
+
+# %d 数据库名称 
+# %p 该备份集中的备份片号，从1开始到创建的文件数 
+# %t 备份集时间戳 
+# %c 备份片的拷贝数
+
+# 查看表空间备份信息
+list backup of tablespace users, tabspace_D312;
+
+# 恢复
+startup mount;
+run{
+    allocate channel ch_1 type disk;
+    sql 'alter tablespace users offline';
+    sql 'alter tablespace tabspace_D312 offline';
+    restore tablespace users, tabspace_D312;
+    recover tablespace users, tabspace_D312;
+    sql 'alter tablespace users online';
+    sql 'alter tablespace tabspace_D312 online';
+}
+</code></pre>
+<p>备份：</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211534658.png" alt="image-20211121153436538" style="zoom:67%;" /></p>
+<p>查看备份结果：</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211535919.png" alt="image-20211121153521814" style="zoom:67%;" /></p>
+<p>恢复：</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211552749.png" alt="image-20211121155258620" style="zoom:67%;" /></p>
+<h3 id="6-sql-sql-1">6.  SQL 生成 SQL 1</h3>
+<p>登录 DBA 用户 system ，通过 cat 字典入口，找到以 DBA_ 开头的相关数据字典，并且每个对象显示 5 条记录（ SQL 生成 SQL ）</p>
+<pre><code class="language-plsql">set heading off;  -- 不显示表的列名
+set feedback off; -- 不显示&quot;已选择xx行&quot;
+set echo off;
+set termout off; -- 不在终端打印，直接打印到script
+conn SYSTEM/sys as sysdba;
+spool D:\Messy\Experiment\大型数据库\OraExp4_D312\cat_output.sql
+select 'select * from '||table_name||' where rownum&lt;=5;' from cat where table_name like 'DBA_%';
+spool off
+
+-- 执行
+start D:\Messy\Experiment\大型数据库\OraExp4_D312\cat_output.sql
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211602420.png" alt="image-20211121160223263" style="zoom:67%;" /></p>
+<h3 id="7-sql-sql-2">7.  SQL 生成 SQL 2</h3>
+<p>通过查找自己用户下的触发器字典，生成代码将所有触发器的状态改为 disable 并执行。再生成代码，将状态为 disable 的触发器的状态改为 enable ，并执行</p>
+<pre><code class="language-plsql">spool D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output.sql
+
+select 'alter trigger '||trigger_name||' disable;' from user_triggers;
+spool off;
+
+start D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output.sql
+
+select trigger_name, status from user_triggers;
+
+spool D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output2.sql
+select 'alter trigger '||trigger_name||' enable;' from user_triggers;
+spool off;
+
+start D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output2.sql
+</code></pre>
+<p>生成使触发器 <code>disable</code> 的 SQL 语句</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211605822.png" alt="image-20211121160542733" style="zoom:67%;" /></p>
+<p>执行 SQL 语句后查看触发器状态</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211607873.png" alt="image-20211121160745777" style="zoom:67%;" /></p>
+<p>生成使触发器 <code>enable</code> 的 SQL 语句</p>
+<p><img alt="image-20211121160823449" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211608496.png" /></p>
+<p>执行 SQL 语句后查看触发器状态</p>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202111211609900.png" alt="image-20211121160920832" style="zoom:67%;" /></p>
+<h2 id="_5">四、收获</h2>
+<p>整体来说本次实验偏向基础性操作内容，旨在加深对表空间、备份恢复机制、数据字典的相关操作。主要收获如下</p>
+<ul>
+<li>学习了有关数据库归档模式/非归档模式的一些基本知识</li>
+<li>懂得了如何利用 EXP/IMP 以及 RMAN 进行导入导出、备份恢复数据库操作</li>
+<li>学会利用数据字典进行一些查询操作，利用 spool 技术进行批量 SQL 语句</li>
+</ul>
+<h2 id="_6">五、源码</h2>
+<pre><code class="language-plsql">-------------------- 建立表空间 --------------------
+drop tablespace tabspace_D312;
+create tablespace tabspace_D312 
+datafile 'E:\App\Lemonade\oradata\TABLESPACE_D312\data01.dbf' size 3G 
+extent management local autoallocate
+online;
+
+----------- 重建 major 表 以及 stud 表 -----------
+DROP TABLE t_stud2_D312;
+DROP TABLE t_major2_D312;
+CREATE TABLE t_major2_D312(
+    majorno VARCHAR2(32) PRIMARY KEY,
+    mname VARCHAR2(32),
+    loc VARCHAR2(32),
+    mdean VARCHAR2(32),
+    CONSTRAINT loc_ck2 check(loc in('主校区','南校区','新校区','铁道校区','湘雅校区'))
+)tablespace tabspace_D312;
+
+DROP TABLE t_stud2_D312;
+CREATE TABLE t_stud2_D312(
+    sno VARCHAR2(20) PRIMARY KEY,
+    sname VARCHAR2(32),
+    sex VARCHAR2(32),
+    tel VARCHAR2(32),
+    email VARCHAR2(32),
+    birthday DATE,
+    mno VARCHAR2(20),
+    majorno VARCHAR2(32),
+    CONSTRAINT sex_ck2 check(sex in('男', '女', '其它')),
+    CONSTRAINT email_ck2 check(email like '%@%.%'),
+    CONSTRAINT birthday_ck2 check(birthday &gt; TO_DATE('19990731', 'YYYYMMDD')),
+    CONSTRAINT majorno_ck2 check(majorno in substr(sno, 3, 2)),
+    CONSTRAINT mno_fk2 FOREIGN KEY(mno) REFERENCES t_stud2_D312(sno),
+    CONSTRAINT majorno_fk2 FOREIGN KEY(majorno) REFERENCES t_major2_D312(majorno)
+) tablespace tabspace_D312;
+
+insert into t_major2_D312(majorno, mname, loc, mdean) select majorno, mname, loc, mdean from t_major_D312;
+
+insert into t_stud2_D312(sno, sname, sex, tel, email, birthday, mno, majorno) select sno, sname, sex, tel, email, birthday, mno, majorno from t_stud_D312;
+
+----------------- 重建 stud_info 表 -----------------
+set timing on;
+delete from t_time where event='生成随机字段(指定表空间)';
+exec p_record_time_D312 ('生成随机字段(表空间)','start');
+drop table t_random22;
+create table t_random22(
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+) tablespace tabspace_D312;
+
+insert /*+ append */ into t_random22 select f_get_sex(), f_get_tel(), f_get_email(), f_get_birth() from xmltable('1 to 11520000');
+commit;
+
+exec p_record_time_D312 ('生成随机字段(指定表空间)','end');
+
+drop table t_stud2_info_D312;
+create table t_stud2_info_D312(
+    sno varchar2(32),
+    sname varchar2(32),
+    sex varchar2(32),
+    tel varchar2(32),
+    email varchar2(32),
+    birthday date
+) tablespace tabspace_D312;
+
+drop synonym t_stud2;
+create synonym t_stud2 for t_stud2_info_D312;
+
+exec p_record_time_D312 ('生成最终数据集(指定表空间)','start');
+insert into t_stud2 
+    select 
+        A.sno, B.name, C.sex, C.tel, C.email, C.birthday 
+    from 
+    (select t_sno_ab.*, rownum rn1 from t_sno_ab)  A,
+    (select t_name.*, rownum rn2 from t_name)      B,
+    (select t_random22.*, rownum rn3 from t_random22)  C
+    where rn1 = rn2 and rn2 = rn3;
+
+exec p_record_time_D312 ('生成最终数据集(指定表空间)','end');
+
+set linesize 500;
+col event format a30;
+col start_time format a33;
+col end_time format a33;
+col time_consume format a20;
+select * from t_time order by start_time;
+
+----------------- 导入导出数据 -----------------
+-- 在命令行中执行
+exp C##U_LZC_D312/sys file=E:\App\Lemonade\oradata\backuptest\t_stud2_info.dmp tables=(t_stud2_info_D312);
+
+drop table t_stud2_info_D312;
+
+imp C##U_LZC_D312/sys file=E:\App\Lemonade\oradata\backuptest\t_stud2_info.dmp tables=(t_stud2_info_D312);
+
+select count(*) from t_stud2_info_D312;
+
+-- 查看数据库的归档模式
+SELECT dbid, name, log_mode FROM v$database;
+
+conn SYSTEM/sys as sysdba;
+-- 关闭数据库
+shutdown
+-- 重启实例
+startup mount;
+-- 设置归档模式
+alter database archivelog;
+-- open 数据库
+alter database open;
+
+-- 再次查看数据库的归档模式
+SELECT dbid, name, log_mode FROM v$database;
+
+-------------------- 备份 --------------------
+-- 连接到 RMAN
+rman target SYSTEM/sys nocatalog;
+
+backup tablespace users, tabspace_D312 format 'E:\App\Lemonade\oradata\backuptest\%d_%p_%t_%c.dbf';
+
+-- 查看表空间备份信息
+list backup of tablespace users, tabspace_D312;
+
+-- 恢复
+startup mount;
+run{
+    allocate channel ch_1 type disk;
+    sql 'alter tablespace users offline';
+    sql 'alter tablespace tabspace_D312 offline';
+    restore tablespace users, tabspace_D312;
+    recover tablespace users, tabspace_D312;
+    sql 'alter tablespace users online';
+    sql 'alter tablespace tabspace_D312 online';
+}
+
+-------------------- 生成 SQL 1 --------------------
+set heading off;
+set feedback off; 
+set echo off;
+set termout off;
+conn SYSTEM/sys as sysdba;
+spool D:\Messy\Experiment\大型数据库\OraExp4_D312\cat_output.sql
+select 'select * from '||table_name||' where rownum&lt;=5;' from cat where table_name like 'DBA_%';
+spool off
+
+-- 执行
+start D:\Messy\Experiment\大型数据库\OraExp4_D312\cat_output.sql
+
+
+-------------------- 生成 SQL 2 --------------------
+spool D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output.sql
+
+select 'alter trigger '||trigger_name||' disable;' from user_triggers;
+spool off;
+
+start D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output.sql
+
+select trigger_name, status from user_triggers;
+
+spool D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output2.sql
+select 'alter trigger '||trigger_name||' enable;' from user_triggers;
+spool off;
+
+start D:\Messy\Experiment\大型数据库\OraExp4_D312\tri_output2.sql
+
+</code></pre>
+<p>dbms</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../experiment-3/" class="md-footer__link md-footer__link--prev" aria-label="上一页: experiment-3" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              experiment-3
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../experiment-5/" class="md-footer__link md-footer__link--next" aria-label="下一页: experiment-5" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              experiment-5
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

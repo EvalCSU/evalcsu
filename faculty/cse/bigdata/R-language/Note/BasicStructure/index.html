@@ -1,0 +1,4274 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>BasicStructure - EvalCSU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-structure" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="EvalCSU" class="md-header__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EvalCSU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BasicStructure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/evalcsu/" class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-tabs__link">
+        评教
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        笔记
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/zh-simplify/contribution/" class="md-tabs__link">
+      贡献指南
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/join/" class="md-tabs__link">
+      加入我们
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="EvalCSU" class="md-nav__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    EvalCSU
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/evalcsu/" class="md-nav__link">
+        EvalCSU
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          评教
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="评教" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          评教
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-nav__link">
+        计算机科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/bigdata/" class="md-nav__link">
+        大数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/security/" class="md-nav__link">
+        信息安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/iot/" class="md-nav__link">
+        物联网
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/software/" class="md-nav__link">
+        软件工程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/automation/" class="md-nav__link">
+        自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/electronic_information/" class="md-nav__link">
+        电子工程及其自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/intelligence/" class="md-nav__link">
+        智能科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_2" type="checkbox" id="__nav_3_1_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_2">
+          数据库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据库
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment1/" class="md-nav__link">
+        experiment1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment2/" class="md-nav__link">
+        experiment2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3" type="checkbox" id="__nav_3_1_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Oracle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_1" type="checkbox" id="__nav_3_1_2_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-3/" class="md-nav__link">
+        experiment-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-4/" class="md-nav__link">
+        experiment-4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-5/" class="md-nav__link">
+        experiment-5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_2" type="checkbox" id="__nav_3_1_2_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Execution_Plan/" class="md-nav__link">
+        Execution_Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Oracle_Architecture/" class="md-nav__link">
+        Oracle_Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Oracle_Schema/" class="md-nav__link">
+        Oracle_Schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/PL_SQL1/" class="md-nav__link">
+        PL_SQL1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/PL_SQL2/" class="md-nav__link">
+        PL_SQL2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4" type="checkbox" id="__nav_3_1_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4">
+          R语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R语言" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          R语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_1" type="checkbox" id="__nav_3_1_2_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_2" type="checkbox" id="__nav_3_1_2_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          BasicStructure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        BasicStructure
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic" class="md-nav__link">
+    1. Basic
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1" class="md-nav__link">
+    1. 1 运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2" class="md-nav__link">
+    1. 2 数学函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    1. 3 常用函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4" class="md-nav__link">
+    1. 4 其他函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-5-formula" class="md-nav__link">
+    1. 5 formula 表达式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 向量
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 向量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2. 1 创建向量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    2. 2 索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    2. 3 赋值操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4" class="md-nav__link">
+    2. 4 插入数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5" class="md-nav__link">
+    2. 5 删除数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6" class="md-nav__link">
+    2. 6 向量化运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-7-series-df" class="md-nav__link">
+    2. 7 给向量命名，类似Series df
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-8" class="md-nav__link">
+    2. 8 其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 字符串
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 日期时间
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 日期时间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-1" class="md-nav__link">
+    4. 1 日期与日期时间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-2" class="md-nav__link">
+    4. 2 字符串与日期数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-3" class="md-nav__link">
+    4. 3 访问日期时间的成分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4" class="md-nav__link">
+    4. 4 日期计算
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 4 日期计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-4-1" class="md-nav__link">
+    4. 4. 1 时间长度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-2" class="md-nav__link">
+    4. 4. 2 时间周期
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-3" class="md-nav__link">
+    4. 4. 3 时间区间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-4-date" class="md-nav__link">
+    4. 4. 4 Date型日期计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-5" class="md-nav__link">
+    4. 4. 5 日期的舍入计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 因子
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 因子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-1" class="md-nav__link">
+    5. 1 创建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-2" class="md-nav__link">
+    5. 2 相关函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 列表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 矩阵与数组
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 矩阵与数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-1" class="md-nav__link">
+    7. 1 创建矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-2" class="md-nav__link">
+    7. 2 索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-3" class="md-nav__link">
+    7. 3 相关函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-4" class="md-nav__link">
+    7. 4 矩阵运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-5" class="md-nav__link">
+    7. 5 数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 数据框
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 数据框">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8-1" class="md-nav__link">
+    8. 1 创建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-2" class="md-nav__link">
+    8. 2 访问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-3" class="md-nav__link">
+    8. 3 删除
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-4" class="md-nav__link">
+    8. 4 相关函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9. 数据类型的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 数据类型的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9-1" class="md-nav__link">
+    9. 1 存储模式与基本类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-2" class="md-nav__link">
+    9. 2 类型转换与类型升档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3" class="md-nav__link">
+    9. 3 属性
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 3 属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9-3-1-attributes" class="md-nav__link">
+    9. 3. 1 attributes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3-2-attrs" class="md-nav__link">
+    9. 3. 2 attrs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3-3-names" class="md-nav__link">
+    9. 3. 3 names属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3-4-dim" class="md-nav__link">
+    9. 3. 4 dim属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-4" class="md-nav__link">
+    9. 4 类属
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-5-str" class="md-nav__link">
+    9. 5 str()函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    10. 工作空间与变量赋值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DataAnalysis/" class="md-nav__link">
+        DataAnalysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataOp/" class="md-nav__link">
+        dataOp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML/" class="md-nav__link">
+        ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plot/" class="md-nav__link">
+        Plot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        R-language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_5" type="checkbox" id="__nav_3_1_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_5">
+          Web 技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web 技术" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web 技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web-technology/web-lab-report/" class="md-nav__link">
+        web-lab-report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          信息安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信息安全" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          信息安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_2" type="checkbox" id="__nav_3_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_2">
+          网络安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="网络安全" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          网络安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/arp-spoofing/" class="md-nav__link">
+        ARP 嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/bgp-route-hijacking/" class="md-nav__link">
+        BGP 路由劫持
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dns-server/" class="md-nav__link">
+        DNS 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dos/" class="md-nav__link">
+        Dos 拒绝服务攻击
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/ipsec/" class="md-nav__link">
+        IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/mail-relay/" class="md-nav__link">
+        邮件中继
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/onetime-password/" class="md-nav__link">
+        一次性口令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/remote-security-authentication/" class="md-nav__link">
+        远程安全认证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/routing-protocol/" class="md-nav__link">
+        路由协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/salt-value/" class="md-nav__link">
+        盐值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/syn-cookies/" class="md-nav__link">
+        SYN-Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/tls-ssl/" class="md-nav__link">
+        TSL / SSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_3" type="checkbox" id="__nav_3_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_3">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/software/MiCode-Note/" class="md-nav__link">
+        小米笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          自动化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/" class="md-nav__link">
+        概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_2" type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据结构" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/graph-traval.md" class="md-nav__link">
+        图遍历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/Huffman/" class="md-nav__link">
+        哈夫曼编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="智能科学与技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          智能科学与技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/intelligence/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/zh-simplify/contribution/" class="md-nav__link">
+        贡献指南
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/join/" class="md-nav__link">
+        加入我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic" class="md-nav__link">
+    1. Basic
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1" class="md-nav__link">
+    1. 1 运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2" class="md-nav__link">
+    1. 2 数学函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    1. 3 常用函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4" class="md-nav__link">
+    1. 4 其他函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-5-formula" class="md-nav__link">
+    1. 5 formula 表达式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 向量
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 向量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2. 1 创建向量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    2. 2 索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    2. 3 赋值操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4" class="md-nav__link">
+    2. 4 插入数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5" class="md-nav__link">
+    2. 5 删除数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6" class="md-nav__link">
+    2. 6 向量化运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-7-series-df" class="md-nav__link">
+    2. 7 给向量命名，类似Series df
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-8" class="md-nav__link">
+    2. 8 其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 字符串
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 日期时间
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 日期时间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-1" class="md-nav__link">
+    4. 1 日期与日期时间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-2" class="md-nav__link">
+    4. 2 字符串与日期数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-3" class="md-nav__link">
+    4. 3 访问日期时间的成分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4" class="md-nav__link">
+    4. 4 日期计算
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 4 日期计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-4-1" class="md-nav__link">
+    4. 4. 1 时间长度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-2" class="md-nav__link">
+    4. 4. 2 时间周期
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-3" class="md-nav__link">
+    4. 4. 3 时间区间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-4-date" class="md-nav__link">
+    4. 4. 4 Date型日期计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4-5" class="md-nav__link">
+    4. 4. 5 日期的舍入计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 因子
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 因子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-1" class="md-nav__link">
+    5. 1 创建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-2" class="md-nav__link">
+    5. 2 相关函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 列表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 矩阵与数组
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 矩阵与数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-1" class="md-nav__link">
+    7. 1 创建矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-2" class="md-nav__link">
+    7. 2 索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-3" class="md-nav__link">
+    7. 3 相关函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-4" class="md-nav__link">
+    7. 4 矩阵运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-5" class="md-nav__link">
+    7. 5 数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 数据框
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 数据框">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8-1" class="md-nav__link">
+    8. 1 创建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-2" class="md-nav__link">
+    8. 2 访问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-3" class="md-nav__link">
+    8. 3 删除
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-4" class="md-nav__link">
+    8. 4 相关函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9. 数据类型的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 数据类型的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9-1" class="md-nav__link">
+    9. 1 存储模式与基本类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-2" class="md-nav__link">
+    9. 2 类型转换与类型升档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3" class="md-nav__link">
+    9. 3 属性
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 3 属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9-3-1-attributes" class="md-nav__link">
+    9. 3. 1 attributes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3-2-attrs" class="md-nav__link">
+    9. 3. 2 attrs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3-3-names" class="md-nav__link">
+    9. 3. 3 names属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-3-4-dim" class="md-nav__link">
+    9. 3. 4 dim属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-4" class="md-nav__link">
+    9. 4 类属
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-5-str" class="md-nav__link">
+    9. 5 str()函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    10. 工作空间与变量赋值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Jacob953/evalcsu/edit/master/docs/faculty/cse/bigdata/R-language/Note/BasicStructure.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="basic-structure">Basic Structure</h1>
+<h2 id="1-basic">1. Basic</h2>
+<h3 id="1-1">1. 1 运算</h3>
+<pre><code class="language-r">2^10
+## [1] 1024
+2**10
+## [1] 1024
+
+7 / 2
+## [1] 3.5
+7 %/% 2 # C语言除法
+## [1] 3
+7 %% 2  # 取余
+## [1] 1
+
+# 比较运算符&lt;   &lt;=   &gt;=  ==  !=  %in% 
+# %in%是比较特殊的比较，x %in% y的运算把向量y看成集合，运算结果是一个逻辑型向量，x中的元素是否属于y
+
+# 函数match(x, y)起到和x %in% y运算类似的作用，但是其返回结果不是找到与否，而是对x的每个元素，找到其在y中首次出现的下标，找不到时取缺失值，如
+match(c(2,5,0), c(1,5,2,5))
+## [1]  3  2 NA
+
+isTRUE(c(1,2,3))
+## FALSE
+
+# intersect(x,y)求交集，结果中不含重复的元素
+intersect(c(5, 7), c(1, 5, 2, 5))
+
+# union(x,y)求并集，结果中不含重复元素
+union(c(5, 7), c(1, 5, 2, 5))
+
+# setdiff(x, y)求差集，结果中不含重复元素
+# setequal(x, y)判断两个集合是否相等，不受次序与重复元素的影响
+
+# 逻辑运算符 | &amp; || &amp;&amp; xor(x,y) 
+# AD | 与 || 区别在于后者有短路
+</code></pre>
+<h3 id="1-2">1. 2 数学函数</h3>
+<p>运算类</p>
+<pre><code class="language-r"># 四舍五入函数
+round(8.5)
+## [1] 8
+round(8.555, digits=2)  
+## [1] 8.55
+round(8.556, digits=2)
+## [1] 8.56
+
+signif(3.55, 2)
+## [1] 3.6
+signif(3.54, 2)
+## [1] 3.5
+signif(3.53, 2)
+## [1] 3.5
+
+# 值域函数
+range(c(1,2,3))
+## [1] 1 3
+</code></pre>
+<h3 id="1-3">1. 3 常用函数</h3>
+<p>查看类型</p>
+<pre><code class="language-r">a &lt;- matrix(1:20, 4)
+typeof(a)
+## &quot;integer&quot;
+class(a)
+## &quot;matrix&quot; &quot;array&quot;     其余可能值： &quot;list&quot;
+mode(a)
+## &quot;numeric&quot;
+
+
+&gt; a &lt;- 1:3
+&gt; class(a)
+[1] &quot;integer&quot;
+&gt; mode(a)
+[1] &quot;numeric&quot;
+&gt; typeof(a)
+[1] &quot;integer&quot;
+</code></pre>
+<pre><code class="language-r">sort(c(2,3,4,1,2))
+## [1] 1 2 2 3 4
+order(c(99,100,89,101))
+## [1] 3 1 2 4
+
+x &lt;- 1:10
+subset(x, x &gt; 2)
+## [1]  3  4  5  6  7  8  9 10
+</code></pre>
+<h3 id="1-4">1. 4 其他函数</h3>
+<pre><code class="language-r">options() # 查看当前选项设置
+options(digits=3) # 显示3位有效数字
+help(&quot;pretty&quot;) # 帮助文档
+
+m &lt;- matrix(1:20,4)
+df &lt;- data.frame(m)
+arr &lt;- array(1:24, dim=c(2,3,4))
+length(m)
+## [1] 20
+length(df) # 返回列数
+## [1] 5
+length(arr)
+## [1] 24
+length(&quot;abc&quot;)
+## [1] 1
+length(list(1:20, m, df))
+## [1] 3
+</code></pre>
+<h3 id="1-5-formula">1. 5 formula 表达式</h3>
+<ul>
+<li><code>~</code>: <code>~</code>连接公式两侧，左侧是因变量，右侧是自变量</li>
+<li><code>+</code>: 模型中的不同项用<code>+</code>分隔；AD R 语言中默认表达式带常数项</li>
+<li><code>-</code>：<code>-</code>表示从模型中移除某一项，y~x-1表示从模型中移除常数项，估计的是一个不带截距项的过原点的回归方程。此外，y~x+0或y~0+x也可以表示不带截距项的回归方程</li>
+<li><code>:</code>: 表示交互项，类似xy（数学意义上的）</li>
+<li><code>*</code>: 不表示乘法；a * b 等价于 a + b + a:b；(a+b+c)*(a+b+c)与 a + b + c + a:b + b:c  + c:a 等价</li>
+<li><code>^</code>: (a+b)^2 与 (a+b) * (a+b)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202112142051766.png" alt="image-20211214205110338" style="zoom: 67%;" /></p>
+<p>例如</p>
+<ul>
+<li>y~x+I(z^2) 表示：$y=\beta_0+\beta_1x+\beta_2z^2$</li>
+<li>y~x+z^2    表示：$y=\beta_0+\beta_1x+\beta_2z$（因为z没法和自己交互）</li>
+</ul>
+<h2 id="2">2. 向量</h2>
+<h3 id="2-1">2. 1 创建向量</h3>
+<pre><code class="language-r"># 初始化空向量
+v &lt;- vector(&quot;character&quot;,3)
+## [1] &quot;&quot; &quot;&quot; &quot;&quot;
+a1 &lt;- c(1,2,3,4,5)
+a2 &lt;- c(&quot;one&quot;, &quot;two&quot;, 'three')
+a3 &lt;- c(TRUE, F, T)
+# AD 若只有一个元素，不用c也可以，此时不是向量，是标量
+
+# AD 这样也是可以的
+a &lt;- 1:2
+b &lt;- c(33, a)
+## [1] 33  1  2
+
+# 通过切片构建等差数列
+a1 &lt;- c(1:10)
+# AD 上面这种等差数列形式也可以不用加c()
+a2 &lt;- 1:10
+## [1]  1  2  3  4  5  6  7  8  9 10
+
+
+# 或者通过seq()
+a2 &lt;- seq(from=1, to=10) # 等价于seq(10)
+## [1]  1  2  3  4  5  6  7  8  9 10
+a3 &lt;- seq(from=1, to=10, by=2) # 等价于seq(1,10,by=2)
+## [1] 1 3 5 7 9
+a4 &lt;- seq(from=1, to=10, length.out=3)
+## [1]  1.0  5.5 10.0
+
+# AD seq(10) 结果是integer，带by参数的结果是double
+# seq(along=x) 会生成由x的下标组成的向量
+x &lt;- c(2,3,4)
+seq(along=x)
+## [1]  1  2  3
+
+# 重复
+x &lt;- c(1,2,3)
+a1 &lt;- rep(2, 5) # 2 rep 5 times
+a2 &lt;- rep(x, 5) # x rep 5 times
+a3 &lt;- rep(x, each=5) # each of x rep each times
+a4 &lt;- rep(x, each=5, times=2) # the result of rep(x, each=5) rep 'times' times 
+a5 &lt;- rep(c(1, 2), c(3,4)) #[1 1 1 2 2 2 2] 注意次数要对应
+a2
+## [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3
+a3
+## [1] 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3
+a4
+## [1] 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3 1 1 1 1 1 2 2 2 2 2 3
+##[27] 3 3 3 3
+
+</code></pre>
+<h3 id="2-2">2. 2 索引</h3>
+<pre><code class="language-r"># 从1开始
+x &lt;- 1:10
+x[1]
+# 负索引表示除了该index的元素不输出，其余都输出
+x[-2]
+# 批量索引
+x[c(-5:-1)]
+# x[c(-2, 3)] 会报错，因为逻辑上讲不通
+
+# 空下标
+x[]
+## [1]  1  2  3  4  5  6  7  8  9 10
+
+# 零下标
+## x[0] # 返回类型相同，长度为0的向量，相当于numeric(0)，为空集
+# 当0与正整数下标一起使用时会被忽略
+# 当0与负整数下标一起使用时也会被忽略
+
+# 布尔索引, 类似py
+a1 &lt;- c(1:10, NA)
+a1 &gt; 3
+[1] FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+[11]    NA
+a1[a1 &gt; 3 &amp; a1 &lt; 9]
+## [1]  4  5  6  7  8 NA 
+# 要注意的是，如果逻辑下标中有缺失值，对应结果也是缺失值。所以，在用逻辑下标作子集选择时，一定要考虑到缺失值问题。正确的做法是加上!is.na前提
+x[!is.na(x) &amp; x &gt; 2]
+
+a1[c(T,F,F,T,F,F,T,F,F,T,T,T)] # 超出长度的部分输出NA
+a1[c(T,F,F)] # 广播为T F F T F F T F F T
+# a1[T,T,T,T,T,T,T,T,T,T] # 会报错，因为没写成向量形式
+
+
+# 判断一个元素是否在向量中, 进而使用布尔索引
+a1 &lt;- c('one', 'two', 'three', 'four', 'five')
+'one' %in% a1
+## [1] TRUE
+a1 %in% c('one', 'tww')
+## [1]  TRUE FALSE FALSE FALSE FALSE
+a1[a1 %in% 'one']
+## [1] &quot;one&quot;
+</code></pre>
+<h3 id="2-3">2. 3 赋值操作</h3>
+<pre><code class="language-r">a1 &lt;- c(1:5)
+a1[1] &lt;- 2
+a1[c(1,2,3)] &lt;-  c(4:6) # 批量赋值
+a1[10] &lt;- 20 # a1会扩展长度，其中6~9会填充NA
+</code></pre>
+<h3 id="2-4">2. 4 插入数据</h3>
+<pre><code class="language-r"># 插入数据
+a1 &lt;- c(1:10)
+a1 &lt;- append(x=a1, values=99, after=1) # 在index=1后面插入99
+# AD 不是原地操作，需重新赋值
+
+a1
+## [1]  1 99  2  3  4  5  6  7  8  9 10
+</code></pre>
+<h3 id="2-5">2. 5 删除数据</h3>
+<pre><code class="language-r">a1 &lt;- c(1:10)
+a1 &lt;- a1[-c(1:3)]
+
+a1
+## [1]  4  5  6  7  8  9 10
+</code></pre>
+<h3 id="2-6">2. 6 向量化运算</h3>
+<pre><code class="language-r"># 向量化运算
+# 缺失值运算后仍是缺失值
+a1 &lt;- c(1,2,3)
+a2 &lt;- c(4,5,6)
+print(a1 * 2 + a2)
+print(a1 * a2)   # 对应位置相乘
+print(a1 ** a2)  # 求幂
+print(a1 %/% a2) # 整数除法，即C语言除法
+print(a1 %% a2)  # 求余
+
+# 若长度不同的向量之间运算，会将短的翻倍到长的
+# AD 不必保证成倍数
+a1 &lt;- c(1:10)
+a2 &lt;- c(1:4)
+a1 + a2
+## [1]  2  4  6  8  6  8 10 12 10 12
+a1 &gt; a2
+## [1] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
+## [10]  TRUE
+a1 == a2 # AD 不是=
+## [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE
+## [10] FALSE
+
+# %in% 运算
+a1 &lt;- c(1:7)
+a2 &lt;- seq(from=10, to=5, by=-1)
+a1 %in% a2
+## [1] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE
+
+# 运算函数: abs, sqrt, log, exp, log10
+# ceiling, floor, round, trunc 去掉小数点，sinif
+# sin cos ...
+# sum max mean median quantile range var sd标准差 prod连乘的积 cumsum cumprod
+a1 &lt;- abs(-5:5)
+a2 &lt;- log(2:5, base=2)
+round(c(1.1, 3.33, 5.555), digits=2) # 默认digits=0
+## [1] 1.10 3.33 5.56
+signif(c(1.1, 3.33, 5.555), digits=2) # 保留有效数字
+## [1] 1.1 3.3 5.6
+quantile(c(1:100))
+##  0%    25%    50%    75%   100% 
+##  1.00  25.75  50.50  75.25 100.00
+quantile(c(1:100), c(0.4, 0.5, 0.6))
+##  40%  50%  60% 
+##  40.6 50.5 60.4
+
+# 逻辑运算函数
+y &lt;- ifelse(c(-1,0,1)&gt;=0, 1, 0)
+y
+## [1] 0 1 1
+
+# 通过which返回值的索引
+which.max(c(1,3,4,2)) # 3
+which(a1 == 0)
+which(a1 &gt; 2)
+
+all(c(1, NA, 3) &gt; 2) # FALSE
+any(c(1, NA, 3) &gt; 2) # TRUE
+any(NA) # NA
+# 比较两个R对象是否完全相同
+identical(c(1,2,3), c(1,3,2)) # FALSE 
+identical(c(1L,2L,3L), c(1,2,3)) # FALSE
+# 比较两个R对象是否在数值上完全相同
+all.equal(c(1L,2L,3L), c(1,2,3)) # TRUE
+# 返回每个元素是否为重复值的结果
+duplicated(c(1,2,1,3,NA,4,NA))
+## [1] FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE
+# unique()可以返回去掉重复值的结果
+</code></pre>
+<h3 id="2-7-series-df">2. 7 给向量命名，类似<code>Series</code> <code>df</code></h3>
+<pre><code class="language-r">ages &lt;- c(30, 25, 28)
+names(ages) &lt;- c(&quot;李明&quot;, &quot;张聪&quot;, &quot;刘颖&quot;)
+# 或
+ages &lt;- c(&quot;李明&quot;=30, &quot;张聪&quot;=25, &quot;刘颖&quot;=28)
+# 或
+ages &lt;- setNames(c(30, 25, 28), c(&quot;李明&quot;, &quot;张聪&quot;, &quot;刘颖&quot;))
+## 李明 张聪 刘颖 
+##  30   25   28
+
+# R允许仅给部分元素命名，这时其它元素名字为空字符串。不同元素的元素名一般应该是不同的，否则在使用元素作为下标时会发生误读，但是R语法允许存在重名。
+# names(x)返回去掉了元素名的x的副本，用names(x) &lt;- NULL可以去掉x的元素名。 
+</code></pre>
+<h3 id="2-8">2. 8 其他</h3>
+<pre><code class="language-r"># length(x)函数返回向量的长度；长度为零的向量表示为numeric(0)
+# numeric()函数可以用来初始化一个指定元素个数而元素都等于零的数值型向量, 如numeric(10)会生成元素为10个零的向量
+# sort(x) 默认升序，非原地操作
+# sort(x, decreasing = T) 降序
+# order(x) 返回排序后的下标，即x[order(x)] 的结果与sort(x)相同
+# rev(x) 非原地操作
+</code></pre>
+<h2 id="3">3. 字符串</h2>
+<p>```r
+ # 大小写
+ toupper(c("Aaa", "Bbb"))
+ tolower(c("Aaa", "Bbb"))</p>
+<p># 统计字符串的长度
+ nchar("Hello World")
+ nchar(c("AAA", "BB", "C")) # [1] 3 2 1
+ length(c("AAA", "BB", "C")) # 3
+ nchar(c(12, 2, 123)) # 转换为字符串处理</p>
+<p># join字符串
+ paste("Hello", "World") # 默认以空格为sep
+ ## [1] "Hello World"
+ paste("Hello", "World", sep='-')
+ ## [1] "Hello-World"
+ paste(c("Alex", "Rosie", "Greg"), "Hi!") # 分别追加
+ ## [1] "Alex Hi!"  "Rosie Hi!" "Greg Hi!"
+ paste(c("ab", "cd"), c("ef", "gh"))
+ ## [1] "ab ef" "cd gh"
+ paste("x", 1:3, sep="_")
+ ## [1] "x_1" "x_2" "x_3"</p>
+<p># collapse：an optional character string to separate the results
+ paste(c("Hello", "World")) # 什么都没做
+ ## [1] "Hello" "World"
+ paste(c("Hello", "World"), collapse=" ")
+ ## [1] "Hello World"</p>
+<p># substr(str, 起始, 终止)  取[起始，终止]
+ substr(x=month.name, start=1, stop=3)
+ substr(c('JAN07', 'MAR66'), 1, 3)</p>
+<p># substring(x, start) 可以从字符串x中取出从第start个到末尾的子串
+ substring("123456",2)
+ ## [1] "23456"</p>
+<p># strsplit
+ strsplit("A/BB/CCC", "/") # 返回一个列表！！！
+ ## [[1]]
+ ## [1] "A"   "BB"  "CCC"
+ strsplit('10w,9w,8w', '<em>')[[1]] # 默认fixed=FALSE，表示使用re
+ ## [1] "1" "0" "w" "," "9" "w" "," "8" "w"
+ strsplit('10w,9w,8w', '</em>', fixed=TRUE)[[1]]
+ ## [1] "10w,9w,8w"</p>
+<p># 模式匹配
+ pattern &lt;- ' '
+ x &lt;- 'AAA BB C'
+ grep(pattern, x, fixed=TRUE) # 寻找X所有元素中包含空格的下标
+ ## [1] 1
+ pattern &lt;- ' '
+ x &lt;- c('AAA BB C', 'AA', 'B B')
+ grep(pattern, x, fixed=TRUE) # 寻找X所有元素中包含空格的下标
+ ## [1] 1 3</p>
+<p># 字符串替换
+ gsub(';',',','1;2;3',fixed=TRUE) # 把;替换为,
+ ## [1] "1,2,3"
+ sub(';',',','1;2;3',fixed=TRUE)
+ ## [1] "1,2;3"
+ # sub和gsub的区别在于，前者只替换第一次匹配的字符串，而后者会替换掉所有匹配的字符串</p>
+<p># 字符串笛卡尔积
+ suit &lt;- c("space", "clubs")
+ face &lt;- 1:3
+ outer(suit, face, FUN=paste)
+      [,1]      [,2]      [,3]   <br />
+ [1,] "space 1" "space 2" "space 3"
+ [2,] "clubs 1" "clubs 2" "clubs 3"</p>
+<p># as.numeric()把内容是数字的字符型值转换为数值
+ as.numeric(substr('JAN07', 4, 5)) + 2000 # 2007
+ as.numeric(substr(c('JAN07', 'MAR66'), 4, 5)) # 7 66</p>
+<p># as.character()函数把数值型转换为字符型
+ as.character((1:5)*5)
+ ## [1] "5"  "10" "15" "20" "25"</p>
+<p># 指定格式打印到字符串
+ sprintf('file%03d.txt', c(1, 99, 100))
+ ```</p>
+<h2 id="4">4. 日期时间</h2>
+<h3 id="4-1">4. 1 日期与日期时间</h3>
+<p>R日期可以保存为Date类型，一般用整数保存，数值为从1970-1-1经过的天数。</p>
+<p>R中用一种叫做POSIXct和POSIXlt的特殊数据类型保存日期和时间，可以仅包含日期部分，也可以同时有日期和时间。</p>
+<p>技术上，POSIXct把日期时间保存为从1970年1月1日零时到该日期时间的时间间隔秒数，所以数据框中需要保存日期时用POSIXct比较合适，需要显示时再转换成字符串形式</p>
+<p>POSIXlt把日期时间保存为一个包含年、月、日、星期、时、分、秒等成分的列表，所以求这些成分可以从POSIXlt格式日期的列表变量中获得。日期时间会涉及到所在时区、夏时制等问题，比较复杂。</p>
+<pre><code class="language-r">library(lubridate)
+</code></pre>
+<h3 id="4-2">4. 2 字符串与日期数据</h3>
+<pre><code class="language-r"># 获得当前日期
+today()
+## [1] &quot;2021-10-04&quot;
+Sys.Date()
+## [1] &quot;2021-10-04&quot;
+# 获得当前日期时间
+now()
+## [1] &quot;2021-10-04 19:38:03 CST&quot;
+Sys.time()
+## [1] &quot;2021-10-04 20:50:16 CST&quot;
+date()
+## [1] &quot;Sun Oct 24 20:31:38 2021&quot;
+
+# 字符串转换为日期
+as.Date(c(&quot;1970-1-5&quot;, &quot;2017-9-12&quot;))
+as.Date(&quot;1/5/1970&quot;, format=&quot;%m/%d/%Y&quot;)
+as.POSIXct(c('1998-03-16'))
+as.POSIXct(c('1998/03/16'))
+as.POSIXct(c('1998-03-16 13:15:45'))
+as.POSIXct('3/13/15', format='%m/%d/%y')
+# 批量生成
+seq(as.Date(&quot;2020-2-2&quot;), as.Date(&quot;2020-4-2&quot;), by=5)
+
+sales &lt;- round(runif(48, min=50, max=100))
+ts(sales, start=c(1010,5), end=c(2014,4), frequency=12) # 12代表月，4代表季度，1代表年
+
+# 用lubridate::ymd(), lubridate::mdy(), lubridate::dmy()将字符型向量转换为日期型向量
+# 在年号只有两位数字时，默认对应到1969-2068范围。
+ymd(c(&quot;1998-3-10&quot;, &quot;2018-01-17&quot;, &quot;18-1-17&quot;))
+## [1] &quot;1998-03-10&quot; &quot;2018-01-17&quot; &quot;2018-01-17&quot;
+
+
+# 字符串转换为日期时间
+# lubridate包的ymd、mdy、dmy等函数添加hms、hm、h等后缀，可以用于将字符串转换成日期时间
+ymd_hms(&quot;1998-03-16 13:15:45&quot;)
+## [1] &quot;1998-03-16 13:15:45 UTC&quot;
+
+# 构造日期
+make_date(1998, 3, 10)
+## [1] &quot;1998-03-10&quot;
+# 构造日期时间
+make_datetime(1998, 3, 16, 13, 15, 45.2)
+## [1] &quot;1998-03-16 13:15:45 UTC&quot;
+
+# 将日期转换为日期时间
+as_datetime(as.Date(&quot;1998-03-16&quot;))
+## [1] &quot;1998-03-16 UTC&quot;
+# 将日期时间转换为日期 
+as_date(as.POSIXct(&quot;1998-03-16 13:15:45&quot;))
+## [1] &quot;1998-03-16&quot;
+## [1] &quot;1998-03-16&quot;
+
+# as.character()函数把日期型数据转换为字符型
+x &lt;- as.POSIXct(c('1998-03-16', '2015-11-22'))
+as.character(x)
+# 可以指定格式 %Y 代表四位数的年份，%y代表两位数的年份
+as.character(x, format='%m/%d/%Y') # &quot;03/16/1998&quot; &quot;11/22/2015&quot;
+as.character(x, format='%H:%M:%S') # &quot;13:15:45&quot;
+
+# 指定类似Mar98这样的格式
+x &lt;- as.POSIXct(c('1998-03-16', '2015-11-22'))
+old.lctime &lt;- Sys.getlocale('LC_TIME')
+Sys.setlocale('LC_TIME', 'C')
+as.character(x, format='%b%y') # &quot;Mar98&quot; &quot;Nov15&quot;
+Sys.setlocale('LC_TIME', old.lctime)
+</code></pre>
+<h3 id="4-3">4. 3 访问日期时间的成分</h3>
+<ul>
+<li>把一个R日期时间值用<code>as.POSIXlt()</code>转换为POSIXlt类型，就可以用列表元素方法取出其组成的年、月、日、时、分、秒等数值：<code>year</code>, <code>mon</code>, <code>mday</code></li>
+</ul>
+<p><code>r
+  x &lt;- as.POSIXct(c('1998-03-16', '2015-11-22'))
+  as.POSIXlt(x)$year + 1900 # 1998 2015</code></p>
+<ul>
+<li>
+<p><code>year()</code>取出年</p>
+</li>
+<li>
+<p><code>month()</code>取出月份数值</p>
+</li>
+<li>
+<p><code>mday()</code>取出日数值</p>
+</li>
+<li>
+<p><code>yday()</code>取出日期在一年中的序号，元旦为1</p>
+</li>
+<li>
+<p><code>wday()</code>取出日期在一个星期内的序号，但是一个星期从星期天开始，星期天为1,星期一为2，星期六为7。</p>
+</li>
+<li>
+<p><code>hour()</code>取出小时</p>
+</li>
+<li>
+<p><code>minute()</code>取出分钟</p>
+</li>
+<li>
+<p><code>second()</code>取出秒</p>
+</li>
+</ul>
+<p>lubridate的这些成分函数还允许被赋值，结果就修改了相应元素的值</p>
+<pre><code class="language-r">month(as.POSIXct(&quot;2018-1-17 13:15:40&quot;)) # 1
+
+x &lt;- as.POSIXct(&quot;2018-1-17 13:15:40&quot;)
+year(x) &lt;- 2000
+month(x) &lt;- 1
+mday(x) &lt;- 1
+</code></pre>
+<p><code>update()</code>可以对一个日期或一个日期型向量统一修改其组成部分的值</p>
+<p><code>update()</code>函数中可以用<code>year</code>, <code>month</code>, <code>mday</code>, <code>hour</code>, <code>minute</code>, <code>second</code>等参数修改日期的组成部分</p>
+<pre><code class="language-r">x &lt;- as.POSIXct(&quot;2018-1-17 13:15:40&quot;)
+y &lt;- update(x, year=2000) # &quot;2000-01-17 13:15:40 CST&quot;
+</code></pre>
+<h3 id="4-4">4. 4 日期计算</h3>
+<p>在lubridate的支持下日期可以相减，可以进行加法、除法。lubridate包提供了如下的三种与时间长短有关的数据类型：</p>
+<ul>
+<li>时间长度(duration)，按整秒计算</li>
+<li>时间周期(period)，如日、周</li>
+<li>时间区间(interval)，包括一个开始时间和一个结束时间</li>
+</ul>
+<h4 id="4-4-1">4. 4. 1 时间长度</h4>
+<p>R的POSIXct日期时间之间可以相减，如</p>
+<pre><code class="language-r">d1 &lt;- ymd_hms(&quot;2000-01-01 0:0:0&quot;)
+d2 &lt;- ymd_hms(&quot;2000-01-02 12:0:5&quot;)
+di &lt;- d2 - d1; di # Time difference of 1.500058 days
+# 结果类型是duration
+
+# lubridate包提供了duration类型
+as.duration(di) # &quot;129605s (~1.5 days)&quot;
+
+# lubridate的dseconds(), dminutes(), dhours(), ddays(), dweeks(), dyears()函数可以直接生成时间长度类型的数据
+dhours(1) # [1] &quot;3600s (~1 hours)&quot;
+
+# lubridate的时间长度类型总是以秒作为单位，可以在时间长度之间相加，也可以对时间长度乘以无量纲数
+dhours(1) + dseconds(5) # &quot;3605s (~1 hours)&quot;
+
+# 可以给一个日期加或者减去一个时间长度，结果严格按推移的秒数计算
+d2 &lt;- ymd_hms(&quot;2000-01-02 12:0:5&quot;)
+d2 - dhours(5) # &quot;2000-01-02 07:00:05 UTC&quot;
+
+
+# 时间的前后推移在涉及到时区和夏时制时有可能出现未预料到的情况。
+# 用unclass()函数将时间长度数据的类型转换为普通数值
+unclass(dhours(1)) # 3600
+</code></pre>
+<h4 id="4-4-2">4. 4. 2 时间周期</h4>
+<p>lubridate包的<code>seconds()</code>, <code>minutes()</code>, <code>hours()</code>, <code>days()</code>，<code>weeks()</code>, <code>years()</code>函数可以生成以日历中正常的周期为单位的时间长度，不需要与秒数相联系，可以用于时间的前后推移。这些时间周期的结果可以相加、乘以无量纲整数</p>
+<pre><code class="language-r">years(2) + 10*days(1) # &quot;2y 0m 10d 0H 0M 0S&quot;
+</code></pre>
+<p>为了按照日历进行日期的前后平移，而不是按照秒数进行日期的前后平移，应该使用这些时间周期。例如，因为2016年是闰年，按秒数给2016-01-01加一年，得到的并不是2017-01-01</p>
+<pre><code class="language-r">ymd(&quot;2016-01-01&quot;) + dyears(1) # &quot;2016-12-31&quot;
+</code></pre>
+<p>使用时间周期函数则得到预期结果：</p>
+<pre><code class="language-r">ymd(&quot;2016-01-01&quot;) + years(1) # &quot;2017-01-01&quot;
+</code></pre>
+<h4 id="4-4-3">4. 4. 3 时间区间</h4>
+<p>lubridate提供了<code>%--%</code>运算符构造一个时间期间。时间区间可以求交集、并集等。</p>
+<p>构造如：</p>
+<pre><code class="language-r">d1 &lt;- ymd_hms(&quot;2000-01-01 0:0:0&quot;)
+d2 &lt;- ymd_hms(&quot;2000-01-02 12:0:5&quot;)
+din &lt;- (d1 %--% d2); din # 2000-01-01 UTC--2000-01-02 12:00:05 UTC
+</code></pre>
+<p>生成时间区间，也可以用<code>lubridate::interval(start, end)</code>函数</p>
+<pre><code class="language-r">interval(ymd_hms(&quot;2000-01-01 0:0:0&quot;), ymd_hms(&quot;2000-01-02 12:0:5&quot;))
+
+# 可以指定时间长度和开始日期生成时间区间
+d1 &lt;- ymd(&quot;2018-01-15&quot;)
+din &lt;- as.interval(dweeks(1), start=d1); din # 2018-01-15 UTC--2018-01-22 UTC
+# 注意这个时间区间表面上涉及到8个日期，但是实际长度还是只有7天，因为每一天的具体时间都是按零时计算，所以区间末尾的那一天实际不含在内
+
+# 用lubridate::int_start()和lubridate::int_end()函数访问时间区间的端点
+int_start(din) # &quot;2018-01-15 UTC&quot;
+int_end(din)   # &quot;2018-01-22 UTC&quot;
+</code></pre>
+<p>运算</p>
+<pre><code class="language-r"># 对一个时间区间可以用除法计算其时间长度
+din / ddays(1) # 1.500058
+din / dseconds(1) # 129605
+
+# 用lubridate::int_shift()平移一个时间区间
+din2 &lt;- int_shift(din, by=ddays(3)); din2 # 2018-01-18 UTC--2018-01-25 UTC
+
+# 用lubridate::int_overlaps()判断两个时间区间是否有共同部分
+int_overlaps(din, din2) # TRUE
+
+# lubridate()现在没有提供求交集的功能，一个自定义求交集的函数如下：
+
+</code></pre>
+<p><img alt="image-20211004203634432" src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20211004203634432.png" /></p>
+<p>时间区间允许开始时间比结束时间晚，用<code>lubridate::int_standardize()</code>可以将时间区间标准化成开始时间小于等于结束时间</p>
+<p><code>Sys.date()</code>返回Date类型的当前日期。<code>Sys.time()</code>返回POSIXct类型的当前日期时间。</p>
+<h4 id="4-4-4-date">4. 4. 4 Date型日期计算</h4>
+<pre><code class="language-r"># 因为Date类型是用数值保存的，所以可以给日期加减一个整数，如：
+x &lt;- as.Date(&quot;1970-1-5&quot;)
+x1 &lt;- x + 10; x1 # &quot;1970-01-15&quot;
+
+# 所有的比较运算都适用于日期类型。可以给一个日期加减一定的秒数
+as.POSIXct(c('1998-03-16 13:15:45')) - 30
+
+# 但是两个日期不能相加。给一个日期加减一定天数，可以通过加减秒数实现
+as.POSIXct(c('1998-03-16 13:15:45')) + 3600*24*2
+
+# 用difftime(time1, time2, units='days')计算time1减去time2的天数；函数结果用c()包裹以转换为数值, 否则会带有单位。
+x &lt;- as.POSIXct(c('1998-03-16', '2015-11-22'))
+c(difftime(x[2], x[1], units='days')) # Time difference of 6460 days
+# 调用difftime()时如果前两个自变量中含有时间部分，则间隔天数也会带有小数部分
+# difftime()中units选项还可以取为 'secs', 'mins', 'hours'等。
+</code></pre>
+<h4 id="4-4-5">4. 4. 5 日期的舍入计算</h4>
+<p>lubridate包提供了<code>floor_date()</code>, <code>round_date()</code>, <code>ceiling_date()</code>等函数，对日期可以用<code>unit=</code>指定一个时间单位进行舍入。时间单位为字符串，如<code>seconds</code>, <code>5 seconds</code>, <code>minutes</code>, <code>2 minutes</code>, <code>hours</code>, <code>days</code>, <code>weeks</code>, <code>months</code>, <code>years</code>等。</p>
+<p>比如，以<code>10 minutes</code>为单位，<code>floor_date()</code>将时间向前归一化到10分钟的整数倍，<code>ceiling_date()</code>将时间向后归一化到10分钟的整数倍，<code>round_date()</code>将时间归一化到最近的10分钟的整数倍，时间恰好是5分钟倍数时按照类似四舍五入的原则向上取整。例如</p>
+<pre><code class="language-r">x &lt;- ymd_hms(&quot;2018-01-11 08:32:44&quot;)
+floor_date(x, unit=&quot;10 minutes&quot;) 
+# &quot;2018-01-11 08:30:00 UTC&quot;
+</code></pre>
+<p>如果单位是星期，会涉及到一个星期周期的开始是星期日还是星期一的问题。用参数<code>week_start=7</code>指定开始是星期日，<code>week_start=1</code>指定开始是星期一。</p>
+<h2 id="5">5. 因子</h2>
+<pre><code class="language-r"># 离散型变量组成的向量
+# eg: [china usa uk]
+
+# 创建
+f &lt;- factor(c(&quot;red&quot;, &quot;blue&quot;, &quot;red&quot;, &quot;green&quot;, &quot;blue&quot;))
+</code></pre>
+<p>因子的<code>levels</code>属性可以看成是一个映射，把整数值 1,2 映射成这些水平值，因子在保存时会保存成整数值 1,2 等与水平值对应的编号。这样可以节省存储空间，在建模计算的程序中也比较有利于进行数学运算</p>
+<p>用<code>as.numeric()</code>查看对应的整数值</p>
+<p>用<code>as.character()</code>可以把因子转换成原来的字符型</p>
+<pre><code class="language-r">sex &lt;- factor(c(&quot;Male&quot;, &quot;Female&quot;))
+as.character(sex)
+## [1] &quot;Male&quot;   &quot;Female&quot;
+as.numeric(sex)
+## [1] 2 1
+</code></pre>
+<h4 id="5-1">5. 1 创建</h4>
+<pre><code class="language-r">factor(x, levels = sort(unique(x), na.last = TRUE), 
+       labels, exclude = NA, ordered = FALSE)
+'''
+levels: 指定各水平值；不指定时由x的不同值来求得
+labels: 指定各水平的文本标签，eg：Male，Female；不指定时用各水平值的对应字符串；输出时打印labels
+exclude: 指定要转换为缺失值(NA)的元素值集合
+ordered: 取真值时表示因子水平是有次序的(按编码次序)
+'''
+
+# 因子分为名义型变量（如身份）与有序型变量（如poor，good）
+# 对于由字符串构成的名义型变量，指定水平level没有意义，此时缺省，默认按字典序
+x &lt;- factor(c(&quot;B&quot;,&quot;C&quot;,&quot;A&quot;))
+x
+## [1] B C A
+Levels: A B C
+
+# 对于由数字构成的名义型变量，指定labels后输出将映射到label指定内容
+x &lt;- factor(c(1,2,3),label=c(&quot;AA&quot;,&quot;BB&quot;,&quot;CC&quot;))
+x # 即1-&gt;&quot;AA&quot;,...,levels缺省，为字典序
+## [1] AA BB CC
+## Levels: AA BB CC
+
+# 对有序型变量，指定ordered，表明这是一个有序型
+# ordered默认level指定的内容按升序排列
+x &lt;- factor(c(&quot;good&quot;,&quot;poor&quot;,&quot;excellent&quot;),ordered=T)
+x
+## [1] good      poor      excellent
+## Levels: excellent &lt; good &lt; poor
+
+# 对于上例，显然我们希望的顺序需要自己通过level指定
+x &lt;- factor(c(&quot;good&quot;,&quot;poor&quot;,&quot;excellent&quot;),level=c(&quot;poor&quot;,&quot;good&quot;,&quot;excellent&quot;),ordered=T)
+x
+## [1] good      poor      excellent
+## Levels: poor &lt; good &lt; excellent
+# 对于上例，假设文件里没有&quot;poor&quot;,&quot;good&quot;,&quot;excellent&quot;, 而是被替换为C&quot;&quot;B&quot;&quot;A&quot;，我们可以指定label打印期望的输出
+x &lt;- factor(c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;, &quot;A&quot;),level=c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;),label=c(&quot;poor&quot;,&quot;good&quot;,&quot;excellent&quot;),ordered=T)
+x
+## [1] poor good excellent poor     
+## Levels: poor &lt; good &lt; excellent
+
+# 注意level必须与unique(x)内容一致
+factor(c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;),level=c(&quot;AA&quot;,&quot;BB&quot;,&quot;CC&quot;))
+## [1] &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## Levels: AA BB CC
+factor(c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;),level=c(&quot;AA&quot;,&quot;BB&quot;,&quot;CC&quot;), labels=c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;))
+## [1] &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## Levels: AA BB CC
+
+# 注意labels的顺序必须和level一致
+</code></pre>
+<p>AD: 因为一个因子的levels属性是该因子独有的，所以合并两个因子有可能造成错误</p>
+<pre><code class="language-r">li1 &lt;- factor(c('男', '女'))
+li2 &lt;- factor(c('男', '男'))
+c(li1, li2) # 1 2 1 1
+# 结果不再是因子，正确的做法是
+factor(c(as.character(li1), as.character(li2)))
+</code></pre>
+<h4 id="5-2">5. 2 相关函数</h4>
+<pre><code class="language-r"># tabel() 统计因子各水平的出现次数; 也可以对一般的向量统计每个不同元素的出现次数
+table(factor(c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;A&quot;,&quot;B&quot;)))
+## A B C 
+## 2 2 1
+# 返回值是一个series(有名字的向量)
+x &lt;- table(factor(c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;A&quot;,&quot;B&quot;)))
+x[&quot;A&quot;]
+## A 
+## 2
+
+# tapply()函数 可以按照因子分组然后每组计算另一变量的概括统
+sex &lt;- c(&quot;male&quot;,&quot;male&quot;,&quot;female&quot;,&quot;male&quot;,&quot;female&quot;)
+h &lt;- c(165, 170, 168, 172, 159)
+tapply(h, sex, mean)
+## female   male 
+##  163.5  169.0
+# 这里第一自变量h与与第二自变量sex是等长的，对应元素分别为同一人的身高和性别，tapply()函数分男女两组计算了身高平均值
+
+# forcats包的因子函数
+...
+</code></pre>
+<pre><code class="language-r"># 通过下例可以看出向量输出散点图，因子输出频率图
+plot(mtcars$cyl) # 横轴是1:len，纵轴是值
+plot(factor(mtcars$cyl))
+
+# cut 函数进行区间分割
+cut(1:10, c(seq(0, 10, 2)))
+## [1] (0,2]  (0,2]  (2,4]  (2,4]  (4,6]  (4,6]  (6,8] 
+## [8] (6,8]  (8,10] (8,10]
+## Levels: (0,2] (2,4] (4,6] (6,8] (8,10]
+
+levels(factor(c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;), level=c(&quot;B&quot;, &quot;C&quot;, &quot;A&quot;)))
+## [1] &quot;B&quot; &quot;C&quot; &quot;A&quot;
+</code></pre>
+<h2 id="6">6. 列表</h2>
+<pre><code class="language-r"># 类似py的一维列表
+
+# 创建列表
+a1 &lt;- 1:20
+a2 &lt;- matrix(1:20,4)
+a3 &lt;- mtcars[1,]  # 是一个列表
+a4 &lt;- &quot;Hello World&quot;
+mlist &lt;- list(a1, a2, a3, a4)
+# 指定列表各项名（默认是1 2 ...）
+mlist2 &lt;-list(first=a1, second=a2, third=a3, forth=a4)
+# 通过names(mlist)查看和修改元素名
+names(mlist2) 
+## [1] &quot;first&quot;  &quot;second&quot; &quot;third&quot;  &quot;forth&quot;
+names(mlist2)[names(mlist2)==&quot;first&quot;] &lt;- &quot;ffirst&quot; 
+
+# 索引
+mlist &lt;- list(a1, a2, a3, a4)
+mlist2 &lt;-list(first=a1, second=a2, third=a3, forth=a4)
+mlist[1] # 相当于访问a1；仍然是一个列表
+mlist[-1] # 访问除a1外的所有；仍然是一个列表
+mlist[c(1, 4)] # 相当于访问a1 a4 AD 不可以写为mlist[1, 4]；仍然是一个列表
+mlist2['third'] # 通过列名访问；仍然是一个列表
+mlist2$third # 通过索引名访问列表，更高效；不是列表
+
+# 给列表不存在的元素名定义元素值就添加了新元素，而且不同于使用向量，对于列表而言这是很正常的做法
+
+class(mlist2[1])  # 返回 list
+class(mlist2[[1]])# [[]]内只能写一个东西 返回integer
+
+# [] 与 [[]]
+# 列表的一个元素也可以称为列表的一个“变量”，单个列表元素必须用两重方括号格式访问
+mlist2[1] # 返回列表的第一个成分，仍为一个列表
+mlist2[[1]] # 返回列表的第一个成分的元素值，不是列表
+mlist2$first # 同mlist2[[1]]
+mlist2$second &lt;- matrix(1:20, 4) # T
+mlist2[2] &lt;- matrix(1:20, 4) # 与预期结果相背
+mlist2[[2]] &lt;- matrix(1:20, 4)
+
+
+# 删除元素
+mlist2 &lt;-list(first=a1, second=a2, third=a3, forth=a4)
+mlist2 &lt;- mlist2[-2]
+mlist2[[1]] &lt;- NULL # AD mlist2[1] &lt;- NULL 结果与预期相背
+# 因为在list()函数中允许定义元素为NULL，这样的元素是存在的
+
+# 若我们要把已经存在的元素修改为NULL值而不是删除此元素，
+# 或者说给列表增加一个取值为NULL的元素
+# 这时需要用单重的方括号取子集，这样的子集会保持其列表类型，给这样的子列表赋值为list(NULL)
+li[&quot;b&quot;] &lt;- list(NULL)
+li[&quot;d&quot;] &lt;- list(NULL)
+li
+
+# 列表类型转换
+li &lt;- list(x=1, y=c(2,3))
+unlist(li)
+## x y1 y2 
+## 1  2  3 
+
+# 一些返回值是列表的函数
+x &lt;- &quot;A,B,C&quot;
+strsplit(x, &quot;,&quot;)
+## [[1]]
+## [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;
+
+x &lt;- c(&quot;10, 8, 7&quot;, &quot;5, 2, 2&quot;, &quot;3, 7, 8&quot;, &quot;8, 8, 9&quot;)
+res &lt;- strsplit(x, &quot;,&quot;)
+## [[1]]
+## [1] &quot;10&quot; &quot; 8&quot; &quot; 7&quot;
+## 
+## [[2]]
+## [1] &quot;5&quot;  &quot; 2&quot; &quot; 2&quot;
+## 
+## [[3]]
+## [1] &quot;3&quot;  &quot; 7&quot; &quot; 8&quot;
+## 
+## [[4]]
+## [1] &quot;8&quot;  &quot; 8&quot; &quot; 9&quot;
+
+# 为了把拆分结果进一步转换成一个数值型矩阵，可以使用sapply()函数如下：
+t(sapply(res, as.numeric))
+##      [,1] [,2] [,3]
+## [1,]   10    8    7
+## [2,]    5    2    2
+## [3,]    3    7    8
+## [4,]    8    8    9
+</code></pre>
+<h2 id="7">7. 矩阵与数组</h2>
+<h3 id="7-1">7. 1 创建矩阵</h3>
+<pre><code class="language-r"># 创建矩阵
+# x &lt;- 1:20
+# m &lt;- matrix(x, nrow=4, ncol=5)
+m1 &lt;- matrix(1:20, 4, 5) # 从上到下，从左到右填充
+m2 &lt;- matrix(1:20, 5, 5) # 广播：会循环对齐，任意情况均可
+m3 &lt;- matrix(1:20, 3, 3)  
+m5 &lt;- matrix(1:20, 3)    # 可自动分配至用完1:20, 即col=7，如下
+
+##     [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]    1    4    7   10   13   16   19
+## [2,]    2    5    8   11   14   17   20
+## [3,]    3    6    9   12   15   18    1
+
+
+m6 &lt;- matrix(1:20, 4, byrow=F) # 默认按列进行填充
+# m7 &lt;- matrix(1:20, 4, byrow=T) # 没有bycol参数
+
+# 定义行列名称
+m &lt;- matrix(1:20,4,5)
+dimnames(m) &lt;- list(c(&quot;R1&quot;, &quot;R2&quot;, &quot;R3&quot;, &quot;R4&quot;), c(&quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;, &quot;C5&quot;))
+# 或者
+m &lt;- matrix(1:20,nrow=4,ncol=5, dimnames=list(c(&quot;R1&quot;, &quot;R2&quot;, &quot;R3&quot;, &quot;R4&quot;), c(&quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;, &quot;C5&quot;))) 
+# 或者
+colnames(A) &lt;- c(&quot;R1&quot;, &quot;R2&quot;, &quot;R3&quot;, &quot;R4&quot;)
+rownames(A) &lt;- c(&quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;, &quot;C5&quot;)
+# 或者
+cnames(A) &lt;- c(&quot;R1&quot;, &quot;R2&quot;, &quot;R3&quot;, &quot;R4&quot;)
+rnames(A) &lt;- c(&quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;, &quot;C5&quot;)
+
+# 查看维数
+x &lt;- 1:20
+dim(x) # NULL
+m &lt;- matrix(x, 4, 5)
+dim(m) # [1] 4 5
+nrow(m) # 4
+ncol(m) # 5
+
+# reshape
+x &lt;-  1:20
+dim(x) &lt;- c(4,5)
+dim(x)
+</code></pre>
+<h3 id="7-2">7. 2 索引</h3>
+<pre><code class="language-r"># 索引
+m &lt;- matrix(1:20, 4, 5, byrow=T) # 4行5列
+##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    2    3    4    5
+## [2,]    6    7    8    9   10
+## [3,]   11   12   13   14   15
+## [4,]   16   17   18   19   20
+m[1, 2] # 第一行第二列
+m[2, ] # 访问第二行
+m[, 2] # 访问第二列
+m[-1, 2] # 去除第一行，再取第二列
+m[1,c(2,3,4)] # 第一行，第二三四列
+m[c(2:4), c(2, 3)]
+##      [,1] [,2]
+## [1,]    7    8
+## [2,]   12   13
+## [3,]   17   18
+m[11] # 相当于按列flatten后的一维索引
+## [1] 13
+# 通过索引名访问
+dimnames(m) &lt;- list(c(&quot;R1&quot;, &quot;R2&quot;, &quot;R3&quot;, &quot;R4&quot;), c(&quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;, &quot;C5&quot;))
+m[&quot;R1&quot;, &quot;C2&quot;]
+m[&quot;R1&quot;, ] # m[&quot;R1&quot;] 结果是NA
+m[, &quot;C2&quot;]
+# m[&quot;C2&quot;] m[&quot;R1&quot;] # 与预期不符，报错 
+
+# AD 注意在对矩阵取子集时，如果取出的子集仅有一行或仅有一列，结果就不再是矩阵而是变成了R向量
+# R向量既不是行向量也不是列向量。如果想避免这样的规则起作用，需要在方括号下标中加选项drop=FALSE
+m[1,]
+## [1]  1  5  9 13 17
+m[1,,drop=FALSE] # 作为列向量取出
+##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    5    9   13   17
+
+# 为了挑选矩阵的任意元素组成的子集而不是子矩阵，可以用一个两列的矩阵作为下标，矩阵的每行的两个元素分别指定一个元素的行号和列号
+ind &lt;- matrix(c(1,1,2,2,3,2), 3, 2, byrow=T)
+##      [,1] [,2]
+## [1,]    1    1
+## [2,]    2    2
+## [3,]    3    2
+m[ind]
+[1] 1 7 12
+</code></pre>
+<h3 id="7-3">7. 3 相关函数</h3>
+<pre><code class="language-r"># 相关函数
+m &lt;- matrix(1:20, 4, 5)
+t(m) # 转置，非原地操作
+diag(m) # 返回向量：A(i, i) i=1, ...
+c(m) # 返回矩阵的所有元素，效果相当于按列flatten后的向量
+m[]  # 相当于m，如果要修改矩阵m的所有元素，可以对m[]赋值
+solve(m) # m的逆矩阵
+solve(A,b) # 求解Ax=b
+apply(A, 2, FUN) # 把矩阵A的每一列分别输入到函数FUN中，得到对应于每一列的结果
+apply(A, 1, FUN) # 把矩阵A的每一行分别输入到函数FUN中，得到与每一行对应的结果
+# 如果函数FUN返回多个结果，则apply(A, 1或2, FUN)结果为矩阵，矩阵的每一列是输入矩阵相应列输入到FUN的结果，结果列数等于A的列数
+D &lt;- matrix(c(6,2,3,5,4,1), nrow=3, ncol=2)
+##      [,1] [,2]
+## [1,]    6    5
+## [2,]    2    4
+## [3,]    3    1
+apply(D, 2, range)
+##      [,1] [,2]
+## [1,]    2    1
+## [2,]    6    5
+# 如果函数FUN返回多个结果，为了对每行计算FUN的结果，结果存入一个与输入的矩阵行数相同的矩阵，应该用t(apply(A, 1, FUN))的形式
+t(apply(D, 1, range))
+##      [,1] [,2]
+## [1,]    5    6
+## [2,]    2    4
+## [3,]    1    3
+
+
+
+# cbind(x): 若x是向量，cbind(x)把x变成列向量，即列数为1的矩阵
+# rbind(x): rbind(x)把x变成行向量
+# cbind(x1,x2,x3): 若x1, x2, x3是等长的向量，cbind(x1, x2, x3)把它们看成列向量并在一起组成一个矩阵
+# cbind()的自变量可以同时包含向量与矩阵，向量的长度必须与矩阵行数相等;
+# cbind()的自变量中也允许有标量，这时此标量被重复使用
+</code></pre>
+<h3 id="7-4">7. 4 矩阵运算</h3>
+<pre><code class="language-r"># 矩阵运算
+m &lt;- matrix(1:20, 4, 5, byrow=T)
+m + 1 # 每个元素+1
+m + m # 对应位置相加
+n &lt;- matrix(1:20, 5, 4, byrow=T)
+# m + n 报错，矩阵运算**必须**形状一致, 无法广播
+n2 &lt;- matrix(1:25, 5, 5)
+m + n2
+m * m # 点乘
+m %*% t(m) # 线代意义的乘法
+
+# 按axis计算
+m &lt;- matrix(1:10, 4, 5)
+rowSums(m)
+colMeans(m)
+
+# 矩阵与向量进行乘法运算时，向量按需要解释成列向量或行向量。当向量左乘矩阵时，看成行向量；当向量右乘矩阵时，看成列向量
+# 此时运算符仍是%*%
+
+# 注意矩阵乘法总是给出矩阵结果，即使此矩阵已经退化为行向量、列向量甚至于退化为标量也是一样。如果需要，可以用c()函数把一个矩阵转换成按列拉直的向量。
+</code></pre>
+<p>内积：设<code>x</code>, <code>y</code>是两个向量，计算向量内积，可以用<code>sum(x*y)</code>表示</p>
+<p>设$A$​, $B$​是两个矩阵，是广义的内积，也称为叉积(crossprod)，结果是一个矩阵，元素为$A$​的每列与$B$​的每列计算内积的结果。$A^TB$​在R中可以表示为<code>crossprod(A, B)</code>, $A^TA$​​可以表示为<code>crossprod(A)</code>。要注意的是，<code>crossprod()</code>的结果总是矩阵，所以计算两个向量的内积用<code>sum(x,y)</code>而不用<code>crossprod(x,y)</code>。</p>
+<p>外积：R向量支持外积运算，记为<code>%o%</code>, 结果为矩阵。<code>x %o% y</code>的第 i 行第 j 列元素等于x[i]乘以y[j]。</p>
+<p>这种运算还可以推广到<code>x</code>的每一元素与<code>y</code>的每一元素进行其它的某种运算，而不限于乘积运算，可以用<code>outer(x,y,f)</code>完成，其中<code>f</code>是某种运算，或者接受两个自变量的函数。</p>
+<h3 id="7-5">7. 5 数组</h3>
+<pre><code class="language-r"># 数组(理解为多维矩阵)
+x &lt;- 1:20
+dim(x) &lt;- c(2,2,5)
+# 或
+x &lt;- array(1:20, dim=c(2,2,5))
+
+# array()创建数组
+dim1 &lt;- c(&quot;A1&quot;, &quot;A2&quot;)
+dim2 &lt;- c(&quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;)
+dim3 &lt;- c(&quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;)
+x &lt;- array(1:24, c(2,3,4), dimnames = list(dim1, dim2, dim3))
+, , C1
+
+   B1 B2 B3
+A1  1  3  5
+A2  2  4  6
+
+, , C2
+
+   B1 B2 B3
+A1  7  9 11
+A2  8 10 12
+
+, , C3
+
+   B1 B2 B3
+A1 13 15 17
+A2 14 16 18
+
+, , C4
+
+   B1 B2 B3
+A1 19 21 23
+A2 20 22 24
+</code></pre>
+<p>多维数组可以利用下标进行一般的子集操作，比如<code>ara[,2, 2:3]</code></p>
+<p>多维数组在取子集时如果某一维下标是标量，则结果维数会减少，可以在方括号内用<code>drop=FALSE</code>选项避免这样的规则发生作用</p>
+<p>类似于矩阵，多维数组可以用一个矩阵作为下标，如果是三维数组，矩阵就需要有3列，四维数组需要用4列矩阵。下标矩阵的每行对应于一个数组元素</p>
+<p>注意多维数组不能用<code>$</code>选择元素</p>
+<h2 id="8">8. 数据框</h2>
+<ul>
+<li>实际上是一个列表，列表中的元素是<strong>向量</strong>或<strong>因子</strong></li>
+<li>这些向量组成数据框的列</li>
+<li>每列的长度必须相同，所以 df 是矩阵结构</li>
+<li>数据框的列必须命名，每一列必须统一类型</li>
+<li>事实上，数据框还允许一个元素是一个矩阵，但这样会使得某些读入数据框的函数发生错误</li>
+<li>字符串向量会自动转换为因子</li>
+</ul>
+<h3 id="8-1">8. 1 创建</h3>
+<pre><code class="language-r"># 1. 通过list直接创建
+name &lt;- c(&quot;Alex&quot;, &quot;Rosie&quot;, &quot;Greg&quot;)
+gender &lt;- c(&quot;M&quot;, &quot;W&quot;, &quot;M&quot;)
+age &lt;- c(18,19,20)
+# list1 &lt;- list(name, gender, age) 与预期相背
+list2 &lt;- list(name=name,
+              gender=gender,
+              age=age)
+df &lt;- data.frame(list2)
+# data.frame()函数会将字符型列转换成因子，加选项stringsAsFactors=FALSE可以避免这样的转换
+# 如果数据框的某一列为常数，可以在data.frame()调用中仅给该列赋一个值，生成的结果会自动重复这个值使得该列与其他列等长
+
+
+# 2. 通过一个个指定df的向量创建
+# 行可以不指定索引名,默认使用123; 列会默认使用变量名
+# df &lt;- data.frame(name=name,
+#                  gender=gender,
+#                  age=age)
+df &lt;- data.frame(name, gender, age)
+
+# 3. as.data.frame(x) 将x转换为数据框
+# 若x是向量，转换结果是以x为唯一一列的数据框
+# 若x是矩阵，转换结果把矩阵的每列变成数据框的一列。
+# 若x是一个列表且满足df的要求，转换结果中每个列表变成数据框的一列
+
+# 4. 创建时指定行名
+df &lt;- data.frame(gender, age, row.names=name)
+##       gender age
+## Alex       M  18
+## Rosie      W  19
+## Greg       M  20
+
+# 5. 创建后将某一列改为行索引
+df &lt;- data.frame(name, gender, age)
+names(df) &lt;- c(&quot;AA&quot;, &quot;BB&quot;, &quot;CC&quot;) # 指定的是列索引名
+row.names(df) &lt;- df$AA # 或rownames(df) &lt;- df$name
+df$name &lt;- NULL
+##       gender age
+## Alex       M  18
+## Rosie      W  19
+## Greg       M  20
+
+# 6. 指定字符串列为factor类型，默认不转换为factor
+df &lt;- data.frame(name, gender, age, stringsAsFactors=T)
+
+
+# 通过table生成df
+data.frame(table(grad))
+     grad Freq
+1 (60,70]  174
+2 (70,80]  125
+3 (80,90]    0
+</code></pre>
+<h3 id="8-2">8. 2 访问</h3>
+<pre><code class="language-r">df[1] # 访问第一列, 也是df
+df[,1] # 访问第一列, 不是df, 是元素，即向量
+df[c(1,3)] # 输出第一列与第二列，是df
+df[-c(2,4)]
+
+df[&quot;NO1&quot;,]
+df$name
+df[c(&quot;name&quot;, &quot;gender&quot;)] # 输出name列与gender列
+
+# 同时取行子集与列子集
+df[1:2, &quot;age&quot;]
+df[1:2, c(&quot;age&quot;, &quot;height&quot;)]
+d[d[,&quot;age&quot;]&gt;=30,]
+
+# AD 以下几种访问列的输出结果均相同，且均为数据本身的类型
+df[, 1]
+df[, &quot;name&quot;]
+df[[1]]
+df[[c(1)]]
+df$name
+df[[&quot;name&quot;]] # 不建议使用
+
+# AD 访问含的结果仍是数据框，不是向量，因为数据类型不一定相同
+df[1,]
+
+# AD 与矩阵类似地是，用如d[,&quot;age&quot;], d[,2]这样的方法取出的数据框的单个列是向量而不再是数据框
+# 但是，如果取出两列或者两列以上，结果则是数据框
+# 如果取列子集时不能预先知道取出的列个数，则子集结果有可能是向量也有可能是数据框，容易造成后续程序错误
+# 对一般的数据框，可以在取子集的方括号内加上drop=FALSE选项，确保取列子集的结果总是数据框
+
+# 当使用attach加载数据框，则无需$符号
+attach(mtcars)
+mpg
+colnames(mtcars)
+detach(mtcars) # 取消加载
+
+# with也可以
+with(mtcars, {mpg})
+with(mtcars, {
+  stats &lt;- summary(mpg)
+  stats
+})
+# AD stats作用域仅在{}内
+# 要想改为全局，可将 &lt;- 换为&lt;&lt;-
+
+# within 和with一样，唯一区别在于可以修改df
+df &lt;- within(df, {
+    age &lt;- NA
+})
+##    name gender age
+## 1  Alex      M  NA
+## 2 Rosie      W  NA
+## 3  Greg      M  NA
+
+# subset()函数
+new_df &lt;- subset(df, gender=&quot;Male&quot; | age &lt; 20, select=c(&quot;name&quot;, &quot;gender&quot;))
+new_df &lt;- subset(df, gender=&quot;Male&quot; | age &lt; 20, select=name : gender) # 效果一样
+
+
+m1 &lt;- head(mtcars, n=5)
+m2 &lt;- mtcars[1:5,]
+identical(m1, m2)
+## [1] TRUE
+
+m1 &lt;- tail(mtcars, n=5)
+m2 &lt;- mtcars[(nrow(mtcars)-4) : nrow(mtcars),] # AD nrow一定要用()括起来
+identical(m1, m2)
+## [1] TRUE
+# 这是因为
+nrow(mtcars)-4 : nrow(mtcars)
+## [1] 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1  0
+</code></pre>
+<h3 id="8-3">8. 3 删除</h3>
+<pre><code class="language-r">df
+##    name gender age
+## 1  Alex      M  18
+## 2 Rosie      W  19
+## 3  Greg      M  20
+
+# 删除一列
+df &lt;- df[, -which(colnames(df) %in% c(&quot;gender&quot;, &quot;age&quot;))]
+# 删除一行
+df &lt;- df[-which(rownames(df) %in% c(&quot;1&quot;, &quot;2&quot;)), ]
+</code></pre>
+<p><a href="https://liuyang0681.github.io/2019/04/28/R-%E6%8C%89%E7%85%A7%E8%A1%8C%E5%90%8D%E6%88%96%E5%88%97%E5%90%8D%E5%88%A0%E9%99%A4%E5%AF%B9%E5%BA%94%E7%9A%84%E8%A1%8C%E5%88%97/">参考网站</a></p>
+<h3 id="8-4">8. 4 相关函数</h3>
+<pre><code class="language-r">names(d): 访问列名；可用作修改
+colnames(d): 访问列名；可用作修改
+nrow(d): 求行数
+ncol(d): 求列数
+length(d): 求列数 
+as.matrix(df): 转换为矩阵
+head(df, n = 6): 默认打印前6行
+</code></pre>
+<h2 id="9">9. 数据类型的性质</h2>
+<h3 id="9-1">9. 1 存储模式与基本类型</h3>
+<p>R中数据的最基本的类型包括logical, integer, double, character, complex, raw, 其它数据类型都是由基本类型组合或转变得到的</p>
+<p>character类型就是字符串类型，raw类型是直接使用其二进制内容的类型。为了判断某个向量<code>x</code>保存的基本类型，可以用<code>is.xxx()</code>类函数，如<code>is.integer(x)</code>, <code>is.double(x)</code>, <code>is.numeric(x)</code>, <code>is.logical(x)</code>, <code>is.character(x)</code>, <code>is.complex(x)</code>, <code>is.raw(x)</code>。其中<code>is.numeric(x)</code>对integer和double内容都返回真值。</p>
+<pre><code class="language-r">typeof(1:3)
+## [1] &quot;integer&quot;
+typeof(c(1:3))
+## [1] &quot;integer&quot;
+typeof(c(1,2,3))
+## [1] &quot;double&quot;
+typeof(c(1,2,3,NA))
+## [1] &quot;double&quot;
+typeof('ABC')
+## [1] &quot;character&quot;
+typeof(factor(c('F', 'M', 'M', 'F')))
+## [1] &quot;integer&quot;
+</code></pre>
+<p>整数型的缺失值是<code>NA</code>，而double型的特殊值除了<code>NA</code>外，还包括<code>Inf</code>, <code>-Inf</code>和<code>NaN</code>，其中<code>NaN</code>也算是缺失值, <code>Inf</code>和<code>-Inf</code>不算是缺失值。</p>
+<pre><code class="language-r"># 对于double类型
+is.infinite(): 判断是否是Inf或-Inf
+is.finite(): 判断是否是NA，Inf，-Inf，NaN
+is.na(): 判断是否NA或NaN
+is.nan(): 判断是否NaN
+</code></pre>
+<p>在R的向量类型中，integer类型、double类型、logical类型、character类型、还有complex类型和raw类型称为原子类型(atomic types)，原子类型的向量中元素都是同一基本类型的。比如，double型向量的元素都是double或者缺失值。</p>
+<p>R有一个特殊的<code>NULL</code>类型，这个类型只有唯一的一个<code>NULL</code>值，表示不存在。<code>NULL</code>长度为0，不能有任何属性值。用<code>is.null()</code>函数判断某个变量是否取<code>NULL</code>。</p>
+<p><code>NULL</code>值可以用来表示类型未知的零长度向量，如<code>c()</code>没有自变量时返回值就是<code>NULL</code>； 也经常用作函数缺省值，在函数内用<code>is.null()</code>判断其缺省后再用一定的计算逻辑得到真正的缺省情况下的数值。</p>
+<p>要把<code>NULL</code>与<code>NA</code>区分开来，<code>NA</code>是有类型的（integer、double、logical、character等), <code>NA</code>表示存在但是未知。数据库管理系统中的NULL值相当于R中的NA值。</p>
+<h3 id="9-2">9. 2 类型转换与类型升档</h3>
+<p>可以用<code>as.xxx()</code>类的函数在不同类型之间进行强制转换。</p>
+<pre><code class="language-r">as.numeric(c(FALSE, TRUE)) # 0 1
+as.character(sqrt(1:4))
+</code></pre>
+<p>类型转换也可能是隐含的，比如，四则运算中数值会被统一转换为double类型，逻辑运算中运算元素会被统一转换为logical类型。</p>
+<p>逻辑值转换成数值时，<code>TRUE</code>转换成1，<code>FALSE</code>转换成0。</p>
+<p>在用<code>c()</code>函数合并若干元素时，如果元素基本类型不同，将统一转换成最复杂的一个，复杂程度从简单到复杂依次为：<code>logical&lt;integer&lt;double&lt;character</code>。</p>
+<p>这种做法称为类型升档</p>
+<h3 id="9-3">9. 3 属性</h3>
+<h4 id="9-3-1-attributes">9. 3. 1 attributes()</h4>
+<ul>
+<li>
+<p>除了<code>NULL</code>以外，R的变量都可以看成是对象，都可以有属性。</p>
+</li>
+<li>
+<p>在R语言中，属性是把变量看成对象后，除了其存储内容（如元素）之外的其它附加信息，如维数、类属等。R对象一般都有<code>length</code>和<code>mode</code>两个属性。</p>
+</li>
+<li>
+<p>常用属性有<code>names</code>, <code>dim</code>，<code>class</code>等。</p>
+</li>
+</ul>
+<p>对象<code>x</code>的所有属性可以用<code>attributes()</code>读取，也可以用<code>attributes()</code>函数修改属性</p>
+<pre><code class="language-r">x &lt;- array(1:24,dim=c(2,3,4))
+attributes(x) &lt;- NULL
+x
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+## [21] 21 22 23 24
+</code></pre>
+<h4 id="9-3-2-attrs">9. 3. 2 attrs()</h4>
+<p>可以用<code>attr(x, "属性名")</code>的格式读取或定义<code>x</code>的属性；可以让向量<code>x</code>额外地保存一个<code>theta</code>属性，这样的属性常常成为“元数据”(meta data)，比如，用来保存数据的说明、模拟数据的真实模型参数</p>
+<pre><code class="language-r">x &lt;- c(1,3,5)
+attr(x, &quot;theta&quot;) &lt;- c(0, 1)
+print(x)
+## [1] 1 3 5
+## attr(,&quot;theta&quot;)
+## [1] 0 1
+attributes(x)
+## $theta
+## [1] 0 1
+</code></pre>
+<h4 id="9-3-3-names">9. 3. 3 names属性</h4>
+<p>有元素名的向量、列表、数据框等都有<code>names</code>属性，许多R函数的输出本质上也是列表，所以也有<code>names</code>属性。</p>
+<h4 id="9-3-4-dim">9. 3. 4 dim属性</h4>
+<p><code>dim</code>属性的存在表明对象是矩阵或一维、多维数组</p>
+<p>R允许<code>dim</code>仅有一个元素，这对应于一维向量，与普通的没有<code>dim</code>属性的向量有区别。</p>
+<p>另外要注意，取矩阵子集时如果结果仅有一列或一行，除非用了<code>drop=FALSE</code>选项，结果不再有<code>dim</code>属性，退化成了普通向量。</p>
+<h3 id="9-4">9. 4 类属</h3>
+<p>R具有一定的面向对象语言特征，其数据类型有一个<code>class</code>属性，函数<code>class()</code>可以返回变量类型的类属</p>
+<pre><code class="language-r">typeof(factor(c('F', 'M', 'M', 'F'))) # &quot;integer&quot;
+class(factor(c('F', 'M', 'M', 'F')))  # &quot;factor&quot;
+class(as.numeric(factor(c('F', 'M', 'M', 'F')))) # &quot;numeric&quot;
+</code></pre>
+<p>class属性是特殊的。如果一个对象具有class属性，某些所谓“通用函数(generic functions)”会针对这样的对象进行专门的操作，比如，<code>print()</code>函数在显示向量和回归结果时采用完全不同的格式。这在其它程序设计语言中称为“重载”(overloading)。</p>
+<h3 id="9-5-str">9. 5 str()函数</h3>
+<p>用<code>str()</code>函数可以显示对象的类型和主要结构及典型内容</p>
+<pre><code class="language-r">s &lt;- 101:200
+attr(s,'author') &lt;- '李小明'
+attr(s,'date') &lt;- '2016-09-12'
+str(s)
+
+##  int [1:100] 101 102 103 104 105 106 107 108 109 110 ...
+##  - attr(*, &quot;author&quot;)= chr &quot;李小明&quot;
+##  - attr(*, &quot;date&quot;)= chr &quot;2016-09-12&quot;
+</code></pre>
+<h2 id="10">10. 工作空间与变量赋值</h2>
+<ul>
+<li>用<code>ls()</code>命令可以查看工作空间中的内容</li>
+<li>
+<p>用<code>rm()</code>函数删除工作空间中的变量</p>
+</li>
+<li>
+<p>R的变量名要求由<strong>字母、数字、下划线、小数点</strong>组成，开头不能是数字、下划线、小数点，中间不能使用空格、减号、井号等特殊符号，变量名不能与<code>if</code>、<code>NA</code>等保留字相同</p>
+</li>
+<li>有时为了与其它软件系统兼容，需要使用不符合规则的变量名，这只要将变量名两边用反向单撇号“` ”保护</li>
+<li>
+<p>如果变量名（元素名、列名等）是以字符串形式使用，就不需要用“`”保护，如x &lt;- c("score a"=85, "score b"=66)</p>
+</li>
+<li>
+<p>在R中赋值本质上是把一个存储的对象与一个变量名“绑定”(bind)在一起</p>
+</li>
+<li>对于<code>x &lt;- c(1,2,3)</code>，实际上，<code>&lt;-</code>右边的<code>c(1,2,3)</code>是一个表达式，其结果为一个R对象(object)，而<code>x</code>只是一个变量名，并没有固定的类型、固定的存储位置，赋值的结果是将<code>x</code>绑定到值为<code>(1,2,3)</code>的R对象上</li>
+<li>R对象有值，但不必有对应的变量名； 变量名必须经过绑定才有对应的值和存储位置</li>
+<li>同一个R对象可以被两个或多个变量名绑定</li>
+<li>对于基本的数据类型如数值型向量，两个指向相同对象的变量当一个变量被修改时自动制作副本</li>
+<li><code>tracemem(x)</code>可以显示变量名<code>x</code>绑定的地址并在其被制作副本时显示地址变化</li>
+</ul>
+<pre><code class="language-r">x &lt;- c(1,2,3)
+cat(tracemem(x), &quot;\n&quot;)
+## &lt;0000000018288290&gt;
+
+y &lt;- x    # 这时y和x绑定到同一R对象
+cat(tracemem(y), &quot;\n&quot;)
+## &lt;0000000018288290与x一样
+
+y[3] &lt;- 0 # 这时y制作了副本
+## tracemem[0x0000000018288290 -0x00000000183c5190]:..
+x
+## [1] 1 2 3
+y
+## [1] 1 2 0
+untracemem(x); untracemem(y)
+可见y &lt;- x并没有制作副本，但是修改y[3]值时就对y制作了副本
+</code></pre>
+<p>如果某个变量名所指向的对象没有被其他变量名绑定，则修改其元素值并不需要制作副本</p>
+<pre><code class="language-r">x &lt;- c(1,2,3)
+cat(tracemem(x), &quot;\n&quot;)
+## &lt;00000000188C09D0&gt;
+x[3] &lt;- 0
+## tracemem[0x00000000188c09d0 -0x000000001895b270]:..
+x
+## [1] 1 2 0
+untracemem(x)
+</code></pre>
+<p>在调用函数时，如果函数内部不修改自变量的元素值，输入的自变量并不制作副本，而是直接被函数使用实参绑定的对象。</p>
+<pre><code class="language-r">x &lt;- c(1,2,3)
+cat(tracemem(x), &quot;\n&quot;)
+## &lt;0000000018DA05A0&gt;
+f &lt;- function(v){ return(v) }
+z &lt;- f(x)
+cat(tracemem(z), &quot;\n&quot;)
+## &lt;0000000018DA05A0与x相同
+untracemem(x); untracemem(z)
+
+从上面的例子可以看出，函数f以x为实参，但不修改x的元素，不会生成x的副本，返回的值是x指向的对象本身，再次赋值给z，也不制作副本，z和x绑定到同一对象
+</code></pre>
+<p>如果函数内部修改自变量的元素值，则输入的自变量也会制作副本</p>
+<pre><code class="language-r">x &lt;- c(1,2,3)
+cat(tracemem(x), &quot;\n&quot;)
+## &lt;000000001931EE70&gt;
+f2 &lt;- function(v){ v[1] &lt;- -999; return(v) }
+z &lt;- f2(x)
+## tracemem[0x000000001931ee70 -0x00000000193d8880]:..
+cat(tracemem(z), &quot;\n&quot;)
+## &lt;00000000193D8880与变化后的x相同
+untracemem(x); untracemem(z)
+
+从程序输出看，函数f2()以x为实参，并修改x的内部元素，就制作了x的副本，返回的结果赋给变量z，绑定的是修改后的副本
+</code></pre>
+<p>如果在函数中对自变量重新赋值，这实际是重新绑定，也不会制作输入的实参的副本。</p>
+<pre><code class="language-r">x &lt;- c(1,2,3)
+cat(tracemem(x), &quot;\n&quot;)
+## &lt;000001698AA77730
+f2 &lt;- function(v){ v &lt;- -999; return(v) }
+z &lt;- f2(x)
+cat(tracemem(z), &quot;\n&quot;)
+## &lt;0000016989BDB780
+untracemem(x); untracemem(z)
+
+可以看见x地址并没有变化
+</code></pre>
+<p>如果修改<code>x</code>的元素值时还修改了其存储类型，比如整型改为浮点型，则会先制作<code>x</code>的副本，然后制作类型改变后的副本，然后再修改其中的元素值</p>
+<pre><code class="language-r">x &lt;- c(1,2,3)
+cat(tracemem(x), &quot;\n&quot;)
+## &lt;000001698CA2B108
+f2 &lt;- function(v){ v[1] &lt;- FALSE; return(v) }
+z &lt;- f2(x)
+## tracemem[0x000001698ca2b108 -0x0000016988bc8aa8]:..
+cat(tracemem(z), &quot;\n&quot;)
+## &lt;0000016988BC8AA8
+untracemem(x); untracemem(z)
+x
+## [1] 1 2 3
+
+可见x地址发生变化但内容不变，且地址和z不同
+</code></pre>
+<p>在当前的R语言中，一个对象的引用（如绑定的变量名）个数，只区分0个、1个或多个这三种情况。在没有引用时，R的垃圾收集器会定期自动清除这些对象。<code>rm(x)</code>只是删除绑定，并不会马上清除<code>x</code>绑定的对象。如果已经有多个引用，即使是只有2个，减少一个引用也还是“多个”状态，不会变成1个</p>
+<p>垃圾收集器是在R程序要求分配新的对象空间时自动运行的，R函数<code>gc()</code>可以要求马上运行垃圾收集器，并返回当前程序用道的存储量； lobstr包的<code>mem_used()</code>函数则报告当前会话内存字节数。</p>
+<p>在上面的示例中，用了基本类型的向量讲解是否制作副本。考虑其它类型的复制。</p>
+<p>如果<code>x</code>是一个有5个元素的列表，则<code>y &lt;- x</code>使得<code>y</code>和<code>x</code>指向同一个列表对象。但是，列表对象的每个元素实际上也相当于一个绑定，每个元素指向一个元素值对象。所以如果修改<code>y</code>：<code>y[[3]] &lt;- 0</code>，这时列表<code>y</code>首先被制作了副本，但是每个元素指向的元素值对象不变，仍与<code>x</code>的各个元素指向的对象相同； 然后，<code>y[[3]]</code>指向的元素值进行了重新绑定，不再指向<code>x[[3]]</code>，而是指向新的保存了值<code>0</code>的对象，但<code>y</code>的其它元素指向的对象仍与<code>x</code>公用。列表的这种复制方法称为浅拷贝，表格对象及各个元素绑定被复制，但各个元素指向（保存）的对象不变。这种做法节省空间也节省运行时间。在R的3.1.0之前则用的深拷贝方法，即复制列表时连各个元素保存的值也制作副本。</p>
+<p>如果<code>x</code>是一个数据框，这类似于一个列表，每个变量相当于一个列表元素，数据框的每一列实际绑定到一个对象上。如果<code>y &lt;- x</code>，则修改<code>y</code>的某一列会对<code>y</code>进行浅拷贝，然后仅该列被制作了副本并被修改，其它未修改的列仍与<code>x</code>共用值对象。</p>
+<p>但是如果修改数据框<code>y</code>的一行，因为这涉及到所有列，所以整个数据框的所有列都会制作副本。</p>
+<p>对于字符型向量，实际上R程序的所有字符型常量都会建立一个全局字符串池，这样有许多重复值时可以节省空间。</p>
+<p>用lobstr包的<code>obj_size()</code>函数可以求变量的存储大小，如<code>obj_size(x)</code>，也可以求若干个变量的总大小，如<code>obj_size(x,y)</code>。因为各种绑定到同一对象的可能性，所以变量的存储大小可能会比想象要少，比如，共用若干列的两个数据框，字符型向量，等等。基本R软件的<code>object.size()</code>则不去检查是否有共享对象，所以对列表等变量的存储大小估计可能会偏高。</p>
+<p>从R 3.5.0版开始，<code>1:n</code>这种对象仅保存其开始值和结束值。</p>
+<p>在自定义函数时，自变量通常是按引用使用的，函数内部仅使用自变量的值而不对其进行修改时不会制作副本，但是如果函数内部修改了自变量的值，就会制作副本，当自变量的存储很大而且返回调用这个函数时就会造成运行速度缓慢。在函数内应慎重修改自变量的值。</p>
+<p>在循环中修改数据框的列，也会造成反复的复制。</p>
+<h2 id="reference">Reference</h2>
+<p>https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../Experiment/experiment-2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: experiment-2" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              experiment-2
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../DataAnalysis/" class="md-footer__link md-footer__link--next" aria-label="下一页: DataAnalysis" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              DataAnalysis
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

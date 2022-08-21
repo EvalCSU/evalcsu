@@ -1,0 +1,3150 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>dataOp - EvalCSU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-operation" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="EvalCSU" class="md-header__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EvalCSU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              dataOp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/evalcsu/" class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-tabs__link">
+        评教
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        笔记
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/zh-simplify/contribution/" class="md-tabs__link">
+      贡献指南
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/join/" class="md-tabs__link">
+      加入我们
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="EvalCSU" class="md-nav__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    EvalCSU
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/evalcsu/" class="md-nav__link">
+        EvalCSU
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          评教
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="评教" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          评教
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-nav__link">
+        计算机科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/bigdata/" class="md-nav__link">
+        大数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/security/" class="md-nav__link">
+        信息安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/iot/" class="md-nav__link">
+        物联网
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/software/" class="md-nav__link">
+        软件工程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/automation/" class="md-nav__link">
+        自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/electronic_information/" class="md-nav__link">
+        电子工程及其自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/intelligence/" class="md-nav__link">
+        智能科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_2" type="checkbox" id="__nav_3_1_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_2">
+          数据库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据库
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment1/" class="md-nav__link">
+        experiment1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment2/" class="md-nav__link">
+        experiment2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3" type="checkbox" id="__nav_3_1_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Oracle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_1" type="checkbox" id="__nav_3_1_2_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-3/" class="md-nav__link">
+        experiment-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-4/" class="md-nav__link">
+        experiment-4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Experiment/experiment-5/" class="md-nav__link">
+        experiment-5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_2" type="checkbox" id="__nav_3_1_2_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Execution_Plan/" class="md-nav__link">
+        Execution_Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Oracle_Architecture/" class="md-nav__link">
+        Oracle_Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/Oracle_Schema/" class="md-nav__link">
+        Oracle_Schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/PL_SQL1/" class="md-nav__link">
+        PL_SQL1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/Note/PL_SQL2/" class="md-nav__link">
+        PL_SQL2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Oracle/" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4" type="checkbox" id="__nav_3_1_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4">
+          R语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R语言" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          R语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_1" type="checkbox" id="__nav_3_1_2_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_2" type="checkbox" id="__nav_3_1_2_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BasicStructure/" class="md-nav__link">
+        BasicStructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DataAnalysis/" class="md-nav__link">
+        DataAnalysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          dataOp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        dataOp
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    创建新变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    变量重编码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    变量的重命名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    缺失值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    日期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    类型转换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    排序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    合并
+  </a>
+  
+    <nav class="md-nav" aria-label="合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 添加列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 添加行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    子集操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    随机抽样
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    常用函数
+  </a>
+  
+    <nav class="md-nav" aria-label="常用函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-p86-p88" class="md-nav__link">
+    1. 数学函数P86 统计函数P88
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scale" class="md-nav__link">
+    2. scale()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 概率函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-p93" class="md-nav__link">
+    4. 字符处理函数P93
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 其他实用函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 批量操作函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 聚合函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-t" class="md-nav__link">
+    8. 转置t()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML/" class="md-nav__link">
+        ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plot/" class="md-nav__link">
+        Plot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        R-language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_5" type="checkbox" id="__nav_3_1_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_5">
+          Web 技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web 技术" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web 技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web-technology/web-lab-report/" class="md-nav__link">
+        web-lab-report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          信息安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信息安全" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          信息安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_2" type="checkbox" id="__nav_3_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_2">
+          网络安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="网络安全" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          网络安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/arp-spoofing/" class="md-nav__link">
+        ARP 嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/bgp-route-hijacking/" class="md-nav__link">
+        BGP 路由劫持
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dns-server/" class="md-nav__link">
+        DNS 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dos/" class="md-nav__link">
+        Dos 拒绝服务攻击
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/ipsec/" class="md-nav__link">
+        IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/mail-relay/" class="md-nav__link">
+        邮件中继
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/onetime-password/" class="md-nav__link">
+        一次性口令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/remote-security-authentication/" class="md-nav__link">
+        远程安全认证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/routing-protocol/" class="md-nav__link">
+        路由协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/salt-value/" class="md-nav__link">
+        盐值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/syn-cookies/" class="md-nav__link">
+        SYN-Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/tls-ssl/" class="md-nav__link">
+        TSL / SSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_3" type="checkbox" id="__nav_3_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_3">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/software/MiCode-Note/" class="md-nav__link">
+        小米笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          自动化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/" class="md-nav__link">
+        概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_2" type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据结构" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/graph-traval.md" class="md-nav__link">
+        图遍历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/Huffman/" class="md-nav__link">
+        哈夫曼编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="智能科学与技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          智能科学与技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/intelligence/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/zh-simplify/contribution/" class="md-nav__link">
+        贡献指南
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/join/" class="md-nav__link">
+        加入我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    创建新变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    变量重编码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    变量的重命名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    缺失值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    日期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    类型转换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    排序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    合并
+  </a>
+  
+    <nav class="md-nav" aria-label="合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 添加列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 添加行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    子集操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    随机抽样
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    常用函数
+  </a>
+  
+    <nav class="md-nav" aria-label="常用函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-p86-p88" class="md-nav__link">
+    1. 数学函数P86 统计函数P88
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scale" class="md-nav__link">
+    2. scale()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 概率函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-p93" class="md-nav__link">
+    4. 字符处理函数P93
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 其他实用函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 批量操作函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 聚合函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-t" class="md-nav__link">
+    8. 转置t()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Jacob953/evalcsu/edit/master/docs/faculty/cse/bigdata/R-language/Note/dataOp.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="data-operation">Data Operation</h1>
+<pre><code class="language-R">name &lt;- c(&quot;Alex&quot;, &quot;Rosie&quot;, &quot;Greg&quot;)
+gender &lt;- c(&quot;M&quot;, &quot;W&quot;, &quot;M&quot;)
+age &lt;- c(18,19,20)
+a_score &lt;- c(98, 99, 100)
+b_score &lt;- c(1, 2, 3)
+df &lt;- data.frame(name, gender, age, a_score, b_score)
+</code></pre>
+<h2 id="_1">创建新变量</h2>
+<p><code>transform(df, ...)</code>: 对<code>df</code>进行<code>...</code>操作</p>
+<pre><code class="language-r">df &lt;- transform(df, age = age + 1, avg_score = (a_score+b_score)/2)
+   name gender age a_score b_score avg_score
+1  Alex      M  19      98       1      49.5
+2 Rosie      W  20      99       2      50.5
+3  Greg      M  21     100       3      51.5
+</code></pre>
+<h2 id="_2">变量重编码</h2>
+<pre><code class="language-r"># 未指定区间
+grades &lt;- c(&quot;D&quot;, &quot;C&quot;, &quot;B&quot;, &quot;A&quot;)
+tmp &lt;- quantile(stu_tot, probs=c(0.4, 0.6, 0.8))
+break_pts &lt;- c(-Inf, tmp, Inf)
+score_level &lt;- cut(scores, break_pts, labels=grades, ordered_result=TRUE)
+
+# 指定区间
+scores &lt;- c(50, 70, 93, 67)
+grades &lt;- c(&quot;F&quot;, &quot;D&quot;, &quot;C&quot;, &quot;B&quot;, &quot;A&quot;)
+break_pts &lt;- c(-Inf, 60, 70, 80, 90, Inf)
+score_level &lt;- cut(scores, break_pts, labels=grades, ordered_result=TRUE)
+</code></pre>
+<p>注意</p>
+<pre><code class="language-r">cut(x, breaks, labels = NULL,
+    include.lowest = FALSE, right = TRUE, dig.lab = 3,
+    ordered_result = FALSE, …)
+
+right=T 表示左开右闭
+right=F 表示左闭右开
+</code></pre>
+<p>补充</p>
+<pre><code class="language-r">pretty(x, …)
+# S3 method for default
+pretty(x, n = 5, min.n = n %/% 3,  shrink.sml = 0.75,
+       high.u.bias = 1.5, u5.bias = .5 + 1.5*high.u.bias,
+       eps.correct = 0, …)
+
+n
+integer giving the desired number of intervals. Non-integer values are rounded down.
+
+min.n
+nonnegative integer giving the minimal number of intervals. If min.n == 0, pretty(.) may return a single value.
+
+pretty(1:15)                    # 0  2  4  6  8 10 12 14 16
+pretty(1:15, high.u.bias = 2)   # 0  5 10 15
+pretty(1:15, n = 4)             # 0  5 10 15
+pretty(1:15 * 2)                # 0  5 10 15 20 25 30
+pretty(1:20)                    # 0  5 10 15 20
+pretty(1:20, n = 2)             # 0 10 20
+pretty(1:20, n = 10)            # 0  2  4 ... 20
+</code></pre>
+<h2 id="_3">变量的重命名</h2>
+<pre><code class="language-r"># 法一
+fix(df) # 跳出来一个编辑框
+
+# 法二
+names(df)[1] &lt;- &quot;sname&quot;
+
+# 法三
+install.packages(&quot;plyr&quot;)
+library(plyr)
+df &lt;- rename(df, c(name=&quot;sname&quot;, age=&quot;sage&quot;))
+</code></pre>
+<h2 id="_4">缺失值</h2>
+<ul>
+<li><code>df == NA</code>永远不会为T，因为<code>NA</code>不可比</li>
+<li>R不会把<code>Inf</code>或<code>NaN</code>标记为<code>NA</code></li>
+</ul>
+<pre><code class="language-r">is.na(c(1,2,3))
+## [1] FALSE FALSE FALSE
+is.na(df)
+      name gender   age a_score b_score
+[1,] FALSE  FALSE FALSE   FALSE   FALSE
+[2,] FALSE  FALSE FALSE   FALSE   FALSE
+[3,] FALSE  FALSE FALSE   FALSE   FALSE
+
+df$test &lt;- NA
+df
+##    name gender age a_score b_score test
+## 1  Alex      M  18      98       1   NA
+## 2 Rosie      W  19      99       2   NA
+## 3  Greg      M  20     100       3   NA
+df[is.na(df)]
+## [1] NA NA NA
+df[is.na(df)] &lt;- T
+df
+##    name gender age a_score b_score test
+## 1  Alex      M  18      98       1 TRUE
+## 2 Rosie      W  19      99       2 TRUE
+## 3  Greg      M  20     100       3 TRUE
+</code></pre>
+<h2 id="_5">日期</h2>
+<p><img src="../images/日期格式.jpg" alt="avatar" style="zoom: 50%;" /></p>
+<pre><code class="language-r"># 获得当前日期
+Sys.Date()
+## [1] &quot;2021-10-24&quot;
+date()
+## [1] &quot;Sun Oct 24 20:34:34 2021&quot;
+
+# 字符串转换为日期
+as.Date(c(&quot;1970-1-5&quot;, &quot;2017-9-12&quot;))
+as.Date(&quot;1/5/1970&quot;, format=&quot;%m/%d/%Y&quot;)
+# 默认format=yyyy-mm-dd
+
+# 指定输出形式
+format(Sys.Date(), format=&quot;%B %d %Y&quot;)
+## [1] &quot;十月 24 2021&quot;
+
+# 算术运算
+sdate &lt;- as.Date(&quot;2021-02-13&quot;)
+edate &lt;- as.Date(&quot;2022-02-13&quot;)
+days &lt;- edate - sdate
+days
+## Time difference of 365 days
+# 或
+difftime(edate, sdate, units=&quot;weeks&quot;)
+## Time difference of 52.14286 weeks
+
+# 逻辑运算
+sdate &gt; edate
+## [1] FALSE
+
+# 日期转换为字符串
+sdate &lt;- as.character(Sys.Date())
+sdate
+## [1] &quot;2021-10-24&quot;
+</code></pre>
+<h2 id="_6">类型转换</h2>
+<p><code>is.numeric()</code> <code>as.numeric()</code></p>
+<h2 id="_7">排序</h2>
+<p>一些绘图需要排序预处理，如打乱的时序数据</p>
+<pre><code class="language-r"># order() 默认是升序，加一个减号变为降序
+new_df &lt;- df[order(df$a_score, -df$b_score),]
+# 优先按a_score升序，若a_score相同则按b_score降序
+</code></pre>
+<h2 id="_8">合并</h2>
+<h3 id="1">1. 添加列</h3>
+<p><img src="../images/merge.jpg" alt="avatar" style="zoom: 67%;" /></p>
+<pre><code class="language-r">id1 &lt;- c(2, 3, 4, 5, 7)
+heights &lt;- c(62, 65, 71, 71, 67)
+df1 &lt;- data.frame(id = id1, heights)
+
+id2 &lt;- c(1, 2, 6:10)
+weights &lt;- c(147, 113, 168, 135, 142, 159, 160)
+df2 &lt;- data.frame(id = id2, weights)
+
+df1
+##   id heights
+## 1  2      62
+## 2  3      65
+## 3  4      71
+## 4  5      71
+## 5  7      67
+
+df2
+##   id weights
+## 1  1     147
+## 2  2     113
+## 3  6     168
+## 4  7     135
+## 5  8     142
+## 6  9     159
+## 7 10     160
+
+merge(df1, df2, all = FALSE) # colnames(df1) ∩ colnames(df2) = id
+##   id heights weights
+## 1  2      62     113
+## 2  7      67     135
+
+merge(df2, df1, all = FALSE)
+##   id weights heights
+## 1  2     113      62
+## 2  7     135      67
+
+merge(df1, df2, by = &quot;id&quot;, all = TRUE)
+##    id heights weights
+## 1   1      NA     147
+## 2   2      62     113
+## 3   3      65      NA
+## 4   4      71      NA
+## 5   5      71      NA
+## 6   6      NA     168
+## 7   7      67     135
+## 8   8      NA     142
+## 9   9      NA     159
+## 10 10      NA     160
+
+merge(df1, df2, by = &quot;id&quot;, all.x = TRUE)
+##   id heights weights
+## 1  2      62     113
+## 2  3      65      NA
+## 3  4      71      NA
+## 4  5      71      NA
+## 5  7      67     135
+
+merge(df1, df2, by = &quot;id&quot;, all.y = TRUE)
+##   id heights weights
+## 1  1      NA     147
+## 2  2      62     113
+## 3  6      NA     168
+## 4  7      67     135
+## 5  8      NA     142
+## 6  9      NA     159
+## 7 10      NA     160
+</code></pre>
+<pre><code class="language-r"># 按行名进行合并
+z &lt;- matrix(c(0,0,1,1,0,0,1,1,0,0,0,0,1,0,1,1,0,1,1,1,1,0,0,0,&quot;RND1&quot;,&quot;WDR&quot;, &quot;PLAC8&quot;,&quot;TYBSA&quot;,&quot;GRA&quot;,&quot;TAF&quot;), nrow=6, dimnames=list(c(&quot;ILMN_1651838&quot;,&quot;ILMN_1652371&quot;,&quot;ILMN_1652464&quot;,&quot;ILMN_1652952&quot;,&quot;ILMN_1653026&quot;,&quot;ILMN_1653103&quot;),c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;symbol&quot;)))
+
+t&lt;-matrix(c(&quot;GO:0002009&quot;, 8, 342, 1, 0.07, 0.679, 0, 0, 1, 0, 
+        &quot;GO:0030334&quot;, 6, 343, 1, 0.07, 0.065, 0, 0, 1, 0,
+        &quot;GO:0015674&quot;, 7, 350, 1, 0.07, 0.065, 1, 0, 0, 0), nrow=10, dimnames= list(c(&quot;GO.ID&quot;,&quot;LEVEL&quot;,&quot;Annotated&quot;,&quot;Significant&quot;,&quot;Expected&quot;,&quot;resultFisher&quot;,&quot;ILMN_1652464&quot;,&quot;ILMN_1651838&quot;,&quot;ILMN_1711311&quot;,&quot;ILMN_1653026&quot;)))
+
+&gt; z
+             A   B   C   D   symbol 
+ILMN_1651838 &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;RND1&quot; 
+ILMN_1652371 &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;WDR&quot;  
+ILMN_1652464 &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;PLAC8&quot;
+ILMN_1652952 &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;TYBSA&quot;
+ILMN_1653026 &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;GRA&quot;  
+ILMN_1653103 &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;TAF&quot;  
+
+&gt; t
+             [,1]         [,2]         [,3]        
+GO.ID        &quot;GO:0002009&quot; &quot;GO:0030334&quot; &quot;GO:0015674&quot;
+LEVEL        &quot;8&quot;          &quot;6&quot;          &quot;7&quot;         
+Annotated    &quot;342&quot;        &quot;343&quot;        &quot;350&quot;       
+Significant  &quot;1&quot;          &quot;1&quot;          &quot;1&quot;         
+Expected     &quot;0.07&quot;       &quot;0.07&quot;       &quot;0.07&quot;      
+resultFisher &quot;0.679&quot;      &quot;0.065&quot;      &quot;0.065&quot;     
+ILMN_1652464 &quot;0&quot;          &quot;0&quot;          &quot;1&quot;         
+ILMN_1651838 &quot;0&quot;          &quot;0&quot;          &quot;0&quot;         
+ILMN_1711311 &quot;1&quot;          &quot;1&quot;          &quot;0&quot;         
+ILMN_1653026 &quot;0&quot;          &quot;0&quot;          &quot;0&quot;  
+
+cbind(t, z[, &quot;symbol&quot;][match(rownames(t), rownames(z))])
+             [,1]         [,2]         [,3]         [,4]   
+GO.ID        &quot;GO:0002009&quot; &quot;GO:0030334&quot; &quot;GO:0015674&quot; NA     
+LEVEL        &quot;8&quot;          &quot;6&quot;          &quot;7&quot;          NA     
+Annotated    &quot;342&quot;        &quot;343&quot;        &quot;350&quot;        NA     
+Significant  &quot;1&quot;          &quot;1&quot;          &quot;1&quot;          NA     
+Expected     &quot;0.07&quot;       &quot;0.07&quot;       &quot;0.07&quot;       NA     
+resultFisher &quot;0.679&quot;      &quot;0.065&quot;      &quot;0.065&quot;      NA     
+ILMN_1652464 &quot;0&quot;          &quot;0&quot;          &quot;1&quot;          &quot;PLAC8&quot;
+ILMN_1651838 &quot;0&quot;          &quot;0&quot;          &quot;0&quot;          &quot;RND1&quot; 
+ILMN_1711311 &quot;1&quot;          &quot;1&quot;          &quot;0&quot;          NA     
+ILMN_1653026 &quot;0&quot;          &quot;0&quot;          &quot;0&quot;          &quot;GRA&quot;  
+</code></pre>
+<pre><code class="language-r">df1 &lt;- data.frame(name, age, gender)
+df2 &lt;- data.frame(name, a_score, b_score)
+df  &lt;- merge(df1, df2, by=&quot;name&quot;)
+   name age gender a_score b_score
+1  Alex  18      M      98       1
+2  Greg  20      M     100       3
+3 Rosie  19      W      99       2
+# dff &lt;- merge(df1, df2, by=c(&quot;name&quot;, &quot;age&quot;)) 也有这样的语法
+
+# 直接合并，不指定索引
+df &lt;- cbind(df1, df2)
+   name age gender  name a_score b_score
+1  Alex  18      M  Alex      98       1
+2 Rosie  19      W Rosie      99       2
+3  Greg  20      M  Greg     100       3
+</code></pre>
+<h3 id="2">2. 添加行</h3>
+<p>两个<code>df</code>必须拥有相同的变量。不过顺序不必相同</p>
+<pre><code class="language-r">df1 &lt;- data.frame(name, age, gender)
+df2 &lt;- data.frame(name, age, gender)
+df  &lt;- rbind(df1, df2)
+</code></pre>
+<h2 id="_9">子集操作</h2>
+<p>访问见 Grammar</p>
+<p>丢弃变量</p>
+<pre><code class="language-r"># 丢弃name与gender列
+# 法一
+tmp &lt;- names(df) %in% c(&quot;name&quot;, &quot;gender&quot;)
+new_df &lt;- df[!tmp]
+
+# 法二
+df$name &lt;- df$gender &lt;- NULL
+</code></pre>
+<h2 id="_10">随机抽样</h2>
+<pre><code class="language-r"># 从第一行到最后一行中，随机抽2个，无放回
+mysample &lt;- df[sample(1:nrow(df), 2, replace=F), ]
+</code></pre>
+<h2 id="sql">SQL语句</h2>
+<pre><code class="language-r">install.packages('sqldf')
+library(sqldf)
+new_df &lt;- sqldf('select * from df where name=\'Alex\'', row.names=T) # 保留行名
+</code></pre>
+<h2 id="_11">常用函数</h2>
+<h3 id="1-p86-p88">1. 数学函数P86 统计函数P88</h3>
+<h3 id="2-scale">2. <code>scale()</code></h3>
+<ul>
+<li>归一化 默认均值为0 方差为1</li>
+<li>存在非数值列会报错</li>
+</ul>
+<pre><code class="language-r">new_df &lt;- scale(df) 
+# 若要化为均值为M，方差为SD
+new_df &lt;- scale(df) * SD + M
+# 若想要只针对某个列（col_name）进行标准化
+new_df &lt;- transform(df, col_name=scale(col_name)*SD+M)
+</code></pre>
+<h3 id="3">3. 概率函数</h3>
+<pre><code class="language-r">set.seed(1234) # 指定种子，用于复现，但只是一次性的，每次随机都要重新指定
+runif(5) # 生成5个服从均匀分布U(0,1)的伪随机数
+runif(5, min=0, max=100) # U[0, 100]
+rnorm(10) # 生成标准正态分布的随机数
+rnorm(10,mean=1,sd=4) # 生成...随机数 sd是标准差
+mvrnorm(100, mu=mean, Sigma=sigma) # 生成100个服从N(mean, sigma)
+# mean是平均值向量，sigma是协方差矩阵
+
+dnorm(0) # 表示标准正态分布密度 就是咱们记得表达式，像凸字形
+## [1] 0.3989423
+pnorm(0) # 标准正态分布函数 形似 sigmoid
+## [1] 0.5
+</code></pre>
+<p><code>sample(x, size, replace = FALSE, prob = NULL)</code>：从 x 中选 size 个</p>
+<ul>
+<li>size: 个数</li>
+<li>replace: 若为T，则有放回的抽</li>
+</ul>
+<h3 id="4-p93">4. 字符处理函数P93</h3>
+<h3 id="5">5. 其他实用函数</h3>
+<pre><code class="language-r">option(digits=2) # 后续都保留两位小数
+
+x &lt;- 1:10
+length(x)
+## [1] 10
+m &lt;- matrix(1:20, nrow=4)
+length(m)
+## [1] 20
+df &lt;- data.frame(name=c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;), score=1:3)
+length(df)
+## [1] 2
+arr &lt;- array(1:20, dim=c(2,2,5))
+length(arr)
+## [1] 20
+
+cut(x, 5) # 分割为一个有着5个水平的因子
+##  [1] (0.991,2.8] (0.991,2.8] (2.8,4.6]   (2.8,4.6]   (4.6,6.4]  
+## [6] (4.6,6.4]   (6.4,8.2]   (6.4,8.2]   (8.2,10]    (8.2,10]   
+## 5 Levels: (0.991,2.8] (2.8,4.6] (4.6,6.4] ... (8.2,10]
+cut(x, breaks=0:3)
+##  [1] (0,1] (1,2] (2,3] &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
+## Levels: (0,1] (1,2] (2,3]
+
+labels = c(&quot;差&quot;, &quot;中&quot;, &quot;优&quot;)
+cut(x, breaks=0:3, labels)
+##  [1] 差   中   优   &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## Levels: 差 中 优
+
+cut(x, breaks=0:3, labels, ordered_result=TRUE)
+##  [1] 差   中   优   &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## Levels: 差 &lt; 中 &lt; 优
+
+pretty(x, 5) # 创建美观的分割点
+## [1]  0  2  4  6  8 10
+
+quantile(x, c(.8, .6, .4, .2)) # 返回一根向量
+## 80% 60% 40% 20% 
+## 8.2 6.4 4.6 2.8
+
+x &lt;- list(1:2, 'aaa', matrix(1:20,nrow=4))
+&quot;[&quot;(x, 2) # 返回x的第二个元素，仍是列表
+## [[1]]
+## [1] &quot;aaa&quot;
+
+cat(&quot;我后面会有一个空格&quot;, &quot;我前面有一个空格&quot;, &quot;不会自动\n换行&quot;)
+## 我后面会有一个空格 我前面有一个空格 不会自动
+## 换行
+
+cat(..., file='xxx', append=FALSE)
+</code></pre>
+<h3 id="6">6. 批量操作函数</h3>
+<p><img alt="image-20211214230501455" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202112142305637.png" /></p>
+<p><code>apply(x, MARGIN, FUN)</code></p>
+<p>输入一个<code>df</code>或<code>matrix</code>，输出<code>vector</code>或<code>list</code>或<code>array</code></p>
+<p>MARGIN=1表示行，MARGIN=2表示列</p>
+<p>若MARGIN=1，则表示对x的每一行进行FUN操作</p>
+<p>即 MARGIN 为多少，就保留这些维度，即若 MARGIN = c(1, 2)，那么最后的 shape 是 (len(第一维度), len(第二维度))</p>
+<pre><code class="language-R">apply(X,       # Array, matrix or data frame
+      MARGIN,  # 1: columns, 2: rows, c(1, 2): rows and columns
+      FUN,     # Function to be applied
+      ...)     # Additional arguments to FUN
+</code></pre>
+<pre><code class="language-r">m &lt;- matrix(1:20, nrow=4)
+apply(m, 1, mean) # 对每一行求平均值
+apply(m, 1, mean, trim=0.2) # 对每一行的20%~80%的部分求平均
+
+x &lt;- array(1:24, c(3,4,2))
+apply(x, c(1, 2), sum) # 在第三维度值求和
+     [,1] [,2] [,3] [,4]
+[1,]   14   20   26   32
+[2,]   16   22   28   34
+[3,]   18   24   30   36
+
+# Example
+# 给出有2列的矩阵，求斜边长
+apply(m, 1, function(x) sqrt(sum(x^2)))
+</code></pre>
+<p><code>sapply(x, FUN, options)</code></p>
+<p>返回一个长度与 X 一致的向量(通过<code>length()</code>函数可以反向推出处理的单元)，每个元素为 FUN 计算出的结果，且分别对应到X中的每个元素。</p>
+<pre><code class="language-r">sapply(X,   # Vector, list or expression object
+       FUN, # Function to be applied
+       ..., # Additional arguments to be passed to FUN
+       simplify = TRUE,  # If FALSE returns a list. If &quot;array&quot; returns an array if possible 
+       USE.NAMES = TRUE) # If TRUE and if X is a character vector, uses the names of X
+</code></pre>
+<pre><code class="language-r"># 输入列表
+l &lt;- list(a=1:10, b=matrix(1:20, nrow=4))
+sapply(l, sum)
+##  a   b 
+## 55 210
+
+# 输入向量
+movies &lt;- c(&quot;SPYDERMAN&quot;,&quot;BATMAN&quot;,&quot;VERTIGO&quot;,&quot;CHINATOWN&quot;)
+movies_lower &lt;-sapply(movies, tolower)
+movies_lower
+##   SPYDERMAN      BATMAN     VERTIGO   CHINATOWN 
+## &quot;spyderman&quot;    &quot;batman&quot;   &quot;vertigo&quot; &quot;chinatown&quot;
+tolower(movies)
+## [1] &quot;spyderman&quot; &quot;batman&quot;    &quot;vertigo&quot;   &quot;chinatown&quot;
+
+# 输入df
+df
+##   age score
+## 1  18    99
+## 2  19    98
+## 3  20    97
+sapply(df, sum)
+## age score 
+##  57   294
+
+# 输入矩阵
+m &lt;- matrix(1:20, nrow=4)
+sapply(m, sum)
+## [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+# 事与愿违是因为
+length(m)
+## [1] 20
+sum(m)
+## [1] 210
+mean(m)
+## [1] 10.5
+
+# FUN使用参数
+sapply(x, &quot;[&quot;, 2) # 若x是一个列表，则取列表中每一个元素的第2个元素 见课本P99
+
+# 可以基于这个实现向量切片
+below_ave &lt;- function(x) {
+    ave &lt;- mean(x)
+    return(x[x &gt; ave])
+}
+dt_s &lt;- sapply(df, below_ave)
+##   age score 
+##  20.0  51.5 
+dt_l &lt;- lapply(df, below_ave)
+## $age
+## [1] 20
+
+## $score
+## [1] 51.5
+
+identical(dt_s, dt_l)
+## [1] TRUE
+
+# 实例，假设df$name 由Alex Sean类似格式组成，现要求从中抽取出姓和名
+name &lt;- strsplit((df$name), &quot; &quot;)
+fname &lt;- sapply(name, &quot;[&quot;, 2)
+lname &lt;- sapply(name, &quot;[&quot;, 1)
+</code></pre>
+<p><code>lapply(x, FUN, options)</code></p>
+<p>返回一个长度与 X 一致的列表，每个元素为 FUN 计算出的结果，且分别对应到X中的每个元素。</p>
+<p>与<code>apply()</code>区别在于输出的是<code>list</code>，且无需<code>MARGIN</code></p>
+<pre><code class="language-r">lapply(X,   # List or vector
+       FUN, # Function to be applied
+       ...) # Additional arguments to be passed to FUN
+</code></pre>
+<pre><code class="language-R"># 输入列表
+l &lt;- list(a=1:10, b=matrix(1:20, nrow=4))
+lapply(l, sum)
+## $a
+## [1] 55
+
+## $b
+## [1] 210
+
+# 输入向量
+movies &lt;- c(&quot;SPYDERMAN&quot;,&quot;BATMAN&quot;,&quot;VERTIGO&quot;,&quot;CHINATOWN&quot;)
+movies_lower &lt;-lapply(movies, tolower)
+movies_lower
+## [[1]]
+## [1] &quot;spyderman&quot;
+
+## [[2]]
+## [1] &quot;batman&quot;
+
+## [[3]]
+## [1] &quot;vertigo&quot;
+
+## [[4]]
+## [1] &quot;chinatown&quot;
+
+unlist(movies_lower)
+## [1] &quot;spyderman&quot; &quot;batman&quot;    &quot;vertigo&quot;   &quot;chinatown&quot;
+
+# 输入df
+df
+##   age score
+## 1  18    99
+## 2  19    98
+## 3  20    97
+lapply(df, sum)
+## $age
+## [1] 57
+
+## $score
+## [1] 294
+
+# 输入矩阵
+m &lt;- matrix(1:20, nrow=4)
+lapply(m, sum)
+## [[1]]
+## [1] 1
+
+## [[2]]
+## [1] 2
+## ...
+# 事与愿违是因为
+length(m)
+## [1] 20
+</code></pre>
+<p><code>tapply(X, INDEX, FUN)</code>: 对一维数据按 label 分组后分别 apply fun</p>
+<pre><code>tapply(X,                # Object you can split (matrix, data frame, ...)
+       INDEX,            # List of factors of the same length
+       FUN,              # Function to be applied to factors (or NULL)
+       ...,              # Additional arguments to be passed to FUN
+       default = NA,     # If simplify = TRUE, is the array initialization value
+       simplify = TRUE)  # If set to FALSE returns a list object
+</code></pre>
+<pre><code class="language-r">set.seed(2)
+
+data_set &lt;- data.frame(price = round(rnorm(25, sd = 10, mean = 30)),
+                       type = sample(1:4, size = 25, replace = TRUE),
+                       store = sample(paste(&quot;Store&quot;, 1:4),
+                                      size = 25, replace = TRUE))
+
+head(data_set)
+  price type   store
+1    21    2 Store 2
+2    32    3 Store 3
+3    46    4 Store 4
+4    19    3 Store 4
+5    29    1 Store 4
+6    31    3 Store 4
+
+price &lt;- data_set$price
+store &lt;- data_set$store
+type &lt;- factor(data_set$type,
+               labels = c(&quot;toy&quot;, &quot;food&quot;, &quot;electronics&quot;, &quot;drinks&quot;))
+# Mean price by product type
+mean_prices &lt;- tapply(price, type, mean)
+
+mean_prices
+        toy        food electronics      drinks 
+   39.50000    30.33333    32.20000    29.33333
+class(mean_prices)
+## &quot;array&quot;
+
+# 等价于 
+by(data_set, data_set$type, function(x) mean(x$price))
+data_set$type: 1
+[1] 39.5
+------------------------------------------ 
+data_set$type: 2
+[1] 30.33333
+------------------------------------------ 
+data_set$type: 3
+[1] 32.2
+------------------------------------------ 
+data_set$type: 4
+[1] 29.33333
+
+# 由于array不能用 $ 操作，所以可考虑返回list
+# Mean price by product type
+mean_prices_list &lt;- tapply(price, type, mean, simplify = FALSE)
+mean_prices_list
+$toy
+[1] 39.5
+
+$food
+[1] 30.33333
+
+$electronics
+[1] 32.2
+
+$drinks
+[1] 29.33333
+
+# Mean price by product type and store
+tapply(price, list(type, store), mean)
+            Store 1  Store 2 Store 3  Store 4
+toy              46 31.00000      49 36.66667
+food             26 30.33333      39       NA
+electronics      50 29.00000      32 25.00000
+drinks           22 40.00000      20 36.00000
+
+# Mean price by product type and store, changing default argument
+tapply(price, list(type, store), mean, default = 0)
+            Store 1  Store 2 Store 3  Store 4
+toy              46 31.00000      49 36.66667
+food             26 30.33333      39  0.00000
+electronics      50 29.00000      32 25.00000
+drinks           22 40.00000      20 36.00000
+</code></pre>
+<p><code>mapply()</code></p>
+<pre><code class="language-r">mapply(FUN, …, MoreArgs = NULL, SIMPLIFY = TRUE,
+       USE.NAMES = TRUE)
+</code></pre>
+<pre><code class="language-r">mapply(function(x,y){x^y},x=c(2,3),y=c(3,4))
+## [1]  8 81
+
+# the values in y are recycled. 
+# i.e. for both the values in x the same value (4) of y is used.
+mapply(function(x,y){x^y},x=c(2,3),y=c(4))
+## [1] 16 81
+mapply(function(x,y){x^y},c(a=2,b=3),c(A=3,B=4))
+## a  b 
+## 8 81
+mapply(function(x,y){x^y},c(a=2,b=3),c(A=3,B=4),USE.NAMES=FALSE)
+## [1]  8 81
+# 指定fun中的额外参数
+mapply(function(x,y,z,k){(x+k)^(y+z)},c(a=2,b=3),c(A=3,B=4),MoreArgs=list(1,2))
+##   a    b 
+## 256 3125 
+</code></pre>
+<p><code>vapply()</code></p>
+<pre><code class="language-r">vapply(.x, .f, fun_value, ..., use_names = TRUE)
+The vapply function is very similar compared to the sapply function, but when using vapply you need to specify the output type explicitly.
+</code></pre>
+<pre><code class="language-r">test &lt;- list(a = c(1, 3, 5), b = c(2,4,6), c = c(9,8,7), d=c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;))
+
+sapply(test, max)
+  a   b   c   d 
+&quot;5&quot; &quot;6&quot; &quot;9&quot; &quot;C&quot; 
+
+vapply(test, max, numeric(1))
+## Error in vapply(test, max, numeric(1)) : values must be type 'double',
+##  but FUN(X[[4]]) result is type 'character'
+</code></pre>
+<p><code>rapply()</code></p>
+<p><em>rapply</em> stands for recursive apply, and as the name suggests it is used to apply a function to all elements of a <strong>list</strong> recursively.</p>
+<pre><code class="language-r">x &lt;- list(1,2,3,4)
+rapply(x,function(x){x^2},class=c(&quot;numeric&quot;))
+## [1]  1  4  9 16
+
+x &lt;- list(1,2,3,4,&quot;a&quot;)
+rapply(x,function(x){x^2},class=c(&quot;numeric&quot;))
+## [1]  1  4  9 16
+</code></pre>
+<h3 id="7">7. 聚合函数</h3>
+<p><code>aggregate(x, by, FUN)</code></p>
+<p><code>FUN</code>只能是单返回值函数</p>
+<p>整合数据，相当于group by by_list and apply fun on each group</p>
+<p><code>by</code>中的变量必须在一个<code>list</code>中，即使只有一个元素；可以在列表中自定义各组的别名</p>
+<pre><code class="language-r"># Data frame
+aggregate(x,               # R object
+          by,              # List of variables (grouping elements)
+          FUN,             # Function to be applied for summary statistics
+          ...,             # Additional arguments to be passed to FUN
+          simplify = TRUE, # Whether to simplify results as much as possible or not
+          drop = TRUE)     # Whether to drop unused combinations of grouping values or not.
+
+# Formula
+aggregate(formula,             # Input formula
+          data,                # List or data frame where the variables are stored
+          FUN,                 # Function to be applied for summary statistics
+          ...,                 # Additional arguments to be passed to FUN
+          subset,              # Observations to be used (optional)
+          na.action = na.omit) # How to deal with NA values
+</code></pre>
+<pre><code class="language-r">aggregate(mtcars, by=list(mtcars$cyl, mtcars$gear), FUN=mean, na.rm=TRUE)
+# group by(cyl, gear) and apply mean on each group
+aggregate(mtcars$disp, by=list(mtcars$cyl, mtcars$gear), FUN=mean, na.rm=TRUE)
+  Group.1 Group.2        x
+1       4       3 120.1000
+2       6       3 241.5000
+3       8       3 357.6167
+4       4       4 102.6250
+5       6       4 163.8000
+6       4       5 107.7000
+7       6       5 145.0000
+8       8       5 326.0000
+# 等价于
+aggregate(disp~cyl+gear, data=mtcars, FUN=mean, na.rm=TRUE)
+  cyl gear     disp
+1   4    3 120.1000
+2   6    3 241.5000
+3   8    3 357.6167
+4   4    4 102.6250
+5   6    4 163.8000
+6   4    5 107.7000
+7   6    5 145.0000
+8   8    5 326.0000
+
+# 统计频率
+aggregate(chickwts$feed, by = list(chickwts$feed), FUN = length)
+aggregate(feed ~ feed, data = chickwts, FUN = length) # Equivalent
+
+states &lt;- data.frame(state.region, state.x77)
+##                 state.region Population Income Illiteracy Life.Exp Murder HS.Grad Frost   Area
+## Alabama                South       3615   3624        2.1    69.05   15.1    41.3    20  50708
+## Alaska                  West        365   6315        1.5    69.31   11.3    66.7   152 566432
+## Arizona                 West       2212   4530        1.8    70.55    7.8    58.1    15 113417
+aggregate(states$Illiteracy, by=list(state.region), FUN=mean)
+#        Group.1        x
+1     Northeast 1.000000
+2         South 1.737500
+3 North Central 0.700000
+4          West 1.023077
+</code></pre>
+<p><code>by(data, INDICES, FUN)</code></p>
+<p>indices是一个因子或因子组成的列表（定义分组），fun是任意函数</p>
+<p>即将data按照indices因子水平进行分组，然后对每组应用fun函数</p>
+<pre><code class="language-r">df
+##    name gender age a_score b_score
+## 1  Alex      M  18      98       1
+## 2 Rosie      W  19      99       2
+## 3  Greg      M  20     100       3
+by(df, df$gender, function(x) mean(x[,4]))
+## df$gender: M
+## [1] 99
+## ------------------------------------------------ 
+## df$gender: W
+## [1] 99
+</code></pre>
+<p><code>table()</code></p>
+<p>类似<code>count on group-by</code></p>
+<p>默认会忽略<code>NA</code>，需要<code>NA</code>的话，添加参数<code>useNa='ifany'</code></p>
+<pre><code class="language-R">table(Arthritis$Improved) # 统计频数
+
+##  None   Some Marked 
+##    42     14     28
+
+table(Arthritis$Improved, Arthritis$Treatment)
+##         Placebo Treated
+##  None        29      13
+##  Some         7       7
+##  Marked       7      21
+</code></pre>
+<h3 id="8-t">8. 转置<code>t()</code></h3>
+<pre><code class="language-r">df &lt;- data.frame(name, gender, age, a_score, b_score)
+row.names(df) &lt;- df$name # 或rownames(df) &lt;- df$name
+df$name &lt;- NULL
+t(df)
+        Alex  Rosie Greg 
+gender  &quot;M&quot;   &quot;W&quot;   &quot;M&quot;  
+age     &quot;18&quot;  &quot;19&quot;  &quot;20&quot; 
+a_score &quot; 98&quot; &quot; 99&quot; &quot;100&quot;
+b_score &quot;1&quot;   &quot;2&quot;   &quot;3&quot;
+</code></pre>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../DataAnalysis/" class="md-footer__link md-footer__link--prev" aria-label="上一页: DataAnalysis" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              DataAnalysis
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Grammar/" class="md-footer__link md-footer__link--next" aria-label="下一页: Grammar" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Grammar
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

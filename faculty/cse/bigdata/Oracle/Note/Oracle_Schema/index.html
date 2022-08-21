@@ -1,0 +1,3362 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Oracle_Schema - EvalCSU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oracle" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="EvalCSU" class="md-header__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EvalCSU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Oracle_Schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/evalcsu/" class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-tabs__link">
+        评教
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        笔记
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/zh-simplify/contribution/" class="md-tabs__link">
+      贡献指南
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../global/join/" class="md-tabs__link">
+      加入我们
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="EvalCSU" class="md-nav__button md-logo" aria-label="EvalCSU" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    EvalCSU
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jacob953/evalcsu" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jacob953/evalcsu
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/evalcsu/" class="md-nav__link">
+        EvalCSU
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          评教
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="评教" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          评教
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/science/" class="md-nav__link">
+        计算机科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/bigdata/" class="md-nav__link">
+        大数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/security/" class="md-nav__link">
+        信息安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/iot/" class="md-nav__link">
+        物联网
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/cse/software/" class="md-nav__link">
+        软件工程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/automation/" class="md-nav__link">
+        自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/electronic_information/" class="md-nav__link">
+        电子工程及其自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../evaluation/soa/intelligence/" class="md-nav__link">
+        智能科学与技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          计算机学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_2" type="checkbox" id="__nav_3_1_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_2">
+          数据库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据库
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment1/" class="md-nav__link">
+        experiment1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Database/experiment2/" class="md-nav__link">
+        experiment2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3" type="checkbox" id="__nav_3_1_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Oracle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_1" type="checkbox" id="__nav_3_1_2_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-3/" class="md-nav__link">
+        experiment-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-4/" class="md-nav__link">
+        experiment-4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Experiment/experiment-5/" class="md-nav__link">
+        experiment-5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_3_2" type="checkbox" id="__nav_3_1_2_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_3_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Execution_Plan/" class="md-nav__link">
+        Execution_Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Oracle_Architecture/" class="md-nav__link">
+        Oracle_Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Oracle_Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Oracle_Schema
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据字典
+  </a>
+  
+    <nav class="md-nav" aria-label="数据字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 静态数据字典
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 动态数据字典
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    表
+  </a>
+  
+    <nav class="md-nav" aria-label="表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1. 数据类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2. 约束
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 约束">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2. 1 约束类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    2. 2 创建约束
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    2. 3 激活/禁用约束
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4" class="md-nav__link">
+    2. 4 删除约束
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 创建表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 增加和删除字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 重命名表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 表空间和存储参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 删除表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 修改表的状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    索引聚簇表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    序列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    数据库连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    同义词
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    视图
+  </a>
+  
+    <nav class="md-nav" aria-label="视图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    1. 标准视图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    2. 内联视图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    3. 物化视图
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    索引
+  </a>
+  
+    <nav class="md-nav" aria-label="索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    1. 创建索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    2. 修改索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    3. 删除索引
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    分区表
+  </a>
+  
+    <nav class="md-nav" aria-label="分区表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    1. 基于范围的分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    2. 基于散列的分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    3. 基于列表的分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    4. 组合分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    5. 表分区操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PL_SQL1/" class="md-nav__link">
+        PL_SQL1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PL_SQL2/" class="md-nav__link">
+        PL_SQL2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4" type="checkbox" id="__nav_3_1_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4">
+          R语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R语言" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          R语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_1" type="checkbox" id="__nav_3_1_2_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_1">
+          Experiment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experiment" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Experiment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Experiment/experiment-1/" class="md-nav__link">
+        experiment-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Experiment/experiment-2/" class="md-nav__link">
+        experiment-2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_4_2" type="checkbox" id="__nav_3_1_2_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_4_2">
+          Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Note" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/BasicStructure/" class="md-nav__link">
+        BasicStructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/DataAnalysis/" class="md-nav__link">
+        DataAnalysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/dataOp/" class="md-nav__link">
+        dataOp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/Grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/ML/" class="md-nav__link">
+        ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/Note/Plot/" class="md-nav__link">
+        Plot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R-language/" class="md-nav__link">
+        R-language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2_5" type="checkbox" id="__nav_3_1_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2_5">
+          Web 技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web 技术" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web 技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web-technology/web-lab-report/" class="md-nav__link">
+        web-lab-report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          信息安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信息安全" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          信息安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_2" type="checkbox" id="__nav_3_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_2">
+          网络安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="网络安全" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          网络安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/arp-spoofing/" class="md-nav__link">
+        ARP 嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/bgp-route-hijacking/" class="md-nav__link">
+        BGP 路由劫持
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dns-server/" class="md-nav__link">
+        DNS 服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/dos/" class="md-nav__link">
+        Dos 拒绝服务攻击
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/ipsec/" class="md-nav__link">
+        IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/mail-relay/" class="md-nav__link">
+        邮件中继
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/onetime-password/" class="md-nav__link">
+        一次性口令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/remote-security-authentication/" class="md-nav__link">
+        远程安全认证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/routing-protocol/" class="md-nav__link">
+        路由协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/salt-value/" class="md-nav__link">
+        盐值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/syn-cookies/" class="md-nav__link">
+        SYN-Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network-security/tls-ssl/" class="md-nav__link">
+        TSL / SSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3_3" type="checkbox" id="__nav_3_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3_3">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/software/MiCode-Note/" class="md-nav__link">
+        小米笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          自动化学院
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化学院" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化学院
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          专业规划
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专业规划" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          专业规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          自动化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="自动化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          自动化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/" class="md-nav__link">
+        概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_2" type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2">
+          数据结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据结构" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/graph-traval.md" class="md-nav__link">
+        图遍历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/automation/datastructure/Huffman/" class="md-nav__link">
+        哈夫曼编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          智能科学与技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="智能科学与技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          智能科学与技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../soa/intelligence/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/zh-simplify/contribution/" class="md-nav__link">
+        贡献指南
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../global/join/" class="md-nav__link">
+        加入我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据字典
+  </a>
+  
+    <nav class="md-nav" aria-label="数据字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 静态数据字典
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 动态数据字典
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    表
+  </a>
+  
+    <nav class="md-nav" aria-label="表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1. 数据类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2. 约束
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 约束">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2. 1 约束类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    2. 2 创建约束
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    2. 3 激活/禁用约束
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4" class="md-nav__link">
+    2. 4 删除约束
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 创建表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 增加和删除字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 重命名表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 表空间和存储参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 删除表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 修改表的状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    索引聚簇表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    序列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    数据库连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    同义词
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    视图
+  </a>
+  
+    <nav class="md-nav" aria-label="视图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    1. 标准视图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    2. 内联视图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    3. 物化视图
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    索引
+  </a>
+  
+    <nav class="md-nav" aria-label="索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    1. 创建索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    2. 修改索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    3. 删除索引
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    分区表
+  </a>
+  
+    <nav class="md-nav" aria-label="分区表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    1. 基于范围的分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    2. 基于散列的分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    3. 基于列表的分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    4. 组合分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    5. 表分区操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Jacob953/evalcsu/edit/master/docs/faculty/cse/bigdata/Oracle/Note/Oracle_Schema.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="oracle">Oracle 模式对象</h1>
+<p>模式是与每个Oracle数据库用户相关的一组数据库对象的集合。
+模式所有者拥有该模式下所有数据库对象，如表、视图、索引、同义词、数据库链接、过程、函数、和包等的全部权限。</p>
+<p>模式对象是由用户创建的逻辑结构，用以包含或引用他们的数据。模式对象包含诸如表、视图、索引子类的结构</p>
+<blockquote>
+<p>A schema is <strong>a collection of database objects</strong>. A schema is owned by a database user and has the same name as that user. Schema objects are logical structures created by users. ... You can create and manipulate schema objects with SQL or with Oracle Enterprise Manager.</p>
+<p>These are Tables, Indexes, Views, Synonyms, Sequences, Database Links, Directory Objects, and Reorganize Objects.</p>
+<p>Note: There is no relationship between a tablespace and a schema. Objects in the same schema can use storage in different tablespaces, and a tablespace can contain data from different schemas.</p>
+</blockquote>
+<ul>
+<li>Oracle schema = Oracle user + database objects owned by that user.</li>
+<li>When an Oracle user is created using the CREATE USER command, a schema gets created for the user by default.</li>
+<li>There is a one-to-one correspondence between Oracle user name and Oracle schema name.</li>
+<li>While user = schema in most circumstances, that isn’t true all the time.</li>
+</ul>
+<h2 id="_1">数据字典</h2>
+<p>是表和相关视图的集合，包括静态数据字典和动态性能数据字典</p>
+<h3 id="1">1. 静态数据字典</h3>
+<ul>
+<li>模式对象的定义（模式对象是由用户创建的逻辑结构）</li>
+<li>完整性约束</li>
+<li>权限和角色</li>
+<li>为模式对象所分配的存储空间</li>
+<li>数据库操作审核信息</li>
+</ul>
+<p>分为</p>
+<ul>
+<li>用户视图：<code>USER_xxx</code>，包含当前用户所拥有的全部对象</li>
+<li>扩展用户视图：<code>ALL_xxx</code>，包含当前用户当前可以访问的全部的对象和权限的信息</li>
+<li>数据库管理员视图：<code>DBA_xxx</code>，包含了数据库拥有的所有对象和权限的信息</li>
+</ul>
+<pre><code class="language-plsql">-- 查询d_xxx数据字典结构
+desc d_xxx;
+-- 查询用户alex在数据库拥有的所有模式对象信息
+select * from user_objects;
+
+-- 查询用户alex的表t_abc的结构定义信息
+select column_name from user_tab_columns where table_name='T_ATTEND_D312'; -- AD一定要大些、写
+
+-- 查询表的存储参数
+select * from user_tables where table_name='xxx';
+-- AD xxx必须不是同义词且必须大写
+
+-- 查询alex权限授予情况
+select * from user_tab_privs;
+
+-- 查询数据字典`recyclebin` 来了解该表是否在回收站中
+select * from recyclebin where origin_name='t_xxx'
+
+-- 查询当前用户创建的同义词
+select * from user_synonyms;
+
+-- 查询视图定义
+select * from user_views where view_name=upper('v_xxx');
+
+-- 查询可更新视图中哪些列可以更新
+select * from user_updatable_columns where table_name='v_xxx';
+
+-- 查询当前创建的序列信息
+select * from user_sequences;
+-- system模式下显示所有者是u_lzc的所有索引对象
+select * from dba_indexes where owner='u_lzc';
+-- 显示索引列
+select * from user_ind_columns where index_name='idx_x';
+-- 显示索引段的位置及大小
+select * from user_segments where segment_name='idx_xx';
+-- 显示函数索引
+select * from user_ind_expressions where index_name='x';
+
+-- 在system模式下，从dba_data_files数据字典中查询表空间及其包含的数据文件
+select * from dba_data_files;
+-- 查询users表空间内存放的数据对象及其类型和拥有者
+select * from dba_segments where tablespace_name='USERS';
+-- 查看表空间的数据文件
+select name from v$datafile;
+
+-- 查看用户表空间
+select default_tablespace, temporary_tablespace from dba_users where username='C##U_LZC_D312';
+
+-- 查看系统默认表空间
+select property_value from database_properties where property_name='DEFAULT_PERMANENT_TABLESPACE';
+
+-- 查询环境资源字典及其限制
+select * from dba_profiles order by profile;
+
+-- 查看系统权限
+select * from user_sys_privs;
+
+-- 查看授予xx用户的所有权限
+select * from dba_tab_privs where grantee='C##U_LZC_D312';
+
+-- 查询预定义角色的细节
+select * from dba_sys_privs where grantee='C'
+</code></pre>
+<h3 id="2">2. 动态数据字典</h3>
+<p>动态性能表记录当前数据库的活动情况和性能参数</p>
+<p>在动态性能表的基础上创建了动态性能数据字典视图，通常称为V$视图</p>
+<pre><code class="language-plsql">-- 可出当前所有后台进程及其运行错误
+select name, description, error from V$BGPROCESS;
+
+-- 查看日志文件信息
+select * from v$log;
+</code></pre>
+<h2 id="_2">表</h2>
+<h4 id="1_1">1. 数据类型</h4>
+<ul>
+<li>字符：<code>char</code>, <code>varchar2</code></li>
+<li>数值：<code>number(5,2)</code>, <code>int</code></li>
+<li>日期：<code>date</code></li>
+<li>LOB 数据类型（大型的，未被结构化的数据）：<code>blob</code> <code>clob</code> <code>bfile</code></li>
+<li><code>ROWID</code></li>
+</ul>
+<h4 id="2_1">2. 约束</h4>
+<h5 id="2-1">2. 1 约束类型</h5>
+<ul>
+<li>
+<p>非空约束：<code>not null(col_name)</code></p>
+</li>
+<li>
+<p>主键约束：<code>primary key(col_name)</code></p>
+</li>
+<li>
+<p>唯一性约束：<code>unique(col_name)</code></p>
+</li>
+<li>
+<p>外键约束：<code>foreign key(col1) references t_xxx(col2)</code></p>
+</li>
+</ul>
+<p>若外键列与被引用表的被引用列同名，则可以写成</p>
+<p><code>foreign key(col) references t_xxx</code></p>
+<ul>
+<li>检查约束：<code>check(sex in ('男', '女'))</code></li>
+</ul>
+<p>PS：对于非空约束与主键约束，若该表已存在数据，但不满足该约束，则该约束操作将失败</p>
+<p>PS：当尝试删除外键约束中被引用表的一行时，可通过<code>on</code>关键字指定处理方案<code>foreign key(col1) references t_xxx(col2) on ???</code>中，<code>???</code>有以下三种类型</p>
+<ul>
+<li><code>no action</code>：默认，禁止删除该行</li>
+<li><code>set null</code>：外键表中的外键列全部设为<code>null</code>，前提是外键列必须支持<code>null</code>值</li>
+<li><code>cascade</code>：级联操作，例如<code>delete cascade</code>表示外键表中相应的数据也被删除</li>
+</ul>
+<h5 id="2-2">2. 2 创建约束</h5>
+<pre><code class="language-plsql">-- 单独写一行
+constraint cst_xxx 约束类型表达式
+constraint cst_xxx primary key(col_name)
+-- 写在字段声明后面
+-- 匿名
+sno char primary key
+mno char references t_xxx(col2)
+sex char check(sex in ('男', '女'))
+birthday date check(birthday between date '1994-01-01' and date '1999-07-31')
+-- 有名
+-- sno char constraint cst_xxx primary key
+
+-- alter语句
+alter table t_xxx add constraint cst_xxx 约束类型表达式
+alter table t_xxx add constraint cst_xxx foreign key(col) references t_yyy
+</code></pre>
+<h5 id="2-3">2. 3 激活/禁用约束</h5>
+<p>禁用</p>
+<pre><code class="language-plsql">-- 写在字段声明后面
+sno char primary key disable
+
+-- 禁用已存在的约束：alter
+alter table t_xxx disable constraint cst_xxx;
+</code></pre>
+<p>PS：</p>
+<ul>
+<li>禁用主键约束时，Oracle会默认删除约束对应的唯一索引，激活时自动重新建立；若不希望这样，可以在禁用约束时使用关键在<code>keep index</code>（通常放在约束名后面）</li>
+<li>禁用唯一性约束或主键约束时，如果有外键约束正在引用该列，则可以先禁用该外键约束，再禁用它；或者在禁用唯一性约束或主键约束时，使用<code>cascade</code>，这样可以级联禁用</li>
+</ul>
+<p>激活</p>
+<ul>
+<li><code>novalidate</code>：不检查数据表中已存在的字段是否满足</li>
+<li><code>validate</code>：默认，检查...</li>
+</ul>
+<pre><code class="language-plsql">-- 激活已存在的约束：alter
+alter table t_xxx enable [novalidate | validate] constraint cst_xxx;
+</code></pre>
+<h5 id="2-4">2. 4 删除约束</h5>
+<p><code>alter table t_xxx drop constraint cst_xxx</code></p>
+<h4 id="3">3. 创建表</h4>
+<pre><code class="language-plsql">create table t_xxx
+(
+    col1 int default 0,
+    col2 char default 'xxx' col_constraint,
+    constraint_1,
+    constraint_2
+)
+
+-- 复制表的结构
+create table 新表 as 
+select * from 旧表 where 1=2;
+
+-- 也复制表的相关内容
+create table 新表 as select * from 旧表
+
+-- 将查询结果插入另一张表
+insert into 已定义的表 
+select * from ...
+
+</code></pre>
+<p>在自己模式中创建表必须拥有<code>create table</code>系统权限</p>
+<p>在其他用户模式中创建表必须拥有<code>create any table</code>系统权限，此外必须在表名前加上某个模式的名称，如<code>scott.t_xxx</code></p>
+<p>创建好后可以通过<code>desc t_xxx</code>查看表的数据结构</p>
+<h4 id="4">4. 增加和删除字段</h4>
+<pre><code class="language-plsql">-- 增加
+alter table t_xxx add(sno char);
+-- 删除
+alter table t_xxx drop column sno;
+alter table t_xxx drop column (sno, sname);
+-- 修改
+alter table t_xxx modify col_xxx 属性
+-- AD 对先前已插入的数据并不起作用
+</code></pre>
+<h4 id="5">5. 重命名表</h4>
+<p><code>alter table t_xxx rename to t_yyy;</code></p>
+<h4 id="6">6. 表空间和存储参数</h4>
+<p><code>create</code>语句后面可加上以下可选的语句</p>
+<pre><code class="language-plsql">create (...)
+pctfree n  -- 块内预留自由空间百分数 默认10
+pctused n  -- 块内已使用空间最小百分比
+initrans n -- 表的每个数据块中分配的事务项初值，默认1
+maxtrans n -- 可同时修改表的数据块的最大事务数
+recoverable | unrecoverable
+tablespace ts_xxx
+enable | disable
+as query
+nologging -- 对DDL操作产生日志数据
+cache | no cache
+storage n -- 分配给表的存储空间大小
+
+-- 修改表的状态/参数
+alter table t_xxx pctfree 25 pctused 45;
+</code></pre>
+<h4 id="7">7. 删除表</h4>
+<p><code>drop table t_xxx [cascade constraints]</code></p>
+<p><code>cascade constraints</code>：删除关联的触发器、视图、约束等</p>
+<p>一般情况下，删除表只是在数据字典里除名，实际依然占用存储空间。此时可利用<code>flashback table</code>语句还原</p>
+<p><code>flashback table t_xxx before drop</code></p>
+<h4 id="8">8. 修改表的状态</h4>
+<pre><code class="language-plsql">alter table t_xxx read only;
+alter table t_xxx read write;
+</code></pre>
+<h2 id="_3">索引聚簇表</h2>
+<ul>
+<li>聚簇是指：如果一组表有一些共同的列，则将这样一组表存储在相同的数据库块中；聚簇还表示把相关的数据存储在同一个块上。利用聚簇，一个块可能包含多个表的数据。概念上就是如果两个或多个表经常做链接操作，那么可以把需要的数据预先存储在一起。聚簇还可以用于单个表，可以按某个列将数据分组存储。</li>
+</ul>
+<p>更加简单的说，比如说，EMP表和DEPT表，这两个表存储在不同的segment中，甚至有可能存储在不同的TABLESPACE中，因此，他们的数据一定不会在同一个BLOCK里。而我们有会经常对这两个表做关联查询，比如说：<code>select * from emp,dept whereemp.deptno = dept.deptno</code>.仔细想想，查询主要是对BLOCK的操作，查询的BLOCK越多，系统IO就消耗越大。如果我把这两个表的数据聚集在少量的BLOCK里，查询效率一定会提高不少。</p>
+<p>比如我现在将值deptno=10的所有员工抽取出来，并且把对应的部门信息也存储在这个BLOCK里（如果存不下了，可以为原来的块串联另外的块）。这就是索引聚簇表的工作原理。</p>
+<pre><code class="language-plsql">-- 1. 创建一个聚簇，并指定聚簇码的数据类型，并设置相应的存储参数
+-- 索引聚簇表是基于一个索引聚簇（index cluster）创建的。里面记录的是各个聚簇键。聚簇键和我们用得做多的索引键不一样，索引键指向的是一行数据，聚簇键指向的是一个ORACLE BLOCK。我们可以先通过以下命令创建一个索引簇。
+create cluster clu_xxx (sno char);
+-- 2. 在该聚簇上创建索引
+-- 聚簇索引的任务是拿到一个聚簇键值，然后返回包含这个键的块的块地址。实际上这是一个主键，其中每个聚簇键值指向聚簇本身中的一个块。因此，我们请求部门10的数据时，Oracle会读取聚簇键，确定相应的块地址，然后读取数据
+create index idx_xxx on cluster clu_xxx;
+-- 3. 在该聚簇之上创建表
+create table t_xxx
+(
+    sno char;
+    ...
+)
+cluster clu_xxx(sno);
+</code></pre>
+<p>SIZE 测试控制着每块上聚簇键的最大个数。这是对聚簇空间利用率影响最大的因素。如果把这个SIZE设置得太高，那么每个块上的键就会很少（单位BLOCK可以存的聚簇键就少了），我们会不必要地使用更多的空间。如果设置得太低，又会导致数据过分串链（一个聚簇键不够存放一条数据），这又与聚簇本来的目的不符，因为聚簇原本是为了把所有相关数据都存储在一个块上。</p>
+<h2 id="_4">序列</h2>
+<p>不占用实际存储空间</p>
+<p>必须要有<code>create sequence</code> 系统权限</p>
+<pre><code class="language-plsql">create sequence seq_xxx
+[start with n] -- 默认递增序列的起始值是minvalue，递减...maxvalue
+[increment by n] -- 默认1
+[minvalue n]
+[maxvalue n]
+[cache n | nocache] -- 是否预分配，存储在内存中；默认20
+[cycle | nocycle] 
+[order | noorder]; -- 按序产生序列
+
+-- 修改 
+-- PS: 不能修改start with参数
+-- 必须拥有 alter 权限
+alter sequence seq_xxx
+maxvalue 100
+...;
+
+drop sequence seq_xxx;
+</code></pre>
+<pre><code class="language-plsql">create sequence seq_xxx 
+maxvalue 999
+start with 1
+increment by 10
+cache 50;
+
+insert into xxx values(seq_xxx.nextval, ...)
+select swq_xxx.currval from dual; 
+-- 没用过的话报错ORA-08002: 序列 SEQ1.CURRVAL 尚未在此会话中定义
+</code></pre>
+<h2 id="_5">数据库连接</h2>
+<p>一个数据库与另一个数据库的通信路径</p>
+<pre><code class="language-plsql">create [public] database link db_xxx
+connect to user_xxx identified by pw_xxx
+using 'connect_str_xxx'
+
+/*
+USING 'connect string'
+
+Specify the service name of a remote database. If you specify only the database name, then Oracle Database implicitly appends the database domain to the connect string to create a complete service name. Therefore, if the database domain of the remote database is different from that of the current database, then you must specify the complete service name.
+*/
+
+drop [public] database link db_xxx;
+</code></pre>
+<pre><code class="language-plsql">-- 创建一个本地用户都可以访问的数据库链接，连接到 远程的数据库Training上
+create public database link testlink.mydomain.com connect to trainee IDENTIFIED BY t123456
+USING 'training'
+
+select * from t_xxx@testlink.mydomain.com;
+</code></pre>
+<h2 id="_6">同义词</h2>
+<p>是表、视图、对象等模式对象的别名</p>
+<p>分为私有~与公有~</p>
+<p>公有~必须有<code>create public synonym</code>权限</p>
+<p>私有~必须有<code>create synonym</code>权限</p>
+<p>若在其他模式创建私有~，则必须有<code>create any synonym</code>权限</p>
+<pre><code class="language-plsql">create [public] synonym syn_xxx for xxx;
+
+drop [public] synonym syn_xxx;
+</code></pre>
+<h2 id="_7">视图</h2>
+<p>权限：<code>create view</code> <code>create any view</code></p>
+<h3 id="1_2">1. 标准视图</h3>
+<pre><code class="language-plsql">-- 创建
+create [or replace] view v_xxx 列1别名, 列2别名...
+as 查询语句
+[with check option[constraint con_xxx]]
+[with read only]
+
+-- 若不指定别名，默认以查询的列名为列别名
+-- 若查询含函数或表达式，必须定义列别名
+-- 函数指集合函数等
+-- with check option: prevents visible rows from being updated to nonvisible rows
+
+-- 管理
+-- 若修改了基本表的定义，则需重新编译
+alter view v_xxx compile;
+
+-- 删除
+drop view v_xxx;
+</code></pre>
+<pre><code class="language-plsql">可更新的视图
+Oracle有一些适用于可更新联接视图的规则和限制。 其中之一是键保留表
+键保留表是与视图中的行通过主键或唯一键具有一对一行关系的基表
+
+所有可更新的列必须是键保留表中的列
+增删改操作在同一时刻只能修改视图的一个基表，否则要通过instead of 触发器
+
+键保留表的理解是：一个复杂视图，若需要出现键保留表的话则必须保证基表中至少有一张表是有主键的！(如果两个没有主键表进行关联时是不会出现键保留表的，已经验证；另外不是如果视图中有一张基表具有主键，就一定会出现另一张基表成为键保留表的现象)
+
+其次，这两张表在进行关联时(可以是表连接也可以是多表查询，但一定要有关联条件，其关联条件其实相当于两表的主外键关系)，如果关联条件是使用了主键的话，则外键表为键保留表。
+</code></pre>
+<blockquote>
+<p>A table is key preserved if every key of the table can also be a key of the result of the join.
+It is not necessary that the key or keys of a table be selected for it to be key preserved.</p>
+<p>It is sufficient that if the key or keys were selected, then they would also be key(s) of the result of the join.</p>
+<p>如果某一个表的主键可以作为这个join结果(view通常是几个表的join结果)的主键,那么这个表就是key preserved table.</p>
+<p>这个表的主键并非一定要出现在select出来的结果集中(select list里面),但是如果其出现在结果集中,那么它必须可以满足作为这个结果集的主键的要求.</p>
+</blockquote>
+<p>以下是可更新连接视图限制的一些示例：</p>
+<ul>
+<li>SQL语句(例如，INSERT，UPDATE 和 DELETE)仅允许修改单个基表中的数据。</li>
+<li>对于<code>INSERT</code>语句，<code>INTO</code>子句中列出的所有列必须属于保存键的表。</li>
+<li>对于<code>UPDATE</code>语句，<code>SET</code>子句中的所有列必须属于保留键的表。</li>
+<li>对于<code>DELETE</code>语句，如果连接生成多个保留键的表，则Oracle将从<code>FROM</code>子句的第一个表中删除。</li>
+</ul>
+<p>除了这些限制之外，Oracle还要求定义查询不包含以下任何元素：</p>
+<ul>
+<li>聚合函数例如，<code>AVG</code>，<code>COUNT</code>，<code>MAX</code>，<code>MIN</code>和<code>SUM</code>。</li>
+<li><code>DISTINCT</code>运算符。</li>
+<li><code>GROUP BY</code>子句。</li>
+<li><code>HAVING</code>子句。</li>
+<li>集合运算符，例如<code>UNION</code>，<code>UNION ALL</code>，<code>INTERSECT</code>和<code>MINUS</code>。</li>
+<li><code>START WITH</code>或者<code>CONNECT BY</code>子句</li>
+<li><code>ROWNUM</code>伪列</li>
+</ul>
+<pre><code class="language-plsql">-- 例子
+create table dept(deptid int primary key,deptname varchar2(20));
+create table employee(empid int primary key,empname varchar2(20),deptid int);
+
+insert into dept values(1,'dept1');  
+insert into dept values(2,'dept2');  
+insert into dept values(3,'dept3');  
+
+insert into employee values(1,'emp1',1);  
+insert into employee values(2,'emp2',1);  
+insert into employee values(3,'emp3',2);  
+
+create view testv   
+as select d.deptid deptid,deptname,empid,empname,e.deptid edeptid  
+from dept d join employee e  
+on d.deptid=e.deptid;
+
+select * from testv;
+    DEPTID DEPTNAME                  EMPID EMPNAME                 EDEPTID
+---------- -------------------- ---------- -------------------- ----------
+         1 dept1                         1 emp1                          1
+         1 dept1                         2 emp2                          1
+         2 dept2                         3 emp3                          2
+
+-- 在testv这个视图中,employee就是一个key preserved table,而dept不是.
+-- In this view, EMP is a key-preserved table, because EMPNO is a key of the EMP table, and also a key of the result of the join. DEPT is not a key-preserved table, because although DEPTNO is a key of the DEPT table, it is not a key of the join. 
+-- 那么这个视图可以进行的DML为
+delete from testv where empid=1
+-- (操作的结果是将employee表中的empid=1的记录delete了,dept表不会有改变)
+delete from testv where deptid=1
+-- (操作的结果是将employee表中的empid=1和2的记录都delete了,dept表不会有改变)
+update testv set empname='empx' where edeptid=1
+update testv set empname='empx' where empid=1
+update testv set empname='empx' where deptid=1
+insert into testv(empid,empname,edeptid) values(4,'emp4',2)
+-- 这个视图不可以进行的DML为
+-- update testv set deptname='deptx' where deptid=1
+-- update testv set deptname='deptx' where empid=1
+-- insert into testv(deptid,deptname) values(4,'dept4')
+-- ORA-01779: cannot modify a column which maps to a non key-preserved table
+
+-- PS 一个View中可以有多个key preserved tables
+
+
+-- 如何查看那些字段可以插入更新
+select * from USER_UPDATABLE_COLUMNS where table_name='TESTV'
+</code></pre>
+<p><a href="https://www.cnblogs.com/JSD1207ZX/p/9386314.html">例子来源</a></p>
+<p><a href="https://www.yiibai.com/oracle/oracle-updatable-view.html">参考</a></p>
+<h3 id="2_2">2. 内联视图</h3>
+<p>一种临时视图，不存在数据字典中</p>
+<p>查询中包含临时的内联视图时，视图中的SELECT语句 先被执行，得到一个结果集，然后由外层查询语句查
+询内联视图的结果。</p>
+<pre><code class="language-plsql">select * from t_xxx t1, (select * from t_yyy t2) where ..
+</code></pre>
+<h3 id="3_1">3. 物化视图</h3>
+<ul>
+<li>能够提高查询速度，这主要是因为物化视图存储了实际的数据</li>
+<li>具有查询重写功能</li>
+<li>物化视图具有实体表，也可以在上面建立索引</li>
+</ul>
+<p>两种刷新方式</p>
+<ul>
+<li><code>ON COMMIT</code>: 在基表做提交操作时刷新物化视图</li>
+<li>可以手工通过DBMS_MVIEW.REFRESH等方法来进行刷新，也可以通过JOB定时进行刷新,即更新物化视图，以保证和基表数据的一致性;一般配合 start with 参数按照特定的时间计划，按计划更新数据，比如每天晚上12点或每周更新一次物化视图中的数据</li>
+<li><code>ON DEMAND</code>: 按需刷新，手动刷新，或者是定时刷新</li>
+</ul>
+<p>刷新量的限制</p>
+<ul>
+<li><code>COMPLETE</code>完全刷新</li>
+<li>删除表中所有的记录（如果是单表刷新，可能会采用<code>TRUNCATE</code>的方式），然后根据物化视图中查询语句的定义重新生成物化视图。</li>
+<li><code>FAST</code>增量更新</li>
+<li>只将自上次刷新以后对基表进行的所有操作刷新到物化视图中去。FAST必须创建基于主表的视图日志。对于增量刷新选项，如果在子查询中存在分析函数，则物化视图不起作用。</li>
+<li><code>FORCE</code>自动选择</li>
+<li>Oracle会自动判断是否满足快速刷新的条件，如果满足则进行快速刷新，否则进行完全刷新。</li>
+</ul>
+<p>Oracle默认为<code>FORCE</code>和<code>DEMAND</code></p>
+<p>设置<code>REFRESH ON COMMIT</code>的物化视图不能访问远端对象
+在建立物化视图的时候可以指定<code>ORDER BY</code>语句，使生成的数据按照一定的顺序进行保存。不过这个语句不会写入物化视图的定义中，而且对以后的刷新也无效</p>
+<pre><code class="language-plsql">create materialized view v_xxx
+refresh [fast | complete | force]
+[
+    on [commit | demand]
+    |
+    start with (start_time) next (next_time)
+]
+[build immediate | build deferred]
+as
+查询语句
+
+
+create materialized view v_xxx
+refresh force 
+on demand 
+start with sysdate next to_date( concat( to_char( sysdate+1,'dd-mmyyyy'),' 22:00:00'),'dd-mm-yyyy hh24:mi:ss')
+AS
+select * from table_name;
+</code></pre>
+<h2 id="_8">索引</h2>
+<p><code>create index</code>  <code>create any index</code></p>
+<h3 id="1_3">1. 创建索引</h3>
+<p>B树索引：见PDF</p>
+<p><img alt="image-20211221154223014" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202112211542166.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">S.NO</th>
+<th align="left">B tree</th>
+<th align="left">B+ tree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1.</td>
+<td align="left">All internal and leaf nodes have data pointers</td>
+<td align="left">Only leaf nodes have data pointers</td>
+</tr>
+<tr>
+<td align="left">2.</td>
+<td align="left">Since all keys are not available at leaf, search often takes more time.</td>
+<td align="left">All keys are at leaf nodes, hence search is faster and accurate..</td>
+</tr>
+<tr>
+<td align="left">3.</td>
+<td align="left">No duplicate of keys is maintained in the tree.</td>
+<td align="left">Duplicate of keys are maintained and all nodes are present at leaf.</td>
+</tr>
+<tr>
+<td align="left">4.</td>
+<td align="left">Insertion takes more time and it is not predictable sometimes.</td>
+<td align="left">Insertion is easier and the results are always the same.</td>
+</tr>
+<tr>
+<td align="left">5.</td>
+<td align="left">Deletion of internal node is very complex and tree has to undergo lot of transformations.</td>
+<td align="left">Deletion of any node is easy because all node are found at leaf.</td>
+</tr>
+<tr>
+<td align="left">6.</td>
+<td align="left">Leaf nodes are not stored as structural linked list.</td>
+<td align="left">Leaf nodes are stored as structural linked list.</td>
+</tr>
+<tr>
+<td align="left">7.</td>
+<td align="left">No redundant search keys are present..</td>
+<td align="left">Redundant search keys may be present..</td>
+</tr>
+</tbody>
+</table>
+<p>AD</p>
+<ul>
+<li>数据一定在叶子结点出现</li>
+<li>左孩子严格小于，右孩子可大等于</li>
+</ul>
+<p>The definition of <em>order</em> for a tree would be the maximum branching factor, i.e. the <strong>maximum number of children</strong> that a node may have</p>
+<p>假设有order=m，则</p>
+<ul>
+<li>每个中间节点的<strong>孩子数</strong>取值范围为[[m/2]（上取整）, m]</li>
+<li>每个节点存储的<strong>key数量</strong>取值范围为[[m/2]-1, m - 1]  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Node Type</th>
+<th align="center">Children Type</th>
+<th align="center">Min Number of Children</th>
+<th align="center">Max Number of Children</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Root Node (when it is the only node in the tree)</td>
+<td align="center">Records</td>
+<td align="center">0</td>
+<td align="center"><em>m-1</em>​​</td>
+</tr>
+<tr>
+<td align="center">Root Node</td>
+<td align="center">Internal Nodes or Leaf Nodes</td>
+<td align="center">2</td>
+<td align="center"><em>m</em></td>
+</tr>
+<tr>
+<td align="center">Internal Node</td>
+<td align="center">Internal Nodes or Leaf Nodes</td>
+<td align="center">${\displaystyle \lceil m/2\rceil }$​</td>
+<td align="center"><em>m</em></td>
+</tr>
+<tr>
+<td align="center">Leaf Node</td>
+<td align="center">Records</td>
+<td align="center">${\displaystyle \lceil m/2\rceil }$​</td>
+<td align="center"><em>m</em></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="avatar" src="https://i.stack.imgur.com/7FXFb.png" /></p>
+<p><a href="https://www.youtube.com/watch?v=DqcZLulVJ0M">Example</a></p>
+<p>假设order=4</p>
+<p>插入1,4,7,10并变形<img alt="avatar" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031552.jpg" /></p>
+<p>插入17,21并变形</p>
+<p><img alt="avatar" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031690.jpg" /></p>
+<p>变形结果</p>
+<p><img alt="avatar" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031366.jpg" /></p>
+<p>插入31,25,19,20并变形</p>
+<p><img alt="avatar" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080031253.jpg" /></p>
+<p>变形结果</p>
+<p><img alt="avatar" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080032996.jpeg" /><img alt="avatar" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080032777.jpg" /></p>
+<p>最终结果</p>
+<p><img alt="avatar" src="https://raw.githubusercontent.com/Yemonade/imgCloud/main/img/202202080032504.jpg" /></p>
+<p>位图索引：见笔记</p>
+<ul>
+<li>缺点：不经常做update（所以一般用在数据仓库）</li>
+<li>优点：节省空间</li>
+</ul>
+<p>函数索引：对<code>col</code>使用函数；若查询条件包含相同的函数，则会使用它</p>
+<pre><code class="language-plsql">-- B树索引
+create index idx_xxx on t_xxx(col1, col2);
+create index idx_xxx on t_xxx(col1 ASC, col2 DESC);
+
+-- 位图索引
+create bitmap index idx_xxx on t_xxx(同上)
+
+-- 函数索引
+create index idx_xxx on t_xxx(lower(col))
+</code></pre>
+<h3 id="2_3">2. 修改索引</h3>
+<p><code>alter any index</code> 或在相应表上<code>index</code>对象权限</p>
+<p>一般用于碎片太多的情形</p>
+<pre><code class="language-plsql">-- 合并索引
+alter index idx_xxx coalesce deallocate unuserd;
+-- 重建索引
+alter index idx_xxx rebuild;
+</code></pre>
+<h3 id="3_2">3. 删除索引</h3>
+<p><code>drop index</code>  <code>drop any index</code></p>
+<pre><code class="language-plsql">drop index idx_xxx;
+</code></pre>
+<h2 id="_9">分区表</h2>
+<p>索引分区一样，可见课本</p>
+<h3 id="1_4">1. 基于范围的分区</h3>
+<pre><code class="language-plsql">create table t_xxx
+(...)
+partition by range(col_list)(
+    partition par_01 values less than value_list1,
+    partition par_03 values less than value_list1
+);
+
+-- Example
+create table t_xxx(...)
+partition by range(ID)(
+    partition par_01 values less than (100) tablespace ts1,
+    partition par_02 values less than (MAXVALUE) tablespace ts2,
+);
+-- PS MAXVALUE是关键字
+-- 多个列时需同时满足
+-- less than是指严格小于（字面意识）
+</code></pre>
+<p><a href="http://oracle-help.com/oracle-database/see-row-placement-in-partitions/">查询某一行在哪一个分区</a></p>
+<pre><code class="language-plsql">CREATE TABLE t_test(
+    ID INT
+)
+PARTITION BY RANGE(ID)(
+    PARTITION P1 VALUES LESS THAN(10),
+    PARTITION P2 VALUES LESS THAN(20),
+    PARTITION P3 VALUES LESS THAN(30)
+);
+
+insert into t_test values(9);
+insert into t_test values(10);
+insert into t_test values(11);
+-- insert into t_test values(30);
+-- ORA-14400: 插入的分区关键字未映射到任何分区
+
+SELECT ID, DO.SUBOBJECT_NAME
+FROM t_test TI, DBA_OBJECTS DO
+WHERE DBMS_ROWID.ROWID_OBJECT(TI.ROWID)=DO.OBJECT_ID;
+
+ ID SUBOB
+--- -----
+ 11 P2
+ 10 P2
+  9 P1
+
+alter table t_test drop partition P2;
+select * from t_test;
+ ID
+---
+  9
+</code></pre>
+<h3 id="2_4">2. 基于散列的分区</h3>
+<p>使得数据均匀分布在磁盘上</p>
+<pre><code class="language-plsql">create table t_xxx (...)
+partition by hash(id) (
+    partition par_01 tablespace ts_1,
+    partition par_02 tablespace ts_2
+);
+-- 或
+create table t_xxx (...)
+partition by hash(id) 
+partitions 2
+store in (ts1, ts2);
+</code></pre>
+<h3 id="3_3">3. 基于列表的分区</h3>
+<p>范围分区的离散情况</p>
+<p>分区关键字只能为单列</p>
+<pre><code class="language-plsql">create table t_xxx(...)
+partition by list(major) (
+    partition par_01 values('数学', '语文'),
+    partition par_02 values('英语', '日语')
+)
+</code></pre>
+<h3 id="4_1">4. 组合分区</h3>
+<p>首先对表进行范围分区，再进行散列或列表分区</p>
+<pre><code class="language-plsql">-- 范围-散列组合分区
+-- 看PDF，下面有问题
+create table t_xxx(...)
+partition by range(timestamp)
+subpartition by hash(id) (
+    partition par_01 values less than(to_date(,,,)),
+    partition par_01 values less than(to_date(,,,))
+)
+-- 范围-列表组合分区
+create table t_xxx(...)
+partition by range(timestamp)
+subpartition by list(major) (
+    partition par_01 values less than(to_date(,,,)) (
+        subpartition par_11 values('语文'),
+        subpartition par_12 values('数学'),
+    )
+    partition par_02 values less than(to_date(,,,)) (
+        subpartition par_21 values('语文'),
+        subpartition par_22 values('数学'),
+    )
+)
+</code></pre>
+<h3 id="5_1">5. 表分区操作</h3>
+<pre><code class="language-plsql">-- 查看指定分区的数据
+select * from t_xxx partition(par_01);
+select * from t_xxx partition(par_01) ss where ss.id=..;
+
+-- 复制表分区
+create table t_xxx as select * from t_yyy partition(par);
+
+-- 增加范围分区
+-- 使用MAXVALUE时不可增加分区
+alter table t_xxx add partition par_01 values less than(...) [tablespace ts_xxx];
+-- 增加列表分区
+alter table t_xxx add partition par_01 values '数学' [tablespace ts_xxx];
+
+-- 分区重命名
+alter table t_xxx rename partition par_xx to par_yy;
+
+-- 合并hash分区
+alter table t_xxx coalesce partition;
+-- 合并复合分区：合并某个子分区到其他子分区
+alter table t_xxx modify coalesce subpartition;
+-- 合并第三个分区到第四个分区
+alter table t_xxx merge partitions par_03, par_04 into partition par_04;
+
+-- 删除分区：drop保留全局索引
+alter table t_xxx drop partition par_xxx; 
+-- 若有全局索引，需重建索引
+alter index idx_xxx rebuild;
+
+-- 删除分区：先delete分区表所有数据+再alter drop
+delete from t_xxx where ...&gt;=to_date(...);
+alter table t_xxx drop partition par_xxx;
+
+-- 删除具有完整性约束的分区
+-- 法一：禁用约束+删除   
+alter table t_xxx disable constraint cnt_xxx;
+alter table t_xxx drop partition par_xxx;
+alter table t_xxx enable constraint cnt_xxx;
+-- 法二：先删除行，再删除分区
+delete from t_xxx where ...&gt;=to_date(...);
+alter table t_xxx drop partition par_xxx;
+
+-- 移动分区数据
+alter table t_xxx move partition par_xxx tablespace ts;
+-- 拆分分区
+alter table t_xxx split partition par_00 at(break_xxx) into (partition par_01, partition par_02);
+</code></pre>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../Oracle_Architecture/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Oracle_Architecture" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Oracle_Architecture
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../PL_SQL1/" class="md-footer__link md-footer__link--next" aria-label="下一页: PL_SQL1" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              PL_SQL1
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

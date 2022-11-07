@@ -22,7 +22,7 @@ EvalCSU 是一个关于 CSU 的非官方专业课程经验分享平台，平台�
 
 ## 导航
 
-- EvalCSU 主页：[EvalCSU](https://jacob953.github.io/evalcsu/)
+- EvalCSU 主页：[EvalCSU](https://evalcsu.github.io/evalcsu//)
 - EvalCSU 维基：[EvalCSU-Wiki](https://github.com/Jacob953/evalcsu/wiki)
 - EvalCSU 专业课程设计：[EvalCSU-Org](https://github.com/EvalCSU)
 
